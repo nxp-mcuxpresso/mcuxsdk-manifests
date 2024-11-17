@@ -1,0 +1,50 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  - name: nxp-real-time-edge-sw
+    url-base: https://github.com/nxp-real-time-edge-sw
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: usb
+    userdata:
+      owner: yichang.wang@nxp.com
+      track_branch: release/24.12.00-pvw2
+    revision: 8891b79e5d4b8b09d7553f5fc7808b7665f31ef3
+    path: mcuxsdk/middleware/usb
+    repo-path: mcux-sdk-middleware-usb
+    groups:
+    - usb
+    - middleware
+  - name: lwip
+    revision: 2258059471ffc22eb87b59fea637ac60ce7d5294
+    path: mcuxsdk/middleware/lwip
+    groups:
+    - lwip
+    - middleware
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: lin_stack
+    repo-path: mcux-lin_stack
+    path: mcuxsdk/middleware/lin_stack
+    userdata:
+      owner: zejiang.yu@nxp.com
+      track_branch: release/24.12.00-pvw2
+    revision: 96b8496fe0cce4b8154e77a4d976dfe4356d952e
+    groups:
+    - lin_stack
+    - middleware
+  - name: soem
+    revision: 0bd6d19c2809ffd92eff1af07ac4fc16ff4ae462
+    path: mcuxsdk/middleware/soem
+    remote: nxp-real-time-edge-sw
+    groups:
+    - soem
+    - middleware
+    userdata:
+      track_branch: release/24.12.00-pvw2

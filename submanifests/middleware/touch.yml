@@ -1,0 +1,20 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: touch
+    userdata:
+      owner: pavel.rech@nxp.com
+      track_branch: release/24.12.00-pvw2
+    path: mcuxsdk/middleware/touch
+    revision: bc69238c81b329c3c349ec0b8e4ff0e80d601b27
+    repo-path: mcux-touch
+    groups:
+    - touch

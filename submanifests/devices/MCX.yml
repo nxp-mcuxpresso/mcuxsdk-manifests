@@ -1,0 +1,18 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: mcux-devices-mcx
+    revision: 7ac25c0620dfe334afa99712264f3acb50d7b229
+    path: mcuxsdk/devices/MCX
+    groups:
+    - core
+    userdata:
+      track_branch: release/24.12.00-pvw2

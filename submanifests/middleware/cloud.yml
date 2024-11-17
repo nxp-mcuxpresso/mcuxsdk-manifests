@@ -1,0 +1,74 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: tinycbor
+    userdata:
+      owner: michal.chromec@nxp.com
+      track_branch: mcux_main
+    path: mcuxsdk/middleware/tinycbor
+    revision: 1cb2eab953a68e3b533247be280fd4fef24bf647
+    groups:
+    - tinycbor
+    - aws_iot
+  - name: pkcs11
+    userdata:
+      owner: michal.chromec@nxp.com
+      track_branch: mcux_main
+    path: mcuxsdk/middleware/pkcs11
+    revision: 7e42bd48bbf02ad4a85010309919ac176373f4b4
+    groups:
+    - pkcs11
+    - aws_iot
+  - name: aws_iot_device-defender
+    repo-path: Device-Defender-for-AWS-IoT-embedded-sdk
+    userdata:
+      owner: michal.chromec@nxp.com
+      track_branch: mcux_main
+    path: mcuxsdk/middleware/aws_iot/device-defender
+    revision: 200c88aebaf439fc6568c7b7e978a94b0a65ec16
+    groups:
+    - aws_iot
+  - name: aws_iot_device-shadow
+    repo-path: Device-Shadow-for-AWS-IoT-embedded-sdk
+    userdata:
+      owner: michal.chromec@nxp.com
+      track_branch: mcux_main
+    path: mcuxsdk/middleware/aws_iot/device-shadow
+    revision: 8df88a3822e915b529024c6e0276230476283fe8
+    groups:
+    - aws_iot
+  - name: aws_iot_jobs
+    repo-path: Jobs-for-AWS-IoT-embedded-sdk
+    userdata:
+      owner: michal.chromec@nxp.com
+      track_branch: mcux_main
+    path: mcuxsdk/middleware/aws_iot/jobs
+    revision: ab5d12ae9764268f60cf4575e1cbbe090bd4873f
+    groups:
+    - aws_iot
+  - name: aws_iot_ota
+    repo-path: ota-for-aws-iot-embedded-sdk
+    userdata:
+      owner: michal.chromec@nxp.com
+      track_branch: mcux_main
+    path: mcuxsdk/middleware/aws_iot/ota
+    revision: 64decfa1775b7bc16d7e6674610bc3841e3271d1
+    groups:
+    - aws_iot
+  - name: aws_iot_llhttp
+    repo-path: llhttp
+    userdata:
+      owner: michal.chromec@nxp.com
+      track_branch: mcux_main
+    path: mcuxsdk/middleware/llhttp
+    revision: 25ae94d6b619bdbbc40cc5b62ceadad5884c53f1
+    groups:
+    - aws_iot

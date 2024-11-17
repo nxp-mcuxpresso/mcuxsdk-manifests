@@ -1,0 +1,29 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: mcux-sdk-middleware-eiq
+    userdata:
+      owner: null
+      track_branch: main
+    path: mcuxsdk/middleware/eiq
+    revision: 7a900a52e466a2ed8fa44446a8a3b4dfb1e5eefe
+    groups:
+    - eiq
+    - middleware
+  - name: mcux-sdk-middleware-tensorflow
+    userdata:
+      owner: null
+      track_branch: main
+    path: mcuxsdk/middleware/eiq/tensorflow-lite
+    revision: 5843804117b53c6ca9cce47703266de5ed33c489
+    groups:
+    - eiq
+    - middleware

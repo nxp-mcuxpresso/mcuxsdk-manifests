@@ -1,0 +1,28 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: issdk
+    repo-path: mcux-is-sdk
+    userdata:
+      owner: null
+      track_branch: issdk_clean_history_branch
+    path: mcuxsdk/middleware/issdk
+    revision: f93ca22e716e0191528089d480c3c515a77d87a8
+    groups:
+    - issdk
+  - name: cjson
+    userdata:
+      owner: yumeng.wang@nxp.com
+      track_branch: release/24.12.00-pvw2
+    revision: afa391ffa15c1adc148e1c22faad7f219ce57a20
+    path: mcuxsdk/middleware/cjson
+    groups:
+    - cjson

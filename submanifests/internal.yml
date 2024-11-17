@@ -1,0 +1,154 @@
+manifest:
+  remotes:
+  - name: origin
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: origin
+  projects:
+  - name: mcu-sdk-test
+    path: mcuxsdk/test
+    revision: 4a30bb2b08e1363381ee7992af0f55d6ac15ac6d
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: docs-int
+    path: mcuxsdk/docs/internal
+    revision: main
+    groups:
+    - bifrost
+    userdata:
+      track_branch: main
+  - name: mcu-sdk-ecosystem
+    path: mcuxsdk/ecosystem
+    revision: 3268ad3cbebae3966ce06b36f3d90c5a2986f4c9
+    west-commands: scripts/west_commands.yml
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: sdk_components
+    path: mcuxsdk/ecosystem/sdk_generator/modules/sdk_components
+    revision: 50da0440ab6ca0ce9d366ad7dc19ebc5fda914df
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: acceptance_tests
+    path: mcuxsdk/ecosystem/sdk_generator/modules/acceptance_tests
+    revision: bef8eecebd5c53fc7409928f012a582e7424ebad
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: cmsis-pack-rev
+    path: mcuxsdk/ecosystem/sdk_generator/modules/cmsis-pack-rev
+    revision: 6f913edd210cc886b5885a117f24d3c78342d357
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: sdk_generator
+    path: mcuxsdk/ecosystem/sdk_generator
+    revision: 71f929418099a3f81ceae3f7d45af33e8ee83c3d
+    submodules:
+    - path: modules/manifest_schema
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: MIR
+    path: mcuxsdk/MIR
+    revision: 42ff4573c0bddd05d6d8647514b8faac61b54a04
+    groups:
+    - bifrost
+    userdata:
+      track_branch: master
+  - name: migrate
+    revision: 3ba1bf57e0f1e0c32186c1457e7fd21dcc68fdf3
+    path: mcuxsdk/migrate
+    west-commands: scripts/west_commands.yml
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: framework-int
+    path: mcuxsdk/middleware/wireless/framework_private
+    revision: 663c3663afc5460a8ce2b5831bf9bc45a4fa3e44
+    groups:
+    - bifrost
+    userdata:
+      track_branch: master
+  - name: ble-controller-int
+    path: mcuxsdk/middleware/wireless/marvell_ll
+    revision: 2c0d097af0052c956183b7cbf10e385d277b0185
+    groups:
+    - bifrost
+    userdata:
+      track_branch: develop/main
+  - name: mcu-sdk-examples-int
+    path: mcuxsdk/examples_int
+    revision: 7937fed868e424c6c05a6d72a60a699a1ca8855b
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: mcux-devices-int
+    path: mcuxsdk/devices/internal
+    revision: ca2d9c1fa9a9b359ebcc5ec51d9cfd915cc177b3
+    groups:
+    - bifrost
+    userdata:
+      track_branch: release/24.12.00-pvw2
+  - name: emwin
+    userdata:
+      owner: tomas.barak@nxp.com
+      track_branch: release/24.12.00-pvw2
+    path: mcuxsdk/middleware/emwin
+    revision: 070d4261d3d3e574f62f63c0bf2f07264b6662eb
+    groups:
+    - bifrost
+  - name: ieee-802.15.4_private
+    userdata:
+      owner: george.stefan@nxp.com
+      track_branch: private/release/24.12.00-pvw2
+    path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
+    revision: 37f63357ec70ae96493f3bdf5d21ea18b804aa41
+    repo-path: mcux-sdk-middleware-ieee_802.15.4-int
+    groups:
+    - bifrost
+  - name: zigbee_private
+    userdata:
+      owner: alexandru.porosanu@nxp.com
+      track_branch: release/24.12.00-pvw2
+    path: mcuxsdk/middleware/wireless/zigbee_private
+    revision: cbaa956635a4f5029fe26b62ca731be00748b9a2
+    repo-path: mcux-sdk-middleware-zigbee-int
+    groups:
+    - bifrost
+  - name: crypto_benchmark
+    userdata:
+      owner: patrik.nemeth@nxp.com
+      track_branch: release/24.12.00-pvw2
+    path: mcuxsdk/components/crypto_benchmark
+    revision: main
+    groups:
+    - bifrost
+  - name: bluetooth_private
+    userdata:
+      owner: mihai-octavian.urzica@nxp.com
+      track_branch: release/24.12.00-pvw2
+    path: mcuxsdk/middleware/wireless/bluetooth_private
+    revision: fbcaa891b035df3a20c0ad051dff784f4ae0757e
+    repo-path: mcux-sdk-middleware-bluetooth-int
+    groups:
+    - bifrost
+  - name: ble_cs_algo_private
+    userdata:
+      owner: mihai-octavian.urzica@nxp.com
+      track_branch: main
+    path: mcuxsdk/middleware/wireless/ble_cs_algo_private
+    revision: 791a3d868dc6a5a5fc38ca60fe35e26be5e69dc4
+    repo-path: mcux-sdk-middleware-ble_cs_algo-int
+    groups:
+    - bifrost

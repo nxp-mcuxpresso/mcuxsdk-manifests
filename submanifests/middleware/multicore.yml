@@ -1,0 +1,51 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: mcux-sdk-middleware-multicore
+    revision: 4cae45bd63d969ed0e44f7d4e3ac64c800e68eac
+    path: mcuxsdk/middleware/multicore
+    url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-multicore
+    groups:
+    - multicore
+    - middleware
+    userdata:
+      owner: michal.princ@nxp.com
+      track_branch: release/24.12.00-pvw2
+  - name: mcux-mcmgr
+    revision: 93d4581bf7dd8376e89267f8438f5a102f811751
+    path: mcuxsdk/middleware/multicore/mcmgr
+    url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
+    groups:
+    - multicore
+    - middleware
+    userdata:
+      owner: tomas.galbicka@nxp.com
+      track_branch: release/24.12.00-pvw2
+  - name: rpmsg-lite
+    revision: afb80c95c4b90caaad79d28dbaf40df9d1d76ad6
+    path: mcuxsdk/middleware/multicore/rpmsg-lite
+    url: https://github.com/nxp-mcuxpresso/rpmsg-lite
+    groups:
+    - multicore
+    - middleware
+    userdata:
+      owner: tomas.galbicka@nxp.com
+      track_branch: release/24.12.00-pvw2
+  - name: erpc
+    revision: b2a8a282fb57ba3868c95321abec5ab00aa4759f
+    path: mcuxsdk/middleware/multicore/erpc
+    url: https://github.com/EmbeddedRPC/erpc
+    groups:
+    - multicore
+    - middleware
+    userdata:
+      owner: michal.princ@nxp.com
+      track_branch: release/24.12.00-pvw2

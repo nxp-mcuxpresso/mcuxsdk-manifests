@@ -1,0 +1,22 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp_zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  group-filter:
+  - -optional
+  - -bifrost
+  self:
+    path: manifests
+    west-commands: scripts/west_commands.yml
+    import:
+    - submanifests/base.yml
+    - submanifests/devices/
+    - submanifests/middleware/
+    - submanifests/rtos/
+    - submanifests/internal.yml
