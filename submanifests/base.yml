@@ -25,6 +25,7 @@ manifest:
     west-commands: scripts/west_commands.yml
     groups:
     - core
+    - ble_nxp
     userdata:
       track_branch: main
   - name: CMSIS
@@ -33,6 +34,7 @@ manifest:
     revision: c3319a16588d05036a9e08cf59a92634a5a0e5dd
     groups:
     - core
+    - ble_nxp
     userdata:
       track_branch: mcux_main
   - name: mcux-soc-svd
@@ -48,6 +50,7 @@ manifest:
     path: mcuxsdk/examples
     groups:
     - examples
+    - ble_nxp
     userdata:
       track_branch: main
   - name: mcu-sdk-components
@@ -56,6 +59,7 @@ manifest:
     path: mcuxsdk/components
     groups:
     - components
+    - ble_nxp
     userdata:
       track_branch: mcux_main
   - name: mcu-sdk-doc

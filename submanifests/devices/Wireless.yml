@@ -14,5 +14,6 @@ manifest:
     path: mcuxsdk/devices/Wireless
     groups:
     - core
+    - ble_nxp
     userdata:
       track_branch: main

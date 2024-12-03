@@ -16,6 +16,7 @@ manifest:
     groups:
     - multicore
     - middleware
+    - ble_nxp
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
@@ -26,6 +27,7 @@ manifest:
     groups:
     - multicore
     - middleware
+    - ble_nxp
     userdata:
       owner: tomas.galbicka@nxp.com
       track_branch: main
@@ -36,6 +38,7 @@ manifest:
     groups:
     - multicore
     - middleware
+    - ble_nxp
     userdata:
       owner: tomas.galbicka@nxp.com
       track_branch: main

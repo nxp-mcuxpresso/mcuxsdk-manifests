@@ -15,6 +15,7 @@ manifest:
     groups:
     - freertos-kernel
     - rtos
+    - ble_nxp
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main

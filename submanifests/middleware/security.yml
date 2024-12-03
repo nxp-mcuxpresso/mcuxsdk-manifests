@@ -39,6 +39,7 @@ manifest:
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
+    - ble_nxp
   - name: edgelock
     userdata:
       owner: vit.solcik@nxp.com

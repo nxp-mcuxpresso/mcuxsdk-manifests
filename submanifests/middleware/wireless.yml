@@ -19,6 +19,7 @@ manifest:
     - connectivity-framework
     - middleware
     - wireless
+    - ble_nxp
   - name: genfsk
     repo-path: mcux-sdk-middleware-genfsk
     userdata:
@@ -41,6 +42,7 @@ manifest:
     - ble_controller
     - middleware
     - wireless
+    - ble_nxp
   - name: bluetooth
     userdata:
       owner: mihai-octavian.urzica@nxp.com
@@ -52,6 +54,7 @@ manifest:
     - bluetooth
     - middleware
     - wireless
+    - ble_nxp
   - name: XCVR
     userdata:
       owner: john.vandermeer@nxp.com
@@ -63,6 +66,7 @@ manifest:
     - XCVR
     - middleware
     - wireless
+    - ble_nxp
   - name: edgefast_bt_ble
     userdata:
       owner: junjie.liu@nxp.com
