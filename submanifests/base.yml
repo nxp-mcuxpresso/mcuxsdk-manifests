@@ -21,12 +21,12 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 1680a5ea7c3e6e36ac9bad2aeeabf46a7552226c
+    revision: a3f5f4e9a2e673ff2f776d7340193d09b0573aa1
     west-commands: scripts/west_commands.yml
     groups:
     - core
     userdata:
-      track_branch: release/24.12.00
+      track_branch: main
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
@@ -34,7 +34,7 @@ manifest:
     groups:
     - core
     userdata:
-      track_branch: release/24.12.00
+      track_branch: mcux_main
   - name: mcux-soc-svd
     path: mcuxsdk/svd
     revision: main
@@ -43,21 +43,21 @@ manifest:
     userdata:
       track_branch: main
   - name: mcu-sdk-examples
-    revision: cd243662d6c601f40cfbefec1012a350138250c9
+    revision: 80e57ef058aa9dc9ba615812f48ea034c1c74c98
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
     - examples
     userdata:
-      track_branch: release/24.12.00
+      track_branch: main
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: ac2be0a2494f4d9ccc004adae9810cef49628563
+    revision: 41cc73c4783243640a6bb5e6477572ac6cf4a781
     path: mcuxsdk/components
     groups:
     - components
     userdata:
-      track_branch: release/24.12.00
+      track_branch: mcux_main
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
     revision: 4ea123e7edad671cae192e6043f6417c3ccb550b
@@ -66,11 +66,11 @@ manifest:
     groups:
     - doc
     userdata:
-      track_branch: release/24.12.00
+      track_branch: main
   - name: mcuxsdk-tool-data
     revision: 777a3f705c83b67a867563b23b211949d35e3a83
     path: mcuxsdk/tool_data
     groups:
     - core
     userdata:
-      track_branch: release/24.12.00
+      track_branch: main

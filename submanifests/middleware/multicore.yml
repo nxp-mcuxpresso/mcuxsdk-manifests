@@ -18,7 +18,7 @@ manifest:
     - middleware
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
   - name: mcux-mcmgr
     revision: a0622ff2d0ed5597b26a291d2eededc83dac6e28
     path: mcuxsdk/middleware/multicore/mcmgr
@@ -28,7 +28,7 @@ manifest:
     - middleware
     userdata:
       owner: tomas.galbicka@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
   - name: rpmsg-lite
     revision: d8903f84eef9743dd4772ba014128840e8686e22
     path: mcuxsdk/middleware/multicore/rpmsg-lite
@@ -38,7 +38,7 @@ manifest:
     - middleware
     userdata:
       owner: tomas.galbicka@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
   - name: erpc
     revision: 0fb3e34cae1e03f409df2b2c3e2e7ecbcda97963
     path: mcuxsdk/middleware/multicore/erpc
@@ -48,4 +48,4 @@ manifest:
     - middleware
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main

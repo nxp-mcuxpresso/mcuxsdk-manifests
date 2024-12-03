@@ -14,9 +14,9 @@ manifest:
   - name: els_pkc
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
     path: mcuxsdk/components/els_pkc
-    revision: 0c8a0724aec38d663fd67a1acf6be4c3fffa9f3c
+    revision: 3609ef315d1dfb428fbb8719d0c6c8692bdfe1b3
     url: https://github.com/NXP/els_pkc
     groups:
     - security
@@ -24,7 +24,7 @@ manifest:
   - name: se_hostlib
     userdata:
       owner: null
-      track_branch: release/24.12.00
+      track_branch: mcux_develop
     path: mcuxsdk/middleware/se_hostlib
     revision: 89daa90316f650b21f271cc577db049eb79dedca
     submodules: true
@@ -33,7 +33,7 @@ manifest:
   - name: secure-subsystem
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: release/24.12.00
+      track_branch: mcux_main
     path: mcuxsdk/middleware/secure-subsystem
     revision: 7ae309dfdd280895823221d942a21a3ad3c3fa74
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
@@ -42,7 +42,7 @@ manifest:
   - name: edgelock
     userdata:
       owner: vit.solcik@nxp.com
-      track_branch: release/24.12.00
+      track_branch: mcux_main
     path: mcuxsdk/firmware/edgelock
     revision: 7c14bf76d7b2c7d08575d1c4339db94a4f0289fe
     repo-path: mcux-edgelock
@@ -52,19 +52,19 @@ manifest:
   - name: mbedtls
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: release/24.12.00
+      track_branch: feature/MCUX-69463-mbedtls-sdk-next-migration
     path: mcuxsdk/middleware/mbedtls
-    revision: 47a499cfc8af64d1f9bcc9f7c6f1ddd085c6b867
+    revision: 3b077a4f16afa69c50449af844eee4ddc2b1fac4
     groups:
     - mbedtls
     - security
   - name: mbedtls3x
     userdata:
       owner: ruchika.gupta_1@nxp.com
-      dev_branch: mcux_main
-      track_branch: release/24.12.00
+      dev_branch: mbedtls-3.6.x-dev
+      track_branch: feature/MCUX-69464-migrate-mbedtls3x
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 8f99a05ecc4c158d08e5ecfbd99e744d5a0a1d0f
+    revision: 1b59ab6e2ac3f5c40c9c671abd6dbd223d5dd5c1
     groups:
     - mbedtls3x
     - security
@@ -82,7 +82,7 @@ manifest:
   - name: tfm
     userdata:
       owner: ruchika.gupta_1@nxp.com
-      track_branch: release/24.12.00
+      track_branch: develop/tf-m-1.8
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
@@ -92,7 +92,7 @@ manifest:
   - name: psa_crypto_driver
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main-dev
     path: mcuxsdk/components/psa_crypto_driver
     revision: 40023c843a617205cfe48778eb49297fe7dec256
     url: https://github.com/NXP/psa_crypto_driver
@@ -102,9 +102,9 @@ manifest:
   - name: mmcau
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: release/24.12.00
+      track_branch: feature/MCUX-69470-migrate-mmcau
     path: mcuxsdk/middleware/mmcau
-    revision: 82a2a665de93989160c5c4347880634584ce1b0d
+    revision: f94cbcae9ea0de3796f19674c2acede847191c7f
     url: https://github.com/nxp-mcuxpresso/mcux-mmcau
     groups:
     - mmcau
@@ -112,7 +112,7 @@ manifest:
   - name: mbedcrypto
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: release/24.12.00
+      track_branch: develop/tf-m-1.8
     path: mcuxsdk/middleware/tfm/mbed-crypto
     remote: nxp
     repo-path: nxp_mbedtls
@@ -123,7 +123,7 @@ manifest:
   - name: psa-arch-tests
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: release/24.12.00
+      track_branch: develop/tf-m-1.8
     path: mcuxsdk/middleware/tfm/psa-arch-tests
     remote: nxp
     repo-path: nxp_psa_arch_test
@@ -134,7 +134,7 @@ manifest:
   - name: tf-m-tests
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: release/24.12.00
+      track_branch: develop/tf-m-1.8
     path: mcuxsdk/middleware/tfm/tf-m-tests
     remote: nxp-mcuxpresso
     repo-path: mcux-tf-m-tests
@@ -145,7 +145,7 @@ manifest:
   - name: qcbor
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: release/24.12.00
+      track_branch: master
     path: mcuxsdk/middleware/tfm/qcbor
     revision: 751d36583a9ce1a640900c57e13c9b6b8f3a2ba2
     remote: qcbor_upstream

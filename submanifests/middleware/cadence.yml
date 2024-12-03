@@ -12,7 +12,7 @@ manifest:
   - name: multicore-xaf
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
     path: mcuxsdk/middleware/cadence/multicore-xaf
     revision: 1eebf8c8af058fa21ae2db815614651694ca58c0
     groups:
@@ -20,7 +20,7 @@ manifest:
   - name: dsp-codecs
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
     path: mcuxsdk/middleware/cadence/codecs
     revision: d621f172254fe4c27e7fe5ead9e907a73e808ac3
     groups:
@@ -28,7 +28,7 @@ manifest:
   - name: naturedsp
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
     path: mcuxsdk/middleware/cadence/naturedsp
     revision: c2ca6d6d3116668cf043e6c7d30ee3f703caadcc
     groups:
@@ -36,7 +36,7 @@ manifest:
   - name: nnlib
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: release/24.12.00
+      track_branch: main
     path: mcuxsdk/middleware/cadence/nnlib
     revision: 58de8f7519cd48117a752248794e7e295ddaff04
     groups:

@@ -21,7 +21,7 @@ manifest:
   - name: cjson
     userdata:
       owner: yumeng.wang@nxp.com
-      track_branch: release/24.12.00
+      track_branch: mcux_main
     revision: afa391ffa15c1adc148e1c22faad7f219ce57a20
     path: mcuxsdk/middleware/cjson
     url: https://github.com/nxp-mcuxpresso/cJSON/
