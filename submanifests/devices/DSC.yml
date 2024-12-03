@@ -9,13 +9,10 @@ manifest:
   defaults:
     remote: nxp-mcuxpresso
   projects:
-  - name: mcuboot_opensource
-    repo-path: mcuboot
-    revision: f7bdc1aa7818d788efc5981a816a54e9c3dc8ec2
-    path: mcuxsdk/middleware/mcuboot_opensource
-    userdata:
-      owner: petr.buchta@nxp.com
-      track_branch: release/24.12.00
+  - name: mcux-devices-dsc
+    revision: d8313dc19d76af3a679b383266f62b1b0b98ee63
+    path: mcuxsdk/devices/DSC
     groups:
-    - mcuboot
-    - middleware
+    - core
+    userdata:
+      track_branch: release/24.12.00

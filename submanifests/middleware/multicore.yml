@@ -18,9 +18,9 @@ manifest:
     - middleware
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: mcux-mcmgr
-    revision: 93d4581bf7dd8376e89267f8438f5a102f811751
+    revision: a0622ff2d0ed5597b26a291d2eededc83dac6e28
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
@@ -28,9 +28,9 @@ manifest:
     - middleware
     userdata:
       owner: tomas.galbicka@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: rpmsg-lite
-    revision: afb80c95c4b90caaad79d28dbaf40df9d1d76ad6
+    revision: d8903f84eef9743dd4772ba014128840e8686e22
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
@@ -38,9 +38,9 @@ manifest:
     - middleware
     userdata:
       owner: tomas.galbicka@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: erpc
-    revision: b2a8a282fb57ba3868c95321abec5ab00aa4759f
+    revision: 0fb3e34cae1e03f409df2b2c3e2e7ecbcda97963
     path: mcuxsdk/middleware/multicore/erpc
     url: https://github.com/EmbeddedRPC/erpc
     groups:
@@ -48,4 +48,4 @@ manifest:
     - middleware
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00

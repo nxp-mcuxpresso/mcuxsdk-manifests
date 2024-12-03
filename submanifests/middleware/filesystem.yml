@@ -16,12 +16,12 @@ manifest:
     - fatfs
     - middleware
     userdata:
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: mcux-sdk-middleware-sdmmc
     userdata:
       owner: yangbo.lu@nxp.com
-      track_branch: release/24.12.00-pvw2
-    revision: cb83ea4241247ead08a5d83c7acb7694fde57a81
+      track_branch: release/24.12.00
+    revision: dd59aeea7adb6ac14a2cca6619cd4ffe0d6d1bad
     path: mcuxsdk/middleware/sdmmc
     groups:
     - sdmmc
@@ -29,7 +29,7 @@ manifest:
   - name: dhara
     userdata:
       owner: null
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/middleware/dhara
     revision: 6bf699a21f56a5405acbf0100d2e2fa7a9e457ec
     groups:
@@ -37,7 +37,7 @@ manifest:
   - name: littlefs
     userdata:
       owner: andrej.trnkoci@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/middleware/littlefs
     revision: deba98015887559b4b89e1d0ed5273890231b66a
     groups:

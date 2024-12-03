@@ -12,9 +12,9 @@ manifest:
   - name: touch
     userdata:
       owner: pavel.rech@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/middleware/touch
-    revision: bc69238c81b329c3c349ec0b8e4ff0e80d601b27
+    revision: 7f4ea5c0683f8c9ef692dbf852d24ba4bfef0a57
     repo-path: mcux-touch
     groups:
     - touch

@@ -12,9 +12,9 @@ manifest:
   - name: metering
     userdata:
       owner: pavel.rech@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/middleware/metering
-    revision: 2f58b8ca807010c4254706480936f678a8ad16e0
+    revision: a3727d42e384cc209016d2d51b7efff8cba785f3
     repo-path: mcux-metering
     groups:
     - metering

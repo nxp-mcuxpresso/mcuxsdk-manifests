@@ -11,26 +11,26 @@ manifest:
   projects:
   - name: freertos-kernel
     path: mcuxsdk/rtos/freertos/freertos-kernel
-    revision: a558b57911db99a6ac4bc71f0c28ec3a07ec5a1b
+    revision: db72462005b1145638494b9b31b6a0d2e23e7f33
     groups:
     - freertos-kernel
     - rtos
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: mcux-freertos-drivers
     userdata:
       owner: david.jurajda@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/freertos-drivers
-    revision: b7eae3d15348fc1d772d27d1d758aacd44ffbbfd
+    revision: 7ec5840cbc58be80fec92a2d5d8ccd4f064741fb
     groups:
     - rtos
     - freertos
   - name: corepkcs11
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: mcux_main
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/corepkcs11
     revision: 60cfafe379011fc3f6d8e50d18098d0febdc64ee
     groups:
@@ -39,7 +39,7 @@ manifest:
   - name: coremqtt
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/coremqtt
     revision: 22a21dae0cf083e0c54f1762a4a95f3f7abbe60e
     groups:
@@ -48,7 +48,7 @@ manifest:
   - name: corejson
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/corejson
     revision: 87afed15ed319663e27fe269d8ffdc39b6bc1df9
     groups:
@@ -57,7 +57,7 @@ manifest:
   - name: corehttp
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/corehttp
     revision: a8f5481b503ad5f5325a71ccdc29cf8095376077
     groups:
@@ -66,7 +66,7 @@ manifest:
   - name: backoffalgorithm
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/backoffalgorithm
     revision: c449dc1eb8a82f3c50fb327cadd97954224f2553
     groups:
@@ -75,7 +75,7 @@ manifest:
   - name: freertos-plus-tcp
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp
     revision: 3fbb5ebc315ad8dd9b622878a44b3d8cf21565bf
     groups:
@@ -83,7 +83,7 @@ manifest:
   - name: coremqtt-agent
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
     path: mcuxsdk/rtos/freertos/coremqtt-agent
     revision: 223e80a64f706e9a8018a65e2bf9b245bd27b7ad
     groups:

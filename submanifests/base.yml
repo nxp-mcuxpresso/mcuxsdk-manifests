@@ -12,7 +12,7 @@ manifest:
   - name: bifrost
     path: bifrost
     remote: nxp-zephyr
-    revision: 2e5513fa5557cb4104cb84633d2303a15ca35f32
+    revision: 9d7384cbecd58e98a32db5033d1d212202fe00d9
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -21,19 +21,20 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: ad7edf9eb30cccdb9528867916daa94612587564
+    revision: 1680a5ea7c3e6e36ac9bad2aeeabf46a7552226c
     west-commands: scripts/west_commands.yml
     groups:
     - core
     userdata:
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: CMSIS
+    repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
-    revision: 532f512a02f339cacdef75e9bde66a8bd7b4f98f
+    revision: c3319a16588d05036a9e08cf59a92634a5a0e5dd
     groups:
     - core
     userdata:
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: mcux-soc-svd
     path: mcuxsdk/svd
     revision: main
@@ -42,34 +43,34 @@ manifest:
     userdata:
       track_branch: main
   - name: mcu-sdk-examples
+    revision: cd243662d6c601f40cfbefec1012a350138250c9
     repo-path: mcuxsdk-examples
-    revision: 65ab90181658969952061e0d2b528abcb7f95831
     path: mcuxsdk/examples
     groups:
     - examples
     userdata:
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: c1bacd7aedd8057cfc4221bf68339799795bb46b
+    revision: ac2be0a2494f4d9ccc004adae9810cef49628563
     path: mcuxsdk/components
     groups:
     - components
     userdata:
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 79d8fcb68165fb1293d67b4a524e1e52cd0bf36f
+    revision: 4ea123e7edad671cae192e6043f6417c3ccb550b
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
     - doc
     userdata:
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/24.12.00
   - name: mcuxsdk-tool-data
-    revision: dedba0fa33f0ed76b9d32f847de317394dc5573e
+    revision: 777a3f705c83b67a867563b23b211949d35e3a83
     path: mcuxsdk/tool_data
     groups:
     - core
     userdata:
-      track_branch: main
+      track_branch: release/24.12.00
