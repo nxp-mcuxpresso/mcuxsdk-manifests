@@ -21,7 +21,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 253da74611f91c489bb9ea880831115a9ac7278d
+    revision: 0d1ae6b6bfad9fa877d4244741f6eae6db80035a
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -59,7 +59,7 @@ manifest:
       track_branch: release/24.12.00
   - name: MIR
     path: mcuxsdk/MIR
-    revision: ec366d4b66caffe46b0eb6ad3ccf79067491b896
+    revision: 6ed9606fd87036c37040d1583e0fb34c90573c8e
     groups:
     - bifrost
     userdata:
@@ -88,7 +88,7 @@ manifest:
       track_branch: release/24.12.00
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 6da46aaf1e9c62290a9a1c147c31a21676528099
+    revision: 34db5b56aa7ee0214066b536c7234d982e4999a7
     groups:
     - bifrost
     userdata:
