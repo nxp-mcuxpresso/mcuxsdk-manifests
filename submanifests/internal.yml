@@ -59,7 +59,7 @@ manifest:
       track_branch: develop/mcu_sdk_next
   - name: MIR
     path: mcuxsdk/MIR
-    revision: ec366d4b66caffe46b0eb6ad3ccf79067491b896
+    revision: 6ed9606fd87036c37040d1583e0fb34c90573c8e
     groups:
     - bifrost
     userdata:
@@ -88,7 +88,7 @@ manifest:
       track_branch: develop/main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 1104fe95ae09298dba626365d341d448c3725497
+    revision: 83f1a2d639d82328ac9b9635d7716629fd4d805f
     groups:
     - bifrost
     userdata:
