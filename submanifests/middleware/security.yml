@@ -35,7 +35,7 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/secure-subsystem
-    revision: 7ae309dfdd280895823221d942a21a3ad3c3fa74
+    revision: 890c57983822fef247088108d4c7a41457c140c3
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
