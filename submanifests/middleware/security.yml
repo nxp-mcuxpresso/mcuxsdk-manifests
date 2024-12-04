@@ -82,17 +82,17 @@ manifest:
     - security
   - name: tfm
     userdata:
-      owner: ruchika.gupta_1@nxp.com
+      owner: waqar.tahir@nxp.com
       track_branch: develop/tf-m-1.8
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: 5b65729badf7723bd42bf9ead44fb2b9c2489ab2
+    revision: 1017be625b98ddfb563a7c33dbe58717e705186e
     groups:
     - tfm
   - name: psa_crypto_driver
     userdata:
-      owner: waqar.tahir@nxp.com
+      owner: vit.chmelar@nxp.com
       track_branch: main-dev
     path: mcuxsdk/components/psa_crypto_driver
     revision: 40023c843a617205cfe48778eb49297fe7dec256
