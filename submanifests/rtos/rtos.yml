@@ -24,7 +24,7 @@ manifest:
       owner: david.jurajda@nxp.com
       track_branch: main
     path: mcuxsdk/rtos/freertos/freertos-drivers
-    revision: 7ec5840cbc58be80fec92a2d5d8ccd4f064741fb
+    revision: 3c5f30d7547b839ea3933364dec44b714b5a306d
     groups:
     - rtos
     - freertos
