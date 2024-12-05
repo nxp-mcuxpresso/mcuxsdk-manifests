@@ -14,7 +14,7 @@ manifest:
       owner: josef.tkadlec@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/motor_control
-    revision: 5b0baa1b9fbc01f7e961bdfadfc96b765e27da8c
+    revision: 255ab17f2fa217f912f6c176a6f3d0a7956b0467
     repo-path: mcux-motor_control
     groups:
     - motor_control
