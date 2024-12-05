@@ -30,7 +30,7 @@ manifest:
       owner: tomas.galbicka@nxp.com
       track_branch: release/24.12.00
   - name: rpmsg-lite
-    revision: d8903f84eef9743dd4772ba014128840e8686e22
+    revision: 90831dc138a847c44b81a6b4881091d142626728
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
