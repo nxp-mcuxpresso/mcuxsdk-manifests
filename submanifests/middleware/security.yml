@@ -62,10 +62,12 @@ manifest:
   - name: mbedtls3x
     userdata:
       owner: ruchika.gupta_1@nxp.com
-      dev_branch: mbedtls-3.6.x-dev
+      dev_branch: mcux_main
       track_branch: feature/MCUX-69464-migrate-mbedtls3x
+    remote: nxp
+    repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 1b59ab6e2ac3f5c40c9c671abd6dbd223d5dd5c1
+    revision: 8f99a05ecc4c158d08e5ecfbd99e744d5a0a1d0f
     groups:
     - mbedtls3x
     - security
