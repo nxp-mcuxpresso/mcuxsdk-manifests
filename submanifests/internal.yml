@@ -150,6 +150,7 @@ manifest:
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
+    - bluetooth_private
   - name: ble_cs_algo_private
     userdata:
       owner: mihai-octavian.urzica@nxp.com
@@ -159,3 +160,4 @@ manifest:
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
     groups:
     - bifrost
+    - ble_cs_algo_private
