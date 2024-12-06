@@ -20,7 +20,7 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/24.12.00
   - name: mcux-mcmgr
-    revision: a0622ff2d0ed5597b26a291d2eededc83dac6e28
+    revision: aae56f61e57863c2290ef7b403d48ddff5b8d591
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
