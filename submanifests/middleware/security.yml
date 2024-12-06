@@ -62,8 +62,10 @@ manifest:
     userdata:
       owner: ruchika.gupta_1@nxp.com
       dev_branch: mcux_main
-      track_branch: release/24.12.00
+      track_branch: release/24.12.00_mbedtls3x
     path: mcuxsdk/middleware/mbedtls3x
+    remote: nxp
+    repo-path: nxp_mbedtls
     revision: 8f99a05ecc4c158d08e5ecfbd99e744d5a0a1d0f
     groups:
     - mbedtls3x
@@ -112,7 +114,7 @@ manifest:
   - name: mbedcrypto
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: release/24.12.00
+      track_branch: release/24.12.00_mbedcrypto
     path: mcuxsdk/middleware/tfm/mbed-crypto
     remote: nxp
     repo-path: nxp_mbedtls
