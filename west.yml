@@ -11,6 +11,8 @@ manifest:
   group-filter:
   - -optional
   - -bifrost
+  - -ble_cs_algo_private
+  - -bluetooth_private
   self:
     path: manifests
     west-commands: scripts/west_commands.yml
