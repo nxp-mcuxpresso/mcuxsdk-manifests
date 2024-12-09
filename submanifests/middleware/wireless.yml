@@ -13,7 +13,7 @@ manifest:
     userdata:
       owner: nicolas.collonville@nxp.com
       track_branch: main
-    revision: 65210fc7f8b5160de43cfdbe389e87b9bd60100c
+    revision: a1e94c9c16d747cb9bd29fe33167cc6cdec845e5
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -37,7 +37,7 @@ manifest:
       owner: damien.lefebvre@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 34bb9b753f596ebe014c6bcb8dac86e3e03c8188
+    revision: 1d867d46334c8f60a00eaffd531811690bfeccdc
     groups:
     - ble_controller
     - middleware
@@ -48,7 +48,7 @@ manifest:
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/master
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 6067927d726b5f7484e0ff9672fe322678001f76
+    revision: b419ec63ece8646bf046fbce3a56d1e470e47578
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -60,7 +60,7 @@ manifest:
       owner: john.vandermeer@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: ec3b3756b9c1815fecce649ac47676decdd5dc06
+    revision: 2452cbb17691fd008b97db5027ffcb808aab3d4d
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -81,7 +81,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: public_main
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: c4b099311a7649d04ef0989b57a389db52109ea0
+    revision: fd0e1e48e0aa147d73755faca9b247d55f914861
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -92,7 +92,7 @@ manifest:
       owner: nirav.agrawal@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: 39336fd9968d71833c5061bd63d065880edc96c2
+    revision: 62e04083626c5ca3549fa48a72a5ce600f28b2de
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
@@ -102,7 +102,7 @@ manifest:
       owner: null
       track_branch: wifi_nxp_gh
     path: mcuxsdk/middleware/wifi_nxp
-    revision: d7e5c2df5a0f9ca7e852733a8ff78463f9ff3ffc
+    revision: 92723346fcb8fd58c6616faa5a7e339a2e30c657
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -111,7 +111,7 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: fw_bin_gh
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 5549e3be59deae9f01a90029a2a70a3c40399c68
+    revision: 248cf4ae278725ea18ae2d0ad3823ca9d4754bc8
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -121,7 +121,7 @@ manifest:
       owner: alexandru.porosanu@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: fb38af224b90249de9a81917deea233c64f7fe90
+    revision: 1dbc7017af189f28b57e4a8cdeb4375ecf658840
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
@@ -130,7 +130,7 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: wpa_supplicant_rtos_gh
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 1d1239b8383b762933fe831ea6be5b58ac7eec2b
+    revision: f57b2392d1ca3040cead77da4908f41a67b4bb97
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
