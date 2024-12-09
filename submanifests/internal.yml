@@ -74,7 +74,7 @@ manifest:
       track_branch: release/24.12.00
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
-    revision: 0fad0bf3d64cbb9d2fd336eb6977cd6c3c13dedc
+    revision: e562c50d62819fcd12ec9bcc173dd3873956f031
     groups:
     - bifrost
     userdata:
@@ -113,7 +113,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: a62d4f162d7ddc375523ffa68fd99dd43a319c99
+    revision: 3740d9e2b876cb9761d1429e3be84787a45ab643
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost

@@ -77,7 +77,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 8db254ad698b7d31881991894e765d8cd5b0d816
+    revision: c1fbe06597d6f3d80ddf48606e87d996f221acc4
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -98,7 +98,7 @@ manifest:
       owner: null
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 29ab10735b94d92572d0af7cdb5968df91e22c17
+    revision: 7e1f9c3ec21112a49a39fc91cc5787c72e6443eb
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -117,7 +117,7 @@ manifest:
       owner: alexandru.porosanu@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: fa804a6c1f159bd23fa86e56514b5bd250c97423
+    revision: e344fdddb57c10011256f7d4a45a8a606cc9da00
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
