@@ -37,7 +37,7 @@ manifest:
       owner: damien.lefebvre@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 1d867d46334c8f60a00eaffd531811690bfeccdc
+    revision: 5e4aa21924f333353044d9d28157746004557267
     groups:
     - ble_controller
     - middleware
@@ -48,7 +48,7 @@ manifest:
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/master
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: b419ec63ece8646bf046fbce3a56d1e470e47578
+    revision: b8b6bbcc4458a0bb1f3fe0fe346e86a23867bb65
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -81,7 +81,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: public_main
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: fd0e1e48e0aa147d73755faca9b247d55f914861
+    revision: c48f9afa3f832d679aad262b0131597a13a5765d
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -102,7 +102,7 @@ manifest:
       owner: null
       track_branch: wifi_nxp_gh
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 92723346fcb8fd58c6616faa5a7e339a2e30c657
+    revision: c88a31195512090383d4a8a01b0911880868b4af
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
