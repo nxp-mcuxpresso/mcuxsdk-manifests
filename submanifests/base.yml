@@ -67,7 +67,7 @@ manifest:
     userdata:
       track_branch: release/24.12.00-pvw2
   - name: mcuxsdk-tool-data
-    revision: ae7f856b98cbf12e95bd05bdef68aa037af032fc
+    revision: dedba0fa33f0ed76b9d32f847de317394dc5573e
     path: mcuxsdk/tool_data
     groups:
     - core
