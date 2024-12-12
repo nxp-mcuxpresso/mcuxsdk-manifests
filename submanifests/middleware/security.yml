@@ -14,9 +14,9 @@ manifest:
   - name: els_pkc
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: main
+      track_branch: mcux_main
     path: mcuxsdk/components/els_pkc
-    revision: 3609ef315d1dfb428fbb8719d0c6c8692bdfe1b3
+    revision: 188ba34d7e0655bab58cd68850abc3ef71f6f1fc
     url: https://github.com/NXP/els_pkc
     groups:
     - security
