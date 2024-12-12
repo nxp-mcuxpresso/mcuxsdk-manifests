@@ -54,7 +54,7 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/mbedtls
-    revision: 47a499cfc8af64d1f9bcc9f7c6f1ddd085c6b867
+    revision: c344c3373c1c50a79c1add0ab14df2591d0bf8be
     groups:
     - mbedtls
     - security
