@@ -33,7 +33,7 @@ manifest:
       owner: andreicatalin.ilie@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/vglite/vglite_sdk
-    revision: 1b9ab206292586eebbf98c0ef9f3978ab2204bf9
+    revision: 571f23edd2dca4fc522dd16b14da13a84d57968f
     groups:
     - vglite
     - middleware
