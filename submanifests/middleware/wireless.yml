@@ -98,7 +98,7 @@ manifest:
       owner: null
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 7e1f9c3ec21112a49a39fc91cc5787c72e6443eb
+    revision: 3028a335d7117b79340885e14bf136c90c346926
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -126,7 +126,7 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 59bdc3d73193aa0e0eac24c98ce2e4a0ccb1229b
+    revision: 1a75f370672b8d863a6169657db59aff48c5e8d7
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
