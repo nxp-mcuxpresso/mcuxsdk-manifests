@@ -72,7 +72,7 @@ manifest:
       owner: junjie.liu@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/edgefast_bluetooth
-    revision: 4e03855d45a6dac637b513162cedc8f6633ef35a
+    revision: 9eda756fb681fd24cd4fcd28b54f7b5cb94128f0
     repo-path: mcux-sdk-middleware-edgefast-bluetooth
     groups:
     - edgefast_bt_ble
