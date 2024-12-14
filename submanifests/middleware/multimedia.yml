@@ -42,7 +42,7 @@ manifest:
       owner: cristianmarian.stoica@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/lvgl
-    revision: 477de75babe6de75882330aab30f363e58301cba
+    revision: 6db5f1d71e1e32796702c1e877b0b6da22019db3
     groups:
     - lvgl
     - middleware
