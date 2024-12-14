@@ -64,14 +64,6 @@ manifest:
     - bifrost
     userdata:
       track_branch: master
-  - name: migrate
-    revision: 3ba1bf57e0f1e0c32186c1457e7fd21dcc68fdf3
-    path: mcuxsdk/migrate
-    west-commands: scripts/west_commands.yml
-    groups:
-    - bifrost
-    userdata:
-      track_branch: release/24.12.00
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
     revision: e562c50d62819fcd12ec9bcc173dd3873956f031
