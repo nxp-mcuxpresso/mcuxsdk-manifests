@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-sdk-middleware-multicore
-    revision: 4cae45bd63d969ed0e44f7d4e3ac64c800e68eac
+    revision: 8409ec2604c2befb05bbcd78ed8d89871972f789
     path: mcuxsdk/middleware/multicore
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-multicore
     groups:
@@ -20,7 +20,7 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/24.12.00
   - name: mcux-mcmgr
-    revision: aae56f61e57863c2290ef7b403d48ddff5b8d591
+    revision: 6c7b0a29e3ef09497db0fe83fc7d766557176994
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
