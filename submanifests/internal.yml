@@ -50,7 +50,7 @@ manifest:
       track_branch: master
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: e8c2530f78bd08836999c501ac0252c37539ed8c
+    revision: b2ed619d2ca0b7df0ff3939523486b538b0c528a
     submodules:
     - path: modules/manifest_schema
     groups:
