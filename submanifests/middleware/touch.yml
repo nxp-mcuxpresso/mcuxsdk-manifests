@@ -14,7 +14,7 @@ manifest:
       owner: pavel.rech@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/touch
-    revision: 7f4ea5c0683f8c9ef692dbf852d24ba4bfef0a57
+    revision: d73accac805c7095284de3b49194d0706689fa64
     repo-path: mcux-touch
     groups:
     - touch

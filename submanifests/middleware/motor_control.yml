@@ -14,7 +14,7 @@ manifest:
       owner: josef.tkadlec@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/motor_control
-    revision: 255ab17f2fa217f912f6c176a6f3d0a7956b0467
+    revision: b901cac7d74ad29ca117f91f6c53f05acd07e483
     repo-path: mcux-motor_control
     groups:
     - motor_control
@@ -23,7 +23,7 @@ manifest:
       owner: pavel.rech@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/rtcesl
-    revision: 3d3a531d260300340710481a7c9957aef53c7d08
+    revision: 4d6cb3ef0409eb4b956efb585022dc2497a762ea
     repo-path: rtcesl
     groups:
     - rtcesl
