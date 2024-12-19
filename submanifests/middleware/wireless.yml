@@ -98,7 +98,7 @@ manifest:
       owner: null
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 312e55830e0f879c56c38b06ac8eb6b44eed4f47
+    revision: f0ac1a07a5a9c2e3e0574e2a191789350e7e7421
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
