@@ -78,6 +78,14 @@ manifest:
     - bifrost
     userdata:
       track_branch: develop/main
+  - name: ble-controller-snps-int
+    path: mcuxsdk/middleware/wireless/snps_ll_private
+    repo-path: ble-controller-int-snps
+    revision: 1b91fab16708445361f3800a583b39f3896c4bcd
+    groups:
+    - bifrost
+    userdata:
+      track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
     revision: 54ae11bb01c71d8d7d37b69f9386436293d75f4b
@@ -87,7 +95,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 2bd95ae046e62745d3ac9cd52b16cce2bd60c051
+    revision: 45c610c3ad261252de5f36c91103aefec2285b5f
     groups:
     - bifrost
     userdata:
