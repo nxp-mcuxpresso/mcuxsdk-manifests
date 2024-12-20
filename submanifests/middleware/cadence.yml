@@ -14,7 +14,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/cadence/multicore-xaf
-    revision: 1eebf8c8af058fa21ae2db815614651694ca58c0
+    revision: 830bfed6a630a65cfd3698181cb31ef248f24028
     groups:
     - bifrost
   - name: dsp-codecs
