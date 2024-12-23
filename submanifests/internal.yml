@@ -80,7 +80,7 @@ manifest:
       track_branch: develop/main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 46e63d2ceba8159a276d5b80b315cdd40d73c56a
+    revision: 74ac054f4faca4d8fd724cc36cdddd25ee0009b0
     groups:
     - bifrost
     userdata:
