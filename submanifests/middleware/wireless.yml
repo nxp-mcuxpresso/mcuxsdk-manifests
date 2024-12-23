@@ -126,7 +126,7 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 1a75f370672b8d863a6169657db59aff48c5e8d7
+    revision: 29d7571348f1815087b0a3181ab46d769c7f6b5f
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
