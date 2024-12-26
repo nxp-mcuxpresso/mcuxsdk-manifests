@@ -21,7 +21,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: b3b29159ee752f271a72ef7ead6ed5e2add5cf2f
+    revision: 99d670f4eea44bd8aa480005d61f3063a914d755
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -73,7 +73,7 @@ manifest:
       track_branch: master
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: f95e72e73de2f1ddc590c24b7588fa6bffeffe86
+    revision: 5936ccb468ac7c424effc45f5409844f1430c692
     groups:
     - bifrost
     userdata:
@@ -88,7 +88,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: fadcbc71174e6e7b1d5dbbb17451cb7ad55d346b
+    revision: ad637564aa5ee7af555db58cd3162d95605abd65
     groups:
     - bifrost
     userdata:
@@ -120,7 +120,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 8c50c329cbbfcf62bb667bae7dc0fe1648fbd160
+    revision: 25b61912c16796b27a6eb949455f7dc0bcf81800
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
