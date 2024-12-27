@@ -55,13 +55,13 @@ manifest:
       track_branch: main
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: a763149c4f892e83a883c33801a9f71f4156763c
+    revision: 40a4943aa38bb42ebe78c3493423d6065ede500f
     path: mcuxsdk/components
     groups:
     - components
     - ble_nxp
     userdata:
-      track_branch: dev/rex.chen/NH_txpwr
+      track_branch: mcux_main
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
     revision: 41e82efc82e834a7db6d5a4cdea5126631782460
