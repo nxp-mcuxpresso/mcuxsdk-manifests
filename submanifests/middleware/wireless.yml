@@ -102,7 +102,7 @@ manifest:
       owner: null
       track_branch: wifi_nxp_gh
     path: mcuxsdk/middleware/wifi_nxp
-    revision: dcdc7f1fca896f7f432acf715d79d9693f245560
+    revision: 15dd9b65cf797449ffdc0b6c7e4cdb8854dab771
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
