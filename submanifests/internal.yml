@@ -73,7 +73,7 @@ manifest:
       track_branch: master
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: 5936ccb468ac7c424effc45f5409844f1430c692
+    revision: 9b6fee86c16d19b6c34ff2f22178d94702c9a9ad
     groups:
     - bifrost
     userdata:
@@ -120,7 +120,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 25b61912c16796b27a6eb949455f7dc0bcf81800
+    revision: 0b0519228e6e948c2d4b7b030b65fcde58740c65
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
