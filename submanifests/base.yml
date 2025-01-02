@@ -43,7 +43,7 @@ manifest:
     userdata:
       track_branch: main
   - name: mcu-sdk-examples
-    revision: d840c39395ce1c3da35f8e0b707ad3675209e68d
+    revision: 384fa1fd57981a1bace597589350ff0bcb5a6f7d
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
@@ -60,7 +60,7 @@ manifest:
       track_branch: release/24.12.00
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 121c4e1ffda7a8fd8e27bba8e93abc268987936e
+    revision: 590febbc87aba21b05934b1e455cd4e1fa57dae1
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
