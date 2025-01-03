@@ -37,7 +37,7 @@ manifest:
       owner: damien.lefebvre@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 4b62b9e5a13833db59868a83253042329b6407c1
+    revision: f3b7eef8e650ae1693cae468869cf53b95fb4b33
     groups:
     - ble_controller
     - middleware
@@ -81,7 +81,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: public_main
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: de38f796cdcad3170cb984b7a784d27b218fb7d8
+    revision: 7e60dcd8cf2f88cd56e2bf604fe10936b9ab6f47
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
