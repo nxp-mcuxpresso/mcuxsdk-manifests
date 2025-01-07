@@ -21,7 +21,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 3bcf410790113d9841ccc166eb14e390fea52aea
+    revision: afa56f6756c80de273cc71c7ef0318a8de3dc7f0
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -73,7 +73,7 @@ manifest:
       track_branch: master
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: 92f6379f860669dde62a7001f3084bbfb550b99c
+    revision: 8e14bddaaade9fd07316081df6d90f433c8dca3e
     groups:
     - bifrost
     userdata:
@@ -105,7 +105,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 1007b4341ce5943c5be84686fcb873b897228242
+    revision: 238c63dd073deefb1a3c85c4b9f17325364c051d
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -131,7 +131,7 @@ manifest:
       owner: mihai-octavian.urzica@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: 71ccfbf48b46166b5d959416660f7f6f578c5882
+    revision: aa0912fced115426e2d1407d466d8e9ba3a0b3f4
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
