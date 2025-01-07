@@ -57,7 +57,7 @@ manifest:
       owner: john.vandermeer@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 9ae77baa3e0c17667ce4f091af6b7ab4d36f0362
+    revision: cb223d442bcbb178bb4fc158205a242a4aeea926
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
