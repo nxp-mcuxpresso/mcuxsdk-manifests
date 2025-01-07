@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: maestro
-    revision: 9dd27754561cc742eebe6dfb1dbebd2eebe181af
+    revision: 05ef474e9799bf5c62638c41bb0b0e10b011b3b6
     path: mcuxsdk/middleware/audio_voice/maestro
     groups:
     - maestro
@@ -62,7 +62,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
-    revision: 931101530a63003e62b04604c787cf0d10c19bce
+    revision: fe186bb0a0c1cb8029a3b1a4fe4fc57747a3c863
     submodules: true
     groups:
     - voice_seeker
@@ -82,7 +82,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/audio_voice/components
-    revision: 9a07da1efec237a599c889b277a2ed1e7e0b9397
+    revision: 3fda7f836eacfe413a567a59e3e5dd89cac17034
     groups:
     - audio-voice-components
     - audio_voice
