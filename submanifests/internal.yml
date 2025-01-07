@@ -59,7 +59,7 @@ manifest:
       track_branch: release/24.12.00
   - name: MIR
     path: mcuxsdk/MIR
-    revision: 369d378c426bdadae95248e9dbbcacbff0432553
+    revision: 0dfb237f0ed549d1910856ab4d0e9f7a9b9647e9
     groups:
     - bifrost
     userdata:
