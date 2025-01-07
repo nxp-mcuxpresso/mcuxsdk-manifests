@@ -98,7 +98,7 @@ manifest:
       owner: null
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 587cb1fcde01ca860d7ad3e308cda44afe4b0a68
+    revision: 97c11b8b8d3cb316ae7a5066908e0ad82c51410e
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -135,6 +135,6 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: release/24.12.00
     path: mcuxsdk/middleware/wireless/coex
-    revision: 4d4458066b04b45d2ded84d015058bdba52c8f7d
+    revision: 434ab19bfd0f11d898e91c9b2452971863e4993f
     groups:
     - coex
