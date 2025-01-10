@@ -95,7 +95,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 45c610c3ad261252de5f36c91103aefec2285b5f
+    revision: a56845646eb54b1845b69a48b2f37e8d62d8e2e0
     groups:
     - bifrost
     userdata:
