@@ -21,7 +21,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: b16b159fd678180bd747c519135648e654664d7f
+    revision: 404c6b52c279adfda74eb7ecf9f6bdb727ab7bd8
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -66,14 +66,14 @@ manifest:
       track_branch: master
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
-    revision: 0736e38f5c1fd4bb2452147e910408110e7197fc
+    revision: 4b54507445b46da7c7730623a7883a269d31de1c
     groups:
     - bifrost
     userdata:
       track_branch: master
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: 8da4e99d5367130fdea3ea774d14158bf389b18b
+    revision: e1530e75a1b569f0e1fe361b94c3860c31b70077
     groups:
     - bifrost
     userdata:
@@ -88,7 +88,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: e659897edbcf0366f6ca127e5fbf52b4cf8dd133
+    revision: 4265c0eedbb93406dc868e381215f7871b4b2564
     groups:
     - bifrost
     userdata:
@@ -120,7 +120,7 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: ffc0df3470405ded2b59de269a103644c5c0807a
+    revision: 1d02e508d47a541311fc80706754283990e1fbe7
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -129,7 +129,7 @@ manifest:
       owner: alexandru.porosanu@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/zigbee_private
-    revision: a26ecd0c64a9b111f9517900bcf703d9180e31e9
+    revision: d0735319fcb1d99011e1b06164fac6a836db8b9f
     repo-path: mcux-sdk-middleware-zigbee-int
     groups:
     - bifrost
@@ -146,7 +146,7 @@ manifest:
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: a57ece900aee29c890cb8d5f0a9a8f1b44aa042a
+    revision: 7eed8065a837e5b5b7806f02d21fdf538a455e01
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
