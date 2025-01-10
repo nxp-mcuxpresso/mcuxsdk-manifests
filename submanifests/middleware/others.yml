@@ -27,3 +27,12 @@ manifest:
     url: https://github.com/nxp-mcuxpresso/cJSON/
     groups:
     - cjson
+  - name: memfault
+    userdata:
+      owner: zejiang.yu@nxp.com
+      track_branch: main
+    revision: 30ad9424f2fc34d085ac5cdcbf2d6a8f0b0db22f
+    path: mcuxsdk/components/debug/memfault-firmware-sdk
+    url: https://github.com/nxp-mcuxpresso/memfault-firmware-sdk
+    groups:
+    - memfault
