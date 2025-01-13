@@ -33,7 +33,7 @@ manifest:
       owner: michal.hanak@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/freemaster
-    revision: 94091abb0aebf263ee29e17435b613d7fe3fc3ca
+    revision: 0c4a7e32c4444ce707ea8a2a3e1385c567c5d6de
     repo-path: mcux-freemaster
     groups:
     - freemaster
