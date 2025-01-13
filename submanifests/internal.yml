@@ -21,7 +21,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 9e4cc39016d7e630793f94769ea1f0506ca1a5bb
+    revision: ea042651f8d316ea2878f8521ccedd254d6edaca
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -80,7 +80,7 @@ manifest:
       track_branch: release/24.12.00
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 073441048b304f05f1349ea4a835de9a96657e2e
+    revision: 88a161d65d0d2ce386d827b6988ece849d89a1a8
     groups:
     - bifrost
     userdata:
