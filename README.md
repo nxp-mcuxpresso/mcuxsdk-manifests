@@ -19,9 +19,9 @@ The [Zephyr west tool](https://docs.zephyrproject.org/latest/guides/west/index.h
 2. Retrieve the full MCUXpresso SDK by using the default *west.yml*. This installs all the available MCUXpresso SDK software repositories, and therefore results in the longest download time.
 3. Users can create a custom version of the  ```west.yml``` optimized for the needs of their own projects.
 
-# Setup
+## Setup
 
-## Installation/Setup
+### Installation/Setup
  - Environment - The easiest way to install all dependencies is using the MCUXpresso Installer. The installer can be installed and launched from the MCUXpresso for VS Code extension. The installer can also be installed from here: https://github.com/nxp-mcuxpresso/vscode-for-mcux/wiki/Dependency-Installation
  - Once the MCUXpresso Installer is launched, install the following:<br>
  **MCUXpresso SDK Developer** <br>
@@ -46,22 +46,22 @@ The [Zephyr west tool](https://docs.zephyrproject.org/latest/guides/west/index.h
  - To install these dependencies manually, follow the steps found on the SDK Documentation https://mcuxpresso.nxp.com/mcuxsdk/latest/html/gsd/installation.html#installation
 
     
-## Cloning the Repo 
+### Cloning the Repo
 - To clone the repo from the CLI run the commands:
     >west init -m https://github.com/nxp-mcuxpresso/mcuxsdk-manifests.git<br>
     west update
     
 
-## Additional steps
+### Additional steps
 - Add ARMGCC_DIR to your environment variables
     - Open your system settings
     - Add ARMGCC_DIR and its path
 
-# Evaluate an example project
+## Evaluate an example project
 Please refer to the guideline [run project](https://mcuxpresso.nxp.com/mcuxsdk/latest/html/gsd/run_project.html).
 
-# Other resources
+## Other resources
 See our [online documentation](https://mcuxpresso.nxp.com/mcuxsdk/latest/html/index.html)
 
-# Contribution
+## Contribution
 The contribution is not open now, will open soon.
