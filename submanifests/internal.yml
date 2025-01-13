@@ -88,14 +88,14 @@ manifest:
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 030ff9e7cbeb81ac4b3144f03124230f9a71bbd9
+    revision: 5bcb0de39bb92f48f968808bcb80bbafe756c3bd
     groups:
     - bifrost
     userdata:
       track_branch: main
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: d8abaa6e0365327514fdfa98a3d09ad59bf88a9b
+    revision: 7ebfb48b8e445dbee32f459c67a5dc72aaf0ce2f
     groups:
     - bifrost
     userdata:
