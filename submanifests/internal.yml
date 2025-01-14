@@ -7,7 +7,7 @@ manifest:
   projects:
   - name: mcu-sdk-test
     path: mcuxsdk/test
-    revision: 668526bb3cbb67a55bacb33cfd810b20965a2d38
+    revision: a4245b49468e03c99075778bd4a40204c1817b45
     groups:
     - bifrost
     userdata:
@@ -88,7 +88,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 5bcb0de39bb92f48f968808bcb80bbafe756c3bd
+    revision: 214a20afbf155f664e39272d539d039af8802d7c
     groups:
     - bifrost
     userdata:
