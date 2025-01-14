@@ -161,3 +161,12 @@ manifest:
     groups:
     - bifrost
     - ble_cs_algo_private
+  - name: executorch
+    userdata:
+      owner: null
+      track_branch: release/mcux
+    path: mcuxsdk/middleware/eiq/executorch
+    revision: 30b9e7eff4201c1516eb4bcf049a644b0c8a73ac
+    repo-path: mcuxsdk-middleware-executorch
+    groups:
+    - bifrost

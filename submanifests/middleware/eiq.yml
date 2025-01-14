@@ -14,7 +14,7 @@ manifest:
       owner: null
       track_branch: main
     path: mcuxsdk/middleware/eiq
-    revision: 61e9cd6ad89b377d33f5b329c2d619661c4eb957
+    revision: debbd5e4bcfbeb7b25687b88d0fb7c34da55a974
     groups:
     - eiq
     - middleware
