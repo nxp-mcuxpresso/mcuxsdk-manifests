@@ -15,7 +15,7 @@ manifest:
     userdata:
       owner: yichang.wang@nxp.com
       track_branch: main
-    revision: 247d40047488a773e60616327ed7e553e2b51825
+    revision: afbf18b54c1c701e62fe677f3c1781516b6bd6b1
     path: mcuxsdk/middleware/usb
     repo-path: mcux-sdk-middleware-usb
     groups:
