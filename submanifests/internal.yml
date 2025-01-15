@@ -1,4 +1,4 @@
-manifest:
+ manifest:
   remotes:
   - name: origin
     url-base: https://github.com/nxp-mcuxpresso
@@ -168,5 +168,13 @@ manifest:
     path: mcuxsdk/middleware/eiq/executorch
     revision: 30b9e7eff4201c1516eb4bcf049a644b0c8a73ac
     repo-path: mcuxsdk-middleware-executorch
+    groups:
+    - bifrost
+  - name: freemaster_internal
+    userdata:
+      owner: michal.hanak@nxp.com
+      track_branch: main
+    path: mcuxsdk/middleware/freemaster_internal
+    revision: main
     groups:
     - bifrost
