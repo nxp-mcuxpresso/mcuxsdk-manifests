@@ -21,7 +21,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: abb89993f18761eb1e26d7b3f06d6a8863180aac
+    revision: 71671d8b1597b79d74264afabcfcb67832de8cc2
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -45,7 +45,7 @@ manifest:
     userdata:
       track_branch: main
   - name: mcu-sdk-examples
-    revision: 5e5a72f25d6f63cf64da8b1f6d155ad5269ad5bb
+    revision: 8c068d6465fe0a362df713e782c32688b57ee625
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
@@ -55,7 +55,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: c1613e82c36d962d1094e88a209acfb6a2278890
+    revision: 581dc5d87bec639a78ff4c073e8e5c12f20490ed
     path: mcuxsdk/components
     groups:
     - components
