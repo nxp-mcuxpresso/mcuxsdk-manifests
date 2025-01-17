@@ -102,7 +102,7 @@ manifest:
       owner: null
       track_branch: wifi_nxp_gh
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 2602f7b04a318f3b4571fb81fd648847c4264f4e
+    revision: ebe56bf3b6f054ec63a5d07d9ff27db788df45f8
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -111,7 +111,7 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: fw_bin_gh
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 248cf4ae278725ea18ae2d0ad3823ca9d4754bc8
+    revision: bf9912fd27f75dd96e6f384b955169b763a2ad4b
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
