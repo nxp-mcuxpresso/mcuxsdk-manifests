@@ -21,8 +21,7 @@ manifest:
     userdata:
       owner: yangbo.lu@nxp.com
       track_branch: mcux_main
-      changed: true
-    revision: pull-requests/58/from
+    revision: cb83ea4241247ead08a5d83c7acb7694fde57a81
     path: mcuxsdk/middleware/sdmmc
     groups:
     - sdmmc
