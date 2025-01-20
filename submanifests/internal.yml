@@ -88,7 +88,7 @@
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: e511ba8eea570893421c90604e65901e1554bc48
+    revision: bb2e0e93e9f3bf5d96e9c67e5670a5f45277538a
     groups:
     - bifrost
     userdata:
