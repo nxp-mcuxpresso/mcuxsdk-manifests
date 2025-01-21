@@ -59,7 +59,7 @@
       track_branch: develop/mcu_sdk_next
   - name: MIR
     path: mcuxsdk/MIR
-    revision: 8f8440e2bebcd5f7f78fbcd0db26460aca904064
+    revision: ba57f86e896c95f5e4a6b514fb401ae891629748
     groups:
     - bifrost
     userdata:
