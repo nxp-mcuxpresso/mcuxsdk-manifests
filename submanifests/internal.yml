@@ -146,7 +146,7 @@
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: b03ac47e67adaf367db94c57d1ecf81b05fabb98
+    revision: 3933dd933c3ffba899b070380a63e911c093c48d
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
