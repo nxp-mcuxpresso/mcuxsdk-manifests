@@ -53,7 +53,7 @@ manifest:
   - name: mbedtls
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: feature/MCUX-69463-mbedtls-sdk-next-migration
+      track_branch: mcux_main
     path: mcuxsdk/middleware/mbedtls
     revision: 3b077a4f16afa69c50449af844eee4ddc2b1fac4
     groups:
@@ -63,7 +63,7 @@ manifest:
     userdata:
       owner: ruchika.gupta_1@nxp.com
       dev_branch: mcux_main
-      track_branch: feature/MCUX-69464-migrate-mbedtls3x
+      track_branch: mcux_main
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
