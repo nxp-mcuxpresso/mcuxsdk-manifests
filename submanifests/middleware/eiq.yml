@@ -32,7 +32,7 @@ manifest:
       owner: null
       track_branch: external_main
     path: mcuxsdk/middleware/eiq/mpp
-    revision: fc4f20e2c4d7a2e4581ed5fbaaf82a937107742b
+    revision: 19e743ad4ac31b8bb364b9e0f05b3dbf608b9393
     groups:
     - eiq
     - middleware
