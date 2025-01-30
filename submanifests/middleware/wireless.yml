@@ -92,7 +92,7 @@ manifest:
       owner: nirav.agrawal@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: 3dc88119850d87c9986e187000d326d602685272
+    revision: f8703fc9f73cd54694d5fd106181e5de2a7d95ce
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
