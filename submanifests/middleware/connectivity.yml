@@ -14,7 +14,7 @@ manifest:
   - name: usb
     userdata:
       owner: yichang.wang@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     revision: a357fa34109eb1abd6ec7024546343532ecdefd1
     path: mcuxsdk/middleware/usb
     repo-path: mcux-sdk-middleware-usb
@@ -28,13 +28,13 @@ manifest:
     - lwip
     - middleware
     userdata:
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
   - name: lin_stack
     repo-path: mcux-lin_stack
     path: mcuxsdk/middleware/lin_stack
     userdata:
       owner: zejiang.yu@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     revision: 244bb0ca0076eb9a52f3bfc3508421503221c92f
     groups:
     - lin_stack
@@ -47,4 +47,4 @@ manifest:
     - soem
     - middleware
     userdata:
-      track_branch: master
+      track_branch: release/25.03.00-pvw2

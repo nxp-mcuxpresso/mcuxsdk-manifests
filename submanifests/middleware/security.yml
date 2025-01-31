@@ -14,7 +14,7 @@ manifest:
   - name: els_pkc
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/components/els_pkc
     revision: 1db724fdad2fdbf87c26d76d1dc438cdce4ba537
     url: https://github.com/NXP/els_pkc
@@ -24,7 +24,7 @@ manifest:
   - name: se_hostlib
     userdata:
       owner: null
-      track_branch: mcux_develop
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/se_hostlib
     revision: 89daa90316f650b21f271cc577db049eb79dedca
     submodules: true
@@ -33,7 +33,7 @@ manifest:
   - name: secure-subsystem
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/secure-subsystem
     revision: 86309f43a9e64ce8de5a5e70c37115dc4a0270df
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
@@ -43,7 +43,7 @@ manifest:
   - name: edgelock
     userdata:
       owner: vit.solcik@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/firmware/edgelock
     revision: 7c14bf76d7b2c7d08575d1c4339db94a4f0289fe
     repo-path: mcux-edgelock
@@ -53,7 +53,7 @@ manifest:
   - name: mbedtls
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/mbedtls
     revision: 3b077a4f16afa69c50449af844eee4ddc2b1fac4
     groups:
@@ -63,7 +63,7 @@ manifest:
     userdata:
       owner: ruchika.gupta_1@nxp.com
       dev_branch: mcux_main
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
@@ -74,7 +74,7 @@ manifest:
   - name: nxp_iot_agent
     userdata:
       owner: bojan.simoneta@nxp.com
-      track_branch: master
+      track_branch: release/25.03.00-pvw2
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
@@ -85,7 +85,7 @@ manifest:
   - name: tfm
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: develop/tf-m-1.8
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
@@ -95,7 +95,7 @@ manifest:
   - name: psa_crypto_driver
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: main-dev
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/components/psa_crypto_driver
     revision: 716cf6aba5715578a7fb9b7c8a9aa5a41c84672e
     url: https://github.com/NXP/psa_crypto_driver
@@ -105,7 +105,7 @@ manifest:
   - name: mmcau
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: feature/MCUX-69470-migrate-mmcau
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/mmcau
     revision: f94cbcae9ea0de3796f19674c2acede847191c7f
     url: https://github.com/nxp-mcuxpresso/mcux-mmcau
@@ -115,7 +115,7 @@ manifest:
   - name: mbedcrypto
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: develop/tf-m-1.8
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/tfm/mbed-crypto
     remote: nxp
     repo-path: nxp_mbedtls
@@ -126,7 +126,7 @@ manifest:
   - name: psa-arch-tests
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: develop/tf-m-1.8
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/tfm/psa-arch-tests
     remote: nxp
     repo-path: nxp_psa_arch_test
@@ -137,7 +137,7 @@ manifest:
   - name: tf-m-tests
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: develop/tf-m-1.8
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/tfm/tf-m-tests
     remote: nxp-mcuxpresso
     repo-path: mcux-tf-m-tests
@@ -148,7 +148,7 @@ manifest:
   - name: qcbor
     userdata:
       owner: waqar.tahir@nxp.com
-      track_branch: master
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/tfm/qcbor
     revision: 751d36583a9ce1a640900c57e13c9b6b8f3a2ba2
     remote: qcbor_upstream

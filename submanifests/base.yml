@@ -27,7 +27,7 @@ manifest:
     - core
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
@@ -36,14 +36,14 @@ manifest:
     - core
     - ble_nxp
     userdata:
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
   - name: mcux-soc-svd
     path: mcuxsdk/svd
     revision: main
     groups:
     - optional
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-examples
     revision: fbf7b3c857d739fdd67a740283032a8a1dc2803b
     repo-path: mcuxsdk-examples
@@ -52,7 +52,7 @@ manifest:
     - examples
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-components
     repo-path: mcux-component
     revision: 0dafe06ed738dffe67b9fcfe075902d791cafa98
@@ -61,7 +61,7 @@ manifest:
     - components
     - ble_nxp
     userdata:
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
     revision: 0abdc8f515cde1686bda617ba121c78ae8250435
@@ -70,11 +70,11 @@ manifest:
     groups:
     - doc
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: mcuxsdk-tool-data
     revision: d4e6ad4f43a6b260fb26a1e56c469891a63c01a9
     path: mcuxsdk/tool_data
     groups:
     - core
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2

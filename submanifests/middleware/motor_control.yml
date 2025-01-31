@@ -12,7 +12,7 @@ manifest:
   - name: motor_control
     userdata:
       owner: josef.tkadlec@nxp.com
-      track_branch: main_github
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/motor_control
     revision: b901cac7d74ad29ca117f91f6c53f05acd07e483
     repo-path: mcux-motor_control
@@ -21,7 +21,7 @@ manifest:
   - name: rtcesl
     userdata:
       owner: pavel.rech@nxp.com
-      track_branch: main_github
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/rtcesl
     revision: 7498a35ad60501d2de1ae072638bce1ced560329
     repo-path: rtcesl
@@ -31,7 +31,7 @@ manifest:
   - name: freemaster
     userdata:
       owner: michal.hanak@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/freemaster
     revision: 6934ed5b87862d5d84bb968192c9769badb2e735
     repo-path: mcux-freemaster

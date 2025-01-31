@@ -12,7 +12,7 @@ manifest:
   - name: tinycbor
     userdata:
       owner: michal.chromec@nxp.com
-      track_branch: release/24.12.00
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/tinycbor
     revision: 1cb2eab953a68e3b533247be280fd4fef24bf647
     groups:
@@ -21,7 +21,7 @@ manifest:
   - name: pkcs11
     userdata:
       owner: michal.chromec@nxp.com
-      track_branch: release/24.12.00
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/pkcs11
     revision: 7e42bd48bbf02ad4a85010309919ac176373f4b4
     groups:
@@ -31,7 +31,7 @@ manifest:
     repo-path: Device-Defender-for-AWS-IoT-embedded-sdk
     userdata:
       owner: michal.chromec@nxp.com
-      track_branch: release/24.12.00
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/aws_iot/device-defender
     revision: 200c88aebaf439fc6568c7b7e978a94b0a65ec16
     groups:
@@ -40,7 +40,7 @@ manifest:
     repo-path: Device-Shadow-for-AWS-IoT-embedded-sdk
     userdata:
       owner: michal.chromec@nxp.com
-      track_branch: release/24.12.00
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/aws_iot/device-shadow
     revision: 8df88a3822e915b529024c6e0276230476283fe8
     groups:
@@ -49,7 +49,7 @@ manifest:
     repo-path: Jobs-for-AWS-IoT-embedded-sdk
     userdata:
       owner: michal.chromec@nxp.com
-      track_branch: release/24.12.00
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/aws_iot/jobs
     revision: ab5d12ae9764268f60cf4575e1cbbe090bd4873f
     groups:
@@ -58,7 +58,7 @@ manifest:
     repo-path: ota-for-aws-iot-embedded-sdk
     userdata:
       owner: michal.chromec@nxp.com
-      track_branch: release/24.12.00
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/aws_iot/ota
     revision: 64decfa1775b7bc16d7e6674610bc3841e3271d1
     groups:

@@ -16,4 +16,4 @@ manifest:
     - core
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2

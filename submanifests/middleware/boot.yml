@@ -15,7 +15,7 @@ manifest:
     path: mcuxsdk/middleware/mcuboot_opensource
     userdata:
       owner: petr.buchta@nxp.com
-      track_branch: mcux_main_develop
+      track_branch: release/25.03.00-pvw2
     groups:
     - mcuboot
     - middleware

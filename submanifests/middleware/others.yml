@@ -21,7 +21,7 @@ manifest:
   - name: cjson
     userdata:
       owner: yumeng.wang@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     revision: afa391ffa15c1adc148e1c22faad7f219ce57a20
     path: mcuxsdk/middleware/cjson
     url: https://github.com/nxp-mcuxpresso/cJSON/
@@ -30,7 +30,7 @@ manifest:
   - name: memfault
     userdata:
       owner: zejiang.yu@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     revision: 30ad9424f2fc34d085ac5cdcbf2d6a8f0b0db22f
     path: mcuxsdk/components/debug/memfault-firmware-sdk
     url: https://github.com/nxp-mcuxpresso/memfault-firmware-sdk

@@ -11,14 +11,14 @@
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: docs-int
     path: mcuxsdk/docs/internal
     revision: main
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
     revision: 9cca807491cf9d6d7d2ee370e10a3768fabdc388
@@ -26,28 +26,28 @@
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: sdk_components
     path: mcuxsdk/ecosystem/sdk_generator/modules/sdk_components
     revision: e8d5be6bbd6643374a68ec8f6b9e7c5f334e461a
     groups:
     - bifrost
     userdata:
-      track_branch: master
+      track_branch: release/25.03.00-pvw2
   - name: acceptance_tests
     path: mcuxsdk/ecosystem/sdk_generator/modules/acceptance_tests
     revision: bef8eecebd5c53fc7409928f012a582e7424ebad
     groups:
     - bifrost
     userdata:
-      track_branch: master
+      track_branch: release/25.03.00-pvw2
   - name: cmsis-pack-rev
     path: mcuxsdk/ecosystem/sdk_generator/modules/cmsis-pack-rev
     revision: 36b325fac3dfd3bda8757cf4dfbdae0648e66763
     groups:
     - bifrost
     userdata:
-      track_branch: master
+      track_branch: release/25.03.00-pvw2
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
     revision: 4b10aad1e482b0d75e5dc3271e7b09f33fedb2c5
@@ -56,7 +56,7 @@
     groups:
     - bifrost
     userdata:
-      track_branch: develop/mcu_sdk_next
+      track_branch: release/25.03.00-pvw2
   - name: MIR
     path: mcuxsdk/MIR
     revision: 49d86e5bd836a1c160ed741cc80a62fbff00b736
@@ -70,14 +70,14 @@
     groups:
     - bifrost
     userdata:
-      track_branch: master
+      track_branch: release/25.03.00-pvw2
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
     revision: 34bf02c4088236435a71c825c5e00474bb467ceb
     groups:
     - bifrost
     userdata:
-      track_branch: develop/main
+      track_branch: release/25.03.00-pvw2
   - name: ble-controller-snps-int
     path: mcuxsdk/middleware/wireless/snps_ll_private
     repo-path: ble-controller-int-snps
@@ -92,25 +92,25 @@
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
     revision: cb7ea2eba5d60c35a0ba143f971a2ae4579f931d
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: mcux-devices-int
     path: mcuxsdk/devices/internal
     revision: ca2d9c1fa9a9b359ebcc5ec51d9cfd915cc177b3
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: emwin
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: 070d4261d3d3e574f62f63c0bf2f07264b6662eb
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/emwin
     revision: 3a5f8ebeaa5d66c8294a94f741509ee2d37b1741
     groups:
@@ -118,7 +118,7 @@
   - name: ieee-802.15.4_private
     userdata:
       owner: george.stefan@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
     revision: 56dd76a569f831c240670de70a8195b5c34cb1f7
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
@@ -127,7 +127,7 @@
   - name: zigbee_private
     userdata:
       owner: alexandru.porosanu@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/zigbee_private
     revision: 954d4210f43d37ba4395bfebf31acdcf94382b94
     repo-path: mcux-sdk-middleware-zigbee-int
@@ -136,7 +136,7 @@
   - name: crypto_benchmark
     userdata:
       owner: patrik.nemeth@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/components/crypto_benchmark
     revision: main
     groups:

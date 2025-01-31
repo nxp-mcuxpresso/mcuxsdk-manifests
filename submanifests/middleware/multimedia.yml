@@ -16,12 +16,12 @@ manifest:
     - maestro
     - middleware
     userdata:
-      track_branch: feature/MCUX-72204-maestro-repo-structure-change
+      track_branch: release/25.03.00-pvw2
   - name: vglite
     repo-path: gpu-vglite
     userdata:
       owner: andreicatalin.ilie@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/vglite/driver
     revision: 7640e1f4304f6b18290cfe34d74c6ebd7167bbbb
     groups:
@@ -31,7 +31,7 @@ manifest:
     repo-path: gpu-vglite-examples
     userdata:
       owner: andreicatalin.ilie@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/vglite/vglite_sdk
     revision: 72951cc2df2d6fe2f39f72c6d9adfed327fdf805
     groups:
@@ -40,7 +40,7 @@ manifest:
   - name: lvgl
     userdata:
       owner: cristianmarian.stoica@nxp.com
-      track_branch: release/nxp-v9.2.1
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/lvgl
     revision: d017f19df2029edb3453114dce05c71abec5f236
     groups:
@@ -49,7 +49,7 @@ manifest:
   - name: vit
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: release/24.12.00-pvw2
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/audio_voice/components/vit
     revision: ba06ab4241396b12ec7d69fa623b10eeefde577e
     groups:
@@ -60,7 +60,7 @@ manifest:
     repo-path: VoiceSeeker
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: 931101530a63003e62b04604c787cf0d10c19bce
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
     revision: 931101530a63003e62b04604c787cf0d10c19bce
     submodules: true
@@ -71,7 +71,7 @@ manifest:
   - name: voice_spot
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: d556758cbd33df7cd126ac4fda37e25540b6d74e
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
     revision: 51e875a2f5c82ecf7e111314a96de24c0bbf3227
     submodules: true
@@ -80,7 +80,7 @@ manifest:
   - name: audio-voice-components
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/audio_voice/components
     revision: 5bd0b951a80c8cec993cac1285b376aedae53bf3
     groups:
@@ -91,7 +91,7 @@ manifest:
     repo-path: mcux-libjpeg
     userdata:
       owner: yumeng.wang@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     revision: f28f8e5f4aa20715887e6e925487fa2f229c7297
     path: mcuxsdk/middleware/libjpeg
     groups:
@@ -99,7 +99,7 @@ manifest:
   - name: pngdec
     userdata:
       owner: yumeng.wang@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     revision: 8eaa817d463eeb3e10dfae464ff6cb332cce2088
     path: mcuxsdk/middleware/pngdec
     url: https://github.com/nxp-mcuxpresso/PNGdec/
@@ -108,7 +108,7 @@ manifest:
   - name: openh264
     userdata:
       owner: yumeng.wang@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.03.00-pvw2
     revision: 93606d753d68353512aa3106e9ae1a65b7f817c7
     path: mcuxsdk/middleware/openh264
     groups:
@@ -116,7 +116,7 @@ manifest:
   - name: openvg
     userdata:
       owner: camelia.groza@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/openvg
     revision: a63813cffb538ccf30e4eb48fb2369a6a5743392
     url: https://github.com/nxp-mcuxpresso/mcux-openvg

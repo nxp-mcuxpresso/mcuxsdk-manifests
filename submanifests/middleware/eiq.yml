@@ -12,7 +12,7 @@ manifest:
   - name: mcux-sdk-middleware-eiq
     userdata:
       owner: null
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/eiq
     revision: debbd5e4bcfbeb7b25687b88d0fb7c34da55a974
     groups:
@@ -21,7 +21,7 @@ manifest:
   - name: mcux-sdk-middleware-tensorflow
     userdata:
       owner: null
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/eiq/tensorflow-lite
     revision: c178c26899f4fac9675bf243bfa593584df54654
     groups:
@@ -30,7 +30,7 @@ manifest:
   - name: mcux-sdk-middleware-mpp
     userdata:
       owner: null
-      track_branch: external_main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/eiq/mpp
     revision: 19e743ad4ac31b8bb364b9e0f05b3dbf608b9393
     groups:

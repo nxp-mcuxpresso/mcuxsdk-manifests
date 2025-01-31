@@ -19,7 +19,7 @@ manifest:
     - ble_nxp
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: mcux-mcmgr
     revision: 23acbf87c0eae879dd581421cee7d7ae87bc26cd
     path: mcuxsdk/middleware/multicore/mcmgr
@@ -30,7 +30,7 @@ manifest:
     - ble_nxp
     userdata:
       owner: tomas.galbicka@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: rpmsg-lite
     revision: 5fc607f15b00a851452c517558302adec0876903
     path: mcuxsdk/middleware/multicore/rpmsg-lite
@@ -41,7 +41,7 @@ manifest:
     - ble_nxp
     userdata:
       owner: tomas.galbicka@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
   - name: erpc
     revision: 0fb3e34cae1e03f409df2b2c3e2e7ecbcda97963
     path: mcuxsdk/middleware/multicore/erpc
@@ -51,4 +51,4 @@ manifest:
     - middleware
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
