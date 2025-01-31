@@ -156,3 +156,13 @@ manifest:
     groups:
     - tfm
     - security
+  - name: secure_storage
+    userdata:
+      owner: ruchika.gupta_1@nxp.com
+      track_branch: main
+    path: mcuxsdk/middleware/secure_storage
+    remote: nxp-mcuxpresso
+    revision: 8307178e9d101f6c908181cacb3b08526b5bd388
+    repo-path: secure_storage
+    groups:
+    - bifrost
