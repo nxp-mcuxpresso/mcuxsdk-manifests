@@ -55,7 +55,7 @@ manifest:
       track_branch: main
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 0dafe06ed738dffe67b9fcfe075902d791cafa98
+    revision: 5a16203938e524be8f488af446c42bcd14892496
     path: mcuxsdk/components
     groups:
     - components
