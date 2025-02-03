@@ -97,7 +97,7 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: main-dev
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 716cf6aba5715578a7fb9b7c8a9aa5a41c84672e
+    revision: be907209f1182cd0661216bc09f1580969401fa7
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
