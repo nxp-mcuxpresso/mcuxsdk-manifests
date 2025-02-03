@@ -21,7 +21,7 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: main
   - name: mcux-mcmgr
-    revision: 23acbf87c0eae879dd581421cee7d7ae87bc26cd
+    revision: cf80d69332336622ced4c0d5913ac3abbba5c6f8
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
@@ -32,7 +32,7 @@ manifest:
       owner: tomas.galbicka@nxp.com
       track_branch: main
   - name: rpmsg-lite
-    revision: 5fc607f15b00a851452c517558302adec0876903
+    revision: 869adbdd6f5bb9a61c9c2738f80b7a270a98596b
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
