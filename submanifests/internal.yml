@@ -88,7 +88,7 @@
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 8232ed20d569e3e9108b20d17c1f9a2cbe1171d2
+    revision: d7d22e39bbbc9692896ae97dabde443e124fc6b1
     groups:
     - bifrost
     userdata:
@@ -146,7 +146,7 @@
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: b0f901fbda8462a6fe6e7c63294ea08874840423
+    revision: 2c246849eb09ce718589749f21e920a8f8375b9f
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
