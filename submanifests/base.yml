@@ -45,7 +45,7 @@ manifest:
     userdata:
       track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-examples
-    revision: a0138c5218111643abf449413cde75c2eb6f3b8d
+    revision: 5d39d95672e7887c3d2bb773f9d349104ca8a126
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
