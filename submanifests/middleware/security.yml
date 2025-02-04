@@ -67,7 +67,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: aebdb67bb4a48c4fbb0adb2f1f4ff7a9cc3515e7
+    revision: 3fd4bc32bf248231b6c2a74686e960bd5c771049
     groups:
     - mbedtls3x
     - security
@@ -97,7 +97,7 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: main-dev
     path: mcuxsdk/components/psa_crypto_driver
-    revision: be907209f1182cd0661216bc09f1580969401fa7
+    revision: 1de0815e1520588636f62ed98cd66f42c5ad2dd0
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
