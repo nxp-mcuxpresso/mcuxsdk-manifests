@@ -45,7 +45,7 @@ manifest:
     userdata:
       track_branch: main
   - name: mcu-sdk-examples
-    revision: pull-requests/784/from
+    revision: 86dd68f5b9da05c811c341fe27279e633aa7ea79
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
@@ -53,7 +53,6 @@ manifest:
     - ble_nxp
     userdata:
       track_branch: main
-      changed: true
   - name: mcu-sdk-components
     repo-path: mcux-component
     revision: 5a16203938e524be8f488af446c42bcd14892496
