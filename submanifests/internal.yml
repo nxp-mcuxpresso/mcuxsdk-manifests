@@ -129,7 +129,7 @@
       owner: alexandru.porosanu@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/zigbee_private
-    revision: 954d4210f43d37ba4395bfebf31acdcf94382b94
+    revision: df7ea95722f2ed46a66d364492b329d9de61f249
     repo-path: mcux-sdk-middleware-zigbee-int
     groups:
     - bifrost
