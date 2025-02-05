@@ -31,7 +31,7 @@ manifest:
       owner: null
       track_branch: mcux_main
     path: mcuxsdk/middleware/dhara
-    revision: 6bf699a21f56a5405acbf0100d2e2fa7a9e457ec
+    revision: 2dfeb816f49ecf4fea20cd566e96a2c36cc53ba9
     groups:
     - dhara
   - name: littlefs
