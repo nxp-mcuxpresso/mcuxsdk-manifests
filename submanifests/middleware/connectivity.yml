@@ -35,7 +35,7 @@ manifest:
     userdata:
       owner: zejiang.yu@nxp.com
       track_branch: release/25.03.00-pvw2
-    revision: 244bb0ca0076eb9a52f3bfc3508421503221c92f
+    revision: 47f9c0485212860b52656e81923efc9f2c36ee9f
     groups:
     - lin_stack
     - middleware
