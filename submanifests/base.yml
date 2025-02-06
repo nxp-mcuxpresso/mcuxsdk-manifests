@@ -45,7 +45,7 @@ manifest:
     userdata:
       track_branch: main
   - name: mcu-sdk-examples
-    revision: e7d866708561382a7b5110363280bbeb62a2614e
+    revision: d4c6af019d65ca904fd18dcdd3e5f629e6a7b35a
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
