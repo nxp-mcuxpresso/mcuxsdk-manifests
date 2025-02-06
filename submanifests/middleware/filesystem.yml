@@ -39,6 +39,6 @@ manifest:
       owner: andrej.trnkoci@nxp.com
       track_branch: deba98015887559b4b89e1d0ed5273890231b66a
     path: mcuxsdk/middleware/littlefs
-    revision: deba98015887559b4b89e1d0ed5273890231b66a
+    revision: bd4d47d65d4e49c6f3f79b7f68228f5b2ce11ed7
     groups:
     - littlefs
