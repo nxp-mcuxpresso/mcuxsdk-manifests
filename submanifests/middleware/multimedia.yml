@@ -10,13 +10,13 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: maestro
-    revision: 1b0f10f18c24b249613a9e923d43cace55c01de3
+    revision: 33c6d9b4f6f110864d394c50dd30536eca9656f3
     path: mcuxsdk/middleware/audio_voice/maestro
     groups:
     - maestro
     - middleware
     userdata:
-      track_branch: feature/MCUX-72204-maestro-repo-structure-change
+      track_branch: main
   - name: vglite
     repo-path: gpu-vglite
     userdata:
@@ -82,7 +82,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/audio_voice/components
-    revision: 5bd0b951a80c8cec993cac1285b376aedae53bf3
+    revision: 3fda7f836eacfe413a567a59e3e5dd89cac17034
     groups:
     - audio-voice-components
     - audio_voice
