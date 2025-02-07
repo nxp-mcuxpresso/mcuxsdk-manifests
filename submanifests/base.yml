@@ -64,7 +64,7 @@ manifest:
       track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 0abdc8f515cde1686bda617ba121c78ae8250435
+    revision: 08d89468b3c3751634f76c1f05602162aa38b1d0
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
