@@ -82,7 +82,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/audio_voice/components
-    revision: 5bd0b951a80c8cec993cac1285b376aedae53bf3
+    revision: aa2a47d610098fddc922df4d17e51b7ebeeaf1e6
     groups:
     - audio-voice-components
     - audio_voice
