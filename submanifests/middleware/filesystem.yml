@@ -31,7 +31,7 @@ manifest:
       owner: null
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/dhara
-    revision: 6bf699a21f56a5405acbf0100d2e2fa7a9e457ec
+    revision: 1ac32a81b7bdf5e8bc2a761b3dad5cfd761fc634
     groups:
     - dhara
   - name: littlefs
