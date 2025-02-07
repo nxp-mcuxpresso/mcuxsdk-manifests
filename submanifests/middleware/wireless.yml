@@ -46,7 +46,7 @@ manifest:
   - name: bluetooth
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: develop/main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/bluetooth
     revision: 450c919ce71b1605f71f66120b048b087c103b3f
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
