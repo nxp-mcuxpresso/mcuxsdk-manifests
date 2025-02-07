@@ -95,7 +95,7 @@
       track_branch: main
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: cab8cf63692b60d1e21fabdd1503b6eba04d7e82
+    revision: b33e00133f151a2316c0889a3a844a5d97bd05e0
     groups:
     - bifrost
     userdata:
