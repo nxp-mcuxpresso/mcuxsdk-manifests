@@ -45,7 +45,7 @@ manifest:
     userdata:
       track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-examples
-    revision: 01fc803b3cb9b0327aa481ca8ce2f604de9ffc88
+    revision: 8f57a7976e33d7360278d1796dab5c81495082f0
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
@@ -55,7 +55,7 @@ manifest:
       track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 9098e7fcf45b99013d954c3467494e9779a71752
+    revision: 01a86dcc9d464e7026e162bd7d2aa8275fa11218
     path: mcuxsdk/components
     groups:
     - components
