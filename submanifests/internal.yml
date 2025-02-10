@@ -21,7 +21,7 @@
       track_branch: main
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: f802b86f6b9604a19bac3e156647ae8e926beb41
+    revision: e3c2c70cb433c43f2cfe478ea25856d85df0cd4f
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
