@@ -21,14 +21,13 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: pull-requests/205/from
+    revision: 426c8cfd7b1895bc44aec859b8a00c23e0ff0b46
     west-commands: scripts/west_commands.yml
     groups:
     - core
     - ble_nxp
     userdata:
       track_branch: release/25.03.00-pvw2
-      changed: true
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
