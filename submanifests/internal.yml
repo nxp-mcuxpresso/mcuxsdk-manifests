@@ -95,7 +95,7 @@
       track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: cb7ea2eba5d60c35a0ba143f971a2ae4579f931d
+    revision: f1ac6d527f33f4bb0d346217334abada120b66fb
     groups:
     - bifrost
     userdata:
