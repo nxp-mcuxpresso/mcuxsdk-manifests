@@ -119,7 +119,7 @@ manifest:
   - name: zigbee
     userdata:
       owner: alexandru.porosanu@nxp.com
-      track_branch: main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/zigbee
     revision: 582e53e2718c83d2918433ce0cb9a3282425924c
     repo-path: mcux-sdk-middleware-zigbee
