@@ -55,7 +55,7 @@ manifest:
       track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 2fd7781b21e821b59a68c8a4b708c301350e90e2
+    revision: 0d03581d29e497b9f0ada38f6234dbd0d35b9841
     path: mcuxsdk/components
     groups:
     - components
