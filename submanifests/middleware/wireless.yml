@@ -79,9 +79,9 @@ manifest:
   - name: ieee-802.15.4
     userdata:
       owner: george.stefan@nxp.com
-      track_branch: public_main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: e8d5b8f301d02f4b2ad9192fd3ace5991ce1caef
+    revision: f5bf23ef7171cb7efb9f9338320f3737e641b516
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
