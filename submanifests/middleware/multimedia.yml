@@ -109,7 +109,7 @@ manifest:
     userdata:
       owner: yumeng.wang@nxp.com
       track_branch: release/25.03.00-pvw2
-    revision: 8d06d97ed6d344bda45cf8a83648aaf5cb086ce5
+    revision: 94d4808655f386a976f28db3168128fad62d647a
     path: mcuxsdk/middleware/openh264
     groups:
     - openh264
