@@ -73,7 +73,7 @@
       track_branch: release/25.03.00-pvw2
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: b55c10ec91d45748bb1df8d567d03942386f6be3
+    revision: 26b21bb0c083cd910cb6fa0f41686ebc1e69b53c
     groups:
     - bifrost
     userdata:
@@ -120,7 +120,7 @@
       owner: george.stefan@nxp.com
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: fde1f21e5534b76d198f8ce4be85077630c7869a
+    revision: 3a55a5c0fa0b3df3a9282be20080ce2c22dbc881
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -146,7 +146,7 @@
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: cd979ae6c923f2235b3a03020beb9ac3cb3130fd
+    revision: 12be3988f8651a6c960c98fe70fb44763ad2d720
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
