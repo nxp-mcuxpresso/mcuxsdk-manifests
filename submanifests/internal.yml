@@ -144,7 +144,7 @@
   - name: bluetooth_private
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: develop/main
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/bluetooth_private
     revision: 12be3988f8651a6c960c98fe70fb44763ad2d720
     repo-path: mcux-sdk-middleware-bluetooth-int
@@ -154,7 +154,7 @@
   - name: ble_cs_algo_private
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: master
+      track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
     revision: 43c8a5b248cf4f0af7947118415afd16b33db340
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
