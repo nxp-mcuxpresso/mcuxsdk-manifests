@@ -39,6 +39,6 @@ manifest:
       owner: david.jurajda@nxp.com
       track_branch: mcux_main
     path: mcuxsdk/middleware/littlefs
-    revision: 691bfd1f7b9685e392ff0bb7c2d6e2fe685e04b6
+    revision: 39df4a21caaefea7fb8741b702b609c373f14dd9
     groups:
     - littlefs
