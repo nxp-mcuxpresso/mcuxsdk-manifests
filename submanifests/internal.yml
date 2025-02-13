@@ -66,14 +66,14 @@
       track_branch: master
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
-    revision: c7dcd0d292244eb67ff91b2025de357503d4cf03
+    revision: 9c717c7484dc4894dbc147a907a1bbc2b51bbc63
     groups:
     - bifrost
     userdata:
       track_branch: master
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: 34bf02c4088236435a71c825c5e00474bb467ceb
+    revision: 27c8de79fb771d41ce5c56a48eb58d2db7ac0c90
     groups:
     - bifrost
     userdata:
@@ -88,7 +88,7 @@
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 04b733157619ca2aeee5ab23cf540ef28751a7cb
+    revision: 4e940d2f4df40cc5b28159b35b59bf5f38b5d0fd
     groups:
     - bifrost
     userdata:
@@ -120,7 +120,7 @@
       owner: george.stefan@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 56dd76a569f831c240670de70a8195b5c34cb1f7
+    revision: ee52246db2825a1a1e01e5d1393adc96a1da3711
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -129,7 +129,7 @@
       owner: alexandru.porosanu@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/wireless/zigbee_private
-    revision: df7ea95722f2ed46a66d364492b329d9de61f249
+    revision: cd012827e7ced5edf5e7d039ca40d54bb73c0548
     repo-path: mcux-sdk-middleware-zigbee-int
     groups:
     - bifrost
@@ -146,7 +146,7 @@
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/main
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: a599d825336bad570c748881d3e1ec0724858927
+    revision: 31acd715ab5863b1b3e844a7e63ffb45bf123c3a
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
