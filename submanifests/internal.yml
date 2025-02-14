@@ -21,7 +21,7 @@
       track_branch: release/25.03.00-pvw2
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 05f7997bccdccf1b8dd2a1c9d7a448de2cbd578e
+    revision: 5c57c42d895c358ff8260041ae5b98162548a810
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
