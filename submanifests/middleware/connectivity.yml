@@ -35,7 +35,7 @@ manifest:
     userdata:
       owner: zejiang.yu@nxp.com
       track_branch: mcux_main
-    revision: 244bb0ca0076eb9a52f3bfc3508421503221c92f
+    revision: 5e53ef84ef52e50c06354659693f25eff8aaafc6
     groups:
     - lin_stack
     - middleware

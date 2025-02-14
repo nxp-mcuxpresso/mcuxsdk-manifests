@@ -92,7 +92,7 @@ manifest:
     userdata:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
-    revision: f28f8e5f4aa20715887e6e925487fa2f229c7297
+    revision: 06537f65a9b03024de05c0ef4be082a7826bec5b
     path: mcuxsdk/middleware/libjpeg
     groups:
     - libjpeg
@@ -100,7 +100,7 @@ manifest:
     userdata:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
-    revision: 8eaa817d463eeb3e10dfae464ff6cb332cce2088
+    revision: cd6beeeeba6175f52e163f6539895985222ffe45
     path: mcuxsdk/middleware/pngdec
     url: https://github.com/nxp-mcuxpresso/PNGdec/
     groups:
@@ -109,7 +109,7 @@ manifest:
     userdata:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
-    revision: 93606d753d68353512aa3106e9ae1a65b7f817c7
+    revision: ece75e1a1f926c2c39091d92778a1cae70e3ae17
     path: mcuxsdk/middleware/openh264
     groups:
     - openh264
