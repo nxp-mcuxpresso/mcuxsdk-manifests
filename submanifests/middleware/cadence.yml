@@ -22,7 +22,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
     path: mcuxsdk/middleware/cadence/codecs
-    revision: d621f172254fe4c27e7fe5ead9e907a73e808ac3
+    revision: 5bd9088d48987b4fb0240eff6e04be9390dcb819
     groups:
     - bifrost
   - name: naturedsp
