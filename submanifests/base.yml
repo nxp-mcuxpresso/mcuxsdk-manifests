@@ -39,7 +39,7 @@ manifest:
       track_branch: mcux_main
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: main
+    revision: 879f26d03799d7e964d1ee97d4f65b88aa92de35
     groups:
     - optional
     userdata:
