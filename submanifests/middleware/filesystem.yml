@@ -17,10 +17,12 @@ manifest:
     - middleware
     userdata:
       track_branch: mcux_main
+      branch_flow: false
   - name: mcux-sdk-middleware-sdmmc
     userdata:
       owner: yangbo.lu@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     revision: 5b3ee72af66a225713be19dc08fb762b3336c2d5
     path: mcuxsdk/middleware/sdmmc
     groups:
@@ -30,6 +32,7 @@ manifest:
     userdata:
       owner: null
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/middleware/dhara
     revision: 2dfeb816f49ecf4fea20cd566e96a2c36cc53ba9
     groups:
@@ -38,6 +41,7 @@ manifest:
     userdata:
       owner: david.jurajda@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/middleware/littlefs
     revision: 39df4a21caaefea7fb8741b702b609c373f14dd9
     groups:

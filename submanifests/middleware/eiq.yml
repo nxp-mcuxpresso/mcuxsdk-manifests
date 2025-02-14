@@ -13,6 +13,7 @@ manifest:
     userdata:
       owner: null
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/eiq
     revision: debbd5e4bcfbeb7b25687b88d0fb7c34da55a974
     groups:
@@ -22,6 +23,7 @@ manifest:
     userdata:
       owner: null
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/eiq/tensorflow-lite
     revision: c178c26899f4fac9675bf243bfa593584df54654
     groups:
@@ -31,6 +33,7 @@ manifest:
     userdata:
       owner: null
       track_branch: external_main
+      branch_flow: false
     path: mcuxsdk/middleware/eiq/mpp
     revision: 19e743ad4ac31b8bb364b9e0f05b3dbf608b9393
     groups:

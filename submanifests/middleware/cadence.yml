@@ -13,6 +13,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/cadence/multicore-xaf
     revision: 8a3980a8a4ca4bf72c74e570084428717c77662e
     groups:
@@ -21,6 +22,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/cadence/codecs
     revision: 5bd9088d48987b4fb0240eff6e04be9390dcb819
     groups:
@@ -29,6 +31,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/cadence/naturedsp
     revision: c2ca6d6d3116668cf043e6c7d30ee3f703caadcc
     groups:
@@ -37,6 +40,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/cadence/nnlib
     revision: 58de8f7519cd48117a752248794e7e295ddaff04
     groups:

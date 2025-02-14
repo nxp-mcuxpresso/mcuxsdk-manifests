@@ -15,6 +15,7 @@ manifest:
     userdata:
       owner: yichang.wang@nxp.com
       track_branch: main
+      branch_flow: false
     revision: deecc7eba7f4d2816e86ce3a429af9c120237c9c
     path: mcuxsdk/middleware/usb
     repo-path: mcux-sdk-middleware-usb
@@ -29,12 +30,14 @@ manifest:
     - middleware
     userdata:
       track_branch: mcux_main
+      branch_flow: false
   - name: lin_stack
     repo-path: mcux-lin_stack
     path: mcuxsdk/middleware/lin_stack
     userdata:
       owner: zejiang.yu@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     revision: 5e53ef84ef52e50c06354659693f25eff8aaafc6
     groups:
     - lin_stack
@@ -48,3 +51,4 @@ manifest:
     - middleware
     userdata:
       track_branch: master
+      branch_flow: false

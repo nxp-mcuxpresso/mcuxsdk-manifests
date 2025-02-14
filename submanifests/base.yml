@@ -18,6 +18,7 @@ manifest:
     - bifrost
     userdata:
       track_branch: main
+      branch_flow: false
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
@@ -28,6 +29,7 @@ manifest:
     - ble_nxp
     userdata:
       track_branch: main
+      branch_flow: true
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
@@ -37,6 +39,7 @@ manifest:
     - ble_nxp
     userdata:
       track_branch: mcux_main
+      branch_flow: false
   - name: mcux-soc-svd
     path: mcuxsdk/svd
     revision: 879f26d03799d7e964d1ee97d4f65b88aa92de35
@@ -44,6 +47,7 @@ manifest:
     - optional
     userdata:
       track_branch: main
+      branch_flow: false
   - name: mcu-sdk-examples
     revision: b8ef9f599a85b9b00f6af44231f8439b6b6e95b6
     repo-path: mcuxsdk-examples
@@ -53,6 +57,7 @@ manifest:
     - ble_nxp
     userdata:
       track_branch: main
+      branch_flow: true
   - name: mcu-sdk-components
     repo-path: mcux-component
     revision: bfb3ada11d0918793082507f514d56e6633638a3
@@ -62,6 +67,7 @@ manifest:
     - ble_nxp
     userdata:
       track_branch: mcux_main
+      branch_flow: true
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
     revision: 136461a6035e103c70633ad347d045bb4f491b3a
@@ -71,6 +77,7 @@ manifest:
     - doc
     userdata:
       track_branch: main
+      branch_flow: false
   - name: mcuxsdk-tool-data
     revision: 2a004b67544517976ecded8a5d5e8c9e3886bae7
     path: mcuxsdk/tool_data
@@ -78,3 +85,4 @@ manifest:
     - core
     userdata:
       track_branch: main
+      branch_flow: false

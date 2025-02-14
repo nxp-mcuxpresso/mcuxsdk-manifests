@@ -20,6 +20,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
+      branch_flow: false
   - name: mcux-mcmgr
     revision: cf80d69332336622ced4c0d5913ac3abbba5c6f8
     path: mcuxsdk/middleware/multicore/mcmgr
@@ -31,6 +32,7 @@ manifest:
     userdata:
       owner: tomas.galbicka@nxp.com
       track_branch: main
+      branch_flow: false
   - name: rpmsg-lite
     revision: 869adbdd6f5bb9a61c9c2738f80b7a270a98596b
     path: mcuxsdk/middleware/multicore/rpmsg-lite
@@ -42,6 +44,7 @@ manifest:
     userdata:
       owner: tomas.galbicka@nxp.com
       track_branch: main
+      branch_flow: false
   - name: erpc
     revision: 0fb3e34cae1e03f409df2b2c3e2e7ecbcda97963
     path: mcuxsdk/middleware/multicore/erpc
@@ -52,3 +55,4 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
+      branch_flow: false

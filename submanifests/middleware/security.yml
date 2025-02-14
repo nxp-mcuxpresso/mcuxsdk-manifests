@@ -15,6 +15,7 @@ manifest:
     userdata:
       owner: vit.chmelar@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/components/els_pkc
     revision: 1db724fdad2fdbf87c26d76d1dc438cdce4ba537
     url: https://github.com/NXP/els_pkc
@@ -25,6 +26,7 @@ manifest:
     userdata:
       owner: null
       track_branch: mcux_develop
+      branch_flow: false
     path: mcuxsdk/middleware/se_hostlib
     revision: 89daa90316f650b21f271cc577db049eb79dedca
     submodules: true
@@ -34,6 +36,7 @@ manifest:
     userdata:
       owner: vit.chmelar@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/middleware/secure-subsystem
     revision: b52d7342406b890d88bc2f3c4874050d1f7eeaa3
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
@@ -44,6 +47,7 @@ manifest:
     userdata:
       owner: vit.solcik@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/firmware/edgelock
     revision: 7c14bf76d7b2c7d08575d1c4339db94a4f0289fe
     repo-path: mcux-edgelock
@@ -54,6 +58,7 @@ manifest:
     userdata:
       owner: vit.chmelar@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/middleware/mbedtls
     revision: a1df64b365e475077801bc333d3da504c0cef647
     groups:
@@ -64,6 +69,7 @@ manifest:
       owner: ruchika.gupta_1@nxp.com
       dev_branch: mcux_main
       track_branch: mcux_main
+      branch_flow: false
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
@@ -75,6 +81,7 @@ manifest:
     userdata:
       owner: bojan.simoneta@nxp.com
       track_branch: master
+      branch_flow: false
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
@@ -86,6 +93,7 @@ manifest:
     userdata:
       owner: waqar.tahir@nxp.com
       track_branch: develop/tf-m-1.8
+      branch_flow: false
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
@@ -96,6 +104,7 @@ manifest:
     userdata:
       owner: vit.chmelar@nxp.com
       track_branch: main-dev
+      branch_flow: false
     path: mcuxsdk/components/psa_crypto_driver
     revision: 1de0815e1520588636f62ed98cd66f42c5ad2dd0
     url: https://github.com/NXP/psa_crypto_driver
@@ -106,6 +115,7 @@ manifest:
     userdata:
       owner: vit.chmelar@nxp.com
       track_branch: feature/MCUX-69470-migrate-mmcau
+      branch_flow: false
     path: mcuxsdk/middleware/mmcau
     revision: f94cbcae9ea0de3796f19674c2acede847191c7f
     url: https://github.com/nxp-mcuxpresso/mcux-mmcau
@@ -116,6 +126,7 @@ manifest:
     userdata:
       owner: waqar.tahir@nxp.com
       track_branch: develop/tf-m-1.8
+      branch_flow: false
     path: mcuxsdk/middleware/tfm/mbed-crypto
     remote: nxp
     repo-path: nxp_mbedtls
@@ -127,6 +138,7 @@ manifest:
     userdata:
       owner: waqar.tahir@nxp.com
       track_branch: develop/tf-m-1.8
+      branch_flow: false
     path: mcuxsdk/middleware/tfm/psa-arch-tests
     remote: nxp
     repo-path: nxp_psa_arch_test
@@ -138,6 +150,7 @@ manifest:
     userdata:
       owner: waqar.tahir@nxp.com
       track_branch: develop/tf-m-1.8
+      branch_flow: false
     path: mcuxsdk/middleware/tfm/tf-m-tests
     remote: nxp-mcuxpresso
     repo-path: mcux-tf-m-tests
@@ -149,6 +162,7 @@ manifest:
     userdata:
       owner: waqar.tahir@nxp.com
       track_branch: master
+      branch_flow: false
     path: mcuxsdk/middleware/tfm/qcbor
     revision: 751d36583a9ce1a640900c57e13c9b6b8f3a2ba2
     remote: qcbor_upstream
@@ -160,6 +174,7 @@ manifest:
     userdata:
       owner: ruchika.gupta_1@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/secure_storage
     remote: nxp-mcuxpresso
     revision: 8307178e9d101f6c908181cacb3b08526b5bd388

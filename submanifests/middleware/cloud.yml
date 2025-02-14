@@ -13,6 +13,7 @@ manifest:
     userdata:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
+      branch_flow: false
     path: mcuxsdk/middleware/tinycbor
     revision: 1cb2eab953a68e3b533247be280fd4fef24bf647
     groups:
@@ -22,6 +23,7 @@ manifest:
     userdata:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
+      branch_flow: false
     path: mcuxsdk/middleware/pkcs11
     revision: 7e42bd48bbf02ad4a85010309919ac176373f4b4
     groups:
@@ -32,6 +34,7 @@ manifest:
     userdata:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
+      branch_flow: false
     path: mcuxsdk/middleware/aws_iot/device-defender
     revision: 200c88aebaf439fc6568c7b7e978a94b0a65ec16
     groups:
@@ -41,6 +44,7 @@ manifest:
     userdata:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
+      branch_flow: false
     path: mcuxsdk/middleware/aws_iot/device-shadow
     revision: 8df88a3822e915b529024c6e0276230476283fe8
     groups:
@@ -50,6 +54,7 @@ manifest:
     userdata:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
+      branch_flow: false
     path: mcuxsdk/middleware/aws_iot/jobs
     revision: ab5d12ae9764268f60cf4575e1cbbe090bd4873f
     groups:
@@ -59,6 +64,7 @@ manifest:
     userdata:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
+      branch_flow: false
     path: mcuxsdk/middleware/aws_iot/ota
     revision: 64decfa1775b7bc16d7e6674610bc3841e3271d1
     groups:
@@ -68,6 +74,7 @@ manifest:
     userdata:
       owner: michal.chromec@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/middleware/llhttp
     revision: 25ae94d6b619bdbbc40cc5b62ceadad5884c53f1
     groups:

@@ -19,10 +19,12 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
   - name: mcux-freertos-drivers
     userdata:
       owner: david.jurajda@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/freertos-drivers
     revision: 3c5f30d7547b839ea3933364dec44b714b5a306d
     groups:
@@ -32,6 +34,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/corepkcs11
     revision: 60cfafe379011fc3f6d8e50d18098d0febdc64ee
     groups:
@@ -41,6 +44,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/coremqtt
     revision: 22a21dae0cf083e0c54f1762a4a95f3f7abbe60e
     groups:
@@ -50,6 +54,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/corejson
     revision: 87afed15ed319663e27fe269d8ffdc39b6bc1df9
     groups:
@@ -59,6 +64,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/corehttp
     revision: a8f5481b503ad5f5325a71ccdc29cf8095376077
     groups:
@@ -68,6 +74,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/backoffalgorithm
     revision: c449dc1eb8a82f3c50fb327cadd97954224f2553
     groups:
@@ -77,6 +84,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp
     revision: 3fbb5ebc315ad8dd9b622878a44b3d8cf21565bf
     groups:
@@ -85,6 +93,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     path: mcuxsdk/rtos/freertos/coremqtt-agent
     revision: 223e80a64f706e9a8018a65e2bf9b245bd27b7ad
     groups:

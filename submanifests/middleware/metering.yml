@@ -13,6 +13,7 @@ manifest:
     userdata:
       owner: pavel.rech@nxp.com
       track_branch: main_github
+      branch_flow: false
     path: mcuxsdk/middleware/metering
     revision: 8f62eaa6103720bc120ae8ca09da64acc20284df
     repo-path: mcux-metering

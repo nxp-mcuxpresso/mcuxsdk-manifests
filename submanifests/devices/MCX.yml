@@ -16,3 +16,4 @@ manifest:
     - core
     userdata:
       track_branch: main
+      branch_flow: true

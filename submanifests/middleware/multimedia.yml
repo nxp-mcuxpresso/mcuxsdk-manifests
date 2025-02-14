@@ -17,11 +17,13 @@ manifest:
     - middleware
     userdata:
       track_branch: main
+      branch_flow: false
   - name: vglite
     repo-path: gpu-vglite
     userdata:
       owner: andreicatalin.ilie@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/vglite/driver
     revision: 7640e1f4304f6b18290cfe34d74c6ebd7167bbbb
     groups:
@@ -32,6 +34,7 @@ manifest:
     userdata:
       owner: andreicatalin.ilie@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/vglite/vglite_sdk
     revision: 72951cc2df2d6fe2f39f72c6d9adfed327fdf805
     groups:
@@ -41,6 +44,7 @@ manifest:
     userdata:
       owner: cristianmarian.stoica@nxp.com
       track_branch: release/nxp-v9.2.1
+      branch_flow: false
     path: mcuxsdk/middleware/lvgl
     revision: d017f19df2029edb3453114dce05c71abec5f236
     groups:
@@ -50,6 +54,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: release/24.12.00-pvw2
+      branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components/vit
     revision: ba06ab4241396b12ec7d69fa623b10eeefde577e
     groups:
@@ -61,6 +66,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: 931101530a63003e62b04604c787cf0d10c19bce
+      branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
     revision: 931101530a63003e62b04604c787cf0d10c19bce
     submodules: true
@@ -72,6 +78,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: d556758cbd33df7cd126ac4fda37e25540b6d74e
+      branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
     revision: 51e875a2f5c82ecf7e111314a96de24c0bbf3227
     submodules: true
@@ -81,6 +88,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components
     revision: 3fda7f836eacfe413a567a59e3e5dd89cac17034
     groups:
@@ -92,6 +100,7 @@ manifest:
     userdata:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     revision: 06537f65a9b03024de05c0ef4be082a7826bec5b
     path: mcuxsdk/middleware/libjpeg
     groups:
@@ -100,6 +109,7 @@ manifest:
     userdata:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     revision: cd6beeeeba6175f52e163f6539895985222ffe45
     path: mcuxsdk/middleware/pngdec
     url: https://github.com/nxp-mcuxpresso/PNGdec/
@@ -109,6 +119,7 @@ manifest:
     userdata:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
+      branch_flow: false
     revision: ece75e1a1f926c2c39091d92778a1cae70e3ae17
     path: mcuxsdk/middleware/openh264
     groups:
@@ -117,6 +128,7 @@ manifest:
     userdata:
       owner: camelia.groza@nxp.com
       track_branch: main
+      branch_flow: false
     path: mcuxsdk/middleware/openvg
     revision: a63813cffb538ccf30e4eb48fb2369a6a5743392
     url: https://github.com/nxp-mcuxpresso/mcux-openvg

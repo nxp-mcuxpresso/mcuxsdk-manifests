@@ -16,6 +16,7 @@ manifest:
     userdata:
       owner: petr.buchta@nxp.com
       track_branch: mcux_main_develop
+      branch_flow: false
     groups:
     - mcuboot
     - middleware
