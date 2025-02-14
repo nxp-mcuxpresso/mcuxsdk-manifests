@@ -139,6 +139,6 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/coex
-    revision: bcaaf4357d6912028d513245ec7dadcfebf7075a
+    revision: a6d5768a70bf3b134a2028567c4f47df6a51122b
     groups:
     - coex
