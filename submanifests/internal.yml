@@ -166,7 +166,7 @@
       owner: null
       track_branch: release/mcux
     path: mcuxsdk/middleware/eiq/executorch
-    revision: 30b9e7eff4201c1516eb4bcf049a644b0c8a73ac
+    revision: ba8a957531047188ec2b5548ad9a1f4b739e95d4
     repo-path: mcuxsdk-middleware-executorch
     groups:
     - bifrost
