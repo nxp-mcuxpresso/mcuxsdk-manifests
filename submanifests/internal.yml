@@ -36,7 +36,7 @@
       track_branch: master
   - name: acceptance_tests
     path: mcuxsdk/ecosystem/sdk_generator/modules/acceptance_tests
-    revision: cdf417d58fb6ae26ea1eac27fbbb02d3bfaef910 
+    revision: cdf417d58fb6ae26ea1eac27fbbb02d3bfaef910
     groups:
     - bifrost
     userdata:
@@ -50,7 +50,7 @@
       track_branch: master
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: a1ffcfa9c6fc3053bb25efd567d5e3f4e7b2eac0 
+    revision: a1ffcfa9c6fc3053bb25efd567d5e3f4e7b2eac0
     submodules:
     - path: modules/manifest_schema
     groups:
