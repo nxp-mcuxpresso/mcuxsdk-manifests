@@ -50,7 +50,7 @@
       track_branch: release/25.03.00-pvw2
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: b07edd9d2438b346a909c80efbe306b8747f1896
+    revision: 85f3d40bc2b3092e02c5269e771cdc568d8fc6c8
     submodules:
     - path: modules/manifest_schema
     groups:
