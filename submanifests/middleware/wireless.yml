@@ -48,7 +48,7 @@ manifest:
       owner: mihai-octavian.urzica@nxp.com
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 804156f5a303253ff7881afc2995f5d7be4a53ea
+    revision: 92cde533f6b043b226826dea76474a5158140806
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
