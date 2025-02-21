@@ -181,16 +181,6 @@
     groups:
     - bifrost
     - ble_cs_algo_private
-  - name: executorch
-    userdata:
-      owner: null
-      track_branch: release/mcux
-      branch_flow: false
-    path: mcuxsdk/middleware/eiq/executorch
-    revision: ba8a957531047188ec2b5548ad9a1f4b739e95d4
-    repo-path: mcuxsdk-middleware-executorch
-    groups:
-    - bifrost
   - name: freemaster_internal
     userdata:
       owner: michal.hanak@nxp.com
