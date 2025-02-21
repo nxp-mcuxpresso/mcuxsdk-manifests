@@ -39,3 +39,13 @@ manifest:
     groups:
     - eiq
     - middleware
+  - name: mcuxsdk-middleware-executorch
+    userdata:
+      owner: null
+      track_branch: release/mcux
+      branch_flow: false
+    path: mcuxsdk/middleware/eiq/executorch
+    revision: f3f1afb580281dbde959fb774fad5d98c10a510c
+    groups:
+    - eiq
+    - middleware
