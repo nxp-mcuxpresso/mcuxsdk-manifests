@@ -25,7 +25,7 @@ manifest:
       track_branch: main_github
       branch_flow: false
     path: mcuxsdk/middleware/rtcesl
-    revision: 7498a35ad60501d2de1ae072638bce1ced560329
+    revision: 9890f732f5e265be3cea0db42fa43cd023074e99
     repo-path: rtcesl
     groups:
     - rtcesl
