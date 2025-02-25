@@ -130,7 +130,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/openvg
-    revision: a63813cffb538ccf30e4eb48fb2369a6a5743392
+    revision: b49ed9d90432fe4616ef925a5da1b233b043eaa5
     url: https://github.com/nxp-mcuxpresso/mcux-openvg
     groups:
     - openvg
