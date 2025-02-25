@@ -38,7 +38,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/secure-subsystem
-    revision: b52d7342406b890d88bc2f3c4874050d1f7eeaa3
+    revision: 8e5f712a6e4706145bf7eff0785df4f5fe343a83
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
@@ -49,7 +49,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/firmware/edgelock
-    revision: 7c14bf76d7b2c7d08575d1c4339db94a4f0289fe
+    revision: 313b329be4444526327b8397c242f2ca844754ea
     repo-path: mcux-edgelock
     groups:
     - edgelock
