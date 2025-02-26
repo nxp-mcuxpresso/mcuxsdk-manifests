@@ -38,7 +38,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/secure-subsystem
-    revision: 8e5f712a6e4706145bf7eff0785df4f5fe343a83
+    revision: d6579c231d0284f1b6930434ea0bb5ee8ccd4977
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
@@ -73,7 +73,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 3fd4bc32bf248231b6c2a74686e960bd5c771049
+    revision: f9ec861eef4e6f235bd9edb7e701a59c9512d1e2
     groups:
     - mbedtls3x
     - security
@@ -106,7 +106,7 @@ manifest:
       track_branch: main-dev
       branch_flow: false
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 20a69932160c3d2d52aaae4e3b697cb1039fb07a
+    revision: 5da3b0ccf39f144c2b073f7cc99395429779f98b
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
