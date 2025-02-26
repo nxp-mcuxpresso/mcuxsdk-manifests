@@ -49,7 +49,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcu-sdk-examples
-    revision: 1f753263a71557db87715529d4328b902b50a2b6
+    revision: fa7e0a3a2ef8284848f7fffa410c0bee4b503411
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
@@ -70,7 +70,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 136461a6035e103c70633ad347d045bb4f491b3a
+    revision: e8262ab3b8f78d43895f27dbbd2fa0d05f45c1f3
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
