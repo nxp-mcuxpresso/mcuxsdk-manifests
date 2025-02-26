@@ -23,7 +23,7 @@ manifest:
       owner: null
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/eiq/tensorflow-lite
-    revision: c178c26899f4fac9675bf243bfa593584df54654
+    revision: 37ecaafb4cb6c17d69687823cee79a9388b652a8
     groups:
     - eiq
     - middleware
