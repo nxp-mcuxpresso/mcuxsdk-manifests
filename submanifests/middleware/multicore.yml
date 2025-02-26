@@ -43,7 +43,7 @@ manifest:
       owner: tomas.galbicka@nxp.com
       track_branch: release/25.03.00-pvw2
   - name: erpc
-    revision: 0fb3e34cae1e03f409df2b2c3e2e7ecbcda97963
+    revision: a3520dcc123dd578b0e8f9f639fdf7ba1750d079
     path: mcuxsdk/middleware/multicore/erpc
     url: https://github.com/EmbeddedRPC/erpc
     groups:
