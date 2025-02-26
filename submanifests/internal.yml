@@ -23,7 +23,7 @@
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: c03ed8fbc285415d40bd1bb50fd2ac9d2b4c22ea
+    revision: 9c808afaaa04868cb86db834e6219ecd5753fd76
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -99,7 +99,7 @@
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 39bfca0f2c64e350094d691b0da202b3c5248120
+    revision: 4944da0a2f4c85c85b5b614fd472f0f67b6305e0
     groups:
     - bifrost
     userdata:
