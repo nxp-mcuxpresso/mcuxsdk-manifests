@@ -78,7 +78,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/edgefast_bluetooth
-    revision: 72f11f93b56e8de72bf92cd2be1b91a048707cb1
+    revision: db26e577d22e4719299686cccff8f22d4678957c
     repo-path: mcux-sdk-middleware-edgefast-bluetooth
     groups:
     - edgefast_bt_ble
@@ -100,7 +100,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: 05b8b53be50040d3794f939e87107ab887a56232
+    revision: 2a377c38d0fabfa76672a44a8c9026b5e651d8b7
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
