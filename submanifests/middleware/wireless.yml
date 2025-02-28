@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: 7b9e7d812da0aa4d8cc1837bde1a1cbbfceaa519
+    revision: b7a7114a5f8f87cf410cd48222978f17db45431d
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 74d8117b6261298a5174833f1c812b873f8db820
+    revision: 08db1bafd979825a9406138b62b217dd6d3380c7
     groups:
     - ble_controller
     - middleware
@@ -52,7 +52,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: f5516fea2b1d99a972536cba53ecf208f8e68428
+    revision: b40d8c818e9ed2e2f266e33b729f5f9c24cec649
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: c7778c57b26b2f67c3c250c4cd273b6140831c39
+    revision: 800eabead7dfdb5b9b5e81038de23562e06230e8
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -132,7 +132,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: 48f17db1b0253e0f59daada09bc349aaa7a68de6
+    revision: b94331f259804f414eaa845cf89659407017046a
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
