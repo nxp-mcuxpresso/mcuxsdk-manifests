@@ -72,7 +72,7 @@ manifest:
       owner: junjie.liu@nxp.com
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/edgefast_bluetooth
-    revision: 4fc3c795a252e9ed3428e0cde63343dc79068d32
+    revision: dfcbf3c17d92af2299706a16b13cecca02d3663c
     repo-path: mcux-sdk-middleware-edgefast-bluetooth
     groups:
     - edgefast_bt_ble
@@ -92,7 +92,7 @@ manifest:
       owner: nirav.agrawal@nxp.com
       track_branch: release/25.03.00-pvw2
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: de1beaee3b41930bb3c45b0211e7b44bc0fef59f
+    revision: d940bac76477d7916b91eacf6e9f69cec31a8248
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
