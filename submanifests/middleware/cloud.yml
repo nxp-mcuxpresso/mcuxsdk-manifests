@@ -36,7 +36,7 @@ manifest:
       track_branch: release/24.12.00
       branch_flow: false
     path: mcuxsdk/middleware/aws_iot/device-defender
-    revision: 200c88aebaf439fc6568c7b7e978a94b0a65ec16
+    revision: 57291433b6a36865887d9370defe4a6ed0cb3f40
     groups:
     - aws_iot
   - name: aws_iot_device-shadow
@@ -46,7 +46,7 @@ manifest:
       track_branch: release/24.12.00
       branch_flow: false
     path: mcuxsdk/middleware/aws_iot/device-shadow
-    revision: 8df88a3822e915b529024c6e0276230476283fe8
+    revision: 08d8b1a68b7c167097479705d210da6700445368
     groups:
     - aws_iot
   - name: aws_iot_jobs
@@ -56,7 +56,7 @@ manifest:
       track_branch: release/24.12.00
       branch_flow: false
     path: mcuxsdk/middleware/aws_iot/jobs
-    revision: ab5d12ae9764268f60cf4575e1cbbe090bd4873f
+    revision: df5b97d03f0bc32d3f62d12dc7d10e36e82a895b
     groups:
     - aws_iot
   - name: aws_iot_ota
@@ -66,7 +66,7 @@ manifest:
       track_branch: release/24.12.00
       branch_flow: false
     path: mcuxsdk/middleware/aws_iot/ota
-    revision: 64decfa1775b7bc16d7e6674610bc3841e3271d1
+    revision: 52904b5a54a0a9335291088879a889f439d7738b
     groups:
     - aws_iot
   - name: aws_iot_llhttp
