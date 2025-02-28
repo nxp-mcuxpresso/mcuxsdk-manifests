@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: mcux-devices-rt
     path: mcuxsdk/devices/RT
-    revision: 463d6ed2da162861402bb7268341039214488b2e
+    revision: 246405036339910d89a97d2bfb33f9a4f47f7b00
     groups:
     - core
     userdata:
