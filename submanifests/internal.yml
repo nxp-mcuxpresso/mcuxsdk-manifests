@@ -1,4 +1,4 @@
- manifest:
+manifest:
   remotes:
   - name: origin
     url-base: https://github.com/nxp-mcuxpresso
