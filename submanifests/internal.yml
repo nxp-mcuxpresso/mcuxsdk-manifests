@@ -1,4 +1,4 @@
- manifest:
+manifest:
   remotes:
   - name: origin
     url-base: https://github.com/nxp-mcuxpresso
@@ -88,7 +88,7 @@
       track_branch: main
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 1bb2e91c16e60c285ddb95215a996f8833807969
+    revision: 5d2aa454d77193f1f2a3deaa5e89bd12dca07489
     groups:
     - bifrost
     userdata:
