@@ -124,10 +124,10 @@ manifest:
   - name: emwin
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: 070d4261d3d3e574f62f63c0bf2f07264b6662eb
+      track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/emwin
-    revision: 3a5f8ebeaa5d66c8294a94f741509ee2d37b1741
+    revision: a066b36455c584fee6798ab8862b2f68500476d9
     groups:
     - bifrost
   - name: ieee-802.15.4_private
