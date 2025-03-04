@@ -15,7 +15,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/cadence/multicore-xaf
-    revision: 90f744ea2093ae51f8d41cd959ba394af773f668
+    revision: 529d7a4e1af81cea6a8a77e3cc2b22016cf94998
     groups:
     - bifrost
   - name: dsp-codecs
@@ -24,7 +24,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/cadence/codecs
-    revision: dc2e4cd9c7b6ce2bd303e455fcd9168215dcb350
+    revision: bde76ff5b0a1444b87dfb151914fb905d521973f
     groups:
     - bifrost
   - name: naturedsp
@@ -33,7 +33,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/cadence/naturedsp
-    revision: c2ca6d6d3116668cf043e6c7d30ee3f703caadcc
+    revision: 28c7d651eedd872a8f5dc262524063eced5a85e6
     groups:
     - bifrost
   - name: nnlib
@@ -42,6 +42,6 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/cadence/nnlib
-    revision: 58de8f7519cd48117a752248794e7e295ddaff04
+    revision: 03aab021e5832b7d027f3fe18bdf6115a863d6ae
     groups:
     - bifrost
