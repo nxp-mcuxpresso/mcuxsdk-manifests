@@ -23,7 +23,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 0de6e077796945848c57e1ed5c459a854f7ea7df
+    revision: 7a6c43bc6d76906e46bcb25c4b6de63b347b17e7
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -99,7 +99,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 377e4fe90a5db0f0bd9ae63913657289a1a52a1f
+    revision: 61874d5d5fad65c3c4b12638c17047b9cbec62bb
     groups:
     - bifrost
     userdata:
@@ -107,7 +107,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 35291d8253a3b87ff63ccac5756fe2400523aeca
+    revision: 05105d9ba604358c65d55fd70efb2754aa83fe05
     groups:
     - bifrost
     userdata:
