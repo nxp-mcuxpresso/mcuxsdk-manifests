@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 97dd6e500cd1ee5feeb34b04b042428d9b917d63
+    revision: db8bbe434fc648ce41a7abedc1a08d75a6277ea4
     west-commands: scripts/west_commands.yml
     groups:
     - core
