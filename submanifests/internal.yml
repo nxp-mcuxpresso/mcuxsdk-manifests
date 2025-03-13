@@ -99,7 +99,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 85b6e9836845d90dc2167c41ba428d96a3e34508
+    revision: abae43b74568211ffb5f5b8a6359cb3e5b60ecd8
     groups:
     - bifrost
     userdata:
@@ -107,7 +107,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: ff4f625cb50f16e186ae4f629eb0d60e56f9149f
+    revision: c166d92ed36c3a5b95c6082a16b95d149ede568b
     groups:
     - bifrost
     userdata:
