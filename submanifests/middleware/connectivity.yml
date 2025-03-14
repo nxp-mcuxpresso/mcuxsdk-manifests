@@ -43,7 +43,7 @@ manifest:
     - lin_stack
     - middleware
   - name: soem
-    revision: db154a25b4d3be4bc4359c49f01df502771d2b3f
+    revision: 0955d51c315e220b8d30084049927003f46a6f37
     path: mcuxsdk/middleware/soem
     remote: nxp-real-time-edge-sw
     groups:
