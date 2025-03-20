@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 3d4f8a359082e1a0951b2a1fa121eaf5f16d0f5c
+    revision: 26ba76f107c2884bee463d8cd3a9e40c554bd4e5
     groups:
     - ble_controller
     - middleware
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: c889ebc04141826c8193ea8699372c4feb5f8a66
+    revision: b1ad21d0167c53fd6ec84fadf3035d6f4b897661
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
