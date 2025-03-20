@@ -28,7 +28,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/genfsk
-    revision: 5bc2fdf7f16668168e0a89e562ef790c2a864ef9
+    revision: 44c484a0513b3523553cb8185f9b58af34a44567
     groups:
     - genfsk
     - middleware
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 351239b9d4e91ec4c96a6541c305d16de10cda8d
+    revision: a4b50956b963c390b3e9b341eb4781b8a712d10a
     groups:
     - ble_controller
     - middleware
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: c2e796976c098f78b97ff2b95f55a76e2eabf0f9
+    revision: 0085d2ac6c1942edd0588490cceee774b6cfd883
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -132,7 +132,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: 0a60feeb16bdcce84eee2f600b86a3751a45ce48
+    revision: 7d09f567bad719a00163c7e88089eb650f276eb0
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
