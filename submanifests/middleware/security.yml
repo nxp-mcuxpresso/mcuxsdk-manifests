@@ -60,7 +60,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/mbedtls
-    revision: a1df64b365e475077801bc333d3da504c0cef647
+    revision: 5891f5c6e48dac322c4624d787c3c2e8ac90e5a9
     groups:
     - mbedtls
     - security
