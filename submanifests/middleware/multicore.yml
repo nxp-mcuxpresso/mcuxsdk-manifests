@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-sdk-middleware-multicore
-    revision: e76cd94dd19711b47ba5d2bfe984b87735266790
+    revision: f8c3bf49d74aede80a3ec04e93fe1d93d4b5e03f
     path: mcuxsdk/middleware/multicore
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-multicore
     groups:
