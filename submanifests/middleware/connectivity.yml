@@ -52,3 +52,13 @@ manifest:
     userdata:
       track_branch: master
       branch_flow: false
+  - name: freemodbus
+    revision: main
+    path: mcuxsdk/middleware/freemodbus
+    remote: nxp-real-time-edge-sw
+    groups:
+    - modbus
+    - middleware
+    userdata:
+      track_branch: main
+      branch_flow: false
