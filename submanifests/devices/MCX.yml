@@ -14,6 +14,7 @@ manifest:
     path: mcuxsdk/devices/MCX
     groups:
     - core
+    - ble_nxp
     userdata:
       track_branch: main
       branch_flow: true
