@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-sdk-middleware-multicore
-    revision: f8c3bf49d74aede80a3ec04e93fe1d93d4b5e03f
+    revision: 94fae41477d4fb57c4342bd1c8ff883d1b811182
     path: mcuxsdk/middleware/multicore
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-multicore
     groups:
@@ -22,7 +22,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcux-mcmgr
-    revision: 0f790b96f521a7855a52b7215ab41b72abac92bd
+    revision: 9827a5cf85d4ab122028a31bd6be5ec6c91870e1
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
@@ -34,7 +34,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: rpmsg-lite
-    revision: 17d2ecdef08b49ff94566931ef85fbe7d46cc4fa
+    revision: 5bee87a9fa53f987bc6bc3c002c6bbc69551260d
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
@@ -46,7 +46,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: erpc
-    revision: 0ee051a181775a94eca69961cff3d583f1dee196
+    revision: 74aa6039c41cdbd4bc29ee4ca6adc294a950634b
     path: mcuxsdk/middleware/multicore/erpc
     url: https://github.com/EmbeddedRPC/erpc
     groups:
