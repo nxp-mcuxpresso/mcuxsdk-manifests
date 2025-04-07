@@ -52,7 +52,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 90c6871bb2aef36f73da7ca734fb4b5c3152d08d
+    revision: 8ea5e5423329f2a3a573e2c3d01fb6732bac04cb
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
