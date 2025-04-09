@@ -60,7 +60,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 5154228a65b4c9a535ee8e196f8b38e2a1dc15e9
+    revision: edb6dfc2f081955329b1d809a36e326e77f4ad8e
     path: mcuxsdk/components
     groups:
     - components
