@@ -23,7 +23,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 172cbda17a5bd8adacf8e3e08707a7438c34c911
+    revision: e246936f727b240e208f8a7b10dad4fd4e01f454
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -99,7 +99,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 624a4edb31a6c35d82169fb8651c8b854d0053f5
+    revision: 40dbba48ef03d6eb88615dd63bd3c0884e5a4058
     groups:
     - bifrost
     userdata:
@@ -165,7 +165,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: 41b7eaee8dc83621f600015f5ce501eca1543aee
+    revision: cff141ca6f2195f687988f9b39f0f9dc98941332
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
