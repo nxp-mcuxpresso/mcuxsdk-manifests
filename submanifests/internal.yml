@@ -28,7 +28,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.06.00-pvw1
       branch_flow: true
   - name: sdk_components
     path: mcuxsdk/ecosystem/sdk_generator/modules/sdk_components
@@ -103,7 +103,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.06.00-pvw1
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
