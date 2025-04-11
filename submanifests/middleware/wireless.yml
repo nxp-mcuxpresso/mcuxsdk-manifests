@@ -132,7 +132,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: 82add5b976b317289a266487336b9e82d322409b
+    revision: 2ebd92d399f675b6b526af178b83a5b4af1ef869
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
