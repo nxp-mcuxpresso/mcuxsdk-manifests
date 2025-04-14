@@ -101,7 +101,7 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: feec32c551f8fa1a31eb66096105c5019ab4b409
+    revision: 63f63cb2174edc38947c970b34931abe575e9f69
     path: mcuxsdk/middleware/libjpeg
     groups:
     - libjpeg
