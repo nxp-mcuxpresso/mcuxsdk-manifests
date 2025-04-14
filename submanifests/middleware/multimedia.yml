@@ -110,7 +110,7 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: f81f3037461f82bde64ece33adf895a94b4d4734
+    revision: ade83e07b8b6d9a2293bf00ce88a24aefaf8d556
     path: mcuxsdk/middleware/pngdec
     url: https://github.com/nxp-mcuxpresso/PNGdec/
     groups:
@@ -120,7 +120,7 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: ece75e1a1f926c2c39091d92778a1cae70e3ae17
+    revision: 90869a2a1918ce0b0e9ce73c4758d4760ced020d
     path: mcuxsdk/middleware/openh264
     groups:
     - openh264
