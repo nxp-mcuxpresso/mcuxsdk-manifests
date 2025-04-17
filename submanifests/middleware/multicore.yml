@@ -22,7 +22,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcux-mcmgr
-    revision: 9827a5cf85d4ab122028a31bd6be5ec6c91870e1
+    revision: 5191d08bf35db5afa7b2f6f895baf13380ec655f
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
@@ -34,7 +34,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: rpmsg-lite
-    revision: 823068c05d3808bcce17ba6c94be0fc1924cf59d
+    revision: eb4dcef09d1439edadaa8e3f26923783f9f7a131
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
