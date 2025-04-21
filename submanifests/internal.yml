@@ -23,7 +23,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 20a087384adaf6448c2a8d4bbdf8c323c6bc07f7
+    revision: ef6ef4bba58c3289dbc1f0622527cd8d6b77ba54
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
