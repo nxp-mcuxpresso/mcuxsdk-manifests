@@ -56,7 +56,7 @@ manifest:
       track_branch: mcuxsdk_release
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/vit
-    revision: ba06ab4241396b12ec7d69fa623b10eeefde577e
+    revision: d85df2e3e2cf632da2deeb48de22a51594cc3b3c
     groups:
     - vit
     - audio_voice
