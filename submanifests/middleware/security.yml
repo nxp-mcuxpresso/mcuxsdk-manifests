@@ -142,7 +142,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/psa-arch-tests
     remote: nxp
     repo-path: nxp_psa_arch_test
-    revision: 909959e35d4c3a82450182f777b49c5c33902d90
+    revision: 0fe60c762aaf8d75c9a9f0422123c1bccd6ff77d
     groups:
     - tfm
     - security
