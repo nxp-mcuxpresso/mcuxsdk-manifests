@@ -120,7 +120,7 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: abe5eeb3c3555465333a4961494dffabea7cb526
+    revision: 1c5d71915ed689239ca6bc8118e93a1c3f787e1f
     path: mcuxsdk/middleware/openh264
     groups:
     - openh264
