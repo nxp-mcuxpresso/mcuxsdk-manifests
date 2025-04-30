@@ -82,7 +82,7 @@ manifest:
       branch_flow: false
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: 605ba63a318dd79d99a16a7a407713d789c7e6a2
+    revision: f3537614ea22ceb81ac01aa81233f145c8f4bd75
     groups:
     - bifrost
     userdata:
@@ -136,7 +136,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 33c4c775464ef729c1a845ce35d83a6a9d16936c
+    revision: 4f48f820c790666eafbf82222e1c2a5d85a8d1c8
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -146,7 +146,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee_private
-    revision: e59af944a849cf8dbde68fc9a88f19c71dc0b821
+    revision: c2b47aa8797937b7ee27ac9134bcf1f7f8895302
     repo-path: mcux-sdk-middleware-zigbee-int
     groups:
     - bifrost
@@ -165,7 +165,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: bbbd37418079c62e1b59723ffbb41a7a02e3974d
+    revision: f14486e69fa6b0d0a598da08ee9da86fef966ef9
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
@@ -176,7 +176,7 @@ manifest:
       track_branch: master
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
-    revision: 2b8ddea3668534f1266d907a663371008896719a
+    revision: 14137c944364ce134cce3c22fa011d9049c922d8
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
     groups:
     - bifrost
