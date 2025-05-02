@@ -85,7 +85,7 @@ manifest:
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
-    revision: a0dc88f3091034a484520d967576cf2d064f886f
+    revision: 3782972310a986ea34188fefea03d5a46975b2f2
     groups:
     - nxp_iot_agent
     - security
@@ -106,7 +106,7 @@ manifest:
       track_branch: main-dev
       branch_flow: false
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 503ebeb8e596c40ca5cf4e18981b5c32acb63b3e
+    revision: 6e33058b7c07491465e39adbb1a9802e88599842
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
