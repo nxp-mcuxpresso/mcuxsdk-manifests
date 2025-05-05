@@ -23,7 +23,7 @@ manifest:
     - usb
     - middleware
   - name: lwip
-    revision: 027be47404b4a9783c2e04a25f22c8c0d28cd113
+    revision: 7be273d2f4315f6240a867d6d0b0e83a6ab223ee
     path: mcuxsdk/middleware/lwip
     groups:
     - lwip
