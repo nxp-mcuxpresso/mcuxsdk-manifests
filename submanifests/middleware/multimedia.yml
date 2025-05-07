@@ -68,7 +68,7 @@ manifest:
       track_branch: mcuxsdk_release
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
-    revision: 6d78fb5b8f5f6f05e7e676a814468e886cf3ba6f
+    revision: aba5edbff27172060431e16ed7a68820e71ec96a
     submodules: true
     groups:
     - voice_seeker
