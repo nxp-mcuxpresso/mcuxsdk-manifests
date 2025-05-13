@@ -1,0 +1,17 @@
+board_name: "frdmmcxw23"
+repo_list:
+  - core
+  - mcu-sdk-components
+  - mcux-devices-mcx
+example_list:
+  - driver_examples
+  - demo_apps
+optional_repos:
+  - mbedtls3x
+  - tfm
+  - tf-m-tests
+  - qcbor
+  - psa-arch-tests
+optional_examples:
+  - tfm_examples
+

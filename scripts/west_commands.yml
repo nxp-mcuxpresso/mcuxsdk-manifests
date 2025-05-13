@@ -1,0 +1,6 @@
+west-commands:
+  - file: scripts/west_commands/update_board.py
+    commands:
+      - name: update_board
+        class: UpdateBoardCommand
+        help: Updates repositories belonging to a specified board and filters paths at file level.

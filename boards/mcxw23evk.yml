@@ -1,0 +1,38 @@
+# Core repositories (always included)
+repo_list:  
+  - mcu-sdk-components
+  - mcu-sdk-doc
+  - mcux-devices-mcx
+  - littlefs
+  - mcux-sdk-middleware-connectivity-framework
+  - ble_controller
+  - bluetooth
+  - freertos-kernel
+  - core
+  - mcu-sdk-examples
+  - CMSIS
+  - mcux-freertos-drivers
+  - tfm
+  - mbedtls3x
+  - tf-m-tests
+  - qcbor
+  - psa-arch-tests
+  - mcuxsdk-tool-data
+
+# Optional repositories (excluded by default, can be included with --include-optional)
+optional_repos:
+
+# Core examples (always included)
+example_list:
+  - cmsis_driver_examples
+  - component_examples
+  - demo_apps
+  - driver_examples
+  - freertos_driver_examples
+  - freertos_examples
+  - littlefs_examples
+  - tfm_examples
+  - wireless_examples
+
+# Optional examples (excluded by default, can be included with --include-optional)  
+optional_examples:
