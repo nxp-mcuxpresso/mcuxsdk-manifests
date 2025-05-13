@@ -113,14 +113,6 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
-  - name: mcux-devices-int
-    path: mcuxsdk/devices/internal
-    revision: a89ef579536e38583933b9306aad417b7ad0238d
-    groups:
-    - bifrost
-    userdata:
-      track_branch: main
-      branch_flow: false
   - name: emwin
     userdata:
       owner: tomas.barak@nxp.com
