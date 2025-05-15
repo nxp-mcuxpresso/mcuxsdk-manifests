@@ -25,11 +25,11 @@ manifest:
   - name: se_hostlib
     userdata:
       owner: null
-      track_branch: mcux_develop
+      track_branch: release/25.06.00
       branch_flow: false
     path: mcuxsdk/middleware/se_hostlib
-    revision: 89daa90316f650b21f271cc577db049eb79dedca
-    submodules: true
+    revision: 29dbd4a90edc2678cd698ac1e87d62113bf469f1
+    submodules: false
     groups:
     - bifrost
   - name: secure-subsystem
