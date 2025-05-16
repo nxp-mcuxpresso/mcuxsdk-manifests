@@ -53,7 +53,7 @@ manifest:
       track_branch: master
       branch_flow: false
   - name: freemodbus
-    revision: main
+    revision: 99c1eb41eef44ef913bf3889875858a72500d168
     path: mcuxsdk/middleware/freemodbus
     remote: nxp-real-time-edge-sw
     groups:
