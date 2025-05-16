@@ -73,7 +73,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: dfdc042471c7ab0125d21f35d8c5911d27bfc1e1
+    revision: 39a7a1f9a95229efed23899d6c338c15e430418d
     groups:
     - mbedtls3x
     - security
@@ -97,7 +97,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: dd790999b23a6d52eb346c14e755ed2acd542e95
+    revision: ff4fb8b6b1d8d48c8bec1d90cb9f4b29957c0b3b
     groups:
     - tfm
   - name: psa_crypto_driver
