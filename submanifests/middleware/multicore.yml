@@ -46,7 +46,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: erpc
-    revision: 7782d81acb65f71515cf61f9343305d86caf451b
+    revision: c26302a4f2de9a7565897a374a16b6a02e45119b
     path: mcuxsdk/middleware/multicore/erpc
     url: https://github.com/EmbeddedRPC/erpc
     groups:
