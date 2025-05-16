@@ -8,6 +8,8 @@ manifest:
     url-base: https://github.com/nxp-mcuxpresso
   - name: qcbor_upstream
     url-base: https://github.com/laurencelundblade
+  - name: tf_m_tests
+    url-base: https://github.com/TrustedFirmware-M
   defaults:
     remote: nxp-mcuxpresso
   projects:
@@ -152,8 +154,8 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/tfm/tf-m-tests
-    remote: nxp-mcuxpresso
-    repo-path: mcux-tf-m-tests
+    remote: tf_m_tests
+    repo-path: tf-m-tests
     revision: 6f642014a8c255e163ae0bc4d21e327de694d6a2
     groups:
     - tfm
