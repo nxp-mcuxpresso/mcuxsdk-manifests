@@ -62,3 +62,13 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+  - name: canopennode
+    url: https://github.com/CANopenNode/CANopenNode
+    revision: 8c7d852902b2d307e8b91a43332c14e366641e00
+    path: mcuxsdk/middleware/canopennode/protocol
+    groups:
+    - canopennode
+    - middleware
+    userdata:
+      track_branch: master
+      branch_flow: false
