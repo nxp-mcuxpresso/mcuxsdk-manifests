@@ -26,7 +26,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/rtos/freertos/freertos-drivers
-    revision: 3c5f30d7547b839ea3933364dec44b714b5a306d
+    revision: c2130f0242642225265f909f7ebffc6a447c4b9f
     groups:
     - rtos
     - freertos
