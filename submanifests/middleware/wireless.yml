@@ -111,7 +111,7 @@ manifest:
       track_branch: wifi_nxp_gh
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 97f79c378153334ec0078fd439a57ac83fec6642
+    revision: 8c66e73097b8df3ce02c6430127c49b00311e2c7
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
