@@ -36,7 +36,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/freemaster
-    revision: 4fab4c562e66729ec43b2bee135e31d5d2c9a47b
+    revision: 2dab9b086113dcf534525d9ab3875a02659c1c15
     repo-path: mcux-freemaster
     groups:
     - freemaster
