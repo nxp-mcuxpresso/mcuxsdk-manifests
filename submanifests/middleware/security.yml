@@ -116,10 +116,10 @@ manifest:
   - name: mmcau
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: feature/MCUX-69470-migrate-mmcau
+      track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/mmcau
-    revision: f94cbcae9ea0de3796f19674c2acede847191c7f
+    revision: 92da780ab2c917505aefeb5ef96e4340344ae09f
     url: https://github.com/nxp-mcuxpresso/mcux-mmcau
     groups:
     - mmcau
