@@ -124,18 +124,6 @@ manifest:
     groups:
     - mmcau
     - security
-  - name: mbedcrypto
-    userdata:
-      owner: waqar.tahir@nxp.com
-      track_branch: develop/tf-m-1.8
-      branch_flow: false
-    path: mcuxsdk/middleware/tfm/mbed-crypto
-    remote: nxp
-    repo-path: nxp_mbedtls
-    revision: 0db4d9a97c95983aefa8aabfe61ddbdeedcd0e61
-    groups:
-    - mbedcrypto
-    - tfm
   - name: psa-arch-tests
     userdata:
       owner: waqar.tahir@nxp.com
