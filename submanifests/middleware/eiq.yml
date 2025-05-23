@@ -25,7 +25,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/eiq/tensorflow-lite
-    revision: 4e49f04241d15e25d0f1107d8523acfc830cfb1a
+    revision: 5965fc6c39815be7e22fcd3d8c9a768771440e8a
     groups:
     - eiq
     - middleware
