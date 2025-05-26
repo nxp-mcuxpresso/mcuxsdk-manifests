@@ -49,7 +49,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcu-sdk-examples
-    revision: 7aea9cf5c5540fa3c46119ec6d31797c3a3c6d6a
+    revision: 097e0bea9bbaaa255deb2b2ad99495b46b4c9473
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
