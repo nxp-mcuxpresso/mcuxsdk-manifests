@@ -121,7 +121,7 @@ manifest:
       track_branch: fw_bin_gh
       branch_flow: false
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 5600bc1e6a9f2bdb5c97b659ad6d7cca4a391478
+    revision: 700df59d65332efe5deaab3e394752e8880cb34a
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -142,7 +142,7 @@ manifest:
       track_branch: wpa_supplicant_rtos_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: fc0712d25adc46d021c033d49186711338a1be99
+    revision: 071a0ddc8e2bb8c91a478b785af77fb4d7a953d4
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
