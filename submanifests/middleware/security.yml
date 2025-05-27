@@ -75,7 +75,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: fa766409e80a242e9cb8287e5396ce8d2d54aa74
+    revision: 9f174e67828036727f08f6dadc373a7d720ea6db
     groups:
     - mbedtls3x
     - security
