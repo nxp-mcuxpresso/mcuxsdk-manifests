@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: mcuboot_opensource
     repo-path: mcuboot
-    revision: 2709ed0a47eb112fca275a68772c64c79b9e2b39
+    revision: fbf77ca1d816ee6e3e6f4b7b073fa06eb49d3a63
     path: mcuxsdk/middleware/mcuboot_opensource
     userdata:
       owner: petr.buchta@nxp.com
