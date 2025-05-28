@@ -19,7 +19,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/components/els_pkc
-    revision: aa9d9d9acd7bb687bf416356f1ac6b24dab1aef3
+    revision: 828f33ba91572afda6adbc7759dc175cfc4ebc0b
     url: https://github.com/NXP/els_pkc
     groups:
     - security
@@ -75,7 +75,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 3088f68fa206a7025ee6ea38fbe859b6cab4d6d4
+    revision: 0af34a4bf1455d099410c4db61a9ec00aeb966bc
     groups:
     - mbedtls3x
     - security
@@ -167,7 +167,7 @@ manifest:
       branch_flow: false
     path: mcuxsdk/middleware/secure_storage
     remote: nxp-mcuxpresso
-    revision: f903103bcb674cf44e54637a9a191b11126e9208
+    revision: f9ef58cf5d5d0bab35963ed1e253be45d97f408f
     repo-path: secure_storage
     groups:
     - bifrost
