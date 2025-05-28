@@ -51,7 +51,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/firmware/edgelock
-    revision: 075651881abbc82810f47d7b8ba4d400c413676d
+    revision: 95c96fe92dd015bc2af908a0d986504766ff6f58
     repo-path: mcux-edgelock
     groups:
     - edgelock
@@ -108,7 +108,7 @@ manifest:
       track_branch: main-dev
       branch_flow: false
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 6f1542fbb35c5d636698b3cf3a1488155fb8fa86
+    revision: c57bbec94ae41ed1549d9239a35edd87f75ef3ec
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
@@ -119,7 +119,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/mmcau
-    revision: 92da780ab2c917505aefeb5ef96e4340344ae09f
+    revision: 2381e9a66cb034386b8a8a6c35c6dc2c8e853dca
     url: https://github.com/nxp-mcuxpresso/mcux-mmcau
     groups:
     - mmcau
