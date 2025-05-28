@@ -152,6 +152,6 @@ manifest:
       track_branch: coex_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/coex
-    revision: 7bddc9cfc111f84c1401647234239c648f344b53
+    revision: 668c78e431f12fe375f1da7f84983f6c71cf052f
     groups:
     - coex
