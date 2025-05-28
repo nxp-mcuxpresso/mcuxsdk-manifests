@@ -12,7 +12,7 @@ manifest:
   - name: mcux-sdk-middleware-multicore
     revision: 94fae41477d4fb57c4342bd1c8ff883d1b811182
     path: mcuxsdk/middleware/multicore
-    url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-multicore
+    url: https://github.com/nxp-mcuxpresso/mcuxsdk-middleware-multicore
     groups:
     - multicore
     - middleware
