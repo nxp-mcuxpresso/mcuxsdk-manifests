@@ -35,7 +35,7 @@ manifest:
       track_branch: external_main
       branch_flow: false
     path: mcuxsdk/middleware/eiq/mpp
-    revision: bb0f46f40d82ace188ed5067607f86f58470ff20
+    revision: 208011dd5e5fe2712274da7b5f373f02be0b925a
     groups:
     - eiq
     - middleware
