@@ -101,7 +101,7 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: 63f63cb2174edc38947c970b34931abe575e9f69
+    revision: a1897a51ce31153efdb3ab42428ec5c472094729
     path: mcuxsdk/middleware/libjpeg
     groups:
     - libjpeg
@@ -120,7 +120,7 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: 1c5d71915ed689239ca6bc8118e93a1c3f787e1f
+    revision: 9190733b46d157a6f1e6fecdc07d056f353edb70
     path: mcuxsdk/middleware/openh264
     groups:
     - openh264
