@@ -30,7 +30,7 @@ manifest:
       track_branch: release/25.06.00
       branch_flow: false
     path: mcuxsdk/middleware/se_hostlib
-    revision: c941632ed7d422f2cffcf43a1e20931bd1eeca4f
+    revision: e503fafc3317c0775b89c70bbc97bb9109507035
     submodules: false
     groups:
     - bifrost
