@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: ea6dcdc3a29060cbc8cbbbeb2a444601b821da75
+    revision: 444aec2d1864b16e922ac3bcf60fa98878407d5b
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: a30f9f224801ce68a2a5f249e0d379ab17f79f50
+    revision: bf529b781a170a9c6d3ff5473494e903c6ed6d0e
     groups:
     - ble_controller
     - middleware
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 5c2990cdedfeb653bdcdee3a7160a07f925448bf
+    revision: 197d25dc8337ba5cd7e2c326fecff2904dc1cddd
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
