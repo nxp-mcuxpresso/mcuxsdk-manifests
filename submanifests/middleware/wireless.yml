@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: 9a84f928ba382fadee9adcd3cb860ba195787b30
+    revision: ea6dcdc3a29060cbc8cbbbeb2a444601b821da75
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 3dff6bb7fa9f225cf9eabf6b1d734015cb28d195
+    revision: a30f9f224801ce68a2a5f249e0d379ab17f79f50
     groups:
     - ble_controller
     - middleware
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 28fbe68f2735ad5dd8b498937ff91c032aee5d39
+    revision: 5c2990cdedfeb653bdcdee3a7160a07f925448bf
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -132,7 +132,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: 7236d4161c38e7605bf6a5302b9ca20f2df57218
+    revision: 646dcd99c572f91197fb4acd77020280ce593eb9
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
