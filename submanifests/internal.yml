@@ -7,7 +7,7 @@ manifest:
   projects:
   - name: mcu-sdk-test
     path: mcuxsdk/test
-    revision: a4245b49468e03c99075778bd4a40204c1817b45
+    revision: main
     groups:
     - bifrost
     userdata:
