@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 1b7a98249c57cdbf704793b688b28529254e3417
+    revision: 73fc1b210ef97f499805b731ae8de4024e93542e
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4

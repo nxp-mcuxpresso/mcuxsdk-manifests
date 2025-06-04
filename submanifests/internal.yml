@@ -99,7 +99,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: a2a6abf881fc7a37c5108014c4a78191248c0179
+    revision: d456e5eb9e95fae0a5ab8597126121462fdfe4b4
     groups:
     - bifrost
     userdata:
@@ -128,7 +128,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: e757ade2ad92dbfe10da2a8a82a3c9294ab9b152
+    revision: c2ee35e763516783381b1af8cbf34ac933681218
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
