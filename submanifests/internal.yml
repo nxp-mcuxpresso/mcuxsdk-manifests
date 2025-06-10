@@ -78,7 +78,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: master
+      track_branch: release/25.06.00
       branch_flow: false
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
