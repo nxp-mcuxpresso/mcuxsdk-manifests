@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: e905b30ee4108bd82076f948cff747a9eb292291
+    revision: 41cbb91f5e8e3ec6b1e1d3baaf024a758a7132c1
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
