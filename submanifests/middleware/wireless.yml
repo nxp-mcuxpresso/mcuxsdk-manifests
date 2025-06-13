@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: release/25.06.00
       branch_flow: false
-    revision: b55223f28594897792fd9490000e8cc23ad9bdc8
+    revision: c25f8d809de08f4b89af7c8991d3f465389ee76a
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -28,7 +28,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/genfsk
-    revision: 44c484a0513b3523553cb8185f9b58af34a44567
+    revision: 8581cbd8a7d71a6b62465d8501500636b4e423f5
     groups:
     - genfsk
     - middleware
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 6c1977997162e472808a9ae0497a2d397848c7b3
+    revision: 28e4e906b7d5971bdebf389905f33200900bd2c9
     groups:
     - ble_controller
     - middleware
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: fe1db1e4ab0f586f30dfac20a9ebbcdd3e998261
+    revision: c067bc9786b219b343ba4004387a7a33d8e0654a
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -111,7 +111,7 @@ manifest:
       track_branch: release/25.06.00
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 72f347a065b93f604f49db01a8a882b85e7401f1
+    revision: 997421a5974aa96a315f03385fd44a7a15c5afe7
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -121,7 +121,7 @@ manifest:
       track_branch: release/25.06.00
       branch_flow: false
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: d5e6f937c27267ee6fc8b654bdd6b03d3dfc25e8
+    revision: 8064c4141dc78f1ce639f1119281c5546f796256
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -132,7 +132,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: c2e54af8f693c885d69b18f437e464fff012d2f4
+    revision: ae4afc04dfeeafb2a61fe3d9fd85d9a44c826a2d
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
