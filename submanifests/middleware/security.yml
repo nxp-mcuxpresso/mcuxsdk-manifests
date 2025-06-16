@@ -177,7 +177,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/components/sgi_pkc
-    revision: a3e09f73b65ea887b8bfc34b99d3a024be112319
+    revision: 5d1fa803f0e5761bfae1033a5ce34dffcd1bfbf8
     url: https://github.com/nxp-mcuxpresso/sgi_pkc
     groups:
     - security
