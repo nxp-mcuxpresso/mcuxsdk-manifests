@@ -171,3 +171,14 @@ manifest:
     repo-path: secure_storage
     groups:
     - bifrost
+  - name: sgi_pkc
+    userdata:
+      owner: vit.chmelar@nxp.com
+      track_branch: main
+      branch_flow: false
+    path: mcuxsdk/components/sgi_pkc
+    revision: a3e09f73b65ea887b8bfc34b99d3a024be112319
+    url: https://github.com/nxp-mcuxpresso/sgi_pkc
+    groups:
+    - security
+    - sgi_pkc
