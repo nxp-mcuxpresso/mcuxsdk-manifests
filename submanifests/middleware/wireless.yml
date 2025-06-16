@@ -121,7 +121,7 @@ manifest:
       track_branch: fw_bin_gh
       branch_flow: false
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: d5e6f937c27267ee6fc8b654bdd6b03d3dfc25e8
+    revision: 06b7a1e3d593b33cd90720622a886cdbbb223896
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
