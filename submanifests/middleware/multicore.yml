@@ -34,7 +34,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: rpmsg-lite
-    revision: e085a365adb4907652b39168bfb73ee1fe5f06b4
+    revision: da5469c591ce71705c3c7d1b85fdd833bc64b880
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
