@@ -22,7 +22,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcux-mcmgr
-    revision: dbc737f40f23b0fe7ff5a247970be3f90ca18152
+    revision: c22becaa393b88454e5b750c30f9a33ef32ac282
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
@@ -34,7 +34,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: rpmsg-lite
-    revision: a7410b5e00c213dbdf099ed3ccd2950bddd9c53a
+    revision: e085a365adb4907652b39168bfb73ee1fe5f06b4
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
@@ -46,7 +46,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: erpc
-    revision: 390c59d6ef4fdd30ef4034ebe903fa875a5c2641
+    revision: e8d5684a920e023a49cec875c04ad05ddc8521e6
     path: mcuxsdk/middleware/multicore/erpc
     url: https://github.com/EmbeddedRPC/erpc
     groups:
