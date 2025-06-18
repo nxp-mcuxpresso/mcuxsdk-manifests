@@ -50,6 +50,16 @@ manifest:
     groups:
     - lvgl
     - middleware
+  - name: g2d_dpu
+    userdata:
+      owner: joshua.wienecke_1@nxp.com
+      track_branch: main
+      branch_flow: false
+    path: mcuxsdk/middleware/g2d_dpu
+    revision: 6a60655caef80823cddc49e8950e2e2b29cd51a5
+    groups:
+    - g2d_dpu
+    - middleware
   - name: vit
     userdata:
       owner: tomas.barak@nxp.com
