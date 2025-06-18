@@ -43,10 +43,10 @@ manifest:
   - name: lvgl
     userdata:
       owner: cristianmarian.stoica@nxp.com
-      track_branch: release/nxp-v9.2.1
+      track_branch: release/nxp-v9.3.0
       branch_flow: false
     path: mcuxsdk/middleware/lvgl
-    revision: 469203a482c4d9dcacff7d75379dab513dd278a8
+    revision: 1d16f3fcc0fe386eac1a328b7dde95bd99fddba0
     groups:
     - lvgl
     - middleware
