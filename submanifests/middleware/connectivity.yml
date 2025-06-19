@@ -14,7 +14,7 @@ manifest:
   - name: usb
     userdata:
       owner: yichang.wang@nxp.com
-      track_branch: main
+      track_branch: release/25.06.00
       branch_flow: false
     revision: 9f4839b6a1eda38aeb81c060c29e5c3d812c6963
     path: mcuxsdk/middleware/usb
