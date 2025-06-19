@@ -23,7 +23,7 @@ manifest:
       owner: yangbo.lu@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: b75b4e37ba5092099cb50258fda11c973b0f8865
+    revision: 28d08d304983288ddee85f252f763282796de67a
     path: mcuxsdk/middleware/sdmmc
     groups:
     - sdmmc
