@@ -16,7 +16,7 @@ manifest:
       track_branch: issdk_clean_history_branch
       branch_flow: false
     path: mcuxsdk/middleware/issdk
-    revision: 6d2fc86d39a74b6a9d269fb2606008303a157177
+    revision: 157d023bc49c5fba7eecfe4ec07ae24481e84c18
     groups:
     - issdk
   - name: cjson
