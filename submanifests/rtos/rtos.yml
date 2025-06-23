@@ -19,7 +19,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
   - name: mcux-freertos-drivers
     userdata:
       owner: david.jurajda@nxp.com
@@ -34,7 +34,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
     path: mcuxsdk/rtos/freertos/corepkcs11
     revision: 38325f85c101ea54bdb73aeeda575281ba6aca8e
     groups:
@@ -44,7 +44,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
     path: mcuxsdk/rtos/freertos/coremqtt
     revision: 4595560fa42b9c972d2dda1911ab3dbc5bf01c82
     groups:
@@ -54,7 +54,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
     path: mcuxsdk/rtos/freertos/corejson
     revision: 6c3b335bd050e13ced31b1889a3838b84405f705
     groups:
@@ -64,7 +64,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
     path: mcuxsdk/rtos/freertos/corehttp
     revision: 8c2ec353f2276c6a092d016baa410c5ff972ece0
     groups:
@@ -74,7 +74,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
     path: mcuxsdk/rtos/freertos/backoffalgorithm
     revision: d73553543fc5df90386a9a1b1ee3cd44bec85caf
     groups:
@@ -84,7 +84,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp
     revision: a665048d31fb736c84a2b71ddf931e08f17b27cf
     groups:
@@ -93,7 +93,7 @@ manifest:
     userdata:
       owner: michal.princ@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
     path: mcuxsdk/rtos/freertos/coremqtt-agent
     revision: 4b590adcc3784ba7089d52ceb7f63ce43d3cabe5
     groups:
