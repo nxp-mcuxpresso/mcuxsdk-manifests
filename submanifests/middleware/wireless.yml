@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: a4dcfafd03d369f37a0dc0fef15d487b9bf33311
+    revision: d87ff391cfaf782616d7bb0fc0e1aecfd5c36a64
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -52,7 +52,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 9a6437896a190d7e5b3e18fd818865052fb51581
+    revision: 4b08865a790d8b7301fe59428b9544b914a2434b
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
