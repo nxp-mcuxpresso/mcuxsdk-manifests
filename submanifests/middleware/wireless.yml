@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: d87ff391cfaf782616d7bb0fc0e1aecfd5c36a64
+    revision: b295055d6b5c456ddffc1418615604c2fb64818b
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: ab711b6ab5399d9daf4eb0249de6f8f7b94b4f2f
+    revision: 343de04a6b1bd9cdd62ee018d43dbb41edf485fc
     groups:
     - ble_controller
     - middleware
