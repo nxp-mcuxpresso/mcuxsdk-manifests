@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: 6338eb8108ecb4fe182229c04b7edbe2a49d7a59
+    revision: 79d35ac29fc95e2879d0eddc90fdddeec3b2d663
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 3940fd10bbd48f5d586ab3cc62253bde7d0f13f0
+    revision: 6e847b85a2b172b1869a24f71a48f09371941924
     groups:
     - ble_controller
     - middleware
@@ -65,7 +65,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 59d4921a0a15feb5ad8ca021cd46c63eaf7c5bec
+    revision: 0b92d232420cc2e9644ce162770414b8931bf9b3
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: db24910e9f0074a3e0a2400b4d473fb6e818295d
+    revision: c686be46a9c9f109dd3971d9477c14324148bcaa
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -100,7 +100,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: 28774e2602bc3591852d7aa83178a1ee727e292e
+    revision: efa505aad11d9ecd0449f17078a47ee4e1121085
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
@@ -111,7 +111,7 @@ manifest:
       track_branch: wifi_nxp_gh
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 49d9260c9193b267afb3756af718a2a9bc2965bb
+    revision: 244ebbade639721c8330bea7364aabde1afcaba6
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -121,7 +121,7 @@ manifest:
       track_branch: fw_bin_gh
       branch_flow: false
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 06b7a1e3d593b33cd90720622a886cdbbb223896
+    revision: a5d323c4ed59e430f5ab8f68d1c31dcc991e808e
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
