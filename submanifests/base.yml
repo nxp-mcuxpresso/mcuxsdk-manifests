@@ -42,14 +42,14 @@ manifest:
       branch_flow: false
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: 1a91700d3988598c8a140897c5228a020ca75ff7
+    revision: a507bc9fa7a097fafb9e08911f6664a38616aa96
     groups:
     - optional
     userdata:
       track_branch: main
       branch_flow: false
   - name: mcu-sdk-examples
-    revision: 4d2d4cdd5316e2bf159f681e00d92a2b25bef2c1
+    revision: 634792dd4373788578c05dc0c083a3626fdce07b
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
