@@ -27,10 +27,10 @@ manifest:
   - name: se_hostlib
     userdata:
       owner: null
-      track_branch: release/25.06.00
+      track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/se_hostlib
-    revision: e503fafc3317c0775b89c70bbc97bb9109507035
+    revision: 93949358d68a88ec976c3696bf8d263edf87c605
     submodules: false
     groups:
     - bifrost
