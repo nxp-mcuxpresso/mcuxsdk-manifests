@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 9c268c99ccf1fabdb8f6bb806511b940539beac1
+    revision: 4994b6c2ccc0790d8138e08ce93f06bdd1260b7b
     groups:
     - ble_controller
     - middleware
