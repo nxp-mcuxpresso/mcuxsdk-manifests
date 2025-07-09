@@ -82,7 +82,7 @@ manifest:
       branch_flow: false
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: bbb99e1c3281bdc2ccf9e9a0455c48a05dc09a5f
+    revision: 6988d0036c3af8627e15f4315d8f964ca4e4fc0b
     groups:
     - bifrost
     userdata:
@@ -128,7 +128,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: e748c0bb3c62f11e9410e77565b075cc678730f3
+    revision: 9cd4b5ed8a4917ce65671339cf0016267befb1f8
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -157,7 +157,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: 09c45e85a87f53de95f55d61b70efa098fe6644c
+    revision: e70982a028fe43818ac99aed554b15df257dc9a0
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
@@ -168,7 +168,7 @@ manifest:
       track_branch: master
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
-    revision: b90b1bda00563e5d25751dc62c040878eaeb0f75
+    revision: c8e9621a0af2ee6eca0f0cd56792934aa6485bfe
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
     groups:
     - bifrost
