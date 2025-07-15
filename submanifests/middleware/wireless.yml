@@ -111,7 +111,7 @@ manifest:
       track_branch: wifi_nxp_gh
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 3fa1b445f554eb9114b9691e459c123fd3d98c74
+    revision: 64b4dc688200e9e8bc4717139419c0b3ec7744b1
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -142,7 +142,7 @@ manifest:
       track_branch: wpa_supplicant_rtos_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: d8b4cbefd771fd21f514bdf74f53d758d16853f0
+    revision: 20811b5401eacb08222473ec479b378cffef7974
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
