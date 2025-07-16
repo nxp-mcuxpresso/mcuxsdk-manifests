@@ -22,7 +22,7 @@ manifest:
     - middleware
   - name: mcu_bootloader
     repo-path: mcuxsdk-middleware-bootloader
-    revision: ed117fdc6c66b6d6225011bfc3329743c5845273
+    revision: 72fcb5add76cacd6f00e3d12f3b59af121e58e16
     path: mcuxsdk/middleware/mcu_bootloader
     userdata:
       owner: shibin.yang@nxp.com
