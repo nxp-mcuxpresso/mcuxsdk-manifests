@@ -40,7 +40,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/secure-subsystem
-    revision: 6562de0363fa7f235df3e291e7035e0025f7c27f
+    revision: c9f94342d6b9ba6486ce8cff90fc34820d9b8b4d
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
