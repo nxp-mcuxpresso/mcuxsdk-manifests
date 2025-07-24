@@ -51,6 +51,7 @@ manifest:
     - lvgl
     - middleware
   - name: g2d_dpu
+    repo-path: gpu-g2d-dpu
     userdata:
       owner: joshua.wienecke_1@nxp.com
       track_branch: main
