@@ -56,7 +56,7 @@ manifest:
       track_branch: mcuxsdk_release
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/vit
-    revision: 3f9a542a2196da499a48bb7c26adf885d0c0a7ea
+    revision: 456628d36bad263cf4e82371f850435f1a2ae411
     groups:
     - vit
     - audio_voice
@@ -68,7 +68,7 @@ manifest:
       track_branch: mcuxsdk_release
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
-    revision: 4ded3dde64deee98e6d0d8755cf26c31312bad0e
+    revision: 8ecf372633ad98e7c64b7fd552ee8293a40fe334
     submodules: true
     groups:
     - voice_seeker
@@ -80,7 +80,7 @@ manifest:
       track_branch: mcuxsdk_release
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
-    revision: 67a868a1a4405aaae1782b7d546d9385705d5d18
+    revision: bd0c217bace6268b0800371af2b2454710c1bfb6
     submodules: true
     groups:
     - bifrost
