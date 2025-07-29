@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 65263760e68dc2907cb578cb043f3181d804240c
+    revision: 446a80130fefdd5486cf459e095ad621fb5359a8
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -33,7 +33,7 @@ manifest:
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
-    revision: 5804ecb5869b17dfe21f966242cb2f6c94a5d157
+    revision: 360049cdcff5aad83c31fc67112255edbf5ccc6b
     groups:
     - core
     - ble_nxp
