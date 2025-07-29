@@ -167,7 +167,7 @@ manifest:
       branch_flow: false
     path: mcuxsdk/middleware/secure_storage
     remote: nxp-mcuxpresso
-    revision: ba863d6bc633a11016e957b079055ec4c91a5143
+    revision: 49e1ded26283d783dbfc12868387170cd743a1f4
     repo-path: secure_storage
     groups:
     - bifrost
