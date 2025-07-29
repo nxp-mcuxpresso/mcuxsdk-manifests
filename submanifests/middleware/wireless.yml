@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: f63c696490301814330f887db7a4420d34eb8873
+    revision: ac1bcdb1d691349302d0c773eaf96d19b44bad31
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: e57647a423c08ff51a9b8627c94de142124c394d
+    revision: 2b6ed1561766f79fea00d0619298dc65066a4919
     groups:
     - ble_controller
     - middleware
@@ -52,7 +52,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: e71e44be1af6574a5892e30721faba499f41350f
+    revision: fd3358f576d70442dc196ab6898268a7688fd976
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -65,7 +65,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: b52ada41cbb996fbfb720da0dd5092b4036d7645
+    revision: 792f1327e51c3efbe1c5e6df85c9186d172a54d4
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 86c71363e4b65ba335362835f5e3c50c59bdc8b7
+    revision: 1f6196f5e6eedb4472fe3198e4b4f370bc3499f5
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -111,7 +111,7 @@ manifest:
       track_branch: wifi_nxp_gh
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 54f3f0c50108bf048872e420c41bcb9c834e60b4
+    revision: 4d61c52321fef50b70b9e0889d84d542c1c54335
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
