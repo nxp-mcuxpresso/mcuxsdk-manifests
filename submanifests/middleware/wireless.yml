@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 901a6ff9ca581e00ab8bd6e77cb970170632e690
+    revision: 9694e0bfe08574849a551aaa8742598e11200c04
     groups:
     - ble_controller
     - middleware
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 183c4f25a2eefeaa368b462aee5d055af4334779
+    revision: 25f5a68bab9768c54e1748836d3aa3063625b544
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -100,7 +100,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: efa505aad11d9ecd0449f17078a47ee4e1121085
+    revision: 38599f96545e8e95f6be81ad4c5047e20aa74281
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
