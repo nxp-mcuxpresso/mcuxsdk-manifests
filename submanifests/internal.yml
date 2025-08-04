@@ -23,7 +23,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 099746348d0ff32af651abcf2235e3f163fbfc9d
+    revision: ed993b207027ac067b8789a572b85f45dfe939c7
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -91,7 +91,7 @@ manifest:
   - name: ble-controller-snps-int
     path: mcuxsdk/middleware/wireless/snps_ll_private
     repo-path: ble-controller-int-snps
-    revision: e0ec0439eafac9759f7c00b9283e1fddf66124bf
+    revision: 5fe1d3c0dd75674a0c6c11e26c31992ab7e32b19
     groups:
     - bifrost
     userdata:
@@ -99,7 +99,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: ccc990ad2cc71e07a654d0dfe5f45bdfaf92d642
+    revision: 0cf3eaddca747b37541320b31cece4feb1a41fc4
     groups:
     - bifrost
     userdata:
