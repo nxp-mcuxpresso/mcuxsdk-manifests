@@ -43,7 +43,7 @@ manifest:
     - lin_stack
     - middleware
   - name: soem
-    revision: 00e479af12d8beffc22f5172101dad53b02a92b3
+    revision: 1735c20f67d32d21e7ed6b14fb1042049d43d94c
     path: mcuxsdk/middleware/soem
     remote: nxp-real-time-edge-sw
     groups:
@@ -53,7 +53,7 @@ manifest:
       track_branch: master
       branch_flow: false
   - name: freemodbus
-    revision: 3bb6432e98e28181122c633a09f3c248e8bc2ee8
+    revision: 6d729fec3a09d64cf64e32e0bb60176ebedf7d80
     path: mcuxsdk/middleware/freemodbus
     remote: nxp-real-time-edge-sw
     groups:
