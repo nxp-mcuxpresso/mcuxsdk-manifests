@@ -78,7 +78,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/edgefast_bluetooth
-    revision: 9e2e67513e8fd340221cfbed912611ace00f8305
+    revision: bf6909fc44238598d75efe720f35e49833770a65
     repo-path: mcux-sdk-middleware-edgefast-bluetooth
     groups:
     - edgefast_bt_ble
