@@ -42,7 +42,7 @@ manifest:
       branch_flow: false
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: a465a60e4e8538b480a6e6976a9413f02c497a76
+    revision: d8962f29e9ea350f491146427e764366b9a3b658
     groups:
     - optional
     userdata:
@@ -70,7 +70,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 8a195e2fc123c6bea7c0fb2a29770c85772fd8ce
+    revision: b0daa45902ab328c83c971a2eae50b2517de074a
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
