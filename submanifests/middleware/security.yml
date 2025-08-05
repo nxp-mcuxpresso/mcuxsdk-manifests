@@ -87,7 +87,7 @@ manifest:
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
-    revision: b6a9c7b93eee654786b0bb114958e0678952e1a6
+    revision: 9f0ca19583f369bde70b0018e2682c4de8429cce
     groups:
     - nxp_iot_agent
     - security
@@ -99,7 +99,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: bd7e6178b9cde08ca1f9d27f1bcc563ccf36f0e9
+    revision: ef96cfcdaf470a25f1dd7fcafcaae5bbfaad33d1
     groups:
     - tfm
   - name: psa_crypto_driver
@@ -132,7 +132,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/psa-arch-tests
     remote: nxp
     repo-path: nxp_psa_arch_test
-    revision: 593892a7a03bcba47502dbcee7b9a2d570545f3e
+    revision: 8014e2fde9fae3b6b7611e57819a85bbba8e62df
     groups:
     - tfm
     - security
