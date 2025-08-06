@@ -87,7 +87,7 @@ manifest:
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
-    revision: 0a1364f502222ef779a2cfde259b56f9644d22ab
+    revision: f078a3123922c61bb9a4e89cedab3b457cfb2a73
     groups:
     - nxp_iot_agent
     - security
