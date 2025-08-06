@@ -170,7 +170,8 @@ manifest:
     revision: 49e1ded26283d783dbfc12868387170cd743a1f4
     repo-path: secure_storage
     groups:
-    - bifrost
+    - secure_storage
+    - security
   - name: sgi_pkc
     userdata:
       owner: vit.chmelar@nxp.com
