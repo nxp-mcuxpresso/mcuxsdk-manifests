@@ -16,6 +16,6 @@ manifest:
       branch_flow: false
     path: mcuxsdk/middleware/safety_iec60730b
     revision: 8d66b0adddf6399b60507b00cab0f81ebfc7a561
-    repo-path: mcux-safety_iec60730b
+    repo-path: mcux-safety-iec60730b
     groups:
     - safety_iec60730b
