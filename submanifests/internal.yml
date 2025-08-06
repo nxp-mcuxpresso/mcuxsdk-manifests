@@ -157,7 +157,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: ad86b640a6c39b694b65219ff8b1ea327403c570
+    revision: 0c0956fc5760ea108b54f3e4b69caec36a41367d
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
