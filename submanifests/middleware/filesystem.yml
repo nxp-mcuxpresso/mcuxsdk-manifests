@@ -21,9 +21,9 @@ manifest:
   - name: mcux-sdk-middleware-sdmmc
     userdata:
       owner: yangbo.lu@nxp.com
-      track_branch: mcux_main
+      track_branch: release/25.09.00-pvw2
       branch_flow: false
-    revision: b355255df963fd50d8f3d15aab24a2f4882ccfe7
+    revision: c2d408c2df98cf60b918ac2894e1bce53b7cdd9f
     path: mcuxsdk/middleware/sdmmc
     groups:
     - sdmmc
