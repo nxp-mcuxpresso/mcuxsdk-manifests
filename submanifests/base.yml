@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 0455af22adf229f945516f912b16c22eb04f6a74
+    revision: feature/heterogeneous_multicore
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -36,7 +36,7 @@ manifest:
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
-    revision: dc8b75b360fce9c864a12f1ccc54172e0c733805
+    revision: feature/heterogeneous_multicore
     groups:
     - core
     - ble_nxp
@@ -72,7 +72,7 @@ manifest:
         integration.
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 3d8bf5c7bb0aaa3c6334314590a831a9015991bb
+    revision: feature/heterogeneous_multicore
     path: mcuxsdk/components
     groups:
     - components
