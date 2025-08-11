@@ -82,7 +82,7 @@ manifest:
   - name: nxp_iot_agent
     userdata:
       owner: bojan.simoneta@nxp.com
-      track_branch: master
+      track_branch: main
       branch_flow: false
     remote: nxp
     repo-path: el2go-agent
