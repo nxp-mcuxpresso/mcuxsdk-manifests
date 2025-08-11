@@ -34,9 +34,8 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: rpmsg-lite
-    revision: 98f770d0c915397bad61cb152f381cafcb5af254
+    revision: feature/heterogeneous_multicore_ng
     path: mcuxsdk/middleware/multicore/rpmsg-lite
-    url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
     - multicore
     - middleware
