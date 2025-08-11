@@ -86,7 +86,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: true
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp
-    revision: a665048d31fb736c84a2b71ddf931e08f17b27cf
+    revision: 69482b57d31d7b5c41ea0ce5e91f365569268dc1
     groups:
     - freertos
   - name: coremqtt-agent
