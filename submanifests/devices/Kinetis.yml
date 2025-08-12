@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-devices-kinetis
-    revision: 3ad573346245a25a66d23c6867b87e4d84b6cebc
+    revision: 978c1f97060c884d548c68ac06836750426033e8
     path: mcuxsdk/devices/Kinetis
     groups:
     - core
