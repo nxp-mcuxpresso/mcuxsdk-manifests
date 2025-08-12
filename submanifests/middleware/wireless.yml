@@ -95,6 +95,16 @@ manifest:
     repo-path: mcux-sdk-middleware-edgefast-bluetooth
     groups:
     - edgefast_bt_ble
+  - name: edgefast_open
+    userdata:
+      owner: junjie.liu@nxp.com
+      track_branch: main
+      branch_flow: false
+    path: mcuxsdk/middleware/edgefast_open
+    revision: main
+    repo-path: mcux-sdk-middleware-edgefast-open
+    groups:
+    - edgefast_open
   - name: ieee-802.15.4
     userdata:
       owner: george.stefan@nxp.com
