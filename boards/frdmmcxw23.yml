@@ -1,5 +1,5 @@
 # Core repositories (always included)
-repo_list:  
+repo_list:
   - mcu-sdk-components
   - mcu-sdk-doc
   - mcux-devices-mcx
@@ -34,6 +34,6 @@ example_list:
   - tfm_examples
   - wireless_examples
 
-# Optional examples (excluded by default, can be included with --include-optional)  
+# Optional examples (excluded by default, can be included with --include-optional)
 optional_examples:
 
