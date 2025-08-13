@@ -80,6 +80,14 @@ manifest:
     userdata:
       track_branch: master
       branch_flow: false
+  - name: hciot-threadx
+    path: mcuxsdk/examples/wireless_examples/reference_design/health_care_iot_threadx
+    revision: ff175c66bbe0b4c4caccd9c2f17b3a10b63b4acc
+    groups:
+    - bifrost
+    userdata:
+      track_branch: main
+      branch_flow: false
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
     revision: 5996b6c9fbdd326cc2a005b2da64255727c093ea
