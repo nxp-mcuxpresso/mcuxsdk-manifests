@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 09c9fc5b3ca0fd598fa7772bed4688fef4eec0cc
+    revision: 45a1e10b167c57f2d94f57f5f945f6ea055aab51
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -49,7 +49,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcu-sdk-examples
-    revision: 6aa05768529bda4606b376e9dcc500bdf05c1339
+    revision: b2b28135361ff0b7ec7938db9dfb32fd630409e4
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
