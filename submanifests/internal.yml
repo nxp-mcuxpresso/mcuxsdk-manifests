@@ -82,7 +82,7 @@ manifest:
       branch_flow: false
   - name: hciot-threadx
     path: mcuxsdk/examples/wireless_examples/reference_design/health_care_iot_threadx
-    revision: 1ee5a6ab0b77bbc149ffc3de64c0d733a82cdc02
+    revision: 0f82353336a24c4baa13cc339fc448814f552175
     groups:
     - bifrost
     userdata:
