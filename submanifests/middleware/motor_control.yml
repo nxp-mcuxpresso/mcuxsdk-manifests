@@ -15,7 +15,7 @@ manifest:
       track_branch: main_github
       branch_flow: false
     path: mcuxsdk/middleware/motor_control
-    revision: 49b772040c89fc8c3ab71fae6bde58544525d299
+    revision: 8d618c88c0a1b9f18f66793140b362fe0d94866e
     repo-path: mcux-motor_control
     groups:
     - motor_control
