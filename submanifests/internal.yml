@@ -88,6 +88,14 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+  - name: threadx
+    path: mcuxsdk/rtos/eclipse-threadx/threadx
+    revision: master
+    groups:
+    - bifrost
+    userdata:
+      track_branch: master
+      branch_flow: false
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
     revision: 073e1dd11c2c0db4368cd74832697856c09d8045
