@@ -22,6 +22,7 @@ repo_list:
 # Optional repositories (excluded by default, can be included with --include-optional)
 optional_repos:
   - hciot-threadx
+  - threadx
 
 # Core examples (always included)
 example_list:
