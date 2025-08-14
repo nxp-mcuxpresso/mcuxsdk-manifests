@@ -45,7 +45,7 @@ manifest:
       track_branch: release/mcux
       branch_flow: false
     path: mcuxsdk/middleware/eiq/executorch
-    revision: 35ddfe439ae90cd65988c3c1cdfc58767cd3bd07
+    revision: ec4cbbab01c81ee12d1c2bcdfd26b80a2af96bf2
     groups:
     - eiq
     - middleware
