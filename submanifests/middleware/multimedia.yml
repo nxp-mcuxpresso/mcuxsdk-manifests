@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: maestro
-    revision: babf4f75312efe1011067fa8f99b9716f4609dc4
+    revision: c4eb145f036f820c86f0dc2de1b269db82930cbe
     path: mcuxsdk/middleware/audio_voice/maestro
     groups:
     - maestro
@@ -101,7 +101,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components
-    revision: 3001865de9b3fbff6f0aa510254752e7b9f5f363
+    revision: 7d5b7396eb0acbcb1232434ea6d8d6cdd8aad9cd
     groups:
     - audio-voice-components
     - audio_voice
