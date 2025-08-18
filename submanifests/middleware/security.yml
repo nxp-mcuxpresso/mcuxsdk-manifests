@@ -19,7 +19,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/components/els_pkc
-    revision: 732bed11f2276e11781851d7bd04eff57fad29b4
+    revision: 54e5dc23bc4b43344996b7abbe34f0bdafac7ffa
     url: https://github.com/NXP/els_pkc
     groups:
     - security
@@ -108,7 +108,7 @@ manifest:
       track_branch: main-dev
       branch_flow: false
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 1a93893f986db38cf2c8910f6138b634f0437a48
+    revision: e3369cb6ea4eb4af6531743ef1e3ebe7d61c4306
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
