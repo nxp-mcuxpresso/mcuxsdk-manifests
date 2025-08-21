@@ -142,7 +142,7 @@ manifest:
       track_branch: wpa_supplicant_rtos_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 25cf1b505dd58b4d27a3bf8607d7ac3dd82be262
+    revision: e00567aa478e505bee20039e55aab0db428e93c1
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
