@@ -37,4 +37,4 @@ example_list:
   - wireless_examples
 
 # Optional examples (excluded by default, can be included with --include-optional)
-optional_examples:
+optional_examples: []
