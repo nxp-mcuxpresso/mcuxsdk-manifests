@@ -20,7 +20,7 @@ repo_list:
   - mcuxsdk-tool-data
 
 # Optional repositories (excluded by default, can be included with --include-optional)
-optional_repos:
+optional_repos: []
 
 # Core examples (always included)
 example_list:
@@ -35,5 +35,5 @@ example_list:
   - wireless_examples
 
 # Optional examples (excluded by default, can be included with --include-optional)
-optional_examples:
+optional_examples: []
 
