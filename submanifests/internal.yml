@@ -90,7 +90,7 @@ manifest:
       branch_flow: false
   - name: threadx
     path: mcuxsdk/rtos/eclipse-threadx/threadx
-    revision: master
+    revision: 3f98afb26163884e5a5c6dab43560ed4350bfccc
     groups:
     - bifrost
     userdata:
