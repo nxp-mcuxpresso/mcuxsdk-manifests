@@ -64,7 +64,7 @@ manifest:
   - name: vit
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: mcuxsdk_release
+      track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/vit
     revision: 456628d36bad263cf4e82371f850435f1a2ae411
@@ -76,7 +76,7 @@ manifest:
     repo-path: VoiceSeeker
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: mcuxsdk_release
+      track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
     revision: 8ecf372633ad98e7c64b7fd552ee8293a40fe334
@@ -88,7 +88,7 @@ manifest:
   - name: voice_spot
     userdata:
       owner: tomas.barak@nxp.com
-      track_branch: mcuxsdk_release
+      track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
     revision: bd0c217bace6268b0800371af2b2454710c1bfb6
