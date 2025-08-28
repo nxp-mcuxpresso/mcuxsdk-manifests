@@ -16,13 +16,32 @@ from west import log
 
 
 class UpdateBoardCommand(WestCommand):
-    """Updates repositories for a specific set (board/device/custom) and creates zip packages."""
+    """Updates repositories for a specific set (board/device/custom) and optionally creates zip packages."""
 
     def __init__(self):
         super().__init__(
             'update_board',
             'Updates repositories for a board, device, or custom configuration.',
-            'Updates repositories based on board, device, or custom configuration with optional repository support.')
+            '''Updates repositories based on board, device, or custom configuration.
+            
+            Without -o/--output: Simply updates the configured repositories for the specified set.
+            With -o/--output: Updates repositories and creates a filtered zip package with optional 
+            documentation generation and git history inclusion. By default, repositories are updated first,
+            but this can be skipped with --no-update for CI/CD scenarios or when repos are already current.
+            
+            Examples:
+              # Update repositories only
+              west update_board --set board mcxw23evk
+              
+              # Update and create package with all optional items
+              west update_board --set board mcxw23evk -o package.zip --include-optional
+              
+              # Skip update, create package without updating and docs (for CI/CD parallel execution)
+              west update_board --set board mcxw23evk -o package.zip --no-update --gen-doc
+              
+              # List available optional repositories and examples
+              west update_board --set board mcxw23evk --list-optional
+            ''')
 
     def do_add_parser(self, parser_adder):
         parser = parser_adder.add_parser(self.name, help=self.help, description=self.description)
@@ -31,18 +50,27 @@ class UpdateBoardCommand(WestCommand):
         parser.add_argument('--set', nargs=2, metavar=('TYPE', 'VALUE'), required=True,
                           help='Configuration set: "board BOARD_NAME", "device DEVICE_NAME", or "custom CONFIG_FILE"')
         
-        # Output
-        parser.add_argument('-o', '--output', help='Output zip file path')
+        # Output (makes this a packaging operation)
+        parser.add_argument('-o', '--output', 
+                          help='Output zip file path. When specified, creates a filtered package after updating repositories.')
         
         # Optional repo control
-        parser.add_argument('--include-optional', nargs='*', metavar='REPO', 
-                          help='Include specific optional repos/examples (or "all" for all optional items)')
         parser.add_argument('--list-optional', action='store_true',
-                          help='List available optional repositories and examples')
+                          help='List available optional repositories and examples for the specified set.')
         
-        # Other options
-        parser.add_argument('--include-git', action='store_true', help='Include .git history in package')
-        parser.add_argument('--gen-doc', action='store_true', help='Generate and include documentation')
+        # Package-only options (only valid with -o/--output)
+        package_group = parser.add_argument_group('Package Options', 
+                                                'These options are only available when creating a package with -o/--output')
+        package_group.add_argument('--no-update', '-n', action='store_true',
+                                 help='Skip repository update step. Assumes repositories are already current. '
+                                      'Useful for parallel CI/CD execution or when repositories are already up-to-date. Only valid with -o/--output.')
+        package_group.add_argument('--include-optional', nargs='*', metavar='REPO', 
+                                 help='Include specific optional repos/examples, or use without arguments to include all optional items. '
+                                      'Example: --include-optional repo1 repo2, or just --include-optional for all.')
+        package_group.add_argument('--include-git', action='store_true', 
+                                 help='Include .git history in package. Only valid with -o/--output.')
+        package_group.add_argument('--gen-doc', action='store_true', 
+                                 help='Generate and include PDF documentation in package. Requires mcu-sdk-doc repository. Only valid with -o/--output.')
         
         return parser
 
@@ -50,44 +78,70 @@ class UpdateBoardCommand(WestCommand):
         """Main execution method."""
         start_time = time.time()
         self._log_with_timestamp("Starting update_board command")
-        
+    
         try:
-            # Parse and validate arguments
-            set_type, set_value = self._parse_set_arguments(args)
+            # Validate arguments
+            self._validate_arguments(args)
             
+            # Parse and validate set arguments
+            set_type, set_value = self._parse_set_arguments(args)
+        
             # Initialize workspace
             workspace_root, manifest_dir, manifest = self._init_workspace()
-            
+        
             # Load configuration
             config = self._load_configuration(set_type, set_value, manifest_dir)
-            
+        
             # Handle list-only operation
             if args.list_optional:
                 self._list_optional_repos(config)
                 return
-            
+        
             # Process repositories and examples
             final_repos, final_examples = self._process_optional_repos(config, args)
-            
+        
             # Get projects to update
             projects = self._get_projects_to_update(manifest, final_repos)
-            
-            # Update repositories
-            self._update_projects(workspace_root, projects)
-            
+        
+            # Update repositories (conditional)
+            if not args.no_update:
+                self._update_projects(workspace_root, projects)
+            else:
+                self._log_with_timestamp("Skipping repository update as requested")
+                self._validate_projects_exist(workspace_root, projects)
+        
             # Create package if requested
             if args.output:
                 board_list = self._get_board_list_for_filtering(config, set_type, set_value)
                 self._create_package(args, workspace_root, manifest, projects, 
                                    final_repos, final_examples, board_list)
+            else:
+                self._log_with_timestamp("Repository update completed. No package creation requested.")
             
             elapsed_time = time.time() - start_time
             self._log_with_timestamp(f"Command completed successfully in {elapsed_time:.2f} seconds")
-            
+        
         except Exception as e:
             elapsed_time = time.time() - start_time
             self._log_with_timestamp(f"Command failed after {elapsed_time:.2f} seconds: {e}")
             self.die(f"Command failed: {e}")
+
+    def _validate_arguments(self, args):
+        """Validate argument combinations."""
+        # Package-only options validation
+        package_only_options = []
+        if args.no_update:
+            package_only_options.append('--no-update')
+        if args.include_optional:
+            package_only_options.append('--include-optional')
+        if args.include_git:
+            package_only_options.append('--include-git')
+        if args.gen_doc:
+            package_only_options.append('--gen-doc')
+        
+        if package_only_options and not args.output:
+            options_str = ', '.join(package_only_options)
+            raise Exception(f"Options {options_str} are only available when creating a package with -o/--output")
 
     def _log_with_timestamp(self, message, level='inf'):
         """Log message with timestamp."""
@@ -144,20 +198,55 @@ class UpdateBoardCommand(WestCommand):
             return self._load_custom_config(set_value)
 
     def _load_board_config(self, board_name, manifest_dir):
-        """Load configuration from board YAML file."""
+        """Load configuration from board YAML file with automatic controlled-access inclusion."""
         config_path = os.path.join(manifest_dir, 'boards', f'{board_name}.yml')
-        
+    
         if not os.path.isfile(config_path):
             raise Exception(f"Board configuration file not found: {config_path}")
-        
+    
         try:
+            # Load the main board configuration
             with open(config_path, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f) or {}
-            
+        
+            # Automatically look for controlled-access configuration
+            # Convention: bifrost/boards/{board_name}.yml
+            controlled_config_path = os.path.join(self.topdir, 'bifrost', 'boards', f'{board_name}.yml')
+        
+            if os.path.isfile(controlled_config_path):
+                try:
+                    with open(controlled_config_path, 'r', encoding='utf-8') as f:
+                        controlled_data = yaml.safe_load(f) or {}
+                
+                    # Merge controlled-access optional repositories
+                    base_optional_repos = data.get('optional_repos', [])
+                    controlled_optional_repos = controlled_data.get('optional_repos', [])
+                    if controlled_optional_repos:
+                        base_optional_repos.extend(controlled_optional_repos)
+                        data['optional_repos'] = list(dict.fromkeys(base_optional_repos))  # Remove duplicates
+                        self._log_with_timestamp(f"Added {len(controlled_optional_repos)} controlled-access repositories")
+                
+                    # Merge controlled-access optional examples
+                    base_optional_examples = data.get('optional_examples', [])
+                    controlled_optional_examples = controlled_data.get('optional_examples', [])
+                    if controlled_optional_examples:
+                        base_optional_examples.extend(controlled_optional_examples)
+                        data['optional_examples'] = list(dict.fromkeys(base_optional_examples))  # Remove duplicates
+                        self._log_with_timestamp(f"Added {len(controlled_optional_examples)} controlled-access examples")
+                
+                    self._log_with_timestamp(f"Loaded controlled-access config: {controlled_config_path}", 'dbg')
+                
+                except yaml.YAMLError as e:
+                    self._log_with_timestamp(f"Error parsing controlled-access config: {e}", 'wrn')
+                except Exception as e:
+                    self._log_with_timestamp(f"Error loading controlled-access config: {e}", 'wrn')
+            else:
+                self._log_with_timestamp(f"No controlled-access config found for {board_name}", 'dbg')
+        
             config = self._normalize_config(data, board_name)
             self._log_with_timestamp(f"Loaded board configuration: {board_name}")
             return config
-            
+        
         except yaml.YAMLError as e:
             raise Exception(f"Error parsing board config file: {e}")
 
@@ -238,23 +327,23 @@ class UpdateBoardCommand(WestCommand):
         merged_examples = set()
         merged_optional_repos = set()
         merged_optional_examples = set()
-        
+    
         for board_name in board_list:
             try:
                 config = self._load_board_config(board_name, manifest_dir)
-                
+            
                 # Merge core lists
                 merged_repos.update(config['repo_list'])
                 merged_examples.update(config['example_list'])
-                
-                # Merge optional lists
+            
+                # Merge optional lists (now includes controlled-access items)
                 merged_optional_repos.update(config['optional_repos'])
                 merged_optional_examples.update(config['optional_examples'])
-                
+            
             except Exception as e:
                 self._log_with_timestamp(f"Failed to load board config '{board_name}': {e}", 'wrn')
                 continue
-        
+    
         return {
             'repo_list': sorted(list(merged_repos)),  # Sort for consistent output
             'example_list': sorted(list(merged_examples)),
@@ -283,7 +372,7 @@ class UpdateBoardCommand(WestCommand):
             return [config.get('board_name', 'custom')]
 
     def _list_optional_repos(self, config):
-        """List available optional repositories."""
+        """List available optional repositories and examples."""
         self._log_with_timestamp("Listing optional repositories and examples")
         
         log.inf("Optional repositories (excluded by default):")
@@ -374,6 +463,53 @@ class UpdateBoardCommand(WestCommand):
         except subprocess.CalledProcessError as e:
             raise Exception(f"Update failed: {e.stderr}")
 
+    def _validate_projects_exist(self, workspace_root, projects):
+        """Validate that required projects exist in the workspace when skipping update."""
+        if not projects:
+            self._log_with_timestamp("No projects to validate")
+            return
+        
+        missing_projects = []
+        existing_projects = []
+        
+        for project in projects:
+            if project.name == "core":
+                # Special handling for core project - check key subdirectories
+                core_subdirs = ["drivers", "arch", "cmake", "share", "scripts", "devices"]
+                missing_core_subdirs = []
+                
+                for subdir in core_subdirs:
+                    subdir_path = os.path.join(workspace_root, "mcuxsdk", subdir)
+                    if not os.path.exists(subdir_path):
+                        missing_core_subdirs.append(f"mcuxsdk/{subdir}")
+                
+                if missing_core_subdirs:
+                    missing_projects.extend(missing_core_subdirs)
+                else:
+                    existing_projects.append(f"{project.name} (mcuxsdk)")
+            else:
+                project_path = os.path.join(workspace_root, project.path)
+                if not os.path.exists(project_path):
+                    missing_projects.append(f"{project.name} ({project.path})")
+                else:
+                    existing_projects.append(f"{project.name} ({project.path})")
+        
+        # Log validation results
+        if existing_projects:
+            self._log_with_timestamp(f"Validated {len(existing_projects)} existing projects")
+            for project in existing_projects:
+                log.dbg(f"  ✓ {project}")
+        
+        if missing_projects:
+            self._log_with_timestamp(f"Missing {len(missing_projects)} required projects:", 'wrn')
+            for project in missing_projects:
+                self._log_with_timestamp(f"  ✗ {project}", 'wrn')
+            
+            raise Exception(f"Missing required projects: {', '.join(missing_projects)}. "
+                        f"Run without --no-update to checkout missing repositories.")
+        
+        self._log_with_timestamp(f"All {len(projects)} required projects are present in workspace")
+
     def _create_package(self, args, workspace_root, manifest, projects, repo_list, example_list, board_list):
         """Create zip package."""
         self._log_with_timestamp(f"Creating package: {args.output}")
@@ -391,7 +527,7 @@ class UpdateBoardCommand(WestCommand):
             # Handle documentation
             if args.gen_doc:
                 doc_start = time.time()
-                self._generate_docs(workspace_root, temp_dir, board_list)
+                self._generate_docs_in_temp_dir(temp_dir, board_list)
                 doc_time = time.time() - doc_start
                 self._log_with_timestamp(f"Documentation generation completed in {doc_time:.2f} seconds")
             else:
@@ -434,10 +570,10 @@ class UpdateBoardCommand(WestCommand):
         
         # Copy project repositories
         for project in projects:
-            # Skip mcu-sdk-doc repository by default (docs folder)
-            if project.name == "mcu-sdk-doc":
-                self._log_with_timestamp(f"Skipping mcu-sdk-doc repository (docs folder)", 'dbg')
-                continue
+            # # Skip mcu-sdk-doc repository by default (docs folder)
+            # if project.name == "mcu-sdk-doc":
+            #     self._log_with_timestamp(f"Skipping mcu-sdk-doc repository (docs folder)", 'dbg')
+            #     continue
 
             if project.name == "core":
                 # Handle core project subdirectories
@@ -627,8 +763,8 @@ class UpdateBoardCommand(WestCommand):
             
         return other_boards
 
-    def _generate_docs(self, workspace_root, temp_dir, board_list):
-        """Generate documentation for one or more boards."""
+    def _generate_docs_in_temp_dir(self, temp_dir, board_list):
+        """Generate documentation for one or more boards in the temporary directory."""
         # Convert single board to list for consistency
         if isinstance(board_list, str):
             board_list = [board_list]
@@ -638,7 +774,7 @@ class UpdateBoardCommand(WestCommand):
         
         self._log_with_timestamp(f"Generating documentation for {len(board_list)} board(s): {board_list}")
         
-        # Create docs directory
+        # Ensure docs directory exists in temp_dir
         docs_dir = os.path.join(temp_dir, "mcuxsdk", "docs")
         os.makedirs(docs_dir, exist_ok=True)
         
@@ -648,28 +784,38 @@ class UpdateBoardCommand(WestCommand):
             try:
                 self._log_with_timestamp(f"Generating docs for: {board_name}")
                 
-                # Run west doc command
+                # Run west doc command in the temporary directory
                 cmd = ['west', 'doc', 'pdf', '--board', board_name]
                 doc_start = time.time()
-                subprocess.run(cmd, cwd=workspace_root, check=True, capture_output=True, text=True)
+                
+                # Set up environment for west command in temp directory
+                env = os.environ.copy()
+                
+                # Run the command in the temporary directory
+                result = subprocess.run(cmd, cwd=temp_dir, check=True, capture_output=True, text=True, env=env)
                 doc_time = time.time() - doc_start
                 
-                # Copy generated PDF
-                pdf_src = os.path.join(workspace_root, "mcuxsdk/docs/_build/latex", f"mcuxsdk-{board_name}.pdf")
-                if os.path.exists(pdf_src):
+                # Look for generated PDF in the temporary directory
+                temp_pdf_src = os.path.join(temp_dir, "mcuxsdk", "docs", "_build", "latex", f"mcuxsdk-{board_name}.pdf")
+                
+                if os.path.exists(temp_pdf_src):
+                    # Move PDF to the final docs location
                     pdf_dest = os.path.join(docs_dir, f"mcuxsdk-{board_name}.pdf")
-                    shutil.copy2(pdf_src, pdf_dest)
+                    shutil.move(temp_pdf_src, pdf_dest)
                     success_count += 1
                     self._log_with_timestamp(f"Documentation generated for {board_name} in {doc_time:.2f} seconds")
                 else:
-                    self._log_with_timestamp(f"PDF not found for board: {board_name}", 'wrn')
+                    self._log_with_timestamp(f"PDF not found for board: {board_name} at {temp_pdf_src}", 'wrn')
                     
             except subprocess.CalledProcessError as e:
-                self._log_with_timestamp(f"Documentation generation failed for {board_name}: {e}", 'wrn')
+                self._log_with_timestamp(f"Documentation generation failed for {board_name}: {e.stderr}", 'wrn')
                 continue
             except Exception as e:
                 self._log_with_timestamp(f"Error generating docs for {board_name}: {e}", 'wrn')
                 continue
+        
+        # Clean up the docs build directory but keep the PDFs
+        self._cleanup_docs_build_directory(temp_dir)
         
         if success_count > 0:
             self._log_with_timestamp(f"Successfully generated documentation for {success_count}/{len(board_list)} boards")
@@ -678,6 +824,60 @@ class UpdateBoardCommand(WestCommand):
             # Remove empty docs directory
             if os.path.exists(docs_dir) and not os.listdir(docs_dir):
                 os.rmdir(docs_dir)
+
+    def _cleanup_docs_build_directory(self, temp_dir):
+        """Back up PDF files, clean the entire docs folder, then restore only the PDFs."""
+        docs_dir = os.path.join(temp_dir, "mcuxsdk", "docs")
+        
+        if not os.path.exists(docs_dir):
+            return
+        
+        try:
+            # Find and back up all PDF files
+            pdf_files = []
+            for root, dirs, files in os.walk(docs_dir):
+                for file in files:
+                    if file.endswith('.pdf') and file.startswith('mcuxsdk-'):
+                        pdf_path = os.path.join(root, file)
+                        pdf_files.append((file, pdf_path))
+            
+            if not pdf_files:
+                self._log_with_timestamp("No PDF files found to preserve", 'dbg')
+                shutil.rmtree(docs_dir)
+                return
+            
+            self._log_with_timestamp(f"Backing up {len(pdf_files)} PDF file(s): {[name for name, _ in pdf_files]}", 'dbg')
+            
+            # Create temporary backup directory
+            temp_backup_dir = tempfile.mkdtemp(prefix='pdf_backup_')
+            
+            try:
+                # Copy PDF files to backup location
+                for pdf_name, pdf_path in pdf_files:
+                    backup_path = os.path.join(temp_backup_dir, pdf_name)
+                    shutil.copy2(pdf_path, backup_path)
+                
+                # Remove entire docs directory
+                shutil.rmtree(docs_dir)
+                self._log_with_timestamp("Cleared docs directory", 'dbg')
+                
+                # Recreate docs directory
+                os.makedirs(docs_dir, exist_ok=True)
+                
+                # Restore PDF files to docs directory
+                for pdf_name, _ in pdf_files:
+                    backup_path = os.path.join(temp_backup_dir, pdf_name)
+                    restore_path = os.path.join(docs_dir, pdf_name)
+                    shutil.copy2(backup_path, restore_path)
+                    self._log_with_timestamp(f"Restored PDF: {pdf_name}", 'dbg')
+                    
+            finally:
+                # Clean up temporary backup directory
+                if os.path.exists(temp_backup_dir):
+                    shutil.rmtree(temp_backup_dir)
+                    
+        except Exception as e:
+            self._log_with_timestamp(f"Failed to clean up docs directory: {e}", 'wrn')
 
     def _remove_docs_directory(self, temp_dir):
         """Remove docs directory when documentation generation is not requested."""
