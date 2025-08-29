@@ -4,3 +4,8 @@ west-commands:
       - name: update_board
         class: UpdateBoardCommand
         help: Updates repositories belonging to a specified board and filters paths at file level.
+  - file: scripts/west_commands/sbom_collect.py
+    commands:
+      - name: sbom_collect
+        class: SbomCollect
+        help: Collect SBOM.spdx.json files from all manifest projects and create a workspace-level SBOM file.
