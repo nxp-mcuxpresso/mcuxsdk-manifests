@@ -1,0 +1,88 @@
+# Core repositories (always included)
+repo_list:
+  - mcu-sdk-components
+  - els_pkc
+  - psa_crypto_driver
+  - fw_bin
+  - memfault
+  - mcu-sdk-doc
+  - mcux-devices-wireless
+  - freertos-kernel
+  - corehttp
+  - coremqtt
+  - coremqtt-agent
+  - corepkcs11
+  - backoffalgorithm
+  - corejson
+  - core
+  - mcu-sdk-examples
+  - CMSIS
+  - mcux-freertos-drivers
+  - mcuxsdk-tool-data
+  - cjson
+  - littlefs
+  - nxp_iot_agent
+  - freemaster
+  - tinycbor
+  - pkcs11
+  - aws_iot_device-defender
+  - aws_iot_device-shadow
+  - aws_iot_jobs
+  - aws_iot_ota
+  - aws_iot_llhttp
+  - fatfs
+  - mcuboot_opensource
+  - wifi_nxp
+  - lwip
+  - tfm
+  - tf-m-tests
+  - qcbor
+  - psa-arch-tests
+  - edgefast_bt_ble
+  - usb
+  - lvgl
+  - mbedtls
+  - mbedtls3x
+  - ethermind
+  - wpa_supplicant-rtos
+  - mcux-sdk-middleware-connectivity-framework
+  - emwin
+  - maestro
+  - vit
+  - voice_seeker
+  - audio-voice-components
+  - coex
+
+# Optional repositories (excluded by default, can be included with --include-optional)
+optional_repos: []
+
+# Core examples (always included)
+example_list:
+  - aws_examples
+  - bt_ble_examples
+  - cmsis_driver_examples
+  - coex_examples
+  - component_examples
+  - demo_apps
+  - driver_examples
+  - edgefast_bluetooth_examples
+  - el2go_examples
+  - els_pkc_examples
+  - freemaster_examples
+  - freertos_examples
+  - littlefs_examples
+  - lvgl_examples
+  - lwip_examples
+  - mbedtls_examples
+  - mbedtls3x_examples
+  - ncp_examples
+  - ota_examples
+  - tfm_examples
+  - usb_examples
+  - wifi_examples
+  - audio_examples
+  - emwin_examples
+
+# Optional examples (excluded by default, can be included with --include-optional)
+optional_examples: []
+
