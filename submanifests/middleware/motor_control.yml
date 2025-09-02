@@ -15,7 +15,7 @@ manifest:
       track_branch: main_github
       branch_flow: false
     path: mcuxsdk/middleware/motor_control
-    revision: 5563beb9d50d62a787aaf9c0555a5116d2d87fb4
+    revision: 1f8b7d1c56de0aa35b32ae55e2478d13dd7773e6
     repo-path: mcux-motor_control
     groups:
     - motor_control
@@ -25,7 +25,7 @@ manifest:
       track_branch: main_github
       branch_flow: false
     path: mcuxsdk/middleware/rtcesl
-    revision: 4fd48886fc8b312e3310e316fac0326e9d63f97d
+    revision: c4b9adcb8688537ac1b06078bcc052c47faf386a
     repo-path: rtcesl
     groups:
     - rtcesl
