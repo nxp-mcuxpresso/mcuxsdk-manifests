@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: freertos-kernel
     path: mcuxsdk/rtos/freertos/freertos-kernel
-    revision: b15e34f07a1f3db5a864d698788f05a31658d852
+    revision: 5e5f13ae34ea9464f4e311450373523e04a4722b
     groups:
     - freertos-kernel
     - rtos
@@ -36,7 +36,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/corepkcs11
-    revision: 7807078397bd5824e7f19c5ff041a7741855285f
+    revision: cdfefdcc61662e84e67e46cc4ca5242ab9227ea2
     groups:
     - freertos
     - aws_iot
@@ -46,7 +46,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/coremqtt
-    revision: 656319154e551e295ecc23d5f35f205bc973eb42
+    revision: d10b9b8096db1af7097dced99eba5e805967764c
     groups:
     - freertos
     - aws_iot
@@ -56,7 +56,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/corejson
-    revision: 01ffdce397018260dd8139de8adc52065fc0c82d
+    revision: ca64c02c436912b5dc505e56fedc5d343f891687
     groups:
     - freertos
     - aws_iot
@@ -66,7 +66,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/corehttp
-    revision: d15096156a324e64215574fbc4baf5a3b9563220
+    revision: 48d97e74d3150a8aac476f0bc744dd9cdf49431f
     groups:
     - freertos
     - aws_iot
@@ -76,7 +76,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/backoffalgorithm
-    revision: 5f656090b0545ecdfbf457fad3914f720a81034e
+    revision: fa891d609939f9ef3019779dc2d23ace1a7f9f15
     groups:
     - freertos
     - aws_iot
@@ -86,7 +86,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp
-    revision: 69482b57d31d7b5c41ea0ce5e91f365569268dc1
+    revision: ef5bcc28ffea075c892f91c5e55ce0db4c084dca
     groups:
     - freertos
   - name: coremqtt-agent
@@ -95,7 +95,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/coremqtt-agent
-    revision: ad752b085422d99d8a523967c66e9c99b132c08d
+    revision: bddeb2b35194e5ccc998dc87a6f173425f2a87ea
     groups:
     - freertos
     - aws_iot
