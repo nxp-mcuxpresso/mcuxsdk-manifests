@@ -19,7 +19,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/components/els_pkc
-    revision: 54e5dc23bc4b43344996b7abbe34f0bdafac7ffa
+    revision: 5a52647b25af2b59515b29bbe348208875c5418a
     url: https://github.com/NXP/els_pkc
     groups:
     - security
@@ -51,7 +51,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/firmware/edgelock
-    revision: d0bfa0aad9de0aea2ae8e9712273cd25e5eb6426
+    revision: 6952e4490541c12fc0f6129a75da8953154fcd3d
     repo-path: mcux-edgelock
     groups:
     - edgelock
@@ -62,7 +62,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/mbedtls
-    revision: 69ce68e23c98941484f1be59b9d7f45965f071e0
+    revision: 791f4e3422c23ebf7b7a38d8501f2028c19c8722
     groups:
     - mbedtls
     - security
@@ -75,7 +75,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 8202f004a1537f30454653ae6075abbe125e709c
+    revision: 1b2f8fca21678f21f1bc2c06051d254400cc720c
     groups:
     - mbedtls3x
     - security
