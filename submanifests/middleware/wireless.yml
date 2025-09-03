@@ -96,11 +96,11 @@ manifest:
     - wireless
   - name: ethermind
     userdata:
-      owner: nirav.agrawal@nxp.com
+      owner: vinit.mehta@nxp.com
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: 43c7df37e4d16e145d3785ae40c103956b7da4d4
+    revision: 5e4b6fdadacd6f02895c5d241462e450d86408ed
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
