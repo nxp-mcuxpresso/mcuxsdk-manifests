@@ -170,7 +170,7 @@ manifest:
   - name: bluetooth_private
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: develop/main
+      track_branch: release/25.09.00
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
     revision: aae1ecb642d812689cb30c4834affaa6a725dacf
@@ -181,7 +181,7 @@ manifest:
   - name: ble_cs_algo_private
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: master
+      track_branch: release/25.09.00
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
     revision: 6b057ffeaa8d88832e6ec134e089367078161b96
