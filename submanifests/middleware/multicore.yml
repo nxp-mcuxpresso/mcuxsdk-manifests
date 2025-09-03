@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-sdk-middleware-multicore
-    revision: 6efff30b68c60a7a7c06bbad08ab8422e69fd79b
+    revision: 9e52c5ffeb00ef0ae6f7397e12ed56cce1d9359a
     path: mcuxsdk/middleware/multicore
     url: https://github.com/nxp-mcuxpresso/mcuxsdk-middleware-multicore
     groups:
@@ -22,7 +22,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcux-mcmgr
-    revision: 6abf1905bf49b4673a58e38f3629315745f9d019
+    revision: 560135dc47506f93212aaf1645733df4f5172053
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
@@ -34,7 +34,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: rpmsg-lite
-    revision: 29cc12fc0e1e46fb98a60d64fe850ecd334013d2
+    revision: 98f770d0c915397bad61cb152f381cafcb5af254
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
