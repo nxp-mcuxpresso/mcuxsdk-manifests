@@ -587,7 +587,11 @@ class UpdateBoardCommand(WestCommand):
                 src = os.path.join(workspace_root, project.path)
                 if os.path.exists(src):
                     dst = os.path.join(temp_dir, project.path)
-                    self._copy_directory_with_symlinks(src, dst, project.path, other_boards, include_git)
+                    if project.path == "mcuxsdk/examples":
+                        self._copy_directory_with_symlinks(src, dst, project.path, other_boards, include_git)
+                    else:
+                        self._copy_directory_with_symlinks(src, dst, project.path, set(), include_git)
+
         
         # Copy mcuxsdk root files
         self._copy_mcuxsdk_root_files(workspace_root, temp_dir)
@@ -895,31 +899,82 @@ class UpdateBoardCommand(WestCommand):
                 if os.path.exists(proj_dir):
                     shutil.rmtree(proj_dir)
                     removed_projects += 1
-        
+
         if removed_projects > 0:
             self._log_with_timestamp(f"Removed {removed_projects} unwanted project directories", 'dbg')
-        
-        # Filter examples directory
+
+        # Filter examples directory based on example_list
         examples_root = os.path.join(temp_dir, "mcuxsdk", "examples")
-        removed_examples = 0
-        
-        if os.path.exists(examples_root):
-            for example_dir in os.listdir(examples_root):
-                example_path = os.path.join(examples_root, example_dir)
-                if not os.path.isdir(example_path):
-                    continue
-                    
-                # Keep _boards and _common directories
-                if example_dir in ["_boards", "_common"]:
-                    continue
-                    
-                # Remove examples not in example_list
-                if example_dir not in example_list:
-                    shutil.rmtree(example_path)
-                    removed_examples += 1
-        
-        if removed_examples > 0:
-            self._log_with_timestamp(f"Removed {removed_examples} unwanted example directories", 'dbg')
+
+        if not os.path.exists(examples_root):
+            self._log_with_timestamp("Examples directory does not exist, skipping example filtering")
+            return
+
+        # Build set of target paths to keep (exact paths from example_list)
+        target_paths = set()
+
+        # Add special directories
+        target_paths.update(["_boards", "_common"])
+
+        # Add example paths from example_list
+        for example_path in example_list:
+            # Normalize path separators
+            example_path = example_path.replace('\\', '/').strip('/')
+            target_paths.add(example_path)
+
+        # Build set of all parent directories that need to be kept
+        parent_paths = set()
+        for target_path in target_paths:
+            path_parts = target_path.split('/')
+            for i in range(1, len(path_parts)):  # Don't include the target itself, only parents
+                parent_path = '/'.join(path_parts[:i])
+                parent_paths.add(parent_path)
+
+        self._log_with_timestamp(f"Keeping {len(example_list)} example paths plus special directories", 'dbg')
+        for example_path in example_list:
+            log.dbg(f"  Target path: {example_path}")
+
+        # Remove unwanted directories
+        removed_count = self._remove_unwanted_examples(examples_root, "", target_paths, parent_paths)
+
+        if removed_count > 0:
+            self._log_with_timestamp(f"Removed {removed_count} unwanted example paths")
+
+    def _remove_unwanted_examples(self, current_dir, relative_path, target_paths, parent_paths):
+        """Recursively remove unwanted example directories."""
+        if not os.path.exists(current_dir):
+            return 0
+
+        removed_count = 0
+
+        try:
+            items = os.listdir(current_dir)
+        except (OSError, PermissionError) as e:
+            self._log_with_timestamp(f"Cannot access directory {current_dir}: {e}", 'wrn')
+            return 0
+
+        for item in items:
+            item_path = os.path.join(current_dir, item)
+            item_relative = os.path.join(relative_path, item).replace('\\', '/') if relative_path else item
+
+            if os.path.isdir(item_path):
+                if item_relative in target_paths:
+                    # This is a target path - keep it entirely (don't recurse to filter its contents)
+                    log.dbg(f"Kept target path entirely: {item_relative}")
+                elif item_relative in parent_paths:
+                    # This is a parent directory - keep it but recurse to filter its contents
+                    removed_count += self._remove_unwanted_examples(item_path, item_relative, target_paths, parent_paths)
+                    log.dbg(f"Kept parent directory: {item_relative}")
+                else:
+                    # This path is not needed - remove the entire directory tree
+                    try:
+                        shutil.rmtree(item_path)
+                        removed_count += 1
+                        log.dbg(f"Removed unwanted directory: {item_relative}")
+                    except (OSError, IOError) as e:
+                        self._log_with_timestamp(f"Failed to remove {item_path}: {e}", 'wrn')
+
+        return removed_count
 
     def _filter_example_yml_files(self, temp_dir, target_board_list):
         """Filter example.yml files to only include boards that match any of the specified board names."""
