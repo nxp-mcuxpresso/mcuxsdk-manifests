@@ -111,7 +111,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 61801c66136ead2b0c9ba5326b1da314d7235110
+    revision: 01b710dbbf48f2a32944e8b495e8284b92374b13
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -121,7 +121,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: false
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: f5113536db19ec428e2d78349dfe35a3f800b9c1
+    revision: 9bfa60b15917c0eb5cb984e5df30832e39217ddd
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -142,7 +142,7 @@ manifest:
       track_branch: release/25.09.00
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 4ca4e8c6766a37ee21339156d1a541cccb1948c9
+    revision: 1d78239ec9304d8934b70249079d023ba9d092ce
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
