@@ -12,7 +12,7 @@ manifest:
   - name: mcux-sdk-middleware-connectivity-framework
     userdata:
       owner: nicolas.collonville@nxp.com
-      track_branch: main
+      track_branch: release/25.09.00
       branch_flow: false
     revision: d2981e68d64c3695d75a945cac43fe9ec005e700
     path: mcuxsdk/middleware/wireless/framework
