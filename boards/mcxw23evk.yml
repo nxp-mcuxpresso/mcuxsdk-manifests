@@ -17,6 +17,7 @@ repo_list:
   - tf-m-tests
   - qcbor
   - psa-arch-tests
+  - psa_crypto_driver
   - mcuxsdk-tool-data
 
 # Optional repositories (excluded by default, can be included with --include-optional)
