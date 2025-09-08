@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: d2981e68d64c3695d75a945cac43fe9ec005e700
+    revision: 4b49d7a43243cde2fc8d8b7d91ab5dea6c99acda
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 24eda5650354d4960dbdaa27e635794ebc586ceb
+    revision: d800b904cc90bfab3e0f4709672aea09e3b12fa4
     groups:
     - ble_controller
     - middleware
@@ -52,7 +52,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 66f554f65a22b56a70112173e4367f4559dd1d34
+    revision: 0b399d89782b1af83139a0b1b17407b95d3721dc
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -65,7 +65,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: e183e86bebdf3a18b019726e83915ac4c692492d
+    revision: 4f93fd977bdc88d1e4c8b3ce6032f20b0d1c8a86
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 2c5e910908c43358b78808d79bfd67a6f7626b50
+    revision: b7afa9e441f9e516f99197f82f650743e0893731
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -111,7 +111,7 @@ manifest:
       track_branch: wifi_nxp_gh
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 1a536cec989fe40279c486c4b9e26c65446e1759
+    revision: b932fd252f229cc22e121c68a6b1f3c0a7cc34f3
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -132,7 +132,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: d9f19e9816f42fd9397502ed8933eb57075587c4
+    revision: d992a615c542885da8e3e0785a3cab8c101239e1
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
@@ -142,7 +142,7 @@ manifest:
       track_branch: wpa_supplicant_rtos_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 361b7913fdc29f67f6486e6c617ff81d89684aa8
+    revision: 999b635b9f0d265186bbda632a603305f0a28bb3
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
