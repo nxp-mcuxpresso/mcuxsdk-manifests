@@ -49,7 +49,7 @@ manifest:
   - name: bluetooth
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: develop/main
+      track_branch: release/25.09.00
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth
     revision: 75b6fef6f73598544175a8c58338aaa5bc587323
