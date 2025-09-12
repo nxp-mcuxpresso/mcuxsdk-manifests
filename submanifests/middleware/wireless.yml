@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: bbeeb221cf805cd1c400a2fbc8dae3e5b36c2a09
+    revision: 57eea5e48a32fe7291bb0b72a6580ebe22607f13
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 5709c4a3e3fbac58efd2e8c9097439a3aa202804
+    revision: 7081c45bfdee2684b826f5b81c333a5835979620
     groups:
     - ble_controller
     - middleware
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 35c3e1d4239e56c9bba0bd6f33bde64fbe557573
+    revision: dc57a7cdaa66dda05e04292729c321cadaa06ba6
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -111,7 +111,7 @@ manifest:
       track_branch: wifi_nxp_gh
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 161c8c8b4819fd79b8fa7c6d61885b2a1293f80d
+    revision: 3596daebbf41dda31f7d3c7e13acd4763716a734
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
