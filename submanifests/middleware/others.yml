@@ -9,16 +9,6 @@ manifest:
   defaults:
     remote: nxp-mcuxpresso
   projects:
-  - name: issdk
-    repo-path: mcux-is-sdk
-    userdata:
-      owner: null
-      track_branch: issdk_clean_history_branch
-      branch_flow: false
-    path: mcuxsdk/middleware/issdk
-    revision: 157d023bc49c5fba7eecfe4ec07ae24481e84c18
-    groups:
-    - issdk
   - name: cjson
     userdata:
       owner: yumeng.wang@nxp.com
