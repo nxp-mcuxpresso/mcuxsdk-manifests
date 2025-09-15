@@ -19,11 +19,6 @@ repo_list:
   - psa-arch-tests
   - mcuxsdk-tool-data
 
-# Optional repositories (excluded by default, can be included with --include-optional)
-optional_repos:
-  - hciot-threadx
-  - threadx
-
 # Core examples (always included)
 example_list:
   - cmsis_driver_examples
@@ -35,6 +30,3 @@ example_list:
   - littlefs_examples
   - tfm_examples
   - wireless_examples
-
-# Optional examples (excluded by default, can be included with --include-optional)
-optional_examples: []
