@@ -46,7 +46,7 @@ manifest:
       track_branch: release/nxp-v9.3.0
       branch_flow: false
     path: mcuxsdk/middleware/lvgl
-    revision: 1d16f3fcc0fe386eac1a328b7dde95bd99fddba0
+    revision: 660716558391a990389c11b263b9c4d1336ae0cb
     groups:
     - lvgl
     - middleware
