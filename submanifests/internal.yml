@@ -135,7 +135,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/emwin
-    revision: 1416bb4693d80ad14eabe7ea4c8486b3aa0ea545
+    revision: 25810c99316d66a1b619c2f165e19dbf4f396c9f
     groups:
     - bifrost
   - name: ieee-802.15.4_private

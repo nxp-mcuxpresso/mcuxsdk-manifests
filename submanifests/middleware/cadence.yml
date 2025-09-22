@@ -33,7 +33,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/cadence/naturedsp
-    revision: 28c7d651eedd872a8f5dc262524063eced5a85e6
+    revision: a2d3578785068c66d88314390add854bb10011f2
     groups:
     - bifrost
   - name: nnlib
@@ -42,6 +42,6 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/cadence/nnlib
-    revision: 03aab021e5832b7d027f3fe18bdf6115a863d6ae
+    revision: 19130b022ec4e78c5c81b0701c2e20ba04acf7a8
     groups:
     - bifrost

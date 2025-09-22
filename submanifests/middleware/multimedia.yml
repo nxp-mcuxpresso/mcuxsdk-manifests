@@ -79,7 +79,7 @@ manifest:
       track_branch: mcuxsdk_release
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
-    revision: f429d4a52952290251c7a416065edb69c8d766c8
+    revision: 4bf52b9735dad775e8fe7264ddb4bdf41081b43e
     submodules: true
     groups:
     - voice_seeker
@@ -91,7 +91,7 @@ manifest:
       track_branch: mcuxsdk_release
       branch_flow: true
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
-    revision: bd0c217bace6268b0800371af2b2454710c1bfb6
+    revision: 6cff6c10fdd892c357a728d1de809511bb30639b
     submodules: true
     groups:
     - bifrost
