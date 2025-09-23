@@ -48,7 +48,7 @@ manifest:
       branch_flow: false
   - name: cmsis-pack-rev
     path: mcuxsdk/ecosystem/sdk_generator/modules/cmsis-pack-rev
-    revision: e3e9f56dd08f73218cba157f0e374840f1203127
+    revision: fed30fe527415687ed98c7c25ad96665f08b6b1d
     groups:
     - bifrost
     userdata:
