@@ -14,6 +14,9 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: DSP Audio Streamer
+      description: DSP Audio Streamer Framework based on Xtensa Audio Framework from
+        Cadence Design Systems for Xtensa DSP Audio Engines.
     path: mcuxsdk/middleware/cadence/multicore-xaf
     revision: a67a04fb706612cc4d3fe49707352ca0ac5b5eb1
     groups:
@@ -23,6 +26,8 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: Codecs for Cadence DSP platforms
+      description: DSP Audio codecs for HiFi1, HiFi4, FusionF1 cores
     path: mcuxsdk/middleware/cadence/codecs
     revision: e39a29621440be5f74cd52faed2f351c25249caa
     groups:
@@ -32,6 +37,8 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: NatureDSP
+      description: Digital Signal Processing for Xtensa HiFi1, HiFi4, FusionF1 Audio Engines
     path: mcuxsdk/middleware/cadence/naturedsp
     revision: a2d3578785068c66d88314390add854bb10011f2
     groups:
@@ -41,6 +48,9 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: DSP Neural Networks
+      description: DSP Neural Networks Framework based on Xtensa Neural Networks Library
+        from Cadence Design Systems for Xtensa HiFi Audio Engines.
     path: mcuxsdk/middleware/cadence/nnlib
     revision: 19130b022ec4e78c5c81b0701c2e20ba04acf7a8
     groups:

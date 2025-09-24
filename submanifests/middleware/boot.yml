@@ -17,6 +17,8 @@ manifest:
       owner: petr.buchta@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: mcuboot
+      description: MCUboot bootloader
     groups:
     - mcuboot
     - middleware
@@ -28,6 +30,8 @@ manifest:
       owner: shibin.yang@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: mcu-boot
+      description: mcu-boot
     groups:
     - mcu-boot
     - middleware

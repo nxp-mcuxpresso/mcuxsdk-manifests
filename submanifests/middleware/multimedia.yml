@@ -18,12 +18,16 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+      display_name: Maestro Audio Framework for MCU
+      description: Maestro Audio Framework library for MCU
   - name: vglite
     repo-path: gpu-vglite
     userdata:
       owner: andreicatalin.ilie@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: vglite
+      description: vglite lib
     path: mcuxsdk/middleware/vglite/driver
     revision: c922f96bcaf9755d65b9a17dc0e4b9e6e2b5ccc4
     groups:
@@ -35,6 +39,8 @@ manifest:
       owner: andreicatalin.ilie@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: vglite sdk
+      description: Integration layer for the vglite graphics library
     path: mcuxsdk/middleware/vglite/vglite_sdk
     revision: a43e907d5526640154604d48633bfc4b60a9f489
     groups:
@@ -45,6 +51,8 @@ manifest:
       owner: cosmin.radu_1@nxp.com
       track_branch: release/25.12.00-pvw2
       branch_flow: false
+      display_name: lvgl
+      description: lvgl graphics library
     path: mcuxsdk/middleware/lvgl
     revision: 638bd3b79ada260b185f8d49334b2fd3e503f002
     groups:
@@ -56,6 +64,8 @@ manifest:
       owner: joshua.wienecke_1@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: G2D
+      description: G2D set
     path: mcuxsdk/middleware/g2d_dpu
     revision: 6a60655caef80823cddc49e8950e2e2b29cd51a5
     groups:
@@ -66,6 +76,8 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: mcuxsdk_release
       branch_flow: false
+      display_name: vit
+      description: Voice intelligent technology library
     path: mcuxsdk/middleware/audio_voice/components/vit
     revision: 3969d13aba350130ade8bd73bde8cd098d71455b
     groups:
@@ -77,6 +89,8 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: mcuxsdk_release
       branch_flow: false
+      display_name: voicespot
+      description: VoiceSpot library
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
     revision: 6cff6c10fdd892c357a728d1de809511bb30639b
     submodules: true
@@ -87,6 +101,9 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: Audio Voice components for MCU
+      description: NXP decoder, encoder and processing libraries for MCU integrated
+        and demonstrated in Maestro audio framework
     path: mcuxsdk/middleware/audio_voice/components
     revision: a49e1e279a609c27b66dd020d61e307b5070cd02
     groups:
@@ -99,6 +116,8 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: JPEG library
+      description: JPEG library
     revision: eeb1869940a80ba723b527b0737107c23c9304c5
     path: mcuxsdk/middleware/libjpeg
     groups:
@@ -108,6 +127,8 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: PNG decoder
+      description: PNG decoder
     revision: d26b03455204dba1a40ecf97d2b5d472d757f585
     path: mcuxsdk/middleware/pngdec
     url: https://github.com/nxp-mcuxpresso/PNGdec/
@@ -118,6 +139,8 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: Openh264
+      description: H.264 Codec Library
     revision: 87a4c14ea8761fd45ae173071ce013c8e6c782e9
     path: mcuxsdk/middleware/openh264
     groups:
@@ -127,6 +150,8 @@ manifest:
       owner: camelia.groza@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: openvg
+      description: openvg lib
     path: mcuxsdk/middleware/openvg
     revision: 9ff3aa3e50ee80eb41220cf982cb2e473039d853
     url: https://github.com/nxp-mcuxpresso/mcux-openvg

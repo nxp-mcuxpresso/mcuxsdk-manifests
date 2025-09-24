@@ -16,6 +16,8 @@ manifest:
       owner: yichang.wang@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: USB stack
+      description: Host, Device, OTG
     revision: f294d48f2cfe9bcfa3e77387d83b27272ecca9b9
     path: mcuxsdk/middleware/usb
     repo-path: mcux-sdk-middleware-usb
@@ -31,6 +33,8 @@ manifest:
     userdata:
       track_branch: mcux_main
       branch_flow: false
+      display_name: lwIP
+      description: TCP/IP Networking Stack
   - name: lin_stack
     repo-path: mcux-lin_stack
     path: mcuxsdk/middleware/lin_stack
@@ -38,6 +42,8 @@ manifest:
       owner: zejiang.yu@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: LIN Stack
+      description: LIN Stack middleware
     revision: 458e0042f13fe9942c9e361a7bd99ce269e3b1ef
     groups:
     - lin_stack
@@ -52,6 +58,8 @@ manifest:
     userdata:
       track_branch: master
       branch_flow: false
+      display_name: SOEM
+      description: Simple Open EtherCAT Master Library
   - name: freemodbus
     revision: 3bb6432e98e28181122c633a09f3c248e8bc2ee8
     path: mcuxsdk/middleware/freemodbus
@@ -62,6 +70,8 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+      display_name: freemodbus
+      description: freemodbus library
   - name: canopennode
     url: https://github.com/CANopenNode/CANopenNode
     revision: 8c7d852902b2d307e8b91a43332c14e366641e00
@@ -72,3 +82,5 @@ manifest:
     userdata:
       track_branch: master
       branch_flow: false
+      display_name: CANopenNode
+      description: CANopen protocol stack

@@ -14,6 +14,8 @@ manifest:
       owner: pavel.rech@nxp.com
       track_branch: main_github
       branch_flow: false
+      display_name: Touch
+      description: NXP Touch Library
     path: mcuxsdk/middleware/touch
     revision: aade9abb784276774cf888cd5773a9101eddfe80
     repo-path: mcux-touch

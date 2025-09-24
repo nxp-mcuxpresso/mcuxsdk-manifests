@@ -14,6 +14,8 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: cjson
+      description: cjson library
     revision: 0eea3821bbbbac4071c029f8dfd53aa5267b69c3
     path: mcuxsdk/middleware/cjson
     url: https://github.com/nxp-mcuxpresso/cJSON/
@@ -23,6 +25,8 @@ manifest:
     userdata:
       owner: zejiang.yu@nxp.com
       track_branch: release/25.12.00
+      display_name: memfault-firmware-sdk
+      description: Memfault SDK for embedded systems
     revision: f1a88a848b4f0a634375ab488d2d1f2a52085bfa
     path: mcuxsdk/components/debug/memfault/memfault-firmware-sdk
     url: https://github.com/memfault/memfault-firmware-sdk

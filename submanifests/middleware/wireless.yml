@@ -14,6 +14,9 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: Wireless Connectivity Framework
+      description: Abstraction and Integration Layer for the connectivity Stacks,
+        MAC and Link Layers
     revision: f705d25b6e84251888eed3a786490e3e5a1fba01
     path: mcuxsdk/middleware/wireless/framework
     groups:
@@ -27,6 +30,8 @@ manifest:
       owner: damien.lefebvre@nxp.com
       track_branch: develop/main
       branch_flow: false
+      display_name: Wireless GENFSK
+      description: GENFSK
     path: mcuxsdk/middleware/wireless/genfsk
     revision: c061c9c46579b0b01f9b6887be4a9c46f58c4e6c
     groups:
@@ -39,6 +44,8 @@ manifest:
       owner: damien.lefebvre@nxp.com
       track_branch: develop/main
       branch_flow: false
+      display_name: Wireless BLE Controller
+      description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
     revision: a5f978fed760e0bb11d3ac4c9ccdcfe182158730
     groups:
@@ -51,6 +58,8 @@ manifest:
       owner: mihai-octavian.urzica@nxp.com
       track_branch: develop/main
       branch_flow: false
+      display_name: Wireless BLE stack
+      description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
     revision: 0bfeabe8c0524bd9e7eef8f7f9573cb3e8d96e85
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
@@ -64,6 +73,8 @@ manifest:
       owner: john.vandermeer@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: Wireless XCVR Driver
+      description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
     revision: 1fe638ccbe6ec6729c134d02e19f328ec2c240a3
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
@@ -77,6 +88,8 @@ manifest:
       owner: junjie.liu@nxp.com
       track_branch: release/25.12.00
       branch_flow: false
+      display_name: Wireless edgefast_bluetooth stack
+      description: BT/BLE edgefast_bluetooth stack
     path: mcuxsdk/middleware/edgefast_bluetooth
     revision: 3aa03d98ec95cdb1b44c799931400d15f3ae0449
     repo-path: mcux-sdk-middleware-edgefast-bluetooth
@@ -87,6 +100,8 @@ manifest:
       owner: george.stefan@nxp.com
       track_branch: public_main
       branch_flow: false
+      display_name: IEEE 802.15.4 MACPHY Software
+      description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
     revision: a3eb14c9c5e412d6220c0b6f39446b4c9ca39326
     repo-path: mcux-sdk-middleware-ieee_802.15.4
@@ -99,6 +114,8 @@ manifest:
       owner: vinit.mehta@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: Bluetooth and Bluetooth Low Energy Host Stack
+      description: Bluetooth and Bluetooth Low Energy Host Stack.
     path: mcuxsdk/middleware/wireless/ethermind
     revision: bea42bcd3d1292534cdcf7cf2880d29df3a33d38
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
@@ -110,6 +127,8 @@ manifest:
       owner: null
       track_branch: release/25.12.00
       branch_flow: false
+      display_name: NXP Wi-Fi
+      description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
     revision: eef17b7be650c4313fc86ad696e490a7e61a553c
     url: https://github.com/NXP/wifi_nxp
@@ -120,6 +139,8 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: release/25.12.00
       branch_flow: false
+      display_name: RW61X Firmware Binary
+      description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
     revision: 75630a4ed522b97bd515009b53b8597b013472cc
     url: https://github.com/NXP/wifi_nb_fw
@@ -131,6 +152,8 @@ manifest:
       owner: alexandru.porosanu@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: Wireless Zigbee
+      description: Zigbee stack
     path: mcuxsdk/middleware/wireless/zigbee
     revision: 62cf39f5e731aa2fbbc40206083d79e596dfbee1
     repo-path: mcux-sdk-middleware-zigbee
@@ -141,6 +164,8 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: release/25.12.00
       branch_flow: false
+      display_name: wpa_supplicant-rtos
+      description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
     revision: b2a9249af108d78cd7012783b54065ac05b61432
     groups:
@@ -151,6 +176,8 @@ manifest:
       owner: jia.guo_2@nxp.com
       track_branch: release/25.12.00
       branch_flow: false
+      display_name: coex
+      description: coex examples for NXP RW612 SoC
     path: mcuxsdk/middleware/wireless/coex
     revision: 2d6620e768114fe2b5cba66174290acb587880de
     groups:

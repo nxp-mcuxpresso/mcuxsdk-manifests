@@ -18,6 +18,9 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: ELS PKC
+      description: Cryptographic library running on NXP ELS and PKC Crypto Hardware
+        IP
     path: mcuxsdk/components/els_pkc
     revision: 296d94ed5932d1a25a8d00f20e3454c3936ee85d
     url: https://github.com/NXP/els_pkc
@@ -29,6 +32,8 @@ manifest:
       owner: null
       track_branch: mcux_main
       branch_flow: false
+      display_name: Secure Element
+      description: Secure Element
     path: mcuxsdk/middleware/se_hostlib
     revision: 410f88d9393d9b536f3900ac0e5acb019ee9d6f3
     submodules: false
@@ -39,6 +44,8 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: secure-subsystem
+      description: Secure subsystem library - SSS APIs
     path: mcuxsdk/middleware/secure-subsystem
     revision: b343c1053a7b59598661ee497ae749ab5b8fafd8
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
@@ -50,6 +57,8 @@ manifest:
       owner: vit.solcik@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: Edgelock Firmware
+      description: Edgelock Firmware
     path: mcuxsdk/firmware/edgelock
     revision: a18436b23473bb23022c791fe68905641e184a8c
     repo-path: mcux-edgelock
@@ -61,6 +70,8 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: mbedtls
+      description: mbedtls SSL/TLS library
     path: mcuxsdk/middleware/mbedtls
     revision: 3d140b49ed730d7e33d8cac2f2072532b97b30c7
     groups:
@@ -72,6 +83,8 @@ manifest:
       dev_branch: mcux_main
       track_branch: mcux_main
       branch_flow: false
+      display_name: MbedTLS 3.X
+      description: mbedtls SSL/TLS library version 3.X
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
@@ -84,6 +97,8 @@ manifest:
       owner: bojan.simoneta@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: nxp_iot_agent
+      description: nxp_iot_agent
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
@@ -96,6 +111,8 @@ manifest:
       owner: waqar.tahir@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: TFM
+      description: Trusted Firmware - M Library
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
@@ -107,6 +124,9 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: main-dev
       branch_flow: false
+      display_name: PSA CRYPTO DRIVER
+      description: PSA crypto driver interface to use cryptographic library running
+        on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
     revision: cd66a6fccf8a5fc710ccb0f08ba4f4ed56f56ca9
     url: https://github.com/NXP/psa_crypto_driver
@@ -118,6 +138,8 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: MMCAU
+      description: MMCAU
     path: mcuxsdk/middleware/mmcau
     revision: 2381e9a66cb034386b8a8a6c35c6dc2c8e853dca
     url: https://github.com/nxp-mcuxpresso/mcux-mmcau
@@ -129,6 +151,8 @@ manifest:
       owner: waqar.tahir@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: PSA Test Suite
+      description: Arm Platform Security Architecture Test Suite
     path: mcuxsdk/middleware/tfm/psa-arch-tests
     remote: nxp
     repo-path: nxp_psa_arch_test
@@ -141,6 +165,8 @@ manifest:
       owner: waqar.tahir@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: TFM Test
+      description: Trusted Firmware-M Tests
     path: mcuxsdk/middleware/tfm/tf-m-tests
     remote: tf_m_tests
     repo-path: tf-m-tests
@@ -153,6 +179,8 @@ manifest:
       owner: waqar.tahir@nxp.com
       track_branch: master
       branch_flow: false
+      display_name: TFM QCBOR
+      description: Trusted Firmware-M QCBOR library
     path: mcuxsdk/middleware/tfm/qcbor
     revision: 751d36583a9ce1a640900c57e13c9b6b8f3a2ba2
     remote: qcbor_upstream
@@ -165,6 +193,8 @@ manifest:
       owner: ruchika.gupta_1@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: secure_storage
+      description: secure storage library
     path: mcuxsdk/middleware/secure_storage
     remote: nxp-mcuxpresso
     revision: 49e1ded26283d783dbfc12868387170cd743a1f4
@@ -177,6 +207,9 @@ manifest:
       owner: vit.chmelar@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: SGI PKC
+      description: Cryptographic library running on NXP SGI and PKC Crypto Hardware
+        IP
     path: mcuxsdk/components/sgi_pkc
     revision: 5f621439b930a970f0f0d4149be7c1f8d46bdbf3
     url: https://github.com/nxp-mcuxpresso/sgi_pkc

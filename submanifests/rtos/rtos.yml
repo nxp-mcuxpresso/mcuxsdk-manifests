@@ -20,11 +20,15 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: FreeRTOS
+      description: FreeRTOS
   - name: mcux-freertos-drivers
     userdata:
       owner: david.jurajda@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: FreeRTOS Drivers
+      description: FreeRTOS peripheral drivers for MCUXpresso SDK
     path: mcuxsdk/rtos/freertos/freertos-drivers
     revision: 845ff93b52bbc1852c5b9911e74524f6baed2ba6
     groups:
@@ -35,6 +39,8 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: FreeRTOS corePKCS11
+      description: 'PKCS #11 key management library'
     path: mcuxsdk/rtos/freertos/corepkcs11
     revision: d75bff23edf54deaca740ae0051efbb513dbc4b1
     groups:
@@ -45,6 +51,8 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: FreeRTOS coreMQTT
+      description: MQTT publish/subscribe messaging library
     path: mcuxsdk/rtos/freertos/coremqtt
     revision: 656319154e551e295ecc23d5f35f205bc973eb42
     groups:
@@ -55,6 +63,8 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: FreeRTOS coreJSON
+      description: JSON parser
     path: mcuxsdk/rtos/freertos/corejson
     revision: 01ffdce397018260dd8139de8adc52065fc0c82d
     groups:
@@ -65,6 +75,8 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: coreHTTP
+      description: coreHTTP
     path: mcuxsdk/rtos/freertos/corehttp
     revision: d15096156a324e64215574fbc4baf5a3b9563220
     groups:
@@ -75,6 +87,9 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: FreeRTOS backoffalgorithm
+      description: Algorithm for calculating exponential backoff with jitter for network
+        retry attempts.
     path: mcuxsdk/rtos/freertos/backoffalgorithm
     revision: 5f656090b0545ecdfbf457fad3914f720a81034e
     groups:
@@ -85,6 +100,8 @@ manifest:
       owner: michal.princ@nxp.com
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: freertos-plus-tcp
+      description: FreeRTOS-Plus-TCP Library
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp
     revision: 69482b57d31d7b5c41ea0ce5e91f365569268dc1
     groups:

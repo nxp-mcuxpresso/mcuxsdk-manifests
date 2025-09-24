@@ -14,6 +14,8 @@ manifest:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
       branch_flow: false
+      display_name: TinyCBOR
+      description: Concise Binary Object Representation (CBOR) Library
     path: mcuxsdk/middleware/tinycbor
     revision: 4ea71e4b8e5b559f0c3ef053756cb8856449b491
     groups:
@@ -24,6 +26,9 @@ manifest:
       owner: michal.chromec@nxp.com
       track_branch: release/24.12.00
       branch_flow: false
+      display_name: pkcs11
+      description: 'Public Key Cryptography Standard #11 defines generic cryptographic
+        token interface.'
     path: mcuxsdk/middleware/pkcs11
     revision: 555a0c4e4087e7d2ce0b042d978e56f32c5cf6a1
     groups:
@@ -35,6 +40,8 @@ manifest:
       owner: michal.chromec@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      display_name: llhttp
+      description: HTTP parser in LLVM IR
     path: mcuxsdk/middleware/llhttp
     revision: 711ee97579c82568789426f432827175533a56c5
     groups:

@@ -30,6 +30,8 @@ manifest:
     userdata:
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: Peripheral Driver
+      description: Drivers for common use cases of hardware peripherals, simplifying access and integration.
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
@@ -40,6 +42,9 @@ manifest:
     userdata:
       track_branch: mcux_main
       branch_flow: false
+      display_name: 'CMSIS'
+      description: 'Vendor-independent hardware abstraction layer for microcontrollers
+          that are based on Arm Cortex processors, distributed by ARM.'
   - name: mcux-soc-svd
     path: mcuxsdk/svd
     revision: 84f6085811d78f85414b8ccdb6af3b76473da440
@@ -48,6 +53,8 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+      display_name: Device SVD
+      description: System View Description (SVD) files for NXP MCU devices, providing detailed peripheral register definitions
   - name: mcu-sdk-examples
     revision: 286b5730b737d3e226adb213b1faec2965b7a003
     repo-path: mcuxsdk-examples
@@ -58,6 +65,8 @@ manifest:
     userdata:
       track_branch: release/25.12.00
       branch_flow: true
+      display_name: Out-of-box Examples
+      description: Out-of-box examples demonstrating peripheral driver usage and middleware integration.
   - name: mcu-sdk-components
     repo-path: mcux-component
     revision: 32db83a295aeed927c0914575d99f64dced771cc
@@ -68,6 +77,8 @@ manifest:
     userdata:
       track_branch: release/25.12.00
       branch_flow: true
+      display_name:  Components and Board Peripheral Drivers
+      description: NXP MCU SDK components and board-specific peripheral driver libraries
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
     revision: 71e75a8703d476d79a712ad1a67ee7f0d487d84e
@@ -78,6 +89,8 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+      display_name: Documentation
+      description: Documentation for NXP MCUXpresso SDK, providing comprehensive reference materials
   - name: mcuxsdk-tool-data
     revision: 275065efdccbf3b182602bcf5e63ada19c1ebe0d
     path: mcuxsdk/tool_data
@@ -86,3 +99,5 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+      display_name: SDK Tool Data
+      description: Additional tooling and configuration data for NXP MCU SDK development environment

@@ -88,6 +88,8 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+      display_name: health_care_iot_threadx
+      description: Health Care IoT Reference Design using ThreadX RTOS
   - name: threadx
     path: mcuxsdk/rtos/eclipse-threadx/threadx
     revision: be411ceed27a88831791c2023617c15d6069a649
@@ -96,6 +98,8 @@ manifest:
     userdata:
       track_branch: master
       branch_flow: false
+      display_name: threadx
+      description: Eclipse ThreadX RTOS
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
     revision: b45a645ad91baab6959d2cc9a97a06b1cb226861
@@ -134,6 +138,8 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: emWin
+      description: emWin graphics library
     path: mcuxsdk/middleware/emwin
     revision: 50c4ffb557a7c7935fe112e039bd22bd5c42534f
     groups:

@@ -14,6 +14,10 @@ manifest:
       owner: null
       track_branch: main
       branch_flow: false
+      display_name: eIQ
+      description: 'eIQ machine learning SDK containing: - ARM CMSIS-NN library (neural
+        network kernels optimized  for Cortex-M cores) - an inference engine for running
+        TensorFlow Lite models'
     path: mcuxsdk/middleware/eiq
     revision: 58af72b1294170ad5b13ac8f31e79037b0587d7e
     groups:
@@ -24,6 +28,9 @@ manifest:
       owner: null
       track_branch: main
       branch_flow: false
+      display_name: TensorFlow Lite for Microcontrollers
+      description: Software library for running machine learning models on embedded
+        devices
     path: mcuxsdk/middleware/eiq/tensorflow-lite
     revision: faf8874ba963d68d6e467279af2b81e06ed853c3
     groups:
@@ -34,6 +41,8 @@ manifest:
       owner: null
       track_branch: external_main
       branch_flow: false
+      display_name: Multimedia Processing Pipelines (MPP)
+      description: Library to build vision pipelines
     path: mcuxsdk/middleware/eiq/mpp
     revision: a9313589e3cb414480ab161765508eefe12f2d59
     groups:
@@ -44,6 +53,9 @@ manifest:
       owner: null
       track_branch: release/mcux
       branch_flow: false
+      display_name: ExecuTorch
+      description: Software library for running machine learning models on embedded
+        devices
     path: mcuxsdk/middleware/eiq/executorch
     revision: b41deabd16e812b55eb1472edf8a9f8042151a4b
     groups:

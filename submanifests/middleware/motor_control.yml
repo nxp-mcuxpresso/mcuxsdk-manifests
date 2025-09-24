@@ -14,6 +14,8 @@ manifest:
       owner: josef.tkadlec@nxp.com
       track_branch: main_github
       branch_flow: false
+      display_name: Motor Control
+      description: Motor control examples
     path: mcuxsdk/middleware/motor_control
     revision: 86deab4a5d3dcf9e44fd39fe510ee3c360fc0fd7
     repo-path: mcux-motor_control
@@ -24,6 +26,8 @@ manifest:
       owner: pavel.rech@nxp.com
       track_branch: main_github
       branch_flow: false
+      display_name: rtcesl
+      description: NXP Real Time Control Embedded Software Library.
     path: mcuxsdk/middleware/rtcesl
     revision: 39b31a322b9fb3eb5176150a4b853c29465adc04
     repo-path: rtcesl
@@ -35,6 +39,8 @@ manifest:
       owner: michal.hanak@nxp.com
       track_branch: main
       branch_flow: false
+      display_name: FreeMASTER
+      description: FreeMASTER communication driver
     path: mcuxsdk/middleware/freemaster
     revision: 05bb4b4f39499ea0bcbc68013e07cc7eba214f06
     repo-path: mcux-freemaster
