@@ -89,13 +89,3 @@ manifest:
     revision: 69482b57d31d7b5c41ea0ce5e91f365569268dc1
     groups:
     - freertos
-  - name: coremqtt-agent
-    userdata:
-      owner: michal.princ@nxp.com
-      track_branch: mcux_main
-      branch_flow: true
-    path: mcuxsdk/rtos/freertos/coremqtt-agent
-    revision: ad752b085422d99d8a523967c66e9c99b132c08d
-    groups:
-    - freertos
-    - aws_iot
