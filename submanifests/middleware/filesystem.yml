@@ -34,7 +34,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/dhara
-    revision: df057701dbe3c7c2bf9a18658c38c889e2eaa145
+    revision: 2bcc5ae40b9942475c8660af0d61688819f4279b
     groups:
     - dhara
   - name: littlefs
