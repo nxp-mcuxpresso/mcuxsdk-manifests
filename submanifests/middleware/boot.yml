@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: mcuboot_opensource
     repo-path: mcuboot
-    revision: 7f69b05abfdbc5c662bdd5236daf19a9be2d86f5
+    revision: 8ab16272f62323d79b59eae8ed9dc75de0261e7c
     path: mcuxsdk/middleware/mcuboot_opensource
     userdata:
       owner: petr.buchta@nxp.com
@@ -22,7 +22,7 @@ manifest:
     - middleware
   - name: mcu_bootloader
     repo-path: mcuxsdk-middleware-bootloader
-    revision: efcf07dd5b5bd5346912f8b3d64654e6da77f20e
+    revision: 509754b5a6ab0f37f976a5817fe6d3e3373f8305
     path: mcuxsdk/middleware/mcu_bootloader
     userdata:
       owner: shibin.yang@nxp.com

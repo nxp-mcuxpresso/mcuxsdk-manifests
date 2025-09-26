@@ -24,7 +24,7 @@ manifest:
       owner: yumeng.wang@nxp.com
       track_branch: mcux_main
       branch_flow: false
-    revision: a7475c35c65628c09aa40950f72b6aa05c912bb5
+    revision: 6e004c0351d194b4576d95640bb91a556255ff28
     path: mcuxsdk/middleware/cjson
     url: https://github.com/nxp-mcuxpresso/cJSON/
     groups:
