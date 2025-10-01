@@ -65,9 +65,9 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: mcuxsdk_release
-      branch_flow: true
+      branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components/vit
-    revision: 456628d36bad263cf4e82371f850435f1a2ae411
+    revision: 3969d13aba350130ade8bd73bde8cd098d71455b
     groups:
     - vit
     - audio_voice
@@ -77,7 +77,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: mcuxsdk_release
-      branch_flow: true
+      branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components/voice_seeker
     revision: 4bf52b9735dad775e8fe7264ddb4bdf41081b43e
     submodules: true
@@ -89,7 +89,7 @@ manifest:
     userdata:
       owner: tomas.barak@nxp.com
       track_branch: mcuxsdk_release
-      branch_flow: true
+      branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
     revision: 6cff6c10fdd892c357a728d1de809511bb30639b
     submodules: true
