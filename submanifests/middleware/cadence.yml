@@ -24,7 +24,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/cadence/codecs
-    revision: 2a0ff81b51d0de4c27c4fc10522f6649e0637718
+    revision: e39a29621440be5f74cd52faed2f351c25249caa
     groups:
     - bifrost
   - name: naturedsp
