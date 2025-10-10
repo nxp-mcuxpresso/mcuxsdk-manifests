@@ -60,13 +60,13 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 9b84128806eea41a831ebfeec747e8dd9a933ad5
+    revision: c141036165677db5aec59d5f69296b5cb4355979
     path: mcuxsdk/components
     groups:
     - components
     - ble_nxp
     userdata:
-      track_branch: mcux_main
+      track_branch: release/25.12.00-pvw1
       branch_flow: true
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
