@@ -36,6 +36,6 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/llhttp
-    revision: 25ae94d6b619bdbbc40cc5b62ceadad5884c53f1
+    revision: 711ee97579c82568789426f432827175533a56c5
     groups:
     - aws_iot
