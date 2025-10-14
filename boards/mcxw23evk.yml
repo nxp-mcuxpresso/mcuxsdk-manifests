@@ -116,46 +116,32 @@ example_list:
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
   - littlefs_examples/littlefs_shell_onchip_flash
+  - littlefs_examples/littlefs_shell
   - tfm_examples/tfm_demo_ns
   - tfm_examples/tfm_demo_s
   - tfm_examples/tfm_psatest_ns
   - tfm_examples/tfm_psatest_s
   - tfm_examples/tfm_regression_ns
   - tfm_examples/tfm_regression_s
+  - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb_mcxw23
-  - wireless_examples/bluetooth/adv_ext_central/bm
-  - wireless_examples/bluetooth/adv_ext_central/freertos
-  - wireless_examples/bluetooth/adv_ext_peripheral/bm
-  - wireless_examples/bluetooth/adv_ext_peripheral/freertos
-  - wireless_examples/bluetooth/ancs_c/bm
-  - wireless_examples/bluetooth/ancs_c/freertos
-  - wireless_examples/bluetooth/beacon/bm
-  - wireless_examples/bluetooth/beacon/freertos
-  - wireless_examples/bluetooth/ble_fscibb/bm
-  - wireless_examples/bluetooth/ble_fscibb/freertos
-  - wireless_examples/bluetooth/ble_shell/bm
-  - wireless_examples/bluetooth/ble_shell/freertos
-  - wireless_examples/bluetooth/eatt_central/bm
-  - wireless_examples/bluetooth/eatt_central/freertos
-  - wireless_examples/bluetooth/eatt_peripheral/bm
-  - wireless_examples/bluetooth/eatt_peripheral/freertos
-  - wireless_examples/bluetooth/hid_device/bm
-  - wireless_examples/bluetooth/hid_device/freertos
-  - wireless_examples/bluetooth/hid_host/bm
-  - wireless_examples/bluetooth/hid_host/freertos
-  - wireless_examples/bluetooth/otac_att/bm
-  - wireless_examples/bluetooth/otac_att/freertos
-  - wireless_examples/bluetooth/otac_l2cap/bm
-  - wireless_examples/bluetooth/otac_l2cap/freertos
-  - wireless_examples/bluetooth/otas/bm
-  - wireless_examples/bluetooth/otas/freertos
-  - wireless_examples/bluetooth/w_uart/bm
-  - wireless_examples/bluetooth/w_uart/freertos
+  - wireless_examples/bluetooth/adv_ext_central
+  - wireless_examples/bluetooth/adv_ext_peripheral
+  - wireless_examples/bluetooth/ancs_c
+  - wireless_examples/bluetooth/beacon
+  - wireless_examples/bluetooth/ble_fscibb
+  - wireless_examples/bluetooth/ble_shell
+  - wireless_examples/bluetooth/eatt_central
+  - wireless_examples/bluetooth/eatt_peripheral
+  - wireless_examples/bluetooth/hid_device
+  - wireless_examples/bluetooth/hid_host
+  - wireless_examples/bluetooth/otac_att
+  - wireless_examples/bluetooth/otac_l2cap
+  - wireless_examples/bluetooth/otas
+  - wireless_examples/bluetooth/w_uart
   - wireless_examples/reference_design/health_care_iot_central
-  - wireless_examples/reference_design/health_care_iot_peripheral/bm
-  - wireless_examples/reference_design/health_care_iot_peripheral/freertos
-  - wireless_examples/reference_design/health_care_iot_threadx/central
-  - wireless_examples/reference_design/health_care_iot_threadx/peripheral
+  - wireless_examples/reference_design/health_care_iot_peripheral
+  - wireless_examples/reference_design/health_care_iot_threadx
 
 
 # Optional examples (excluded by default, can be included with --include-optional)

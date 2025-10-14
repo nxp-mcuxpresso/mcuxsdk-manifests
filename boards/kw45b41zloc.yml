@@ -27,6 +27,7 @@ repo_list:
   - bluetooth
   - XCVR
   - freertos-kernel
+  - mcux-freertos-drivers
 
 # Optional repositories (excluded by default, can be included with --include-optional)
 optional_repos: []
@@ -49,19 +50,14 @@ example_list:
   - freertos_examples/freertos_sem_static
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
-  - trustzone_examples/hello_world_ns
-  - trustzone_examples/hello_world_s
+  - trustzone_examples
+  - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb/bm
-  - wireless_examples/bluetooth/w_uart/bm
-  - wireless_examples/bluetooth/w_uart/freertos
-  - wireless_examples/bluetooth/w_uart_genfsk/bm
-  - wireless_examples/bluetooth/w_uart_genfsk/freertos
-  - wireless_examples/genfsk/connectivity_test/bm
-  - wireless_examples/genfsk/connectivity_test/freertos
-  - wireless_examples/reference_design/lowpower_central/bm
-  - wireless_examples/reference_design/lowpower_central/freertos
-  - wireless_examples/reference_design/lowpower_peripheral/bm
-  - wireless_examples/reference_design/lowpower_peripheral/freertos
+  - wireless_examples/bluetooth/w_uart
+  - wireless_examples/bluetooth/w_uart_genfsk
+  - wireless_examples/genfsk/connectivity_test
+  - wireless_examples/reference_design/lowpower_central
+  - wireless_examples/reference_design/lowpower_peripheral
 
 # Optional examples (excluded by default, can be included with --include-optional)
 optional_examples: []

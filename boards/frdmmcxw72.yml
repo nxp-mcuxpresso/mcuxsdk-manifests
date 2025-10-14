@@ -33,6 +33,7 @@ repo_list:
   - ieee-802.15.4
   - zigbee
   - freertos-kernel
+  - mcux-freertos-drivers
 
 # Optional repositories (excluded by default, can be included with --include-optional)
 optional_repos: []
@@ -57,6 +58,8 @@ example_list:
   - cmsis_driver_examples/lpspi/int_b2b_transfer/slave
   - cmsis_driver_examples/lpuart/edma_transfer
   - cmsis_driver_examples/lpuart/interrupt_transfer
+  - cmsis_driver_examples/usart/interrupt_transfer
+  - cmsis_driver_examples/usart/edma_transfer
   - component_examples/flash_component/nor/lpspi
   - component_examples/log/bm
   - component_examples/log/freertos
@@ -159,6 +162,7 @@ example_list:
   - driver_examples/wdog32
   - el2go_examples/el2go_blob_test/el2go_blob_test
   - el2go_examples/el2go_import_blob/el2go_import_blob
+  - freemaster_examples/common
   - freemaster_examples/fmstr_example_can
   - freemaster_examples/fmstr_example_rtt
   - freemaster_examples/fmstr_example_uart
@@ -170,6 +174,7 @@ example_list:
   - freertos_driver_examples/freertos_lpspi_b2b/slave
   - freertos_driver_examples/freertos_lpuart
   - littlefs_examples/littlefs_shell_onchip_flash
+  - littlefs_examples/littlefs_shell
   - mbedtls3x_examples/mbedtls3x_benchmark
   - mbedtls3x_examples/mbedtls3x_psatest
   - mbedtls3x_examples/mbedtls3x_selftest
@@ -204,64 +209,40 @@ example_list:
   - tfm_examples/tfm_regression_s
   - tfm_examples/tfm_secureboot_ns
   - tfm_examples/tfm_secureboot_s
-  - trustzone_examples/hello_world_ns
-  - trustzone_examples/hello_world_s
+  - trustzone_examples
+  - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb/bm
   - wireless_examples/ble_controller/nbu_ble
-  - wireless_examples/bluetooth/adv_ext_central/bm
-  - wireless_examples/bluetooth/adv_ext_central/freertos
-  - wireless_examples/bluetooth/adv_ext_peripheral/bm
-  - wireless_examples/bluetooth/adv_ext_peripheral/freertos
-  - wireless_examples/bluetooth/ancs_c/bm
-  - wireless_examples/bluetooth/ancs_c/freertos
-  - wireless_examples/bluetooth/beacon/bm
-  - wireless_examples/bluetooth/beacon/freertos
-  - wireless_examples/bluetooth/ble_fscibb/bm
-  - wireless_examples/bluetooth/ble_fscibb/freertos
-  - wireless_examples/bluetooth/ble_shell/bm
-  - wireless_examples/bluetooth/ble_shell/freertos
-  - wireless_examples/bluetooth/eatt_central/bm
-  - wireless_examples/bluetooth/eatt_central/freertos
-  - wireless_examples/bluetooth/eatt_peripheral/bm
-  - wireless_examples/bluetooth/eatt_peripheral/freertos
-  - wireless_examples/bluetooth/fsci_bridge/bm
-  - wireless_examples/bluetooth/fsci_bridge/freertos
-  - wireless_examples/bluetooth/hid_device/bm
-  - wireless_examples/bluetooth/hid_device/freertos
-  - wireless_examples/bluetooth/hid_host/bm
-  - wireless_examples/bluetooth/hid_host/freertos
+  - wireless_examples/bluetooth/adv_ext_central
+  - wireless_examples/bluetooth/adv_ext_peripheral
+  - wireless_examples/bluetooth/ancs_c
+  - wireless_examples/bluetooth/beacon
+  - wireless_examples/bluetooth/ble_fscibb
+  - wireless_examples/bluetooth/ble_shell
+  - wireless_examples/bluetooth/eatt_central
+  - wireless_examples/bluetooth/eatt_peripheral
+  - wireless_examples/bluetooth/fsci_bridge
+  - wireless_examples/bluetooth/hid_device
+  - wireless_examples/bluetooth/hid_host
   - wireless_examples/bluetooth/ncp_fsci_black_box/threadx
-  - wireless_examples/bluetooth/otac_att/bm
-  - wireless_examples/bluetooth/otac_att/freertos
-  - wireless_examples/bluetooth/otac_l2cap/bm
-  - wireless_examples/bluetooth/otac_l2cap/freertos
-  - wireless_examples/bluetooth/otas/bm
-  - wireless_examples/bluetooth/otas/freertos
-  - wireless_examples/bluetooth/temp_coll/bm
-  - wireless_examples/bluetooth/temp_coll/freertos
-  - wireless_examples/bluetooth/temp_sens/bm
-  - wireless_examples/bluetooth/temp_sens/freertos
-  - wireless_examples/bluetooth/w_uart/bm
-  - wireless_examples/bluetooth/w_uart/freertos
-  - wireless_examples/bluetooth/w_uart_host/bm
-  - wireless_examples/bluetooth/w_uart_host/freertos
-  - wireless_examples/genfsk/connectivity_test/bm
-  - wireless_examples/genfsk/connectivity_test/freertos
+  - wireless_examples/bluetooth/otac_att
+  - wireless_examples/bluetooth/otac_l2cap
+  - wireless_examples/bluetooth/otas
+  - wireless_examples/bluetooth/temp_coll
+  - wireless_examples/bluetooth/temp_sens
+  - wireless_examples/bluetooth/w_uart
+  - wireless_examples/bluetooth/w_uart_host
+  - wireless_examples/genfsk/connectivity_test
   - wireless_examples/ieee-802.15.4/connectivity_test/bm
   - wireless_examples/ieee-802.15.4/nbu_ble_15_4_dyn/mac_split
   - wireless_examples/ieee-802.15.4/nbu_ble_15_4_dyn/phy_split
   - wireless_examples/ieee-802.15.4/nbu_ble_15_4_dyn/phy_split_matter
-  - wireless_examples/reference_design/lowpower_central/bm
-  - wireless_examples/reference_design/lowpower_central/freertos
-  - wireless_examples/reference_design/lowpower_peripheral/bm
-  - wireless_examples/reference_design/lowpower_peripheral/freertos
+  - wireless_examples/reference_design/lowpower_central
+  - wireless_examples/reference_design/lowpower_peripheral
   - wireless_examples/zigbee/coordinator/freertos
-  - wireless_examples/zigbee/coordinator/freertos/r23
   - wireless_examples/zigbee/coordinator_ble_wuart/freertos
   - wireless_examples/zigbee/ed_rx_off/freertos
-  - wireless_examples/zigbee/ed_rx_off/freertos/r23
   - wireless_examples/zigbee/router/freertos
-  - wireless_examples/zigbee/router/freertos/r23
   - wireless_examples/zigbee/router_ble_wuart/freertos
 
 # Optional examples (excluded by default, can be included with --include-optional)
