@@ -79,7 +79,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcuxsdk-tool-data
-    revision: f52fdfcdb92ad734347729f1198a0d226cd0d3d0
+    revision: 275065efdccbf3b182602bcf5e63ada19c1ebe0d
     path: mcuxsdk/tool_data
     groups:
     - core
