@@ -228,7 +228,6 @@ example_list:
   - wireless_examples/bluetooth/w_uart_genfsk/freertos
   - wireless_examples/genfsk/connectivity_test/bm
   - wireless_examples/genfsk/connectivity_test/freertos
-  - wireless_examples/ieee-802.15.4/nbu_ble_15_4_dyn/mac_split
   - wireless_examples/ieee-802.15.4/nbu_ble_15_4_dyn/phy_split
   - wireless_examples/ieee-802.15.4/nbu_ble_15_4_dyn/phy_split_matter
   - wireless_examples/ieee-802.15.4/nbu_ble_15_4_dyn/phy_split_single_pan
