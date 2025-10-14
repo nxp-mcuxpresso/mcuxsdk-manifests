@@ -27,18 +27,41 @@ repo_list:
   - bluetooth
   - XCVR
   - freertos-kernel
-  - framework-int
 
 # Optional repositories (excluded by default, can be included with --include-optional)
 optional_repos: []
 
 # Core examples (always included)
 example_list:
-  - component_examples
-  - demo_apps
-  - freertos_driver_examples
-  - freertos_examples
-  - wireless_examples
+  - component_examples/log/bm
+  - component_examples/log/freertos
+  - demo_apps/hello_world
+  - demo_apps/hello_world_swo
+  - demo_apps/led_blinky
+  - demo_apps/shell
+  - freertos_driver_examples/freertos_lpuart
+  - freertos_examples/freertos_event
+  - freertos_examples/freertos_generic
+  - freertos_examples/freertos_hello
+  - freertos_examples/freertos_mutex
+  - freertos_examples/freertos_queue
+  - freertos_examples/freertos_sem
+  - freertos_examples/freertos_sem_static
+  - freertos_examples/freertos_swtimer
+  - freertos_examples/freertos_tickless
+  - trustzone_examples/hello_world_ns
+  - trustzone_examples/hello_world_s
+  - wireless_examples/ble_controller/hci_bb/bm
+  - wireless_examples/bluetooth/w_uart/bm
+  - wireless_examples/bluetooth/w_uart/freertos
+  - wireless_examples/bluetooth/w_uart_genfsk/bm
+  - wireless_examples/bluetooth/w_uart_genfsk/freertos
+  - wireless_examples/genfsk/connectivity_test/bm
+  - wireless_examples/genfsk/connectivity_test/freertos
+  - wireless_examples/reference_design/lowpower_central/bm
+  - wireless_examples/reference_design/lowpower_central/freertos
+  - wireless_examples/reference_design/lowpower_peripheral/bm
+  - wireless_examples/reference_design/lowpower_peripheral/freertos
 
 # Optional examples (excluded by default, can be included with --include-optional)
 optional_examples: []
