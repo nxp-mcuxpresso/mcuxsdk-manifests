@@ -111,7 +111,7 @@ manifest:
       track_branch: release/25.12.00-pvw1
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: d23bef7234df184ea8b79d7ff4c7a0590f736357
+    revision: 4f4280804d4b68824681c315716faee9dbc7f8af
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -121,7 +121,7 @@ manifest:
       track_branch: release/25.12.00-pvw1
       branch_flow: false
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 793699482e538ae748bb99132a92290a60bfd399
+    revision: a162bdae481aeb40f4b1f51a0fa6b5cc595b42c2
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -142,7 +142,7 @@ manifest:
       track_branch: release/25.12.00-pvw1
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 5a41fed7132959f2add17bb2bffcf9d8a3045f26
+    revision: dec59786490082ef9fc0d08a479632530d9ebf9d
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
@@ -152,6 +152,6 @@ manifest:
       track_branch: release/25.12.00-pvw1
       branch_flow: false
     path: mcuxsdk/middleware/wireless/coex
-    revision: 39bb1d2de8b702b32282cc9cc0f237cc4a3b5e87
+    revision: 4d483837493fffbfca535625c4feeabd7d326535
     groups:
     - coex
