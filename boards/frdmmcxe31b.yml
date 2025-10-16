@@ -1,0 +1,35 @@
+example_list:
+- canopennode_examples
+- demo_apps
+- driver_examples
+- ele_hseb
+- freemaster_examples
+- freertos_examples
+- lvgl_examples
+- lwip_examples
+- mbedtls3x_examples
+- ota_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- mcuboot_opensource
+- lwip
+- canopennode
+- motor_control
+- rtcesl
+- freemaster
+- lvgl
+- safety_iec60730b
+- edgelock
+- mbedtls3x
+- tfm
+- psa_crypto_driver
+- psa-arch-tests
+- tf-m-tests
+- qcbor
+- freertos-kernel
