@@ -219,6 +219,7 @@ example_list:
   - wireless_examples/reference_design/lowpower_peripheral
   - wireless_examples/zigbee/coordinator
   - wireless_examples/zigbee/coordinator_ble_wuart
+  - wireless_examples/zigbee/coprocessor/bm
   - wireless_examples/zigbee/ed_rx_off
   - wireless_examples/zigbee/router
   - wireless_examples/zigbee/router_ble_wuart
