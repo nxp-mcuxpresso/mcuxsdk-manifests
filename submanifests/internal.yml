@@ -98,7 +98,7 @@ manifest:
       branch_flow: false
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: 6ad0f280beb8d1597fcd73d4829234286348126f
+    revision: 7b83905d87eac6083bd0c20cd888f32067a173b7
     groups:
     - bifrost
     userdata:
@@ -115,7 +115,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: d022e415d7100b7d68da3c46548a795cad8f5191
+    revision: 24b50029cb7270ad0a53873323e3d38e356a5400
     groups:
     - bifrost
     userdata:
@@ -123,7 +123,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 7faa72d3b6b593f9b5681960bdc534e36143471f
+    revision: ba8098d2ab4d27807f0a30c7fa7759a550a6a3c7
     groups:
     - bifrost
     userdata:
