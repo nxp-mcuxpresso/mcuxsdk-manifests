@@ -70,7 +70,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 424f77d2abb6b66a16c116aff597376c1d205e88
+    revision: 5657ac4ed348f42c2926d29f928877c24fb81bf1
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
