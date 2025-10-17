@@ -11,23 +11,32 @@ by parsing tool data and validating board configurations.
 import os
 import yaml
 import subprocess
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Callable
 
 
 class DeviceBoardMapper:
     """Independent utility for mapping devices to boards using tool data."""
     
-    def __init__(self, workspace_root: str, manifest_dir: str):
+    def __init__(self, workspace_root: str, manifest_dir: str, logger: Callable[[str, str], None] = None):
         self.workspace_root = workspace_root
         self.manifest_dir = manifest_dir
         self._device_cache = None
+        self.logger = logger or self._default_logger
+    
+    def _default_logger(self, message: str, level: str = 'inf'):
+        """Default logger that does nothing."""
+        pass
     
     def get_boards_for_device(self, device_name: str) -> List[str]:
         """Get list of validated board names that support the specified device."""
+        self.logger(f"Looking up boards for device: {device_name}", 'dbg')
+        
         device_map = self._get_device_to_board_mapping()
         
         if not device_map:
-            raise ValueError("No device-to-board mapping available. Tool data may be missing.")
+            error_msg = "No device-to-board mapping available. Tool data may be missing."
+            self.logger(error_msg, 'err')
+            raise ValueError(error_msg)
         
         # Search for matching device (case-insensitive)
         device_name_lower = device_name.lower()
@@ -39,37 +48,49 @@ class DeviceBoardMapper:
             if device.lower() == device_name_lower:
                 matched_boards = boards
                 matched_device_name = device
+                self.logger(f"Found exact device match: {device} -> {len(boards)} boards", 'dbg')
                 break
         
         # If no exact match, try partial match
         if not matched_boards:
+            self.logger(f"No exact match found, trying partial match for: {device_name}", 'dbg')
             for device, boards in device_map.items():
                 if device_name_lower in device.lower() or device.lower() in device_name_lower:
                     matched_boards = boards
                     matched_device_name = device
+                    self.logger(f"Found partial device match: {device} -> {len(boards)} boards", 'dbg')
                     break
         
         if not matched_boards:
             error_msg = self._format_device_not_found_error(device_name, device_map)
+            self.logger(f"Device '{device_name}' not found in mapping", 'err')
             raise ValueError(error_msg)
         
         # Validate board configurations exist
+        self.logger(f"Validating {len(matched_boards)} board configurations", 'dbg')
         validated_boards = self._validate_board_configs(matched_boards)
         if not validated_boards:
             error_msg = self._format_no_valid_boards_error(device_name, matched_device_name, matched_boards)
+            self.logger(f"No valid board configurations found for device '{device_name}'", 'err')
             raise ValueError(error_msg)
         
+        self.logger(f"Successfully found {len(validated_boards)} valid boards for device '{device_name}': {validated_boards}", 'inf')
         return validated_boards
     
     def get_available_devices(self) -> Dict[str, List[str]]:
         """Get all available devices and their supported boards."""
-        return self._get_device_to_board_mapping()
+        self.logger("Retrieving all available devices", 'dbg')
+        device_map = self._get_device_to_board_mapping()
+        self.logger(f"Found {len(device_map)} available devices", 'dbg')
+        return device_map
     
     def get_available_boards(self) -> List[str]:
         """Get list of all available board configuration files."""
         boards_dir = os.path.join(self.manifest_dir, 'boards')
+        self.logger(f"Scanning boards directory: {boards_dir}", 'dbg')
         
         if not os.path.isdir(boards_dir):
+            self.logger(f"Boards directory not found: {boards_dir}", 'wrn')
             return []
         
         boards = []
@@ -78,9 +99,11 @@ class DeviceBoardMapper:
                 if filename.endswith(('.yml', '.yaml')):
                     board_name = os.path.splitext(filename)[0]
                     boards.append(board_name)
-        except (OSError, PermissionError):
+        except (OSError, PermissionError) as e:
+            self.logger(f"Error reading boards directory: {e}", 'wrn')
             pass
         
+        self.logger(f"Found {len(boards)} board configuration files", 'dbg')
         return sorted(boards)
     
     def _format_device_not_found_error(self, device_name: str, device_map: Dict[str, List[str]]) -> str:
@@ -243,9 +266,12 @@ class DeviceBoardMapper:
     def _get_device_to_board_mapping(self) -> Dict[str, List[str]]:
         """Build and cache device-to-board mapping."""
         if self._device_cache is not None:
+            self.logger("Using cached device-to-board mapping", 'dbg')
             return self._device_cache
         
+        self.logger("Building device-to-board mapping from tool data", 'dbg')
         self._device_cache = self._build_device_mapping()
+        self.logger(f"Built mapping for {len(self._device_cache)} devices", 'dbg')
         return self._device_cache
     
     def _build_device_mapping(self) -> Dict[str, List[str]]:
@@ -255,8 +281,11 @@ class DeviceBoardMapper:
             "mcuxsdk", "tool_data", "recommended_boards"
         )
         
+        self.logger(f"Looking for tool data in: {tool_data_dir}", 'dbg')
+        
         # Ensure tool data is available
         if not os.path.isdir(tool_data_dir):
+            self.logger("Tool data directory not found, attempting to download", 'inf')
             self._download_tool_data()
         
         device_map = {}
@@ -268,13 +297,18 @@ class DeviceBoardMapper:
                 if f.endswith(('.yml', '.yaml'))
             ]
             
+            self.logger(f"Found {len(yaml_files)} YAML files to process", 'dbg')
+            
             for yaml_file in yaml_files:
+                self.logger(f"Processing device YAML file: {os.path.basename(yaml_file)}", 'dbg')
                 device_data = self._parse_device_yaml(yaml_file)
                 device_map.update(device_data)
                 
-        except (OSError, PermissionError):
+        except (OSError, PermissionError) as e:
+            self.logger(f"Error reading tool data directory: {e}", 'wrn')
             pass
         
+        self.logger(f"Successfully built device mapping with {len(device_map)} devices", 'inf')
         return device_map
     
     def _parse_device_yaml(self, yaml_file: str) -> Dict[str, List[str]]:
@@ -286,6 +320,7 @@ class DeviceBoardMapper:
                 yaml_content = yaml.safe_load(f) or {}
             
             recommended_boards_list = yaml_content.get('recommended_boards', [])
+            self.logger(f"Processing {len(recommended_boards_list)} device entries from {os.path.basename(yaml_file)}", 'dbg')
             
             for device_entry in recommended_boards_list:
                 if not isinstance(device_entry, dict):
@@ -308,10 +343,13 @@ class DeviceBoardMapper:
                         existing = set(device_data[device_name])
                         new_boards = set(board_list)
                         device_data[device_name] = sorted(list(existing.union(new_boards)))
+                        self.logger(f"Merged boards for device {device_name}: {len(device_data[device_name])} total boards", 'dbg')
                     else:
                         device_data[device_name] = sorted(board_list)
+                        self.logger(f"Added device {device_name} with {len(board_list)} boards", 'dbg')
                         
-        except (yaml.YAMLError, IOError):
+        except (yaml.YAMLError, IOError) as e:
+            self.logger(f"Error parsing YAML file {yaml_file}: {e}", 'wrn')
             pass
         
         return device_data
@@ -321,17 +359,31 @@ class DeviceBoardMapper:
         boards_dir = os.path.join(self.manifest_dir, 'boards')
         validated = []
         
+        self.logger(f"Validating {len(board_list)} board configurations in {boards_dir}", 'dbg')
+        
         for board_id in board_list:
             config_file = os.path.join(boards_dir, f'{board_id}.yml')
             if os.path.isfile(config_file):
                 validated.append(board_id)
+                self.logger(f"Validated board config: {board_id}", 'dbg')
+            else:
+                self.logger(f"Board config not found: {board_id} ({config_file})", 'dbg')
         
+        self.logger(f"Validated {len(validated)} out of {len(board_list)} board configurations", 'dbg')
         return validated
     
     def _download_tool_data(self):
         """Download tool data if not available."""
+        self.logger("Attempting to download tool data using west update", 'inf')
         try:
             cmd = ['west', 'update', 'mcuxsdk-tool-data', '-n', '-o=--depth=1']
-            subprocess.run(cmd, cwd=self.workspace_root, check=True, capture_output=True)
-        except subprocess.CalledProcessError:
+            self.logger(f"Running command: {' '.join(cmd)}", 'dbg')
+            result = subprocess.run(cmd, cwd=self.workspace_root, check=True, capture_output=True, text=True)
+            self.logger("Tool data download completed successfully", 'inf')
+            if result.stdout:
+                self.logger(f"Download output: {result.stdout.strip()}", 'dbg')
+        except subprocess.CalledProcessError as e:
+            self.logger(f"Tool data download failed: {e}", 'wrn')
+            if e.stderr:
+                self.logger(f"Download error: {e.stderr.strip()}", 'wrn')
             pass  # Fail silently, will be handled by caller

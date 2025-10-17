@@ -95,8 +95,8 @@ class UpdateBoardCommand(WestCommand):
             # Initialize workspace
             workspace_root, manifest_dir, manifest = self._init_workspace()
         
-            # Initialize utilities
-            config_loader = ConfigLoader(workspace_root, manifest_dir)
+            # Initialize utilities with logger
+            config_loader = ConfigLoader(workspace_root, manifest_dir, self._log_with_timestamp)
         
             # Load configuration
             config = self._load_configuration(config_loader, set_type, set_value)
@@ -442,8 +442,8 @@ class UpdateBoardCommand(WestCommand):
         
         self._log_with_timestamp(f"Package options: git={options.include_git}, docs={options.generate_docs}", 'dbg')
         
-        # Create package
-        package_creator = PackageCreator(self.topdir)
+        # Create package with logger
+        package_creator = PackageCreator(self.topdir, self._log_with_timestamp)
         
         start_time = time.time()
         package_creator.create_package(args.output, projects, final_repos, final_examples, options)
@@ -455,3 +455,4 @@ class UpdateBoardCommand(WestCommand):
             self._log_with_timestamp(f"Package created: {args.output} ({size_mb:.1f} MB) in {elapsed_time:.2f} seconds", 'inf')
         else:
             self._log_with_timestamp(f"Package creation completed in {elapsed_time:.2f} seconds, but file not found", 'wrn')
+
