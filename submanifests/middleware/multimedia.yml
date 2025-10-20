@@ -101,7 +101,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/audio_voice/components
-    revision: 7d5b7396eb0acbcb1232434ea6d8d6cdd8aad9cd
+    revision: 3e009997c92afed7fe9c7aeb68bdab23b673a74c
     groups:
     - audio-voice-components
     - audio_voice

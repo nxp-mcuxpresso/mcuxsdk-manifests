@@ -15,7 +15,7 @@ manifest:
       track_branch: main_github
       branch_flow: false
     path: mcuxsdk/middleware/metering
-    revision: fba36ee63db03bcadc4b98b99f961dfe938be8a1
+    revision: 1981b0ebb09437384f7e5b85243c5c203fb93500
     repo-path: mcux-metering
     groups:
     - metering
