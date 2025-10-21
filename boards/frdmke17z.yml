@@ -1,0 +1,25 @@
+example_list:
+- bootloader_examples
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- freemaster_examples
+- freertos_driver_examples
+- freertos_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-kinetis
+- mcu_bootloader
+- tinycbor
+- pkcs11
+- aws_iot_llhttp
+- freemaster
+- touch
+- freertos-kernel
+- mcux-freertos-drivers
