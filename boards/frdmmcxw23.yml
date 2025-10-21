@@ -21,7 +21,9 @@ repo_list:
   - mcuxsdk-tool-data
 
 # Optional repositories (excluded by default, can be included with --include-optional)
-optional_repos: []
+optional_repos:
+  - hciot-threadx
+  - threadx
 
 # Core examples (always included)
 example_list:
