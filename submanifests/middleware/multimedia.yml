@@ -72,19 +72,6 @@ manifest:
     - vit
     - audio_voice
     - middleware
-  - name: voice_seeker
-    repo-path: VoiceSeeker
-    userdata:
-      owner: tomas.barak@nxp.com
-      track_branch: mcuxsdk_release
-      branch_flow: false
-    path: mcuxsdk/middleware/audio_voice/components/voice_seeker
-    revision: 4bf52b9735dad775e8fe7264ddb4bdf41081b43e
-    submodules: true
-    groups:
-    - voice_seeker
-    - audio_voice
-    - middleware
   - name: voice_spot
     userdata:
       owner: tomas.barak@nxp.com
