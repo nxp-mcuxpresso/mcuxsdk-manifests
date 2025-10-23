@@ -19,7 +19,7 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/components/els_pkc
-    revision: 133c233c26b6faff0099af148b78ec2f39b74ccd
+    revision: fa0cd56c7ed4142b65e4a54c42616e74b74ccd1f
     url: https://github.com/NXP/els_pkc
     groups:
     - security
