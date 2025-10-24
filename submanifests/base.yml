@@ -12,7 +12,7 @@ manifest:
   - name: bifrost
     path: bifrost
     remote: nxp-zephyr
-    revision: 14fe540e6e361b8d8b55c12a4ebaed150a6b88f7
+    revision: 99b0387d3354a08159ebe971c5e22968acab62d3
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -49,7 +49,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcu-sdk-examples
-    revision: 4413d62212abad7c20cd59928e55a4089165462d
+    revision: a505d86625cd7dde1c1dff78785e05920d82b557
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
