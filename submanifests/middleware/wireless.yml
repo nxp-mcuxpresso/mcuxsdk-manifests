@@ -142,7 +142,7 @@ manifest:
       track_branch: wpa_supplicant_rtos_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 10445bd34eef02d27ea24811c35bc6939ef4ac2c
+    revision: fa11fc3da7e3a7c59ce4d08ee879ad8bdbad2fe1
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
@@ -152,6 +152,6 @@ manifest:
       track_branch: coex_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/coex
-    revision: b9093dc9156c3e1ed16532045095f67ded806da8
+    revision: 037837af6664e329dadd49ff08487dc6cdcace69
     groups:
     - coex
