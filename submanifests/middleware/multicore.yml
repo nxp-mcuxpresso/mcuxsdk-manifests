@@ -41,7 +41,7 @@ manifest:
       display_name: MCMGR
       description: Multicore manager
   - name: rpmsg-lite
-    revision: feature/heterogeneous_multicore_ng
+    revision: feature/heterogeneous_multicore
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     groups:
     - multicore
