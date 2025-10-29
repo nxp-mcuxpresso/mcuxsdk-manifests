@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: freertos-kernel
     path: mcuxsdk/rtos/freertos/freertos-kernel
-    revision: feature/heterogeneous_multicore_ng
+    revision: feature/heterogeneous_multicore
     groups:
     - freertos-kernel
     - rtos
