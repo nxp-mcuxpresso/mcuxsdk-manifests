@@ -108,7 +108,7 @@ manifest:
   - name: wifi_nxp
     userdata:
       owner: null
-      track_branch: wifi_nxp_gh
+      track_branch: release/25.12.00-pvw2
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
     revision: af5d04fc5385bb77ef01f2c176ee7c64930d2df1
@@ -118,7 +118,7 @@ manifest:
   - name: fw_bin
     userdata:
       owner: jia.guo_2@nxp.com
-      track_branch: fw_bin_gh
+      track_branch: release/25.12.00-pvw2
       branch_flow: false
     path: mcuxsdk/components/conn_fwloader/fw_bin
     revision: defb3277518b27cd413690907692ecec065e651a
@@ -139,7 +139,7 @@ manifest:
   - name: wpa_supplicant-rtos
     userdata:
       owner: jia.guo_2@nxp.com
-      track_branch: wpa_supplicant_rtos_gh
+      track_branch: release/25.12.00-pvw2
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
     revision: fa11fc3da7e3a7c59ce4d08ee879ad8bdbad2fe1
@@ -149,7 +149,7 @@ manifest:
   - name: coex
     userdata:
       owner: jia.guo_2@nxp.com
-      track_branch: coex_gh
+      track_branch: release/25.12.00-pvw2
       branch_flow: false
     path: mcuxsdk/middleware/wireless/coex
     revision: 037837af6664e329dadd49ff08487dc6cdcace69
