@@ -15,7 +15,7 @@ manifest:
       track_branch: release/24.12.00
       branch_flow: false
     path: mcuxsdk/middleware/tinycbor
-    revision: 1cb2eab953a68e3b533247be280fd4fef24bf647
+    revision: 4ea71e4b8e5b559f0c3ef053756cb8856449b491
     groups:
     - tinycbor
     - aws_iot
