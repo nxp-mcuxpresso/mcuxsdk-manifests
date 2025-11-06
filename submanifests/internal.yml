@@ -115,7 +115,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 1db4217e6438332a2c2e0f50ab233c4b319c697b
+    revision: 6799e5b828dfaefeffb8fce2d50d22424ebb8c54
     groups:
     - bifrost
     userdata:
@@ -135,7 +135,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/emwin
-    revision: 25810c99316d66a1b619c2f165e19dbf4f396c9f
+    revision: 50c4ffb557a7c7935fe112e039bd22bd5c42534f
     groups:
     - bifrost
   - name: ieee-802.15.4_private
