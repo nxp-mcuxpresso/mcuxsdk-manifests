@@ -164,7 +164,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/components/crypto_benchmark
-    revision: 960802241ef7d4234cd7c99db9310d0ab0d0900f
+    revision: 78f6b793348507a18c85db4882ff9467e3fda831
     groups:
     - bifrost
   - name: bluetooth_private
