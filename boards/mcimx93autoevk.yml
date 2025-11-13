@@ -1,0 +1,31 @@
+example_list:
+- freertos_examples
+- lwip_examples
+- cmsis_driver_examples
+- driver_examples
+- demo_apps
+- multicore_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-imx
+- tinycbor
+- pkcs11
+- aws_iot_llhttp
+- lwip
+- mcux-sdk-middleware-eiq
+- mcux-sdk-middleware-tensorflow
+- mcuxsdk-middleware-executorch
+- freemaster
+- mcux-sdk-middleware-multicore
+- mcux-mcmgr
+- rpmsg-lite
+- erpc
+- voice_seeker
+- voice_spot
+- audio-voice-components
+- freertos-kernel
