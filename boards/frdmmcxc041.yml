@@ -1,0 +1,20 @@
+example_list:
+- cmsis_driver_examples
+- demo_apps
+- driver_examples
+- freemaster_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- mcux-sdk-middleware-sdmmc
+- fatfs
+- freemaster
+- freertos-kernel
+- aws_iot_llhttp
+- pkcs11
+- tinycbor
