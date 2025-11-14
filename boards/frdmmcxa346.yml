@@ -1,0 +1,32 @@
+example_list:
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- fatfs_examples
+- freemaster_examples
+- freertos_examples
+- littlefs_examples
+- ota_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- mcuboot_opensource
+- usb
+- fatfs
+- littlefs
+- metering
+- motor_control
+- rtcesl
+- freemaster
+- lvgl
+- safety_iec60730b
+- mbedtls3x
+- psa_crypto_driver
+- sgi_pkc
+- freertos-kernel

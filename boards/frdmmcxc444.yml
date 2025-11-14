@@ -1,0 +1,24 @@
+example_list:
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- freemaster_examples
+- freertos_examples
+- multiprocessor_examples
+- usb_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- usb
+- mcux-sdk-middleware-sdmmc
+- freemaster
+- mcux-sdk-middleware-multicore
+- erpc
+- safety_iec60730b
+- freertos-kernel

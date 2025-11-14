@@ -1,0 +1,33 @@
+example_list:
+- canopennode_examples
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- emwin_examples
+- freemaster_examples
+- freertos_examples
+- littlefs_examples
+- lvgl_examples
+- ota_examples
+- usb_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- mcuboot_opensource
+- usb
+- canopennode
+- fatfs
+- littlefs
+- motor_control
+- rtcesl
+- freemaster
+- lvgl
+- safety_iec60730b
+- freertos-kernel
+- emwin

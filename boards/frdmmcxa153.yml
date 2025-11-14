@@ -1,0 +1,25 @@
+example_list:
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- freemaster_examples
+- freertos_examples
+- ota_examples
+- se_hostlib_examples
+- usb_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- mcuboot_opensource
+- usb
+- motor_control
+- rtcesl
+- freemaster
+- se_hostlib
+- freertos-kernel

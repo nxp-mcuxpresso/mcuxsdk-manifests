@@ -1,0 +1,22 @@
+example_list:
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- freemaster_examples
+- freertos_examples
+- littlefs_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- fatfs
+- littlefs
+- motor_control
+- rtcesl
+- freemaster
+- freertos-kernel
