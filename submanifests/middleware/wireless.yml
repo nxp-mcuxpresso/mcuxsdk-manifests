@@ -14,7 +14,7 @@ manifest:
       owner: nicolas.collonville@nxp.com
       track_branch: main
       branch_flow: false
-    revision: 7a1c93b7a9eabe267e96c10bc1d8529a4c7b2afd
+    revision: 20fce4177eb446d0eddbaa4ff4ec23f3cf0a1980
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -40,7 +40,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 10750fd295ee01a11d577c7e8a9de017d4e4713e
+    revision: b560629c22ef8f09c4c1c811a589ec9cde410edc
     groups:
     - ble_controller
     - middleware
@@ -52,7 +52,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 4ee7664720a7dde9427e66b7cdfa5f44bc4c8d11
+    revision: 6302516429bf51821409628fe50735fbfc4ccfae
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -65,7 +65,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 6b9354850d082f85056c0d80d226158d9b810c5e
+    revision: 1fe638ccbe6ec6729c134d02e19f328ec2c240a3
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -88,7 +88,7 @@ manifest:
       track_branch: public_main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 96fc1591485e7f9c5e930636c6d00c94fe9f0128
+    revision: 650dd0b5dd7f06148a47b416779fc08f79a33110
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -111,7 +111,7 @@ manifest:
       track_branch: wifi_nxp_gh
       branch_flow: false
     path: mcuxsdk/middleware/wifi_nxp
-    revision: fe6cae94a5180cc7ee204fc96dee2a4fc2a85788
+    revision: 37a7e19383169c15b8f04ae85fd79ae5759e156a
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -142,7 +142,7 @@ manifest:
       track_branch: wpa_supplicant_rtos_gh
       branch_flow: false
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: fa11fc3da7e3a7c59ce4d08ee879ad8bdbad2fe1
+    revision: 52ce0562ddfd411d7fa3b19dfa30458245742e17
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
