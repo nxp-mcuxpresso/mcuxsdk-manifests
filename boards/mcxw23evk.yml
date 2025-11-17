@@ -13,17 +13,13 @@ repo_list:
   - CMSIS
   - mcux-freertos-drivers
   - tfm
+  - mbedtls
   - mbedtls3x
   - tf-m-tests
   - qcbor
   - psa-arch-tests
   - psa_crypto_driver
   - mcuxsdk-tool-data
-
-# Optional repositories (excluded by default, can be included with --include-optional)
-optional_repos:
-  - hciot-threadx
-  - threadx
 
 # Core examples (always included)
 example_list:
@@ -144,8 +140,3 @@ example_list:
   - wireless_examples/reference_design/health_care_iot_common
   - wireless_examples/reference_design/health_care_iot_central
   - wireless_examples/reference_design/health_care_iot_peripheral
-  - wireless_examples/reference_design/health_care_iot_threadx
-
-
-# Optional examples (excluded by default, can be included with --include-optional)
-optional_examples: []
