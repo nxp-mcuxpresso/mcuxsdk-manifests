@@ -54,5 +54,6 @@ repo_list:
 - rpmsg-lite
 - rtcesl
 - soem
+- tfm
 - tinycbor
 - usb
