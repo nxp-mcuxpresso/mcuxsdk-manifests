@@ -24,6 +24,7 @@ repo_list:
 - freemaster
 - safety_iec60730b
 - edgelock
+- mbedtls
 - mbedtls3x
 - tfm
 - psa_crypto_driver
@@ -31,3 +32,5 @@ repo_list:
 - tf-m-tests
 - qcbor
 - freertos-kernel
+- corehttp
+- aws_iot_llhttp
