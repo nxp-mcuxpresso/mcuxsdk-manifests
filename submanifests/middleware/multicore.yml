@@ -22,7 +22,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: mcux-mcmgr
-    revision: 24b82b3dad6804871eda407faa55db6c63accd19
+    revision: b5109ad42ca29d64c6364a68a0443ac71190dd6b
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
