@@ -196,8 +196,13 @@ example_list:
   - trustzone_examples
   - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb
+  - wireless_examples/bluetooth/digital_key_car_anchor_cs
+  - wireless_examples/bluetooth/digital_key_device_cs
+  - wireless_examples/bluetooth/loc_reader
+  - wireless_examples/bluetooth/loc_user_device
   - wireless_examples/bluetooth/w_uart
   - wireless_examples/bluetooth/w_uart_genfsk
+  - wireless_examples/bluetooth/wireless_ranging
   - wireless_examples/genfsk/connectivity_test
   - wireless_examples/reference_design/lowpower_central
   - wireless_examples/reference_design/lowpower_peripheral

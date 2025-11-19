@@ -201,7 +201,10 @@ example_list:
   - secure-subsystem_examples/ele_spake2plus
   - secure-subsystem_examples/ele_symmetric
   - trustzone_examples
+  - wireless_examples/bluetooth/loc_reader
+  - wireless_examples/bluetooth/loc_user_device
   - wireless_examples/bluetooth/w_uart
+  - wireless_examples/bluetooth/wireless_ranging
 
 # Optional examples (excluded by default, can be included with --include-optional)
 optional_examples: []

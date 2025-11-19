@@ -226,11 +226,15 @@ example_list:
   - wireless_examples/bluetooth/ble_fscibb
   - wireless_examples/bluetooth/ble_shell
   - wireless_examples/bluetooth/digital_key_car_anchor
+  - wireless_examples/bluetooth/digital_key_car_anchor_cs
   - wireless_examples/bluetooth/digital_key_device
+  - wireless_examples/bluetooth/digital_key_device_cs
   - wireless_examples/bluetooth/eatt_central
   - wireless_examples/bluetooth/eatt_peripheral
   - wireless_examples/bluetooth/hid_device
   - wireless_examples/bluetooth/hid_host
+  - wireless_examples/bluetooth/loc_reader
+  - wireless_examples/bluetooth/loc_user_device
   - wireless_examples/bluetooth/otac_att
   - wireless_examples/bluetooth/otac_l2cap
   - wireless_examples/bluetooth/otas
@@ -238,6 +242,7 @@ example_list:
   - wireless_examples/bluetooth/temp_sens
   - wireless_examples/bluetooth/w_uart
   - wireless_examples/bluetooth/w_uart_genfsk
+  - wireless_examples/bluetooth/wireless_ranging
   - wireless_examples/genfsk/connectivity_test
   - wireless_examples/reference_design/lowpower_central
   - wireless_examples/reference_design/lowpower_peripheral
