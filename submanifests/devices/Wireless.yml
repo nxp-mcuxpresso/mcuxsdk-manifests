@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-devices-wireless
-    revision: f4aeb76582f00fe748f252ca21e2a9f486201b10
+    revision: fd48fe5e64b86b2725297c10886a389b52e86b72
     path: mcuxsdk/devices/Wireless
     groups:
     - core
