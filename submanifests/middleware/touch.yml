@@ -15,7 +15,7 @@ manifest:
       track_branch: main_github
       branch_flow: false
     path: mcuxsdk/middleware/touch
-    revision: 40db6922949f0e8517fdda38652e4820e66d4b34
+    revision: aade9abb784276774cf888cd5773a9101eddfe80
     repo-path: mcux-touch
     groups:
     - touch
