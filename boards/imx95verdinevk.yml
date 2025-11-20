@@ -24,3 +24,5 @@ repo_list:
 - erpc
 - g2d_dpu
 - freertos-kernel
+board_dependencies:
+- imx95lpd5evk19

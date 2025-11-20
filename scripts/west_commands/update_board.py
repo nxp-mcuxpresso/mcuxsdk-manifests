@@ -208,12 +208,21 @@ class UpdateBoardCommand(WestCommand):
         try:
             if set_type == 'board':
                 config = config_loader.load_board_config(set_value)
+                # Log board dependencies if any
+                if config.board_dependencies:
+                    self._log_with_timestamp(f"Board '{set_value}' has dependencies: {', '.join(config.board_dependencies)}", 'inf')
             elif set_type == 'device':
                 config = config_loader.load_device_config(set_value)
                 if hasattr(config, 'source_boards') and config.source_boards:
                     self._log_with_timestamp(f"Matched boards for devices '{set_value}':  {', '.join(config.source_boards)}", 'inf')
+                # Log merged dependencies if any
+                if config.board_dependencies:
+                    self._log_with_timestamp(f"Device '{set_value}' has merged dependencies: {', '.join(config.board_dependencies)}", 'inf')
             elif set_type == 'custom':
                 config = config_loader.load_custom_config(set_value)
+                # Log custom config dependencies if any
+                if config.board_dependencies:
+                    self._log_with_timestamp(f"Custom config '{set_value}' has dependencies: {', '.join(config.board_dependencies)}", 'inf')
             
             self._log_with_timestamp(f"Loaded {set_type} configuration: {config.name}", 'inf')
 
@@ -431,7 +440,7 @@ class UpdateBoardCommand(WestCommand):
         
         # Get board list for filtering
         board_list = config_loader.get_filtering_boards(config)
-        self._log_with_timestamp(f"Using board filter: {board_list}", 'dbg')
+        self._log_with_timestamp(f"Using board filter (including dependencies): {board_list}", 'dbg')
         
         # Create package options
         options = PackageOptions(

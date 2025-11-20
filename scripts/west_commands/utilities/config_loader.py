@@ -18,12 +18,14 @@ class BoardConfig:
     """Represents a board configuration."""
     
     def __init__(self, name: str, repo_list: List[str], example_list: List[str], 
-                 optional_repos: List[str] = None, optional_examples: List[str] = None):
+                 optional_repos: List[str] = None, optional_examples: List[str] = None,
+                 board_dependencies: List[str] = None):
         self.name = name
         self.repo_list = repo_list or []
         self.example_list = example_list or []
         self.optional_repos = optional_repos or []
         self.optional_examples = optional_examples or []
+        self.board_dependencies = board_dependencies or []  # New attribute
         self.source_boards = []  # For device configs
     
     def to_dict(self) -> Dict[str, Any]:
@@ -33,12 +35,19 @@ class BoardConfig:
             'repo_list': self.repo_list,
             'example_list': self.example_list,
             'optional_repos': self.optional_repos,
-            'optional_examples': self.optional_examples
+            'optional_examples': self.optional_examples,
+            'board_dependencies': self.board_dependencies  # Include in dict
         }
         if self.source_boards:
             result['source_boards'] = self.source_boards
         return result
-    
+
+    def get_all_filtering_boards(self) -> List[str]:
+        """Get all boards that should be preserved during filtering (self + dependencies)."""
+        boards = [self.name]
+        boards.extend(self.board_dependencies)
+        return list(dict.fromkeys(boards))  # Remove duplicates while preserving order
+
     def get_all_repos(self, include_optional: bool = False) -> List[str]:
         """Get all repositories, optionally including optional ones."""
         repos = list(self.repo_list)
@@ -107,6 +116,7 @@ class ConfigLoader:
         merged_examples = set()
         merged_optional_repos = set()
         merged_optional_examples = set()
+        merged_dependencies = set()  # New: collect all dependencies
         
         successful_boards = []
         failed_boards = []
@@ -119,8 +129,9 @@ class ConfigLoader:
                 merged_examples.update(board_config.example_list)
                 merged_optional_repos.update(board_config.optional_repos)
                 merged_optional_examples.update(board_config.optional_examples)
+                merged_dependencies.update(board_config.board_dependencies)  # Merge dependencies
                 successful_boards.append(board_name)
-                self.logger(f"Successfully merged config from board: {board_name}", 'dbg')
+                self.logger(f"Successfully merged config from board: {board_name} (deps: {board_config.board_dependencies})", 'dbg')
             except Exception as e:
                 failed_boards.append(board_name)
                 self.logger(f"Failed to load config for board {board_name}: {e}", 'wrn')
@@ -140,13 +151,15 @@ class ConfigLoader:
             repo_list=sorted(list(merged_repos)),
             example_list=sorted(list(merged_examples)),
             optional_repos=sorted(list(merged_optional_repos)),
-            optional_examples=sorted(list(merged_optional_examples))
+            optional_examples=sorted(list(merged_optional_examples)),
+            board_dependencies=sorted(list(merged_dependencies))  # Include merged dependencies
         )
         config.source_boards = board_names
         
         self.logger(f"Successfully created merged device config: {device_name} "
                    f"(repos: {len(config.repo_list)}, examples: {len(config.example_list)}, "
-                   f"optional_repos: {len(config.optional_repos)}, optional_examples: {len(config.optional_examples)})", 'inf')
+                   f"optional_repos: {len(config.optional_repos)}, optional_examples: {len(config.optional_examples)})",
+                   f"dependencies: {len(config.board_dependencies)})", 'inf')
         
         return config
     
@@ -173,12 +186,26 @@ class ConfigLoader:
     def get_filtering_boards(self, config: BoardConfig) -> List[str]:
         """Get board names for filtering purposes."""
         if hasattr(config, 'source_boards') and config.source_boards:
-            boards = config.source_boards
-            self.logger(f"Using source boards for filtering: {boards}", 'dbg')
+            # For device configs, collect dependencies from all source boards
+            all_boards = set(config.source_boards)
+            
+            # Load each source board config to get its dependencies
+            for board_name in config.source_boards:
+                try:
+                    board_config = self.load_board_config(board_name)
+                    all_boards.update(board_config.board_dependencies)
+                    self.logger(f"Added dependencies for board {board_name}: {board_config.board_dependencies}", 'dbg')
+                except Exception as e:
+                    self.logger(f"Failed to load dependencies for board {board_name}: {e}", 'wrn')
+                    continue
+            
+            boards = sorted(list(all_boards))
+            self.logger(f"Using source boards and dependencies for filtering: {boards}", 'dbg')
             return boards
         
-        boards = [config.name]
-        self.logger(f"Using config name for filtering: {boards}", 'dbg')
+        # For single board configs, include the board and its dependencies
+        boards = config.get_all_filtering_boards()
+        self.logger(f"Using config board and dependencies for filtering: {boards}", 'dbg')
         return boards
     
     def _format_board_not_found_error(self, board_name: str) -> str:
@@ -298,11 +325,13 @@ class ConfigLoader:
             repo_list=data.get('repo_list', []),
             example_list=data.get('example_list', []),
             optional_repos=data.get('optional_repos', []),
-            optional_examples=data.get('optional_examples', [])
+            optional_examples=data.get('optional_examples', []),
+            board_dependencies=data.get('board_dependencies', [])  # Load dependencies
         )
         
         self.logger(f"Created BoardConfig for {name}: "
                    f"repos={len(config.repo_list)}, examples={len(config.example_list)}, "
-                   f"optional_repos={len(config.optional_repos)}, optional_examples={len(config.optional_examples)}", 'dbg')
+                   f"optional_repos={len(config.optional_repos)}, optional_examples={len(config.optional_examples)}"
+                   f"dependencies={len(config.board_dependencies)}",'dbg')
         
         return config

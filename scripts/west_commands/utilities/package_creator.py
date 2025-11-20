@@ -320,7 +320,7 @@ class PackageCreator:
                             excluded.add(name)
                 
                 self.logger(f"Found {len(all_boards)} total boards, excluding {len(excluded)} boards", 'dbg')
-                self.logger(f"Target boards: {sorted(target_set)}", 'dbg')
+                self.logger(f"Target boards (including dependencies):{sorted(target_set)}", 'dbg')
                 
             except (OSError, PermissionError) as e:
                 self.logger(f"Error reading boards directory {boards_dir}: {e}", 'wrn')
