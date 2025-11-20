@@ -43,6 +43,6 @@ manifest:
       track_branch: mcux_main
       branch_flow: false
     path: mcuxsdk/middleware/littlefs
-    revision: ef8dacce13bf331dfd1903ead830264854c3df35
+    revision: 6d539af7a370eed17febdf679a0ec2c0245154f2
     groups:
     - littlefs
