@@ -70,7 +70,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: 25_12_00_0
+      track_branch: 2512000
       branch_flow: false
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
