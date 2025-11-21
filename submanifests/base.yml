@@ -28,7 +28,7 @@ manifest:
     - core
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/25.12.00
       branch_flow: true
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
@@ -56,7 +56,7 @@ manifest:
     - examples
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/25.12.00
       branch_flow: true
   - name: mcu-sdk-components
     repo-path: mcux-component
@@ -66,7 +66,7 @@ manifest:
     - components
     - ble_nxp
     userdata:
-      track_branch: mcux_main
+      track_branch: release/25.12.00
       branch_flow: true
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc

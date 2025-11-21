@@ -28,7 +28,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.12.00
       branch_flow: true
   - name: sdk_components
     path: mcuxsdk/ecosystem/sdk_generator/modules/sdk_components
@@ -66,11 +66,11 @@ manifest:
       branch_flow: false
   - name: MIR
     path: mcuxsdk/MIR
-    revision: 35377139c48d286543dd341ddd0280646ae4c77c
+    revision: dff9badd7bcbd508e5896d87a1961c2e964e6016
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: 25_12_00_0
       branch_flow: false
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
@@ -119,7 +119,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/25.12.00
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int

@@ -15,5 +15,5 @@ manifest:
     groups:
     - core
     userdata:
-      track_branch: main
+      track_branch: release/25.12.00
       branch_flow: true

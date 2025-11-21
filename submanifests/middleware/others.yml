@@ -22,7 +22,7 @@ manifest:
   - name: memfault
     userdata:
       owner: zejiang.yu@nxp.com
-      track_branch: master
+      track_branch: release/25.12.00
     revision: f1a88a848b4f0a634375ab488d2d1f2a52085bfa
     path: mcuxsdk/components/debug/memfault/memfault-firmware-sdk
     url: https://github.com/memfault/memfault-firmware-sdk
