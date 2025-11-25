@@ -48,3 +48,4 @@ repo_list:
 - freertos-kernel
 - mcux-freertos-drivers
 - emwin
+- safety_iec60730b

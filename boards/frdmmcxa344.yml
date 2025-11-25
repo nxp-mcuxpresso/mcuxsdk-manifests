@@ -20,3 +20,5 @@ repo_list:
 - rtcesl
 - freemaster
 - freertos-kernel
+- safety_iec60730b
+
