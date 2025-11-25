@@ -18,3 +18,5 @@ repo_list:
 - freemaster
 - touch
 - freertos-kernel
+- safety_iec60730b
+

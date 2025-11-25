@@ -23,3 +23,5 @@ repo_list:
 - freemaster
 - se_hostlib
 - freertos-kernel
+- safety_iec60730b
+
