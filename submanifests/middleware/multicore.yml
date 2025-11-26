@@ -43,6 +43,7 @@ manifest:
   - name: rpmsg-lite
     revision: feature/heterogeneous_multicore
     path: mcuxsdk/middleware/multicore/rpmsg-lite
+    url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
     - multicore
     - middleware

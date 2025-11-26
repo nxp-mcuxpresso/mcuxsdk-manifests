@@ -51,6 +51,7 @@ manifest:
   - name: soem
     revision: feature/heterogeneous_multicore
     path: mcuxsdk/middleware/soem
+    remote: nxp-real-time-edge-sw
     groups:
     - soem
     - middleware
