@@ -154,7 +154,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/zigbee_private
-    revision: 7fc8b42a361a9503fc49e2e52b6e052973b7fe97
+    revision: 1d86d7dca92c02e4ba3eaf8b5518354349402045
     repo-path: mcux-sdk-middleware-zigbee-int
     groups:
     - bifrost
