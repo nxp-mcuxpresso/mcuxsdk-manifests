@@ -36,6 +36,7 @@ manifest:
   - name: rpmsg-lite
     revision: 42a37572d84fbabb35455292b3a87244b10a877e
     path: mcuxsdk/middleware/multicore/rpmsg-lite
+    url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
     - multicore
     - middleware

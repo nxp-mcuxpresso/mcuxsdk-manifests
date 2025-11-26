@@ -45,6 +45,7 @@ manifest:
   - name: soem
     revision: 53acd56dca133af3817a53d93e0928f5bbc8406e
     path: mcuxsdk/middleware/soem
+    remote: nxp-real-time-edge-sw
     groups:
     - soem
     - middleware
