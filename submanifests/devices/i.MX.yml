@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-devices-imx
-    revision: feature/heterogeneous_multicore
+    revision: 6ebb1ec8b81214d9f7ea54a1b50d553c7d32dea3
     path: mcuxsdk/devices/i.MX
     groups:
     - core

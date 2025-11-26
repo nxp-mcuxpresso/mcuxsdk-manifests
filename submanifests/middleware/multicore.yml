@@ -34,7 +34,7 @@ manifest:
       track_branch: main
       branch_flow: false
   - name: rpmsg-lite
-    revision: feature/heterogeneous_multicore
+    revision: 42a37572d84fbabb35455292b3a87244b10a877e
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     groups:
     - multicore

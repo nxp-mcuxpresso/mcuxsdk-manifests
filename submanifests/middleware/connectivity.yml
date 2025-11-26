@@ -23,7 +23,7 @@ manifest:
     - usb
     - middleware
   - name: lwip
-    revision: feature/heterogeneous_multicore
+    revision: fbc6c9b6a5908e52661a3c1bf2f0e05f2c16b360
     path: mcuxsdk/middleware/lwip
     groups:
     - lwip
@@ -43,7 +43,7 @@ manifest:
     - lin_stack
     - middleware
   - name: soem
-    revision: feature/heterogeneous_multicore
+    revision: 53acd56dca133af3817a53d93e0928f5bbc8406e
     path: mcuxsdk/middleware/soem
     groups:
     - soem
