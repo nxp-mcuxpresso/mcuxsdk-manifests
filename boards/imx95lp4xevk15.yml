@@ -23,7 +23,6 @@ repo_list:
 - rpmsg-lite
 - erpc
 - g2d_dpu
-- voice_seeker
 - voice_spot
 - audio-voice-components
 - freertos-kernel

@@ -26,7 +26,6 @@ repo_list:
 - mcux-mcmgr
 - rpmsg-lite
 - erpc
-- voice_seeker
 - voice_spot
 - audio-voice-components
 - safety_iec60730b

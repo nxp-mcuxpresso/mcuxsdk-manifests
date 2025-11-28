@@ -46,7 +46,6 @@ repo_list:
 - erpc
 - lvgl
 - vit
-- voice_seeker
 - audio-voice-components
 - cjson
 - mbedtls

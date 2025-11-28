@@ -10,7 +10,6 @@ repo_list:
   - freertos-kernel
   - corehttp
   - coremqtt
-  - coremqtt-agent
   - corepkcs11
   - backoffalgorithm
   - corejson
@@ -25,10 +24,6 @@ repo_list:
   - freemaster
   - tinycbor
   - pkcs11
-  - aws_iot_device-defender
-  - aws_iot_device-shadow
-  - aws_iot_jobs
-  - aws_iot_ota
   - aws_iot_llhttp
   - fatfs
   - mcuboot_opensource
@@ -49,14 +44,10 @@ repo_list:
   - emwin
   - maestro
   - vit
-  - voice_seeker
   - audio-voice-components
   - coex
   - zigbee
   - ieee-802.15.4
-
-# Optional repositories (excluded by default, can be included with --include-optional)
-optional_repos: []
 
 # Core examples (always included)
 example_list:

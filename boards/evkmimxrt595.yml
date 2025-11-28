@@ -49,7 +49,6 @@ repo_list:
 - vglite_sdk
 - lvgl
 - vit
-- voice_seeker
 - audio-voice-components
 - libjpeg
 - cjson
