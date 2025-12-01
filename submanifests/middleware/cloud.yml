@@ -25,7 +25,7 @@ manifest:
       track_branch: release/24.12.00
       branch_flow: false
     path: mcuxsdk/middleware/pkcs11
-    revision: 7e42bd48bbf02ad4a85010309919ac176373f4b4
+    revision: 555a0c4e4087e7d2ce0b042d978e56f32c5cf6a1
     groups:
     - pkcs11
     - aws_iot
