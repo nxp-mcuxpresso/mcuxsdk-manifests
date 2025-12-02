@@ -36,7 +36,7 @@ manifest:
       track_branch: release/25.12.00
       branch_flow: true
     path: mcuxsdk/rtos/freertos/corepkcs11
-    revision: 7807078397bd5824e7f19c5ff041a7741855285f
+    revision: d75bff23edf54deaca740ae0051efbb513dbc4b1
     groups:
     - freertos
     - aws_iot
