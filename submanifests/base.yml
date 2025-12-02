@@ -12,7 +12,7 @@ manifest:
   - name: bifrost
     path: bifrost
     remote: nxp-zephyr
-    revision: 3e96a8c6f640814c24a34cd1e80c02bb9f8d94a4
+    revision: c048c7995c9bd87b4a3decebbcb0288ec494855b
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -58,7 +58,7 @@ manifest:
       description: System View Description (SVD) files for NXP MCU devices, providing
         detailed peripheral register definitions
   - name: mcu-sdk-examples
-    revision: 47c0111c6a47c011ea41ba4c19ed05a75f13d446
+    revision: f5562210a385cc547c4379d97c298bc957cff8f6
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:

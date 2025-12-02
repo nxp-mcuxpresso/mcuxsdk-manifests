@@ -10,6 +10,8 @@ manifest:
     url-base: https://github.com/laurencelundblade
   - name: tf_m_tests
     url-base: https://github.com/TrustedFirmware-M
+  - name: mbedtls_upstream
+    url-base: https://github.com/Mbed-TLS
   defaults:
     remote: nxp-mcuxpresso
   projects:
@@ -66,14 +68,16 @@ manifest:
     - edgelock
     - security
   - name: mbedtls
+    submodules:
+    - path: framework
     userdata:
-      owner: vit.chmelar@nxp.com
-      track_branch: mcux_main
+      owner: vit.solcik@nxp.com
+      track_branch: v4.0.0
       branch_flow: false
       display_name: mbedtls
       description: mbedtls SSL/TLS library
     path: mcuxsdk/middleware/mbedtls
-    revision: 3d140b49ed730d7e33d8cac2f2072532b97b30c7
+    revision: 67dafdd8fc41dd23c09d974de84ad3e5f3aeb7fe
     groups:
     - mbedtls
     - security
@@ -88,7 +92,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 9af0a0c7521ff1e1ba82e3b7c921f81c86017adb
+    revision: 3a77955b39ab86ed4244eb6fac3044eef70ec186
     groups:
     - mbedtls3x
     - security
@@ -116,7 +120,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: 0df75156edb171df4a9c489610b7da6f480fcded
+    revision: a055065725844b32cf6ae697751b37bda2485f52
     groups:
     - tfm
   - name: psa_crypto_driver
@@ -128,7 +132,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 7f77527ea511fdb754cba1a180365b5cdddad088
+    revision: cd642ee2b2f7b4599045b9cffe76edc450d743b2
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
@@ -216,3 +220,15 @@ manifest:
     groups:
     - security
     - sgi_pkc
+  - name: tf-psa-crypto
+    submodules: true
+    userdata:
+      owner: vit.solcik@nxp.com
+      track_branch: tf-psa-crypto-1.0.0_nxp
+      branch_flow: false
+    path: mcuxsdk/middleware/mbedtls/tf-psa-crypto
+    revision: 2f986ba9a3ff24e5c9a5685035d4145b6dfdd650
+    remote: nxp-mcuxpresso
+    groups:
+    - psa_crypto_driver
+    - security
