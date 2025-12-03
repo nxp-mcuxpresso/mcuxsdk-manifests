@@ -36,7 +36,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/vglite/vglite_sdk
-    revision: 782f033619bfa5b68370e97bcb88dab9df3a68ad
+    revision: a43e907d5526640154604d48633bfc4b60a9f489
     groups:
     - vglite
     - middleware
