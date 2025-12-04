@@ -18,4 +18,5 @@ manifest:
       track_branch: release/25.12.00
       branch_flow: true
       display_name: LPC Series Device Files
-      description: Device system files, template files, IDE related startup and linker files.
+      description: Device system files, template files, IDE related startup and linker
+        files.
