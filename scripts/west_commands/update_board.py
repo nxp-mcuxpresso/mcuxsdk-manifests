@@ -293,7 +293,10 @@ class UpdateBoardCommand(WestCommand):
         # Output to file if requested
         if output_file and output_file.lower().endswith(('.yml', '.yaml')):
             try:
-                os.makedirs(os.path.dirname(output_file), exist_ok=True)
+                # Only create directory if there is a directory component
+                output_dir = os.path.dirname(output_file)
+                if output_dir:  # Only create if directory path is not empty
+                    os.makedirs(output_dir, exist_ok=True)
                 with open(output_file, 'w', encoding='utf-8') as f:
                     f.write(yaml_output)
                 self._log_with_timestamp(f"Repository information written to: {output_file}", 'inf')

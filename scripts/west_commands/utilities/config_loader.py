@@ -157,9 +157,9 @@ class ConfigLoader:
         config.source_boards = board_names
         
         self.logger(f"Successfully created merged device config: {device_name} "
-                   f"(repos: {len(config.repo_list)}, examples: {len(config.example_list)}, "
-                   f"optional_repos: {len(config.optional_repos)}, optional_examples: {len(config.optional_examples)})",
-                   f"dependencies: {len(config.board_dependencies)})", 'inf')
+           f"(repos: {len(config.repo_list)}, examples: {len(config.example_list)}, "
+           f"optional_repos: {len(config.optional_repos)}, optional_examples: {len(config.optional_examples)}, "
+           f"dependencies: {len(config.board_dependencies)})", 'inf')
         
         return config
     
@@ -330,8 +330,8 @@ class ConfigLoader:
         )
         
         self.logger(f"Created BoardConfig for {name}: "
-                   f"repos={len(config.repo_list)}, examples={len(config.example_list)}, "
-                   f"optional_repos={len(config.optional_repos)}, optional_examples={len(config.optional_examples)}"
-                   f"dependencies={len(config.board_dependencies)}",'dbg')
-        
+           f"repos={len(config.repo_list)}, examples={len(config.example_list)}, "
+           f"optional_repos={len(config.optional_repos)}, optional_examples={len(config.optional_examples)}, "
+           f"dependencies={len(config.board_dependencies)}", 'dbg')
+
         return config
