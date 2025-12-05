@@ -12,12 +12,12 @@ manifest:
   - name: safety_iec60730b
     userdata:
       owner: radim.volek@nxp.com
-      track_branch: main_github
+      track_branch: release/25.12.00
       branch_flow: false
       display_name: Safety
       description: NXP IEC60730B Safety Library
     path: mcuxsdk/middleware/safety_iec60730b
-    revision: 2c4ef2dacf0b01fb36a6f7cfaf13f0d8af49ced7
+    revision: f13acaafd0fba81752675cc9dc15618ef2fec758
     repo-path: mcux-safety-iec60730b
     groups:
     - safety_iec60730b
