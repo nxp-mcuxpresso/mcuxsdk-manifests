@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set
 from datetime import datetime
 import uuid
+import fnmatch
 
 from west.commands import WestCommand
 from west.manifest import Manifest
@@ -26,8 +27,9 @@ class SbomCollect(WestCommand):
         super().__init__(
             'sbom_collect',
             'collect SBOM files from manifest projects',
-            'Collect SBOM.spdx.json files from all manifest projects '
-            'and create a workspace-level SBOM file.',
+            'Collect SBOM files matching a pattern from specified manifest projects '
+            'and create a workspace-level SBOM file. If no projects are specified, '
+            'collects from all projects.',
             accepts_unknown_args=False)
 
     def do_add_parser(self, parser_adder):
@@ -35,6 +37,11 @@ class SbomCollect(WestCommand):
             self.name,
             help=self.help,
             description=self.description)
+        
+        parser.add_argument(
+            'projects',
+            nargs='*',
+            help='List of project names to collect SBOM from. If not specified, collects from all projects.')
         
         parser.add_argument(
             '-o', '--output',
@@ -47,9 +54,10 @@ class SbomCollect(WestCommand):
             help='Enable verbose (DEBUG) logging')
         
         parser.add_argument(
-            '--sbom-filename',
-            default='SBOM.spdx.json',
-            help='SBOM filename to search for in each project (default: SBOM.spdx.json)')
+            '--sbom-pattern',
+            default='*SBOM*.json',
+            help='Filename pattern to search for SBOM files in each project (default: *SBOM*.json). '
+                 'Supports wildcards like *SBOM*.json, SBOM.spdx.json, etc.')
 
         parser.add_argument(
             '--dry-run',
@@ -69,7 +77,7 @@ class SbomCollect(WestCommand):
             workspace_root = Path(manifest.topdir)
             
             log.inf(f"Starting SBOM merge for workspace: {workspace_root}")
-            log.inf(f"Looking for SBOM files named: {args.sbom_filename}")
+            log.inf(f"Looking for SBOM files matching pattern: {args.sbom_pattern}")
 
             # Collect disabled groups once from manifest
             disabled_groups = self._get_disabled_groups(manifest)
@@ -78,25 +86,48 @@ class SbomCollect(WestCommand):
             else:
                 log.inf("No disabled groups found in manifest")
 
-            # Collect SBOM files from all projects
+            # Filter projects based on provided project names
+            if args.projects:
+                log.inf(f"Filtering projects: {args.projects}")
+                projects_to_process = [p for p in manifest.projects if p.name in args.projects]
+                
+                # Check for projects not found
+                found_project_names = {p.name for p in projects_to_process}
+                not_found = set(args.projects) - found_project_names
+                if not_found:
+                    log.wrn(f"Projects not found in manifest: {sorted(not_found)}")
+                
+                if not projects_to_process:
+                    log.err(f"None of the specified projects found in manifest: {args.projects}")
+                    return 1
+                
+                log.inf(f"Processing {len(projects_to_process)} specified projects")
+            else:
+                projects_to_process = manifest.projects
+                log.inf(f"No projects specified, processing all {len(projects_to_process)} projects")
+
+            # Collect SBOM files from filtered projects
             sbom_files = []
             projects_without_sbom = []
             disabled_projects = []
 
-            # Process each project in the manifest
-            for project in manifest.projects:
+            # Process each project
+            for project in projects_to_process:
                 project_path = workspace_root / project.path
-                sbom_path = project_path / args.sbom_filename
                 
                 log.dbg(f"Checking project: {project.name} at {project_path}")
                 
-                if sbom_path.exists() and sbom_path.is_file():
-                    log.inf(f"Found SBOM file in project '{project.name}': {sbom_path}")
-                    sbom_files.append({
-                        'project_name': project.url.rstrip('/').split('/')[-1],
-                        'project_path': project.path,
-                        'sbom_path': sbom_path
-                    })
+                # Find SBOM files matching the pattern
+                found_sbom_files = self._find_sbom_files(project_path, args.sbom_pattern)
+                
+                if found_sbom_files:
+                    for sbom_path in found_sbom_files:
+                        log.inf(f"Found SBOM file in project '{project.name}': {sbom_path}")
+                        sbom_files.append({
+                            'project_name': project.url.rstrip('/').split('/')[-1] if project.url else project.name,
+                            'project_path': project.path,
+                            'sbom_path': sbom_path
+                        })
                 else:
                     if self._is_project_disabled(project, disabled_groups):
                         log.dbg(f"Project '{project.name}' is disabled by group-filter, skipping SBOM requirement")
@@ -106,7 +137,7 @@ class SbomCollect(WestCommand):
                             'groups': getattr(project, 'groups', [])
                         })
                     else:
-                        log.wrn(f"No SBOM file found in enabled project '{project.name}' at {sbom_path}")
+                        log.wrn(f"No SBOM file matching pattern '{args.sbom_pattern}' found in enabled project '{project.name}' at {project_path}")
                         projects_without_sbom.append({
                             'project_name': project.name,
                             'project_path': project.path,
@@ -129,6 +160,7 @@ class SbomCollect(WestCommand):
             
             # Merge SBOM files
             merged_sbom = self._merge_sbom_files(sbom_files)
+            
             # Write merged SBOM to output file
             output_path = Path(args.output)
             if not output_path.is_absolute():
@@ -175,6 +207,46 @@ class SbomCollect(WestCommand):
             log.err(f"Error during SBOM merge: {e}")
             log.dbg("Exception details:", exc_info=True)
             return 1
+
+    def _find_sbom_files(self, project_path: Path, pattern: str) -> List[Path]:
+        """
+        Find SBOM files matching the pattern in the project directory.
+        
+        Args:
+            project_path: Path to the project directory
+            pattern: Filename pattern to match (supports wildcards)
+            
+        Returns:
+            List of Path objects for matching SBOM files
+        """
+        sbom_files = []
+        
+        if not project_path.exists() or not project_path.is_dir():
+            log.dbg(f"Project path does not exist or is not a directory: {project_path}")
+            return sbom_files
+        
+        try:
+            # Search for files matching the pattern in the project root
+            for file_path in project_path.iterdir():
+                if file_path.is_file() and fnmatch.fnmatch(file_path.name, pattern):
+                    log.dbg(f"Found matching SBOM file: {file_path}")
+                    sbom_files.append(file_path)
+            
+            # If no files found in root, also check common subdirectories
+            if not sbom_files:
+                common_sbom_dirs = ['sbom', 'SBOM', 'docs', 'documentation']
+                for subdir_name in common_sbom_dirs:
+                    subdir_path = project_path / subdir_name
+                    if subdir_path.exists() and subdir_path.is_dir():
+                        for file_path in subdir_path.iterdir():
+                            if file_path.is_file() and fnmatch.fnmatch(file_path.name, pattern):
+                                log.dbg(f"Found matching SBOM file in {subdir_name}: {file_path}")
+                                sbom_files.append(file_path)
+        
+        except (OSError, PermissionError) as e:
+            log.wrn(f"Error searching for SBOM files in {project_path}: {e}")
+        
+        return sbom_files
 
     def _validate_sbom_structure(self, sbom_data: Dict, project_name: str) -> bool:
         """Validate basic SBOM structure."""

@@ -8,6 +8,7 @@ import time
 import yaml
 from datetime import datetime
 from typing import List, Tuple
+import argparse
 
 from west.commands import WestCommand
 from west.manifest import Manifest
@@ -23,33 +24,45 @@ class UpdateBoardCommand(WestCommand):
     def __init__(self):
         super().__init__(
             'update_board',
-            'Updates repositories for a board, device, or custom configuration.',
-            '''Updates repositories based on board, device, or custom configuration.
-            
-            Without -o/--output: Simply updates the configured repositories for the specified set.
-            With -o/--output: Updates repositories and creates a filtered zip package with optional 
-            documentation generation and git history inclusion. By default, repositories are updated first,
-            but this can be skipped with --no-update for CI/CD scenarios or when repos are already current.
-            
-            Examples:
-              # Update repositories only
-              west update_board --set board mcxw23evk
-              
-              # Update and create package with all optional items
-              west update_board --set board mcxw23evk -o package.zip --include-optional
-              
-              # Skip update, create package without updating and docs (for CI/CD parallel execution)
-              west update_board --set board mcxw23evk -o package.zip --no-update --gen-doc
-              
-              # List all repositories with descriptions in YAML format
-              west update_board --set board mcxw23evk --list-repo
+            'update repositories for a board, device, or custom configuration',
+            '''
+Update repositories based on board, device, or custom configuration.
 
-              # Save repository information to YAML file
-              west update_board --set board mcxw23evk --list-repo -o repos.yml
-            ''')
+Without -o/--output: Simply updates the configured repositories for the specified set.
+
+With -o/--output: Updates repositories and creates a filtered zip package with optional
+documentation generation and git history inclusion. By default, repositories are updated
+first, but this can be skipped with --no-update for CI/CD scenarios or when repos are
+already current.
+
+Examples:
+  # Update repositories only
+  west update_board --set board mcxw23evk
+
+  # Update and create package with all optional items
+  west update_board --set board mcxw23evk -o package.zip --include-optional
+
+  # Skip update, create package with docs (for CI/CD parallel execution)
+  west update_board --set board mcxw23evk -o package.zip --no-update --gen-doc
+
+  # List all repositories with descriptions in YAML format
+  west update_board --set board mcxw23evk --list-repo
+
+  # Save repository information to YAML file
+  west update_board --set board mcxw23evk --list-repo -o repos.yml
+
+  # Collect SBOM for board repositories and save to JSON file
+  west update_board --set board mcxw23evk --list-sbom -o sbom.json
+
+  # Collect SBOM for device repositories
+  west update_board --set device MCXW235 --list-sbom -o device-sbom.json
+
+Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
+      --sbom-pattern option.
+''')
 
     def do_add_parser(self, parser_adder):
-        parser = parser_adder.add_parser(self.name, help=self.help, description=self.description)
+        parser = parser_adder.add_parser(self.name, help=self.help, description=self.description, formatter_class=argparse.RawDescriptionHelpFormatter)
         
         # Core set argument with value
         parser.add_argument('--set', nargs=2, metavar=('TYPE', 'VALUE'), required=True,
@@ -58,11 +71,18 @@ class UpdateBoardCommand(WestCommand):
         # Output (makes this a packaging operation)
         parser.add_argument('-o', '--output', 
                           help='Output file path. For packaging: creates a filtered zip package after updating repositories. '
-                               'For --list-repo: if the file has .yml/.yaml extension, writes repository information to that file;')
+                               'For --list-repo: if the file has .yml/.yaml extension, writes repository information to that file; '
+                               'For --list-sbom: writes merged SBOM to the specified JSON file.')
         
         # Repository listing
         parser.add_argument('--list-repo', action='store_true',
                           help='List all repositories with display names and descriptions in YAML format for the specified set.')
+        
+        # SBOM collection
+        parser.add_argument('--list-sbom', action='store_true',
+                          help='Collect SBOM files from repositories for the specified set and output merged SBOM. '
+                               'Requires -o/--output to specify the output JSON file path. '
+                               'Uses default pattern (*SBOM*.json). For custom patterns, use "west sbom_collect" directly.')
         
         # Package-only options (only valid with -o/--output)
         package_group = parser.add_argument_group('Package Options', 
@@ -105,6 +125,11 @@ class UpdateBoardCommand(WestCommand):
             if args.list_repo:
                 self._handle_list_repositories(config, manifest, args.output)
                 return
+            
+            # Handle list-sbom operation
+            if args.list_sbom:
+                self._handle_list_sbom(config, args.output, workspace_root)
+                return
         
             # Process repositories and examples based on optional inclusion
             final_repos, final_examples = self._process_optional_inclusion(config, args)
@@ -138,6 +163,21 @@ class UpdateBoardCommand(WestCommand):
 
     def _validate_arguments(self, args):
         """Validate argument combinations."""
+        # Check for mutually exclusive operations
+        if args.list_repo and args.list_sbom:
+            self._log_with_timestamp("Cannot use --list-repo and --list-sbom together", 'err')
+            raise Exception("Options --list-repo and --list-sbom are mutually exclusive")
+        
+        # Check if --list-sbom requires -o/--output
+        if args.list_sbom and not args.output:
+            self._log_with_timestamp("--list-sbom requires -o/--output to specify the output JSON file", 'err')
+            raise Exception("--list-sbom requires -o/--output to specify the output JSON file path")
+        
+        # Check if --list-sbom output has .json extension
+        if args.list_sbom and args.output:
+            if not args.output.lower().endswith('.json'):
+                self._log_with_timestamp("--list-sbom output file must have .json extension", 'wrn')
+        
         package_only_options = []
         if args.no_update:
             package_only_options.append('--no-update')
@@ -147,6 +187,13 @@ class UpdateBoardCommand(WestCommand):
             package_only_options.append('--include-git')
         if args.gen_doc:
             package_only_options.append('--gen-doc')
+        
+        # Package-only options should not be used with --list-repo or --list-sbom
+        if package_only_options and (args.list_repo or args.list_sbom):
+            options_str = ', '.join(package_only_options)
+            operation = '--list-repo' if args.list_repo else '--list-sbom'
+            self._log_with_timestamp(f"Invalid argument combination: {options_str} cannot be used with {operation}", 'err')
+            raise Exception(f"Options {options_str} are not applicable with {operation}")
         
         if package_only_options and not args.output:
             options_str = ', '.join(package_only_options)
@@ -214,7 +261,7 @@ class UpdateBoardCommand(WestCommand):
             elif set_type == 'device':
                 config = config_loader.load_device_config(set_value)
                 if hasattr(config, 'source_boards') and config.source_boards:
-                    self._log_with_timestamp(f"Matched boards for devices '{set_value}':  {', '.join(config.source_boards)}", 'inf')
+                    self._log_with_timestamp(f"Matched boards for device '{set_value}': {', '.join(config.source_boards)}", 'inf')
                 # Log merged dependencies if any
                 if config.board_dependencies:
                     self._log_with_timestamp(f"Device '{set_value}' has merged dependencies: {', '.join(config.board_dependencies)}", 'inf')
@@ -236,6 +283,33 @@ class UpdateBoardCommand(WestCommand):
                 # Other errors (parsing, etc.) can be 'wrn' level
                 self._log_with_timestamp(f"{e}", 'wrn')
             raise SystemExit(1)
+
+    def _resolve_output_path(self, output_file: str, workspace_root: str) -> str:
+        """
+        Resolve output file path to absolute path.
+        
+        If the path is relative, it's resolved relative to the current working directory,
+        not the workspace root. This ensures consistent behavior with user expectations.
+        
+        Args:
+            output_file: Output file path (can be relative or absolute)
+            workspace_root: Workspace root directory
+            
+        Returns:
+            Absolute path to the output file
+        """
+        if not output_file:
+            return output_file
+        
+        # Convert to absolute path if relative
+        if not os.path.isabs(output_file):
+            # Resolve relative to current working directory
+            abs_path = os.path.abspath(output_file)
+            self._log_with_timestamp(f"Resolved relative path '{output_file}' to '{abs_path}'", 'dbg')
+            return abs_path
+        
+        self._log_with_timestamp(f"Using absolute path: {output_file}", 'dbg')
+        return output_file
 
     def _handle_list_repositories(self, config: BoardConfig, manifest: Manifest, output_file: str = None):
         """Handle repository listing operation."""
@@ -293,18 +367,84 @@ class UpdateBoardCommand(WestCommand):
         # Output to file if requested
         if output_file and output_file.lower().endswith(('.yml', '.yaml')):
             try:
+                # Resolve output path to absolute
+                abs_output_file = self._resolve_output_path(output_file, self.topdir)
+                
                 # Only create directory if there is a directory component
-                output_dir = os.path.dirname(output_file)
+                output_dir = os.path.dirname(abs_output_file)
                 if output_dir:  # Only create if directory path is not empty
                     os.makedirs(output_dir, exist_ok=True)
-                with open(output_file, 'w', encoding='utf-8') as f:
+                
+                with open(abs_output_file, 'w', encoding='utf-8') as f:
                     f.write(yaml_output)
-                self._log_with_timestamp(f"Repository information written to: {output_file}", 'inf')
+                self._log_with_timestamp(f"Repository information written to: {abs_output_file}", 'inf')
             except (IOError, OSError) as e:
                 self._log_with_timestamp(f"Failed to write repository information to file: {e}", 'err')
                 raise Exception(f"Failed to write repository information to file: {e}")
         
         self._log_with_timestamp(f"Listed {len(all_repos)} repositories ({len(config.repo_list)} core, {len(config.optional_repos)} optional)", 'inf')
+
+    def _handle_list_sbom(self, config: BoardConfig, output_file: str, workspace_root: str):
+        """Handle SBOM collection operation by calling west sbom_collect."""
+        self._log_with_timestamp("Starting SBOM collection for configured repositories", 'inf')
+        
+        # Collect all repositories (core + optional)
+        all_repos = list(set(config.repo_list + config.optional_repos))
+        self._log_with_timestamp(f"Collecting SBOM from {len(all_repos)} repositories", 'inf')
+        
+        # Resolve output path to absolute path
+        abs_output_file = self._resolve_output_path(output_file, workspace_root)
+        self._log_with_timestamp(f"SBOM will be written to: {abs_output_file}", 'dbg')
+        
+        # Build west sbom_collect command
+        cmd = ['west', 'sbom_collect'] + all_repos
+        
+        # Add output file (use absolute path)
+        cmd.extend(['-o', abs_output_file])
+        
+        # Add verbose flag if in debug mode
+        if log.VERBOSE:
+            cmd.append('-v')
+        
+        try:
+            self._log_with_timestamp(f"Running command: {' '.join(cmd)}", 'dbg')
+            start_time = time.time()
+            
+            # Run the sbom_collect command from workspace root
+            result = subprocess.run(
+                cmd,
+                cwd=workspace_root,
+                check=True,
+                capture_output=True,
+                text=True
+            )
+            
+            elapsed_time = time.time() - start_time
+            self._log_with_timestamp(f"SBOM collection completed in {elapsed_time:.2f} seconds", 'inf')
+            
+            # Log output
+            if result.stdout:
+                for line in result.stdout.strip().split('\n'):
+                    if line.strip():
+                        self._log_with_timestamp(f"SBOM: {line}", 'dbg')
+            
+            # Verify output file was created
+            if os.path.exists(abs_output_file):
+                file_size = os.path.getsize(abs_output_file) / 1024  # Size in KB
+                self._log_with_timestamp(f"SBOM file created: {abs_output_file} ({file_size:.1f} KB)", 'inf')
+            else:
+                self._log_with_timestamp(f"SBOM file was not created: {abs_output_file}", 'wrn')
+                
+        except subprocess.CalledProcessError as e:
+            self._log_with_timestamp(f"SBOM collection failed with exit code {e.returncode}", 'err')
+            if e.stderr:
+                for line in e.stderr.strip().split('\n'):
+                    if line.strip():
+                        self._log_with_timestamp(f"SBOM Error: {line}", 'err')
+            raise Exception(f"SBOM collection failed: {e.stderr}")
+        except Exception as e:
+            self._log_with_timestamp(f"Error during SBOM collection: {e}", 'err')
+            raise
 
     def _process_optional_inclusion(self, config: BoardConfig, args) -> Tuple[List[str], List[str]]:
         """Process optional repository and example inclusion."""
@@ -439,7 +579,9 @@ class UpdateBoardCommand(WestCommand):
     def _create_package(self, config_loader: ConfigLoader, config: BoardConfig, args, 
                        projects: List, final_repos: List[str], final_examples: List[str]):
         """Create package using PackageCreator."""
-        self._log_with_timestamp(f"Creating package: {args.output}", 'inf')
+        # Resolve output path to absolute
+        abs_output = self._resolve_output_path(args.output, self.topdir)
+        self._log_with_timestamp(f"Creating package: {abs_output}", 'inf')
         
         # Get board list for filtering
         board_list = config_loader.get_filtering_boards(config)
@@ -458,13 +600,12 @@ class UpdateBoardCommand(WestCommand):
         package_creator = PackageCreator(self.topdir, self._log_with_timestamp)
         
         start_time = time.time()
-        package_creator.create_package(args.output, projects, final_repos, final_examples, options)
+        package_creator.create_package(abs_output, projects, final_repos, final_examples, options)
         elapsed_time = time.time() - start_time
         
         # Get final package size
-        if os.path.exists(args.output):
-            size_mb = os.path.getsize(args.output) / (1024 * 1024)
-            self._log_with_timestamp(f"Package created: {args.output} ({size_mb:.1f} MB) in {elapsed_time:.2f} seconds", 'inf')
+        if os.path.exists(abs_output):
+            size_mb = os.path.getsize(abs_output) / (1024 * 1024)
+            self._log_with_timestamp(f"Package created: {abs_output} ({size_mb:.1f} MB) in {elapsed_time:.2f} seconds", 'inf')
         else:
             self._log_with_timestamp(f"Package creation completed in {elapsed_time:.2f} seconds, but file not found", 'wrn')
-
