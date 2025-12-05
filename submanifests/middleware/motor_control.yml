@@ -17,7 +17,7 @@ manifest:
       display_name: Motor Control
       description: Motor control examples
     path: mcuxsdk/middleware/motor_control
-    revision: 4c81993431e153803d1b32647de687a036f217ad
+    revision: 3c65528a63324450e51d4dddd892d18af35030bf
     repo-path: mcux-motor_control
     groups:
     - motor_control
@@ -29,7 +29,7 @@ manifest:
       display_name: rtcesl
       description: NXP Real Time Control Embedded Software Library.
     path: mcuxsdk/middleware/rtcesl
-    revision: 39b31a322b9fb3eb5176150a4b853c29465adc04
+    revision: c317a22438b5cac2547909ace1238a6628cc0a53
     repo-path: rtcesl
     groups:
     - rtcesl

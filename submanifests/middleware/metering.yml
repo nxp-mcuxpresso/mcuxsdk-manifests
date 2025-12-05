@@ -17,7 +17,7 @@ manifest:
       display_name: Metering
       description: Metering Library
     path: mcuxsdk/middleware/metering
-    revision: 1981b0ebb09437384f7e5b85243c5c203fb93500
+    revision: 149308be7bef7ea231ee1557eb79da16022a3c2e
     repo-path: mcux-metering
     groups:
     - metering
