@@ -92,7 +92,7 @@ manifest:
       display_name: voicespot
       description: VoiceSpot library
     path: mcuxsdk/middleware/audio_voice/components/voice_spot
-    revision: 6cff6c10fdd892c357a728d1de809511bb30639b
+    revision: 0555e2d10435a076b5f51512097eaf069d7a7b24
     submodules: true
     groups:
     - bifrost
