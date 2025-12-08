@@ -178,6 +178,7 @@ example_list:
   - mbedtls3x_examples/mbedtls3x_psatest
   - mbedtls3x_examples/mbedtls3x_selftest
   - mbedtls3x_examples/psa_crypto_examples
+  - mbedtls3x_examples/psa_crypto_opaque_key_examples
   - mbedtls_examples/mbedtls_benchmark
   - mbedtls_examples/mbedtls_selftest
   - multicore_examples/erpc_matrix_multiply_rpmsg/primary
