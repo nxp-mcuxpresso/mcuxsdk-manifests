@@ -16,6 +16,7 @@ example_list:
 - tfm_examples
 - usb_examples
 - trustzone_examples
+- ota_examples
 repo_list:
 - core
 - CMSIS
@@ -49,3 +50,4 @@ repo_list:
 - mcux-freertos-drivers
 - emwin
 - safety_iec60730b
+- mcuboot_opensource
