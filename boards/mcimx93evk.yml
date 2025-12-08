@@ -35,3 +35,4 @@ repo_list:
 - tfm
 - psa-arch-tests
 - tf-m-tests
+- qcbor
