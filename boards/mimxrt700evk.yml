@@ -21,6 +21,7 @@ example_list:
 - openvg_examples
 - ota_examples
 - sdmmc_examples
+- tfm_examples
 - trustzone_examples
 - usb_examples
 - vglite_examples
@@ -38,6 +39,10 @@ repo_list:
 - dsp-codecs
 - naturedsp
 - nnlib
+- tfm
+- tf-m-tests
+- qcbor
+- psa-arch-tests
 - tinycbor
 - pkcs11
 - aws_iot_llhttp
