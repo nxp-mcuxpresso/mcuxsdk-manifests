@@ -31,3 +31,7 @@ repo_list:
 - audio-voice-components
 - safety_iec60730b
 - freertos-kernel
+- mbedtls3x
+- tfm
+- psa-arch-tests
+- tf-m-tests
