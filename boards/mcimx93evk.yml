@@ -6,6 +6,7 @@ example_list:
 - demo_apps
 - multicore_examples
 - eiq_examples
+- tfm_examples
 repo_list:
 - core
 - CMSIS

@@ -3,6 +3,7 @@ example_list:
 - driver_examples
 - demo_apps
 - multicore_examples
+- lwip_examples
 repo_list:
 - core
 - CMSIS
