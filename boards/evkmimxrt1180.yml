@@ -8,6 +8,7 @@ example_list:
 - ecat_examples
 - edgefast_bluetooth_examples
 - eiq_examples
+- ele_crypto
 - freemaster_examples
 - freertos_examples
 - littlefs_examples

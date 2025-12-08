@@ -6,6 +6,7 @@ example_list:
 - driver_examples
 - ecat_examples
 - eiq_examples
+- ele_crypto
 - freemaster_examples
 - freertos_examples
 - littlefs_examples
