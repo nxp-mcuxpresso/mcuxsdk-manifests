@@ -112,7 +112,7 @@ manifest:
   - name: ethermind
     userdata:
       owner: vinit.mehta@nxp.com
-      track_branch: main
+      track_branch: release/25.12.00
       branch_flow: false
       display_name: Bluetooth and Bluetooth Low Energy Host Stack
       description: Bluetooth and Bluetooth Low Energy Host Stack.
