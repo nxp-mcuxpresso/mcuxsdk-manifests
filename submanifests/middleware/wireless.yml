@@ -155,7 +155,7 @@ manifest:
       display_name: Wireless Zigbee
       description: Zigbee stack
     path: mcuxsdk/middleware/wireless/zigbee
-    revision: 62cf39f5e731aa2fbbc40206083d79e596dfbee1
+    revision: 9b84dfc0b6672dbab9675d4ae2816aefc4e8b189
     repo-path: mcux-sdk-middleware-zigbee
     groups:
     - zigbee
