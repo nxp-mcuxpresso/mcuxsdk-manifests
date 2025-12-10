@@ -461,7 +461,8 @@ class PackageCreator:
             self.logger("No target boards specified, skipping example.yml filtering", 'dbg')
             return 0
         
-        examples_dir = os.path.join(temp_dir, "mcuxsdk", "examples")
+        #change examples dir to the mcuxsdk folder, because now examples not limit in examples folder.
+        examples_dir = os.path.join(temp_dir, "mcuxsdk")
         if not os.path.exists(examples_dir):
             self.logger(f"Examples directory not found for yml filtering: {examples_dir}", 'wrn')
             return 0
