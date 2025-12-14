@@ -33,7 +33,7 @@ manifest:
       display_name: Wireless GENFSK
       description: GENFSK
     path: mcuxsdk/middleware/wireless/genfsk
-    revision: 70230df982fefce9d9ec313cfef1526bd1a7e92d 
+    revision: 70230df982fefce9d9ec313cfef1526bd1a7e92d
     groups:
     - genfsk
     - middleware
