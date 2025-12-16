@@ -90,8 +90,11 @@ class PackageCreator:
         finally:
             if os.path.exists(temp_dir):
                 self.logger(f"Cleaning up temporary directory: {temp_dir}", 'dbg')
-                shutil.rmtree(temp_dir)
-    
+                try:
+                    shutil.rmtree(temp_dir)
+                except Exception as e:
+                    self.logger(f"Cleaning tmp folder failed: {e}, please delete manually {temp_dir}.", 'wrn')
+
     def _copy_repositories(self, temp_dir: str, projects: List, options: PackageOptions) -> None:
         """Copy repositories with filtering."""
         self.logger(f"Copying {len(projects)} repositories to temporary directory", 'inf')
