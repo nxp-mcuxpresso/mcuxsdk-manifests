@@ -55,6 +55,10 @@ class PackageCreator:
             self._copy_repositories(temp_dir, projects, options)
             copy_elapsed = time.time() - copy_start
             self.logger(f"Repository copy completed in {copy_elapsed:.2f} seconds", 'inf')
+
+            # Clean west manifest filter settings in temp directory
+            self.logger("Cleaning west manifest filter settings", 'inf')
+            self._clean_west_filters(temp_dir)
             
             # Handle documentation
             if options.generate_docs:
@@ -94,6 +98,45 @@ class PackageCreator:
                     shutil.rmtree(temp_dir)
                 except Exception as e:
                     self.logger(f"Cleaning tmp folder failed: {e}, please delete manually {temp_dir}.", 'wrn')
+
+    def _clean_west_filters(self, temp_dir: str) -> None:
+        """Clean west manifest filter settings in the temporary directory."""
+        try:
+            # Remove manifest.project-filter setting
+            self.logger("Removing manifest.project-filter setting", 'dbg')
+            result = subprocess.run(
+                ['west', 'config', '-d', 'manifest.project-filter'],
+                cwd=temp_dir,
+                capture_output=True,
+                text=True
+            )
+            if result.returncode == 0:
+                self.logger("Successfully removed manifest.project-filter", 'dbg')
+            else:
+                self.logger(f"manifest.project-filter not set or already removed", 'dbg')
+            
+            # Remove manifest.group-filter setting
+            self.logger("Removing manifest.group-filter setting", 'dbg')
+            result = subprocess.run(
+                ['west', 'config', '-d', 'manifest.group-filter'],
+                cwd=temp_dir,
+                capture_output=True,
+                text=True
+            )
+            if result.returncode == 0:
+                self.logger("Successfully removed manifest.group-filter", 'dbg')
+            else:
+                self.logger(f"manifest.group-filter not set or already removed", 'dbg')
+                
+            self.logger("West manifest filter settings cleaned", 'inf')
+            
+        except subprocess.CalledProcessError as e:
+            self.logger(f"Warning: Failed to clean west filters: {e}", 'wrn')
+            # Don't fail the entire operation if filter cleanup fails
+            pass
+        except Exception as e:
+            self.logger(f"Warning: Unexpected error cleaning west filters: {e}", 'wrn')
+            pass
 
     def _copy_repositories(self, temp_dir: str, projects: List, options: PackageOptions) -> None:
         """Copy repositories with filtering."""
