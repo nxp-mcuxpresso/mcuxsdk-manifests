@@ -86,13 +86,15 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
         
         # Package-only options (only valid with -o/--output)
         package_group = parser.add_argument_group('Package Options', 
-                                                'These options are only available when creating a package with -o/--output')
+                                                'These options are only available when creating a package with -o/--output. '
+                                                'Note: --include-optional can also be used with --list-sbom.')
         package_group.add_argument('--no-update', '-n', action='store_true',
                                  help='Skip repository update step. Assumes repositories are already current. '
                                       'Useful for parallel CI/CD execution or when repositories are already up-to-date. Only valid with -o/--output.')
         package_group.add_argument('--include-optional', nargs='*', metavar='REPO', 
                                  help='Include specific optional repos/examples, or use without arguments to include all optional items. '
-                                      'Example: --include-optional repo1 repo2, or just --include-optional for all.')
+                                      'Example: --include-optional repo1 repo2, or just --include-optional for all. '
+                                      'Can be used with --list-sbom to include optional repositories in SBOM collection.')
         package_group.add_argument('--include-git', action='store_true', 
                                  help='Include .git history in package. Only valid with -o/--output.')
         package_group.add_argument('--gen-doc', action='store_true', 
@@ -126,13 +128,14 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
                 self._handle_list_repositories(config, manifest, args.output)
                 return
             
+            # Process repositories and examples based on optional inclusion
+            # This needs to happen before list-sbom to respect --include-optional
+            final_repos, final_examples = self._process_optional_inclusion(config, args)
+            
             # Handle list-sbom operation
             if args.list_sbom:
-                self._handle_list_sbom(config, args.output, workspace_root)
+                self._handle_list_sbom(final_repos, args.output, workspace_root)
                 return
-        
-            # Process repositories and examples based on optional inclusion
-            final_repos, final_examples = self._process_optional_inclusion(config, args)
         
             # Get projects to update
             projects = self._get_projects_to_update(manifest, final_repos)
@@ -181,13 +184,12 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
         package_only_options = []
         if args.no_update:
             package_only_options.append('--no-update')
-        if args.include_optional is not None:
-            package_only_options.append('--include-optional')
         if args.include_git:
             package_only_options.append('--include-git')
         if args.gen_doc:
             package_only_options.append('--gen-doc')
         
+        # --include-optional can be used with --list-sbom, so don't add it to package_only_options
         # Package-only options should not be used with --list-repo or --list-sbom
         if package_only_options and (args.list_repo or args.list_sbom):
             options_str = ', '.join(package_only_options)
@@ -384,20 +386,19 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
         
         self._log_with_timestamp(f"Listed {len(all_repos)} repositories ({len(config.repo_list)} core, {len(config.optional_repos)} optional)", 'inf')
 
-    def _handle_list_sbom(self, config: BoardConfig, output_file: str, workspace_root: str):
+    def _handle_list_sbom(self, repo_list: List[str], output_file: str, workspace_root: str):
         """Handle SBOM collection operation by calling west sbom_collect."""
         self._log_with_timestamp("Starting SBOM collection for configured repositories", 'inf')
         
-        # Collect all repositories (core + optional)
-        all_repos = list(set(config.repo_list + config.optional_repos))
-        self._log_with_timestamp(f"Collecting SBOM from {len(all_repos)} repositories", 'inf')
+        # Use the provided repo_list which already includes optional repos if --include-optional was specified
+        self._log_with_timestamp(f"Collecting SBOM from {len(repo_list)} repositories", 'inf')
         
         # Resolve output path to absolute path
         abs_output_file = self._resolve_output_path(output_file, workspace_root)
         self._log_with_timestamp(f"SBOM will be written to: {abs_output_file}", 'dbg')
         
         # Build west sbom_collect command
-        cmd = ['west', 'sbom_collect'] + all_repos
+        cmd = ['west', 'sbom_collect'] + repo_list
         
         # Add output file (use absolute path)
         cmd.extend(['-o', abs_output_file])
