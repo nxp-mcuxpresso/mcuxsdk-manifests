@@ -38,6 +38,7 @@ example_list:
   - demo_apps/hello_world_swo
   - demo_apps/led_blinky_lpc
   - demo_apps/new_project
+  - demo_apps/power_manager_test/bm
   - demo_apps/power_mode_switch_mcxw23
   - demo_apps/shell
   - demo_apps/utick/utick_wakeup
