@@ -32,7 +32,7 @@ manifest:
       description: Software library for running machine learning models on embedded
         devices
     path: mcuxsdk/middleware/eiq/tensorflow-lite
-    revision: faf8874ba963d68d6e467279af2b81e06ed853c3
+    revision: 6963e6c15caece01f7a6346d45d934c0fabda130
     groups:
     - eiq
     - middleware
