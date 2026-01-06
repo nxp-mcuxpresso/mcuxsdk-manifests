@@ -137,12 +137,12 @@ manifest:
   - name: fw_bin
     userdata:
       owner: jia.guo_2@nxp.com
-      track_branch: fw_bin_gh
+      track_branch: release/26.03.00-pvw1
       branch_flow: false
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 80b5fc323592c837ad3cbced8f609b225aaed963
+    revision: d4e43ddcaae5ff1adfab4356831e3b6317ad10ca
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
