@@ -54,7 +54,7 @@ manifest:
       display_name: lvgl
       description: lvgl graphics library
     path: mcuxsdk/middleware/lvgl
-    revision: ac0bdffa184625f737890eb1b1d86278bcac9f5a
+    revision: 0779788b76285538b25c7c6d80b1b6856dfeb2bf
     groups:
     - lvgl
     - middleware
