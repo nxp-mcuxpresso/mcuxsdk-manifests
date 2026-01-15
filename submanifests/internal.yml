@@ -74,7 +74,7 @@ manifest:
       branch_flow: false
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
-    revision: 36585cd633cbd0000305099e6a47347eedc283c7
+    revision: 0de60b8baaab9bcd1ae75081e3c93f82cb676fb5
     groups:
     - bifrost
     userdata:
@@ -102,7 +102,7 @@ manifest:
       description: Eclipse ThreadX RTOS
   - name: ble-controller-int
     path: mcuxsdk/middleware/wireless/marvell_ll
-    revision: ffdd987de4dce06fd4b3ac5bcf7cf7de7a47575e
+    revision: 25385432ed421067eecb3ed5fad274ed0bf178c0
     groups:
     - bifrost
     userdata:
@@ -159,7 +159,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 97b01f707aad14af84ceae75a000524c9451d6f4
+    revision: 4e7e351ddd27c3d6961e37f7092526c715f9bad4
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -188,7 +188,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: 58926558dcb5949cdcdc0d95556e216a9ad12a6e
+    revision: d1f76923727f5205f7c00a9381226932884f4b96
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
