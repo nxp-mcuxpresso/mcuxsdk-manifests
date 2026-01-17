@@ -120,7 +120,7 @@ manifest:
   - name: ble-controller-snps-int
     path: mcuxsdk/middleware/wireless/snps_ll_private
     repo-path: ble-controller-int-snps
-    revision: a2dd98d6611a4765544eaa734d97c3154185d062
+    revision: 02f20f07a2752ac91ecc0f7f92ceb4e81c56c30b
     groups:
     - bifrost
     userdata:
