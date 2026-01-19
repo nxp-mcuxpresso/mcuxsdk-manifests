@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: 3ae3ebdd61821aebb4eee3b2a64521475b3b2d01
+    revision: 4452a8bf6a08f0d89ce1bc8dbd77ff93a720c6b4
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 4f53fa49fc4c18a1522df9186d60d32a64f1478e
+    revision: fb57f3232629119e8a3c3b98900b1267c170eeab
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: e7cba346b0d9ef0e9528a172e79ff0787b8b1ab7
+    revision: 36c1cfcdeadbfef4d44ebe24b34a20c2da07f219
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: a64d0112901aa0cccd744908dc7b1c3275b851ec
+    revision: 71ea67a8ed464584a3657504fc2c0fcf436bb82b
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -103,7 +103,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: e371fc2ad220461df3849a3ef84f9465cce6fae7
+    revision: 504d1479afe5b2a43ad9698dc918544383e632be
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -117,7 +117,7 @@ manifest:
       display_name: Bluetooth and Bluetooth Low Energy Host Stack
       description: Bluetooth and Bluetooth Low Energy Host Stack.
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: ee7a062ac374e04d3c82b663f5db47c0ccb72f9e
+    revision: 1d238ac98c5e7423e318c7d19a9154ee32bccad0
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
