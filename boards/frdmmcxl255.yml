@@ -1,0 +1,42 @@
+example_list:
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- freemaster_examples
+- freertos_examples
+- littlefs_examples
+- mbedtls3x_examples
+- multicore_examples
+- ota_examples
+- sgi_pkc_examples
+- tfm_examples
+- trustzone_examples
+
+repo_list:
+  - core
+  - CMSIS
+  - mcu-sdk-examples
+  - mcu-sdk-components
+  - mcux-devices-mcx
+  - mcuxsdk-tool-data
+  - sdk-doc
+  - freertos-kernel
+  - mcux-freertos-drivers
+  - freemaster
+  - littlefs
+  - fatfs
+  - mbedtls3x
+  - mcux-sdk-middleware-multicore
+  - mcux-mcmgr
+  - rpmsg-lite
+  - erpc
+  - mcuboot_opensource
+  - mcu_bootloader
+  - sgi_pkc
+  - els_pkc
+  - se_hostlib
+  - tfm
+  - psa_crypto_driver
+  - qcbor
+  - secure_storage
