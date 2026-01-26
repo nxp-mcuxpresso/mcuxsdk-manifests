@@ -37,6 +37,8 @@ repo_list:
   - els_pkc
   - se_hostlib
   - tfm
+  - psa-arch-tests
+  - tf-m-tests
   - psa_crypto_driver
   - qcbor
   - secure_storage
