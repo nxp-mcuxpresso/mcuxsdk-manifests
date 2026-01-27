@@ -44,7 +44,7 @@ manifest:
       display_name: Multimedia Processing Pipelines (MPP)
       description: Library to build vision pipelines
     path: mcuxsdk/middleware/eiq/mpp
-    revision: a9313589e3cb414480ab161765508eefe12f2d59
+    revision: 9c93de57b9175af41f57e0e0b37619b34a06f449
     groups:
     - eiq
     - middleware
