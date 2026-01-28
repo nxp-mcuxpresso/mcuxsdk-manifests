@@ -48,7 +48,7 @@ manifest:
         that are based on Arm Cortex processors, distributed by ARM.
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: 9028f76842f62bd60f486de58699bf8115b9c1ee
+    revision: 13bbf7019d8446446328dde9a7dbe58f928c980b
     groups:
     - optional
     userdata:
