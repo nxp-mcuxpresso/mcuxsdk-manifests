@@ -91,7 +91,7 @@ manifest:
       description: Algorithm for calculating exponential backoff with jitter for network
         retry attempts.
     path: mcuxsdk/rtos/freertos/backoffalgorithm
-    revision: 45f3ab4a953aa7d77945f2537419e2f3833c4cf1
+    revision: cc666b178982cb1594f0c7b9e08df47030925234
     groups:
     - freertos
     - aws_iot
