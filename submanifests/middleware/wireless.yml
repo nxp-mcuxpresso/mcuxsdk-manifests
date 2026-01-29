@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 4ffd6fcb752da5b1673e0fb28925b2bbd990750d
+    revision: cdd2ae4a9d3560b5d646f9571e3d56d139d23b91
     groups:
     - ble_controller
     - middleware
