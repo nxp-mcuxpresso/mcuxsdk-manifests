@@ -84,7 +84,7 @@ manifest:
       description: NXP MCU SDK components and board-specific peripheral driver libraries
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 06f9c5c82a07f779c3e9d93c3b6f97ae8211660d
+    revision: 4ac6bc51d3cb9869e49e780d90c9e8c1a8c4dd6a
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
