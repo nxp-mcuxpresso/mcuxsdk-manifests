@@ -11,7 +11,7 @@ import time
 import yaml
 from typing import List, Optional, Set, Callable
 from dataclasses import dataclass
-
+from west.manifest import Manifest
 
 @dataclass
 class PackageOptions:
@@ -74,6 +74,7 @@ class PackageCreator:
             # Filter examples
             self.logger("Starting example filtering phase", 'inf')
             filter_start = time.time()
+            self._remove_unwanted_directory(temp_dir, repo_list)
             self._filter_examples(temp_dir, repo_list, example_list, options.board_filter)
             filter_elapsed = time.time() - filter_start
             self.logger(f"Example filtering completed in {filter_elapsed:.2f} seconds", 'inf')
@@ -430,7 +431,22 @@ class PackageCreator:
             shutil.rmtree(docs_dir)
         else:
             self.logger("No docs directory found to remove", 'dbg')
-    
+
+    def _remove_unwanted_directory(self, temp_dir: str, repo_list: List[str]) -> None:
+        # Remove unwanted project directories
+        removed_projects = 0
+        manifest = Manifest.from_topdir()
+        for project in manifest.projects:
+            if project.name not in repo_list and project.path != "manifests":
+                proj_dir = os.path.join(temp_dir, project.path)
+                if os.path.exists(proj_dir):
+                    shutil.rmtree(proj_dir)
+                    self.logger(f"Removed unwanted project directory {proj_dir} ", 'dbg')
+                    removed_projects += 1
+        
+        if removed_projects > 0:
+            self.logger(f"Removed {removed_projects} unwanted project directories", 'inf')
+
     def _filter_examples(self, temp_dir: str, repo_list: List[str], 
                         example_list: List[str], board_filter: List[str]) -> None:
         """Filter examples based on the provided lists."""
