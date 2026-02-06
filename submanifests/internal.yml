@@ -66,7 +66,7 @@ manifest:
       branch_flow: false
   - name: MIR
     path: mcuxsdk/MIR
-    revision: 5a8e396a40ea9163c62f02788982e8d77905649b
+    revision: 4ac8a38d517efc7e530061abbd26b8a0efc3f7ca
     groups:
     - bifrost
     userdata:
