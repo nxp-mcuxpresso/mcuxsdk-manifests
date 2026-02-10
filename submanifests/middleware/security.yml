@@ -77,7 +77,7 @@ manifest:
       display_name: mbedtls
       description: mbedtls SSL/TLS library
     path: mcuxsdk/middleware/mbedtls
-    revision: 67dafdd8fc41dd23c09d974de84ad3e5f3aeb7fe
+    revision: bc67dc83d6092988bfcb1ae1a60617700f1ba114
     groups:
     - mbedtls
     - security
@@ -227,7 +227,7 @@ manifest:
       track_branch: tf-psa-crypto-1.0.0_nxp
       branch_flow: false
     path: mcuxsdk/middleware/mbedtls/tf-psa-crypto
-    revision: 2f986ba9a3ff24e5c9a5685035d4145b6dfdd650
+    revision: 5956f18fcffb84f2d00620e8f9d9dcbc5090f26a
     remote: nxp-mcuxpresso
     groups:
     - psa_crypto_driver
