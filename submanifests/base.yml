@@ -65,7 +65,7 @@ manifest:
     - examples
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/26.03.00-pvw2
       branch_flow: true
       display_name: Out-of-box Examples
       description: Out-of-box examples demonstrating peripheral driver usage and middleware
