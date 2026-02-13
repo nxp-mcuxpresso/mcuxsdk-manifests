@@ -28,7 +28,7 @@ manifest:
     - core
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/26.03.00-pvw2
       branch_flow: true
       display_name: Peripheral Driver
       description: Drivers for common use cases of hardware peripherals, simplifying
