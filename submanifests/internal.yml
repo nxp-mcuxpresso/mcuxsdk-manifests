@@ -56,7 +56,7 @@ manifest:
       branch_flow: false
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: e4cbf7dbb64bc4b45f2f784ad9361fc796e2b569
+    revision: 941cda9e316cdeffbece1f039d865c722a37bdd6
     submodules:
     - path: modules/manifest_schema
     groups:
@@ -128,7 +128,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: a96e6e116839327418f90c3063cf99efa4d675f9
+    revision: cc0e86ee43f6ad7749c927605304343c5c7d18a9
     groups:
     - bifrost
     userdata:
