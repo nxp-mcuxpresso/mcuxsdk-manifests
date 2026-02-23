@@ -57,6 +57,7 @@ repo_list:
 - mcux-sdk-middleware-multicore
 - mcux-sdk-middleware-sdmmc
 - mcux-sdk-middleware-tensorflow
+- mcux-sdk-middleware-mpp
 - mcuxsdk-middleware-executorch
 - mcuxsdk-tool-data
 - mmcau

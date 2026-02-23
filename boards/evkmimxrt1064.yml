@@ -54,6 +54,7 @@ repo_list:
 - mcux-sdk-middleware-sdmmc
 - mcux-sdk-middleware-tensorflow
 - mcuxsdk-middleware-executorch
+- mcux-sdk-middleware-mpp
 - mcuxsdk-tool-data
 - openh264
 - pkcs11

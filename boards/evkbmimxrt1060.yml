@@ -63,6 +63,7 @@ repo_list:
 - mcux-sdk-middleware-sdmmc
 - mcux-sdk-middleware-tensorflow
 - mcuxsdk-middleware-executorch
+- mcux-sdk-middleware-mpp
 - mcuxsdk-tool-data
 - nxp_iot_agent
 - openh264

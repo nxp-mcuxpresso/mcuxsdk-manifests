@@ -38,6 +38,7 @@ repo_list:
 - mcux-sdk-middleware-eiq
 - mcux-sdk-middleware-tensorflow
 - mcuxsdk-middleware-executorch
+- mcux-sdk-middleware-mpp
 - fatfs
 - mcux-sdk-middleware-sdmmc
 - littlefs
