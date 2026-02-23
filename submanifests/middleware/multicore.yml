@@ -41,7 +41,7 @@ manifest:
       display_name: MCMGR
       description: Multicore manager
   - name: rpmsg-lite
-    revision: 2fc18c780831fd03448d2330bcd7b63555b3dbdf
+    revision: d56d434bf8783535646093b7466860a96e681b97
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
@@ -55,7 +55,7 @@ manifest:
       display_name: RPMsg-Lite
       description: Open Asymmetric Multi Processing (OpenAMP) framework project
   - name: erpc
-    revision: a1499c8ad5f5e05b29dc3f51729b7697157b165e
+    revision: 64fd6442b1ec01642db2d5963ce617eb5e761984
     path: mcuxsdk/middleware/multicore/erpc
     url: https://github.com/EmbeddedRPC/erpc
     groups:
