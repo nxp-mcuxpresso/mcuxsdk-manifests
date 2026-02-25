@@ -27,6 +27,7 @@ repo_list:
 - CMSIS
 - mcuxsdk-tool-data
 - mcu-sdk-components
+- fw_bin
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcux-devices-mcx

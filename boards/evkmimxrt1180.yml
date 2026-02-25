@@ -46,6 +46,7 @@ repo_list:
 - mbedtls
 - mbedtls3x
 - mcu-sdk-components
+- fw_bin
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcu_bootloader
