@@ -15,7 +15,7 @@ manifest:
     groups:
     - core
     userdata:
-      track_branch: main
+      track_branch: release/26.03.00
       branch_flow: true
       display_name: Kinetis Series Device Files
       description: Device system files, template files, IDE related startup and linker
