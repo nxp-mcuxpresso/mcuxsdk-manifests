@@ -28,6 +28,7 @@ repo_list:
   - ble_controller
   - bluetooth
   - XCVR
+  - ieee-802.15.4
   - freertos-kernel
   - mcux-freertos-drivers
 
@@ -200,13 +201,18 @@ example_list:
   - secure-subsystem_examples/ele_derive_key
   - secure-subsystem_examples/ele_digest
   - secure-subsystem_examples/ele_keystore
+  - secure-subsystem_examples/ele_pqc
   - secure-subsystem_examples/ele_spake2plus
   - secure-subsystem_examples/ele_symmetric
   - trustzone_examples
+  - wireless_examples/ble_controller/common
+  - wireless_examples/ble_controller/hci_bb/bm
   - wireless_examples/bluetooth/loc_reader
   - wireless_examples/bluetooth/loc_user_device
   - wireless_examples/bluetooth/w_uart
   - wireless_examples/bluetooth/wireless_ranging
+  - wireless_examples/genfsk/connectivity_test
+  - wireless_examples/ieee-802.15.4/connectivity_test/bm
 
 # Optional examples (excluded by default, can be included with --include-optional)
 optional_examples: []
