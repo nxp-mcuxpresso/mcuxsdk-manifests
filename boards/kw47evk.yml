@@ -206,6 +206,7 @@ example_list:
   - secure-subsystem_examples/ele_derive_key
   - secure-subsystem_examples/ele_digest
   - secure-subsystem_examples/ele_keystore
+  - secure-subsystem_examples/ele_pqc
   - secure-subsystem_examples/ele_spake2plus
   - secure-subsystem_examples/ele_symmetric
   - secure-subsystem_examples/ele_elgamal
