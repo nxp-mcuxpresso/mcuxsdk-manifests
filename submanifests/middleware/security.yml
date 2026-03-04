@@ -58,7 +58,7 @@ manifest:
     userdata:
       owner: vit.solcik@nxp.com
       track_branch: mcux_main
-      branch_flow: false
+      branch_flow: true
       display_name: Edgelock Firmware
       description: Edgelock Firmware
     path: mcuxsdk/firmware/edgelock
@@ -127,7 +127,7 @@ manifest:
     userdata:
       owner: vit.chmelar@nxp.com
       track_branch: main-dev
-      branch_flow: false
+      branch_flow: true
       display_name: PSA CRYPTO DRIVER
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
