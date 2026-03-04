@@ -86,7 +86,7 @@ manifest:
   - name: edgefast_bt_ble
     userdata:
       owner: junjie.liu@nxp.com
-      track_branch: main
+      track_branch: release/26.03.00
       branch_flow: false
       display_name: Wireless edgefast_bluetooth stack
       description: BT/BLE edgefast_bluetooth stack
