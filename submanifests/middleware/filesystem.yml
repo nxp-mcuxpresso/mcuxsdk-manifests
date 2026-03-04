@@ -51,6 +51,6 @@ manifest:
       display_name: littlefs
       description: LittleFS filesystem stack
     path: mcuxsdk/middleware/littlefs
-    revision: 37ba984145f8f8fba4e4b4bab4e7f5ee864cd39f
+    revision: 4217f5aa1a51a06e9549e3acb84087a770bde458
     groups:
     - littlefs
