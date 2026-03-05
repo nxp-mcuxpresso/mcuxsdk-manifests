@@ -130,7 +130,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: a87b753a9acf56d69afed09a17c9d5848305b5e2
+    revision: b49da5b0de371940f5b62db5cdb83c756e26d134
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -167,7 +167,7 @@ manifest:
       display_name: wpa_supplicant-rtos
       description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: aa7b367558f4dc6ebbbe5091d9d9978123d345f0
+    revision: 9893c5fc844b57d8e81f94ec8087e62da0dbf73f
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
