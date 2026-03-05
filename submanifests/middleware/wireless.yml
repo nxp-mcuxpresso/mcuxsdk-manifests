@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: 34502df8d13de5c5a5acf565f420d67d3177f6cd
+    revision: 72703e0a3365b1d2601d34556e2bc7e6b8db30bf
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: f52ccd488c7eadb536fd1a03b20d3a9c458bdb32
+    revision: 6f49f660073ba4a0c85ef028a0491e4c8cb5a828
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: ed28c7c5d704e9862f3eea2f3424f99dc0153e8d
+    revision: 356aeb98b28ea51f75a7610b4aa8846959484c53
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: b8e8b1063f7cd59e7f5714b93563f81f8f2977e3
+    revision: e2a082bdd9e5f21694a72de7e47cf1907bf888a3
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -103,7 +103,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: aadb43dd67fc98ebc7308d83ffe43f2bc68bc13b
+    revision: 713bc2722bb3f9bdfdf066d2f9ffceac6d29eb1c
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -130,7 +130,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: b49da5b0de371940f5b62db5cdb83c756e26d134
+    revision: 65b49378f0e037a5d5b9723d8a71f4f65b516b2d
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -142,7 +142,7 @@ manifest:
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 4ebebbc78070e51492cc758fbecc566a637a5b27
+    revision: 395d74a0820094c3b9e53cab8f67948bb5a897a0
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
