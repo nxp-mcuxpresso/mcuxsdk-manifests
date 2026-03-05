@@ -126,7 +126,7 @@ manifest:
   - name: psa_crypto_driver
     userdata:
       owner: vit.chmelar@nxp.com
-      track_branch: main-dev
+      track_branch: release/26.03.00
       branch_flow: false
       display_name: PSA CRYPTO DRIVER
       description: PSA crypto driver interface to use cryptographic library running
