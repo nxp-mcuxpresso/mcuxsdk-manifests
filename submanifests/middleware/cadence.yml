@@ -29,7 +29,7 @@ manifest:
       display_name: Codecs for Cadence DSP platforms
       description: DSP Audio codecs for HiFi1, HiFi4, FusionF1 cores
     path: mcuxsdk/middleware/cadence/codecs
-    revision: e39a29621440be5f74cd52faed2f351c25249caa
+    revision: efb4a258635081688e0bd64788ce021d69939f0a
     groups:
     - bifrost
   - name: naturedsp
