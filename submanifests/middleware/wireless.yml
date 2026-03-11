@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: 3e1f820c1b2a00464f7267a3be2ed39f7ead5427
+    revision: 9432dc63e5f9a403b18f9400b9fa098a950ef184
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -33,7 +33,7 @@ manifest:
       display_name: Wireless GENFSK
       description: GENFSK
     path: mcuxsdk/middleware/wireless/genfsk
-    revision: e549aeca4c603bb424572e3ba4b7fc0fb9453db7
+    revision: 6cc59591e0bfff107dd5ec090eaad5080544a431
     groups:
     - genfsk
     - middleware
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: c0a5bd6fa4752c2454584d8474ce8ec15b9d91fd
+    revision: 4d3d757dd69baccf009fb1caea937a8d1456cfd5
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 6ab43071e7dc51c90efb99a823f2cd958f12a412
+    revision: 2a19c0e9bc3b607cd8eaf6d1f9b58da5f4b0eca6
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 5f72e79b8d66001532fc28f67d939782a4468cd1
+    revision: 529c72cb5a41ee74e478aca18b3299bbfef414e4
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -103,7 +103,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: e42addd4e3a6bd71220b14ce9c9a959deff65b75
+    revision: 3ad5644d5d2b916f958ededac24e75dacab67aa0
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
