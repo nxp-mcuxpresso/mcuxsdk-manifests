@@ -173,6 +173,16 @@ manifest:
     repo-path: mcux-sdk-middleware-zigbee-int
     groups:
     - bifrost
+  - name: simw-test
+    userdata:
+      owner: fikret.eren@nxp.com
+      track_branch: develop
+      branch_flow: false
+    path: mcuxsdk/middleware/nxp_iot_agent_int/el2go_csr_testing
+    revision: develop
+    repo-path: simw-test
+    groups:
+    - bifrost
   - name: crypto_benchmark
     userdata:
       owner: patrik.nemeth@nxp.com
