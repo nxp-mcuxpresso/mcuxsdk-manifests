@@ -130,7 +130,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 27d3640e3e48ffe6f0ab05fb4099241ad4f88255
+    revision: 70dd8de011abdd9374883d8d1e06273aef792ebf
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -142,7 +142,7 @@ manifest:
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 395d74a0820094c3b9e53cab8f67948bb5a897a0
+    revision: 604eb53a49bbd20c0b9b52a5b292516c7e46b219
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
