@@ -142,7 +142,7 @@ manifest:
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 7d80b36c846d7948acc19fff17d9bfcc3e8acd53
+    revision: fcca70411367f7f9a07b584936bb780c997d24a8
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
