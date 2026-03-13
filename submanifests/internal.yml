@@ -180,7 +180,6 @@ manifest:
       branch_flow: false
     path: mcuxsdk/middleware/nxp_iot_agent_int/el2go_csr_testing
     revision: develop
-    repo-path: simw-test
     groups:
     - bifrost
   - name: crypto_benchmark
