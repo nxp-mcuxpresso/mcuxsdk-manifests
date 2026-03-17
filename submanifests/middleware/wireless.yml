@@ -130,7 +130,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 626d5a470cc1b94aaf1180c3cbf49bba0fa873db
+    revision: 2ef9c62f60c3cfddb8b474ccb11454f7d14bddea
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -179,6 +179,6 @@ manifest:
       display_name: coex
       description: coex examples for NXP RW612 SoC
     path: mcuxsdk/middleware/wireless/coex
-    revision: c8b908ebf33c191b84a5098fe15cbb7fff33dfb5
+    revision: dd0c0e2bd580db70aa47dfa93b8fa28de979bea7
     groups:
     - coex
