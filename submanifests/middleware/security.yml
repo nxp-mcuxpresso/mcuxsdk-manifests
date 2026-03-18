@@ -49,7 +49,7 @@ manifest:
       display_name: secure-subsystem
       description: Secure subsystem library - SSS APIs
     path: mcuxsdk/middleware/secure-subsystem
-    revision: db5ddb552d8a2a0cb44052658d16f16a591dd34e
+    revision: 884ec6a210000963c463c654547b97e16d12f446
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
@@ -62,7 +62,7 @@ manifest:
       display_name: Edgelock Firmware
       description: Edgelock Firmware
     path: mcuxsdk/firmware/edgelock
-    revision: b8a689fefee94bb5e776352e9ca6f6694c6a3188
+    revision: e1874feb2d54d99472de72a7bd18e696a26c7c38
     repo-path: mcux-edgelock
     groups:
     - edgelock
