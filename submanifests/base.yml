@@ -101,7 +101,7 @@ manifest:
     groups:
     - core
     userdata:
-      track_branch: main
+      track_branch: 26_03_00_fix
       branch_flow: false
       display_name: SDK Tool Data
       description: Additional tooling and configuration data for NXP MCU SDK development
