@@ -26,3 +26,4 @@ repo_list:
 - mcux-mcmgr
 - rpmsg-lite
 - freertos-kernel
+- freertos-kernel-upstream

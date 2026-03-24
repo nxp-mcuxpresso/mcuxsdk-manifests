@@ -30,6 +30,7 @@ repo_list:
   - XCVR
   - ieee-802.15.4
   - freertos-kernel
+  - freertos-kernel-upstream
   - mcux-freertos-drivers
 
 # Optional repositories (excluded by default, can be included with --include-optional)

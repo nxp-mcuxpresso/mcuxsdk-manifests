@@ -35,6 +35,8 @@ repo_list:
 - psa_crypto_driver
 - psa-arch-tests
 - freertos-kernel
+- freertos-kernel-upstream
 - mcux-freertos-drivers
 - corehttp
+- corehttp-upstream
 - emwin

@@ -67,8 +67,12 @@ repo_list:
 - ethermind
 - wifi_nxp
 - freertos-kernel
+- freertos-kernel-upstream
 - mcux-freertos-drivers
 - coremqtt
+- coremqtt-upstream
 - corejson
+- corejson-upstream
 - corehttp
+- corehttp-upstream
 - emwin

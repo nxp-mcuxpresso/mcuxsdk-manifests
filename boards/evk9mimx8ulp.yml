@@ -23,5 +23,6 @@ repo_list:
 - erpc
 - mbedtls
 - freertos-kernel
+- freertos-kernel-upstream
 board_dependencies:
 - evkmimx8ulp

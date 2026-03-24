@@ -27,3 +27,4 @@ repo_list:
 - audio-voice-components
 - mbedtls
 - freertos-kernel
+- freertos-kernel-upstream

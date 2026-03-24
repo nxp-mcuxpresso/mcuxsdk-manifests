@@ -33,3 +33,4 @@ repo_list:
 - tf-m-tests
 - qcbor
 - freertos-kernel
+- freertos-kernel-upstream

@@ -64,9 +64,15 @@ repo_list:
 - wifi_nxp
 - wpa_supplicant-rtos
 - freertos-kernel
+- freertos-kernel-upstream
 - corepkcs11
+- corepkcs11-upstream
 - coremqtt
+- coremqtt-upstream
 - corejson
+- corejson-upstream
 - corehttp
+- corehttp-upstream
 - backoffalgorithm
+- backoffalgorithm-upstream
 - emwin

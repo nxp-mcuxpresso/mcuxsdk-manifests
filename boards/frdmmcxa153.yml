@@ -23,5 +23,6 @@ repo_list:
 - freemaster
 - se_hostlib
 - freertos-kernel
+- freertos-kernel-upstream
 - safety_iec60730b
 

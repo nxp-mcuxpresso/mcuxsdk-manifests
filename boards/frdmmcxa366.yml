@@ -40,4 +40,5 @@ repo_list:
 - qcbor
 - sgi_pkc
 - freertos-kernel
+- freertos-kernel-upstream
 - emwin

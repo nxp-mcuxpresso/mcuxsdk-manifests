@@ -30,3 +30,4 @@ repo_list:
 - voice_spot
 - audio-voice-components
 - freertos-kernel
+- freertos-kernel-upstream

@@ -30,4 +30,5 @@ repo_list:
 - lvgl
 - safety_iec60730b
 - freertos-kernel
+- freertos-kernel-upstream
 - emwin

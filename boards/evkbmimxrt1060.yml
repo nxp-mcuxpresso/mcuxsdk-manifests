@@ -29,13 +29,18 @@ repo_list:
 - audio-voice-components
 - aws_iot_llhttp
 - backoffalgorithm
+- backoffalgorithm-upstream
 - canopennode
 - cjson
 - core
 - corehttp
+- corehttp-upstream
 - corejson
+- corejson-upstream
 - coremqtt
+- coremqtt-upstream
 - corepkcs11
+- corepkcs11-upstream
 - dhara
 - edgefast_bt_ble
 - emwin
@@ -44,6 +49,7 @@ repo_list:
 - fatfs
 - freemaster
 - freertos-kernel
+- freertos-kernel-upstream
 - libjpeg
 - littlefs
 - lvgl

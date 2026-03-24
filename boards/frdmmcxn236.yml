@@ -47,6 +47,7 @@ repo_list:
 - tf-m-tests
 - qcbor
 - freertos-kernel
+- freertos-kernel-upstream
 - mcux-freertos-drivers
 - emwin
 - safety_iec60730b

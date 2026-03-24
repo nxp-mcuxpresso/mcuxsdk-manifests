@@ -8,6 +8,7 @@ repo_list:
   - ble_controller
   - bluetooth
   - freertos-kernel
+  - freertos-kernel-upstream
   - core
   - mcu-sdk-examples
   - CMSIS

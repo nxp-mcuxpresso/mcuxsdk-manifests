@@ -8,12 +8,19 @@ repo_list:
   - mcu-sdk-doc
   - mcux-devices-wireless
   - freertos-kernel
+  - freertos-kernel-upstream
   - corehttp
+  - corehttp-upstream
   - coremqtt
+  - coremqtt-upstream
   - coremqtt-agent
+  - coremqtt-agent-upstream
   - corepkcs11
+  - corepkcs11-upstream
   - backoffalgorithm
+  - backoffalgorithm-upstream
   - corejson
+  - corejson-upstream
   - core
   - mcu-sdk-examples
   - CMSIS

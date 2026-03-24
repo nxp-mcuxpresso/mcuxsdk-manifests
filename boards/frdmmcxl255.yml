@@ -22,6 +22,7 @@ repo_list:
   - mcuxsdk-tool-data
   - sdk-doc
   - freertos-kernel
+  - freertos-kernel-upstream
   - mcux-freertos-drivers
   - freemaster
   - littlefs

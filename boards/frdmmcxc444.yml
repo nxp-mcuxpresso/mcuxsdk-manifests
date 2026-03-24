@@ -22,3 +22,4 @@ repo_list:
 - erpc
 - safety_iec60730b
 - freertos-kernel
+- freertos-kernel-upstream

@@ -20,6 +20,7 @@ repo_list:
 - fatfs
 - freemaster
 - freertos-kernel
+- freertos-kernel-upstream
 - aws_iot_llhttp
 - pkcs11
 - tinycbor

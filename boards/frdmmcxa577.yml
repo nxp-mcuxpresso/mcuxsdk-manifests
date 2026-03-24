@@ -20,6 +20,7 @@ repo_list:
 - core
 - CMSIS
 - corehttp
+- corehttp-upstream
 - mcuxsdk-tool-data
 - mcu-sdk-components
 - mcu-sdk-doc
@@ -43,6 +44,7 @@ repo_list:
 - qcbor
 - sgi_pkc
 - freertos-kernel
+- freertos-kernel-upstream
 - emwin
 - lwip
 - touch

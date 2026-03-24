@@ -33,6 +33,7 @@ repo_list:
   - ieee-802.15.4
   - zigbee
   - freertos-kernel
+  - freertos-kernel-upstream
   - mcux-freertos-drivers
 
 # Optional repositories (excluded by default, can be included with --include-optional)

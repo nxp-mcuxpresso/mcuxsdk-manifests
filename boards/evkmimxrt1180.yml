@@ -27,11 +27,16 @@ repo_list:
 - CMSIS
 - aws_iot_llhttp
 - backoffalgorithm
+- backoffalgorithm-upstream
 - core
 - corehttp
+- corehttp-upstream
 - corejson
+- corejson-upstream
 - coremqtt
+- coremqtt-upstream
 - corepkcs11
+- corepkcs11-upstream
 - dhara
 - edgefast_bt_ble
 - edgelock
@@ -41,6 +46,7 @@ repo_list:
 - freemaster
 - freemodbus
 - freertos-kernel
+- freertos-kernel-upstream
 - littlefs
 - lwip
 - mbedtls

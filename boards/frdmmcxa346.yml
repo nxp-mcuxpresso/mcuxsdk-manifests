@@ -30,3 +30,4 @@ repo_list:
 - psa_crypto_driver
 - sgi_pkc
 - freertos-kernel
+- freertos-kernel-upstream

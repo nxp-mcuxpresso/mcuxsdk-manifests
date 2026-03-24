@@ -21,3 +21,4 @@ repo_list:
 - rpmsg-lite
 - erpc
 - freertos-kernel
+- freertos-kernel-upstream
