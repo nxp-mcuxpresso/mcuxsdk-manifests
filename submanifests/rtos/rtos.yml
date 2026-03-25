@@ -124,7 +124,7 @@ manifest:
     - aws_iot
   - name: corehttp
     path: mcuxsdk/rtos/freertos/corehttp
-    revision: bd1abd631112f686bf51dac2aa36c76ec57a19be
+    revision: 190630fbc5ff6c08cba368ed04950f5a5e4b49d7
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
