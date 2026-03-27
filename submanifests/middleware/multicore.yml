@@ -41,7 +41,7 @@ manifest:
       display_name: MCMGR
       description: Multicore manager
   - name: rpmsg-lite
-    revision: fedbd6f26c3ef5481cdb1bd8295f475c20bbc7f8
+    revision: 2bf1c478853f892dc10aeafc192c73f8d32784c7
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:
