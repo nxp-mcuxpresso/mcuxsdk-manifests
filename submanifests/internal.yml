@@ -23,12 +23,12 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: d5cbdd0711c3e694101688e5d44b676ad11852ec
+    revision: 7a78ac3556b79c84c6eea2d07bb5629062237011
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/26.06.00-pvw1
       branch_flow: true
   - name: sdk_components
     path: mcuxsdk/ecosystem/sdk_generator/modules/sdk_components
@@ -56,7 +56,7 @@ manifest:
       branch_flow: false
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: 7b9508bea2790229cc01b5e0117a8fcf96b97915
+    revision: 8f35f512648761fcefdc2ea6c1fd65af9fbb2b0e
     submodules:
     - path: modules/manifest_schema
     groups:

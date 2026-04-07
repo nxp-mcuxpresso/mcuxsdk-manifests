@@ -22,13 +22,13 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 51545166d7e4aadad184015199626f1bbfc45ace
+    revision: 3d4aca8cb50e91659368e7698f747fd6b1b0d9bc
     west-commands: scripts/west_commands.yml
     groups:
     - core
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/26.06.00-pvw1
       branch_flow: true
       display_name: Peripheral Driver
       description: Drivers for common use cases of hardware peripherals, simplifying
