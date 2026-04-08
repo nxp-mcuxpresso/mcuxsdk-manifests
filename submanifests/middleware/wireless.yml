@@ -102,7 +102,7 @@ manifest:
       branch_flow: false
     path: mcuxsdk/middleware/edgefast_open
     revision: 84cfff2f9264703691b1e0bc0c28cd64bd9243a8
-    repo-path: mcux-sdk-middleware-edgefast-open
+    repo-path: edgefast-open
     groups:
     - edgefast_open
   - name: ieee-802.15.4
