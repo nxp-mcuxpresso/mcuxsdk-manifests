@@ -3,6 +3,7 @@ example_list:
 - cmsis_driver_examples
 - component_examples
 - demo_apps
+- digital_encoder_examples
 - driver_examples
 - ecat_examples
 - eiq_examples
