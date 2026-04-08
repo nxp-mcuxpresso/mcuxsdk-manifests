@@ -132,11 +132,19 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
             # This needs to happen before list-sbom to respect --include-optional
             final_repos, final_examples = self._process_optional_inclusion(config, args)
             
+            # Filter repos by group-filter (e.g. exclude bifrost for external users)
+            project_map = {p.name: p for p in manifest.projects}
+            inactive_repos = [r for r in final_repos if r in project_map and not manifest.is_active(project_map[r])]
+            if inactive_repos:
+                self._log_with_timestamp(
+                    f"Skipping {len(inactive_repos)} repos disabled by group-filter: {inactive_repos}", 'inf')
+            final_repos = [r for r in final_repos if r not in set(inactive_repos)]
+
             # Handle list-sbom operation
             if args.list_sbom:
                 self._handle_list_sbom(final_repos, args.output, workspace_root)
                 return
-        
+
             # Get projects to update
             projects = self._get_projects_to_update(manifest, final_repos)
         
@@ -317,12 +325,13 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
         """Handle repository listing operation."""
         self._log_with_timestamp("Generating repository information in YAML format", 'inf')
         
-        # Collect all repositories (core + optional)
-        all_repos = set(config.repo_list + config.optional_repos)
+        # Collect all repositories (core + optional), filtered by group-filter
+        project_map = {p.name: p for p in manifest.projects}
+        all_repos = set(
+            name for name in config.repo_list + config.optional_repos
+            if name not in project_map or manifest.is_active(project_map[name])
+        )
         self._log_with_timestamp(f"Processing {len(all_repos)} repositories", 'dbg')
-        
-        # Get project information from manifest
-        project_map = {project.name: project for project in manifest.projects}
         
         # Create repository information structure
         repo_info = {}
@@ -490,16 +499,23 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
         return final_repos, final_examples
 
     def _get_projects_to_update(self, manifest: Manifest, repo_list: List[str]) -> List:
-        """Get projects to update from manifest."""
-        projects = [p for p in manifest.projects if p.name in repo_list]
-        
+        """Get projects to update from manifest, respecting group filters."""
+        all_matched = [p for p in manifest.projects if p.name in repo_list]
+        projects = [p for p in all_matched if manifest.is_active(p)]
+
+        # Log filtered-out projects
+        filtered_out = [p.name for p in all_matched if not manifest.is_active(p)]
+        if filtered_out:
+            self._log_with_timestamp(
+                f"Skipping {len(filtered_out)} inactive projects (disabled by group-filter): {filtered_out}", 'inf')
+
         if projects:
             project_names = [p.name for p in projects]
             self._log_with_timestamp(f"Found {len(projects)} projects to update: {project_names}", 'inf')
             self._log_with_timestamp(f"Project details: {[(p.name, p.path) for p in projects]}", 'dbg')
         else:
             self._log_with_timestamp("No projects found to update", 'wrn')
-            
+
         return projects
 
     def _update_projects(self, workspace_root: str, projects: List):
