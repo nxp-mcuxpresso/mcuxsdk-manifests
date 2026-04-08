@@ -1,5 +1,6 @@
 example_list:
 - bootloader_examples
+- canopennode_examples
 - cmsis_driver_examples
 - component_examples
 - demo_apps
