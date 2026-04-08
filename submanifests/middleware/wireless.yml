@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: c75bc2bcfcba2cccf1e71050f0013b2adacd6350
+    revision: ff273fb422fc1b34ca7cddc6a52460bc6b6f7ecf
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: cb97de17e34b25aeec551a67fbc7826db9e3f04b
+    revision: a3939dc4645b0813729567569ea535ad972d16a1
     groups:
     - ble_controller
     - middleware
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: a1985a9180f9a4bddd239d10af654ed60ea04cbb
+    revision: f1179cb7f84a3f7737e25d039cbdef52a415cfa0
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
