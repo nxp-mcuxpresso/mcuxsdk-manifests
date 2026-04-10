@@ -120,7 +120,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: c9b0de45a17a04609d1f1bcbbbc951c9de8a1f0f
+    revision: 285f8be5c8fedb92e2a9a624ca5bd93abff55481
     groups:
     - tfm
   - name: psa_crypto_driver
