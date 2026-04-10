@@ -42,7 +42,7 @@ manifest:
       display_name: FreeMASTER
       description: FreeMASTER communication driver
     path: mcuxsdk/middleware/freemaster
-    revision: 94b6086547a6201011336771e405be5c7a538a46
+    revision: ae760c4f8ea249f62faf92e0f78a3eaf9731c40c
     repo-path: mcux-freemaster
     groups:
     - freemaster
