@@ -13,7 +13,7 @@ manifest:
     path: mcuxsdk/rtos/freertos/freertos-kernel
     revision: ac7643f48dfc1c3efef3396b837f6c431c610984
     groups:
-    - freertos-kernel
+    - freertos
     - rtos
     - ble_nxp
     userdata:
@@ -27,7 +27,7 @@ manifest:
     path: mcuxsdk/rtos/freertos/freertos-kernel-upstream
     revision: 0adc196d4bd52a2d91102b525b0aafc1e14a2386
     groups:
-    - freertos-kernel
+    - freertos
     - rtos
     userdata:
       owner: michal.princ@nxp.com
