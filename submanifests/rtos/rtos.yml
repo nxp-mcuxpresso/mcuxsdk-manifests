@@ -29,6 +29,7 @@ manifest:
     groups:
     - freertos
     - rtos
+    - ble_nxp
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
