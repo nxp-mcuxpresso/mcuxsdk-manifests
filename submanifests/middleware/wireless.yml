@@ -91,7 +91,7 @@ manifest:
       display_name: Wireless edgefast_bluetooth stack
       description: BT/BLE edgefast_bluetooth stack
     path: mcuxsdk/middleware/edgefast_bluetooth
-    revision: 5c8f2f1136d53294eb963d32e45625926c592b96
+    revision: 68400880bede537e456f527a7702175c1cd784cc
     repo-path: mcux-sdk-middleware-edgefast-bluetooth
     groups:
     - edgefast_bt_ble
