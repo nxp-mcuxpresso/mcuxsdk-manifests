@@ -198,3 +198,26 @@ manifest:
       description: FreeRTOS-Plus-TCP Library Upstream
     groups:
     - freertos
+  - name: lab-project-freertos-posix
+    path: mcuxsdk/rtos/freertos/lab-project-freertos-posix
+    revision: f25c4307954acd917baf883fb349127b610e790e
+    userdata:
+      owner: michal.princ@nxp.com
+      track_branch: main
+      branch_flow: true
+      display_name: lab-project-freertos-posix
+      description: MCUX FreeRTOS+POSIX Library
+    groups:
+    - freertos
+  - name: lab-project-freertos-posix-upstream
+    url: https://github.com/FreeRTOS/Lab-Project-FreeRTOS-POSIX.git
+    path: mcuxsdk/rtos/freertos/lab-project-freertos-posix-upstream
+    revision: 14ee4b2c7c34f2663c6f083080d3e4a2d30171ec
+    userdata:
+      owner: michal.princ@nxp.com
+      track_branch: main
+      branch_flow: false
+      display_name: lab-project-freertos-posix-upstream
+      description: FreeRTOS+POSIX Library
+    groups:
+    - freertos
