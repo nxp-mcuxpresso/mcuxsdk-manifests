@@ -118,7 +118,7 @@ manifest:
       branch_flow: false
       display_name: JPEG library
       description: JPEG library
-    revision: eeb1869940a80ba723b527b0737107c23c9304c5
+    revision: 4b0526717f28b4a4e44417478cfb8770fbc2110d
     path: mcuxsdk/middleware/libjpeg
     groups:
     - libjpeg
