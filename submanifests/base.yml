@@ -12,12 +12,12 @@ manifest:
   - name: bifrost
     path: bifrost
     remote: nxp-zephyr
-    revision: 26a220e63dae9ebbe36268650040bde5ff16d010
+    revision: 21857d63905e2a362481de5bfa7be453cd54d26f
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/26.06.00-pvw1
       branch_flow: false
   - name: core
     path: mcuxsdk/
