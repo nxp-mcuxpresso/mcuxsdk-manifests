@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: freertos-kernel
     path: mcuxsdk/rtos/freertos/freertos-kernel
-    revision: 9d0f31e06f3a44d7afd219e94e8873adf82e953f
+    revision: b51b10e14c698b2cd25b4d88bc8fe27aa7391983
     groups:
     - freertos-kernel
     - rtos
@@ -49,7 +49,7 @@ manifest:
     - freertos
   - name: corepkcs11
     path: mcuxsdk/rtos/freertos/corepkcs11
-    revision: d3bc3bffd0dc8cf25d3d80981f57b01386a15a60
+    revision: 98f20a3aae25a80127434569b9d2fe2ffd903789
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
@@ -74,7 +74,7 @@ manifest:
     - aws_iot
   - name: coremqtt
     path: mcuxsdk/rtos/freertos/coremqtt
-    revision: ea29413815ade23983447d7e7f4fd5f0fe7de2f9
+    revision: cdbda6575d6abde6393e001fd67aa6d1e6eca63c
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
@@ -99,7 +99,7 @@ manifest:
     - aws_iot
   - name: corejson
     path: mcuxsdk/rtos/freertos/corejson
-    revision: 491a42462a7ed6165c348973e838de7deb414803
+    revision: 9fe2a951eb0b0390e2d305ed545d9742286d9134
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
@@ -124,7 +124,7 @@ manifest:
     - aws_iot
   - name: corehttp
     path: mcuxsdk/rtos/freertos/corehttp
-    revision: 190630fbc5ff6c08cba368ed04950f5a5e4b49d7
+    revision: 23f21353ab276fd7b6417cde725d83c1803c4efb
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
@@ -149,7 +149,7 @@ manifest:
     - aws_iot
   - name: backoffalgorithm
     path: mcuxsdk/rtos/freertos/backoffalgorithm
-    revision: 30d34f0eafb8138a227005e8d7632a96b2b65051
+    revision: 1cdcee0df0f298134c098f053a532e47bfb061dc
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
@@ -176,7 +176,7 @@ manifest:
     - aws_iot
   - name: freertos-plus-tcp
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp
-    revision: cb25232ee4abfea775204d32b79f74602a9270a7
+    revision: 60186a67da9427603b3b86b1a24881af949d2fdf
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
