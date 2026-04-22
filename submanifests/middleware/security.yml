@@ -220,6 +220,19 @@ manifest:
     groups:
     - security
     - sgi_pkc
+  - name: sgi_pkc_pqc
+    userdata:
+      owner: vit.chmelar@nxp.com
+      track_branch: main
+      branch_flow: false
+      display_name: SGI PKC PQC Addon
+      description: PQC addon for SGI PKC lib
+    path: mcuxsdk/components/sgi_pkc/pqc
+    revision: a52751ff7ecfde307d347166cca071ee6da0daf7
+    url: https://github.com/nxp-mcuxpresso/sgi_pkc_pqc
+    groups:
+    - security
+    - sgi_pkc
   - name: tf-psa-crypto
     submodules: true
     userdata:
