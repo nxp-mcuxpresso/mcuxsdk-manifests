@@ -200,7 +200,7 @@ manifest:
     - freertos
   - name: lab-project-freertos-posix
     path: mcuxsdk/rtos/freertos/lab-project-freertos-posix
-    revision: f25c4307954acd917baf883fb349127b610e790e
+    revision: b8fe3930e37d9ef84af56dd26df000bc638ad4aa
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
