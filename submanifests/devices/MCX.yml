@@ -10,13 +10,13 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-devices-mcx
-    revision: 8708d0ef266cb0c7e7dac624121297420af95576
+    revision: 5b93587ceb3e5f30163312dd7e39d42e98f91127
     path: mcuxsdk/devices/MCX
     groups:
     - core
     - ble_nxp
     userdata:
-      track_branch: main
+      track_branch: release/26.06.00-pvw2
       branch_flow: true
       display_name: MCX Series Device Files
       description: Device system files, template files, IDE related startup and linker
