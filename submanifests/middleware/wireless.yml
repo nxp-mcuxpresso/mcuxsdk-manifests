@@ -189,6 +189,6 @@ manifest:
       display_name: coex
       description: coex examples for NXP RW612 SoC
     path: mcuxsdk/middleware/wireless/coex
-    revision: 602ff978c2d26f1c20c619ce684d20041292aab9
+    revision: 05d9e84e74242e4e8b6eb2e83b2c0bf344addb8f
     groups:
     - coex
