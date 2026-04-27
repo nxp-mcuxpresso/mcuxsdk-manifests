@@ -215,7 +215,7 @@ manifest:
       description: Cryptographic library running on NXP SGI and PKC Crypto Hardware
         IP
     path: mcuxsdk/components/sgi_pkc
-    revision: 54eb8effa01db44bd068516ac30aed0d74e0fff5
+    revision: cb56ee1785e3e96cdf9e730cb43b0318f1ea8c63
     url: https://github.com/nxp-mcuxpresso/sgi_pkc
     groups:
     - security
@@ -228,7 +228,7 @@ manifest:
       display_name: SGI PKC PQC Addon
       description: PQC addon for SGI PKC lib
     path: mcuxsdk/components/sgi_pkc/pqc
-    revision: a52751ff7ecfde307d347166cca071ee6da0daf7
+    revision: cab577213872eb9ad551abed71b27661a97dc344
     url: https://github.com/nxp-mcuxpresso/sgi_pkc_pqc
     groups:
     - security
