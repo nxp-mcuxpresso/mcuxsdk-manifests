@@ -33,6 +33,8 @@ repo_list:
   - freertos-kernel
   - freertos-kernel-upstream
   - mcux-freertos-drivers
+  - sgi_pkc
+  - sgi_pkc_pqc
 
 # Optional repositories (excluded by default, can be included with --include-optional)
 optional_repos: []
