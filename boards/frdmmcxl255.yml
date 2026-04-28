@@ -35,6 +35,7 @@ repo_list:
   - mcuboot_opensource
   - mcu_bootloader
   - sgi_pkc
+  - sgi_pkc_pqc
   - els_pkc
   - se_hostlib
   - tfm
