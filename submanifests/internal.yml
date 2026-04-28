@@ -136,11 +136,11 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 8cfc2f01dd5a307848f116e8b6e49a5d9fde5584
+    revision: 40b6b0ef07446251460bb7cea50f5217ba307a26
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/26.06.00-pvw2
       branch_flow: false
   - name: emwin
     userdata:
