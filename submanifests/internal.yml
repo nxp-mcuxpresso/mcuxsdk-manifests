@@ -132,7 +132,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/26.06.00-pvw2
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
