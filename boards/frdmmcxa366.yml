@@ -39,6 +39,7 @@ repo_list:
 - tf-m-tests
 - qcbor
 - sgi_pkc
+- sgi_pkc_pqc
 - freertos-kernel
 - freertos-kernel-upstream
 - emwin
