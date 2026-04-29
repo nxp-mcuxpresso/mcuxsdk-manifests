@@ -22,3 +22,5 @@ repo_list:
 - erpc
 - freertos-kernel
 - freertos-kernel-upstream
+board_dependencies:
+- evkmimx8mn
