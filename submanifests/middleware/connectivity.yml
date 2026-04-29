@@ -44,7 +44,7 @@ manifest:
       branch_flow: false
       display_name: LIN Stack
       description: LIN Stack middleware
-    revision: 458e0042f13fe9942c9e361a7bd99ce269e3b1ef
+    revision: 67206905c5c0616131aead96f58d74ec7686c7a4
     groups:
     - lin_stack
     - middleware
