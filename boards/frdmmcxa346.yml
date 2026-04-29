@@ -29,5 +29,6 @@ repo_list:
 - mbedtls3x
 - psa_crypto_driver
 - sgi_pkc
+- sgi_pkc_pqc
 - freertos-kernel
 - freertos-kernel-upstream
