@@ -29,6 +29,7 @@ repo_list:
 - aws_iot_llhttp
 - backoffalgorithm
 - backoffalgorithm-upstream
+- canopennode
 - core
 - corehttp
 - corehttp-upstream
