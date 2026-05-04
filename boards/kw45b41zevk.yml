@@ -210,6 +210,8 @@ example_list:
   - wireless_examples/bluetooth/otas
   - wireless_examples/bluetooth/temp_coll
   - wireless_examples/bluetooth/temp_sens
+  - wireless_examples/bluetooth/tpms_monitor
+  - wireless_examples/bluetooth/tpms_sensor
   - wireless_examples/bluetooth/w_uart
   - wireless_examples/bluetooth/w_uart_genfsk
   - wireless_examples/genfsk/connectivity_test
