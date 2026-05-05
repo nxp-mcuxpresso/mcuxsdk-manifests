@@ -96,7 +96,7 @@ manifest:
       description: Documentation for NXP MCUXpresso SDK, providing comprehensive reference
         materials
   - name: mcuxsdk-tool-data
-    revision: 07a5dd3a09c32631393dcd542eccf2e01a2bd846
+    revision: 9429790f03f1c4d9e9733d97e3b8f82e98431bac
     path: mcuxsdk/tool_data
     groups:
     - core
