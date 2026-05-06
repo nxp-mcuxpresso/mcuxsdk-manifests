@@ -74,7 +74,7 @@ manifest:
       branch_flow: false
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
-    revision: fae9281cea09e664f02125f1f3b220ed213c599b
+    revision: 057a99f1eb0bfff60c83c242bd32657bd3c6531f
     groups:
     - bifrost
     userdata:
@@ -110,7 +110,7 @@ manifest:
       branch_flow: false
   - name: fw_v19_nb
     path: mcuxsdk/middleware/wireless/fw_v19_nb
-    revision: 26a3bb723a8300d3d4abc3e58f9701d445a53c27
+    revision: f555792863f6c06f84c9da864e1db24b8f97f82b
     groups:
     - bifrost
     - fw_v19_nb
@@ -159,7 +159,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 32d7d932337dfcbed79f2d24b807dbeb3549e946
+    revision: de08aab23eb0cc42da4061e1b48efb0c18a73d40
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -197,7 +197,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: 5a142fa736a7100b1bacb585c9f225686c824c77
+    revision: 955c6a914b5b8196841f35a75ca43029a313a442
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
@@ -208,7 +208,7 @@ manifest:
       track_branch: master
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
-    revision: 312ec00ddbb67c2522876f81cc2345964fc364b1
+    revision: 87993735d4101f4e15a784f1d3e02798fbd7288b
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
     groups:
     - bifrost
