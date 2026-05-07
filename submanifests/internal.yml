@@ -213,6 +213,17 @@ manifest:
     groups:
     - bifrost
     - ble_cs_algo_private
+  - name: ble_cs_algo-restricted_private
+    userdata:
+      owner: mihai-octavian.urzica@nxp.com
+      track_branch: main
+      branch_flow: false
+    path: mcuxsdk/middleware/wireless/ble_cs_algo-restricted_private
+    revision: 5a7f30997ebb26b24a004375ae8842db061f5eab
+    repo-path: mcux-sdk-middleware-ble_cs_algo-restricted-int
+    groups:
+    - bifrost
+    - ble_cs_algo-restricted_private
   - name: freemaster_internal
     userdata:
       owner: michal.hanak@nxp.com
