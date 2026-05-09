@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-devices-lpc
-    revision: a908b2e4940f8a02cc7458f1aad11c08d813a807
+    revision: fd5d59d4e6d6359f16e8022f66645150a4980c88
     path: mcuxsdk/devices/LPC
     groups:
     - core
