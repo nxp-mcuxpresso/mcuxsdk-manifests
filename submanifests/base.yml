@@ -12,14 +12,13 @@ manifest:
   - name: bifrost
     path: bifrost
     remote: nxp-zephyr
-    revision: pull-requests/869/from
+    revision: f5969140560f788b304e99f1069b98d3d19cb35e
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
     userdata:
       track_branch: main
       branch_flow: false
-      changed: true
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
