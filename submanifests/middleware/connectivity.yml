@@ -61,7 +61,7 @@ manifest:
       display_name: SOEM
       description: Simple Open EtherCAT Master Library
   - name: freemodbus
-    revision: 3bb6432e98e28181122c633a09f3c248e8bc2ee8
+    revision: a218ab839a8c152421b3b34c0503b487e346ef43
     path: mcuxsdk/middleware/freemodbus
     remote: nxp-real-time-edge-sw
     groups:
