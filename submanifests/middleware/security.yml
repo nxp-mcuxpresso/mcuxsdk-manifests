@@ -240,7 +240,7 @@ manifest:
       track_branch: tf-psa-crypto-1.0.0_nxp
       branch_flow: false
     path: mcuxsdk/middleware/mbedtls/tf-psa-crypto
-    revision: 5956f18fcffb84f2d00620e8f9d9dcbc5090f26a
+    revision: 470afa2e08b2bd1f92a4e872f326addff00ff05e
     remote: nxp-mcuxpresso
     groups:
     - psa_crypto_driver
