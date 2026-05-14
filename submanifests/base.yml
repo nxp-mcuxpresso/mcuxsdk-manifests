@@ -48,7 +48,7 @@ manifest:
         that are based on Arm Cortex processors, distributed by ARM.
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: d63d09318b2d5bc7ae53ea6517234630b92efe2e
+    revision: b4adcb354952b48d573f23a342ef55bbef6d0bb4
     groups:
     - optional
     userdata:
@@ -72,7 +72,7 @@ manifest:
         integration.
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 00daea58c29a6abdc94f43de6d6c5ac605c498bf
+    revision: 56520e17974b2a9e70777a117602bf05fc0c8546
     path: mcuxsdk/components
     groups:
     - components
@@ -84,7 +84,7 @@ manifest:
       description: NXP MCU SDK components and board-specific peripheral driver libraries
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 9d4b2ecd348c8d94ead068793e79c909e54225c2
+    revision: debe2f3d10d95641c84be29f55c8d81644cea4cc
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
