@@ -17,7 +17,7 @@ manifest:
       display_name: Motor Control
       description: Motor control examples
     path: mcuxsdk/middleware/motor_control
-    revision: 84e76d6642fe652123bac49f03496db257efe963
+    revision: edfe266f1bf9e9f3a952c25a7dfc2389e1c0f103
     repo-path: mcux-motor_control
     groups:
     - motor_control
