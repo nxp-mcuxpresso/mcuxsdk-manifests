@@ -12,8 +12,11 @@ example_list:
 - lvgl_examples
 - lwip_examples
 - mbedtls3x_examples
+- mbedtls_examples
 - ota_examples
 - sgi_pkc_examples
+- tfm_examples
+- trustzone_examples
 - usb_examples
 repo_list:
 - aws_iot_llhttp
@@ -36,6 +39,7 @@ repo_list:
 - freemaster
 - lvgl
 - safety_iec60730b
+- mbedtls
 - mbedtls3x
 - tfm
 - psa_crypto_driver
@@ -46,6 +50,7 @@ repo_list:
 - sgi_pkc_pqc
 - freertos-kernel
 - freertos-kernel-upstream
+- mcux-freertos-drivers
 - emwin
 - lwip
 - touch
