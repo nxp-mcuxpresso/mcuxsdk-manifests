@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-devices-dsc
-    revision: e0536901719f76f631b9708130eeda14a35ae668
+    revision: 9c68d8b50f2d86de31f09449e08bde155d21b7ef
     path: mcuxsdk/devices/DSC
     groups:
     - core
