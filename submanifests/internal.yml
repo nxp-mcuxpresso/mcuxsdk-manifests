@@ -23,7 +23,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: 7b53784b10edbd7bc3ccd5e4a50893406514d2e0
+    revision: afbb33553cc731ea6908eb4dd2fc431792623286
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -208,7 +208,7 @@ manifest:
       track_branch: master
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
-    revision: 7c52224140865dcc8dd386830f68f6b00c1a0f8d
+    revision: 01f5b70603993a60b94a3b73d13fff46b2b091bf
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
     groups:
     - bifrost
@@ -219,7 +219,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo-restricted_private
-    revision: 5a7f30997ebb26b24a004375ae8842db061f5eab
+    revision: ff58bce86418eb3c0416f0ff44753805a3cacf40
     repo-path: mcux-sdk-middleware-ble_cs_algo-restricted-int
     groups:
     - bifrost
