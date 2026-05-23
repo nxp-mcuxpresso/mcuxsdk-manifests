@@ -141,7 +141,7 @@ manifest:
       branch_flow: false
       display_name: Openh264
       description: H.264 Codec Library
-    revision: ffbfa72c58e016031d2fc234fb259ab93a920ad5
+    revision: 00a3007a64f4a175c122e95ec6d87e3fbfde18df
     path: mcuxsdk/middleware/openh264
     groups:
     - openh264
