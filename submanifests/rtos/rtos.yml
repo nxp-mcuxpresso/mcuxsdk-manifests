@@ -18,7 +18,7 @@ manifest:
     - ble_nxp
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: MCUX FreeRTOS
       description: MCUX FreeRTOS
@@ -53,7 +53,7 @@ manifest:
     revision: 98f20a3aae25a80127434569b9d2fe2ffd903789
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: MCUX FreeRTOS corePKCS11
       description: 'PKCS #11 key management library'
@@ -78,7 +78,7 @@ manifest:
     revision: cdbda6575d6abde6393e001fd67aa6d1e6eca63c
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: MCUX FreeRTOS coreMQTT
       description: MQTT publish/subscribe messaging library
@@ -103,7 +103,7 @@ manifest:
     revision: 9fe2a951eb0b0390e2d305ed545d9742286d9134
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: MCUX FreeRTOS coreJSON
       description: JSON parser
@@ -128,7 +128,7 @@ manifest:
     revision: 23f21353ab276fd7b6417cde725d83c1803c4efb
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: MCUX coreHTTP
       description: MCUX coreHTTP
@@ -153,7 +153,7 @@ manifest:
     revision: 1cdcee0df0f298134c098f053a532e47bfb061dc
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: MCUX FreeRTOS backoffalgorithm
       description: Algorithm for calculating exponential backoff with jitter for network
@@ -180,7 +180,7 @@ manifest:
     revision: 60186a67da9427603b3b86b1a24881af949d2fdf
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: freertos-plus-tcp
       description: MCUX FreeRTOS-Plus-TCP Library
@@ -203,7 +203,7 @@ manifest:
     revision: b8fe3930e37d9ef84af56dd26df000bc638ad4aa
     userdata:
       owner: michal.princ@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: true
       display_name: lab-project-freertos-posix
       description: MCUX FreeRTOS+POSIX Library
