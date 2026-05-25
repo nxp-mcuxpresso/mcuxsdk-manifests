@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 6877d04a79254b0a16fe2933722b1a6147a1cb25
+    revision: 660f3cf924764bcbe290e10e5eccd0aaed18595e
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -36,7 +36,7 @@ manifest:
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
-    revision: dc8b75b360fce9c864a12f1ccc54172e0c733805
+    revision: e07cca54712c65a938f41a3e72fbfcb20e2f864a
     groups:
     - core
     - ble_nxp
@@ -58,7 +58,7 @@ manifest:
       description: System View Description (SVD) files for NXP MCU devices, providing
         detailed peripheral register definitions
   - name: mcu-sdk-examples
-    revision: 16c4b78da3fadac8ae91a98a60d35d3abf84dcd7
+    revision: cf249287a5d34d1eb1bc4ba2928325eb537d98e2
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
@@ -72,7 +72,7 @@ manifest:
         integration.
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 8f3059e01731d8630995547873bf608316d9ba4b
+    revision: 0d96ece047359fd2f1afe25b500193a140275677
     path: mcuxsdk/components
     groups:
     - components
