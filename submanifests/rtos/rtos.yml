@@ -44,7 +44,7 @@ manifest:
       display_name: FreeRTOS Drivers
       description: FreeRTOS peripheral drivers for MCUXpresso SDK
     path: mcuxsdk/rtos/freertos/freertos-drivers
-    revision: 845ff93b52bbc1852c5b9911e74524f6baed2ba6
+    revision: efec44ceeec8ed9d0a279022488ea9f46e83f210
     groups:
     - rtos
     - freertos
