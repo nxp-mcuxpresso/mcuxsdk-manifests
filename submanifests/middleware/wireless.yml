@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: 3980bffcf7f25492887be9d6c3a5b7d53432446f
+    revision: 4a3a7d6796d8cc02178e19570d620ddab5ca5c4c
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: b0b703f77a789480bb660a205f7c699014d3563a
+    revision: 0e9f3ff64a050af7ebaaf7c1778a2b9f4b5cfacf
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 5e3d388923a3039e2362c6adc3234ce53468efd5
+    revision: 82b7ddf87fd1e9f0e75ddcf4ef932ee04c6b0d38
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: f4fe2e8b695169f92b88c454badaabd900a99f34
+    revision: 541c8c9f5248b42ceae179df872da0a9c2ded567
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -113,7 +113,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: f18321a343980b2de94bf4078f5b4703d89d9a24
+    revision: fa3cdf799351dab12f2533e8019e8a3b9789da91
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -127,7 +127,7 @@ manifest:
       display_name: Bluetooth and Bluetooth Low Energy Host Stack
       description: Bluetooth and Bluetooth Low Energy Host Stack.
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: 361bf8fe0b9501c2cbb3e0b954d2a04fb599a67a
+    revision: bc4be7cf27af303ef0bc2ea90f60b94a50289b6f
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
@@ -140,7 +140,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 2e6203c056645617ffcbf38e6af02414f7f6c60a
+    revision: c17fda396daccee2680406b183f8a7c334a63f4a
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -152,7 +152,7 @@ manifest:
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: e040c64d8a4ca78bade1b26a197d86060f7d7f9a
+    revision: 4a03b40930bf5a494fbfc14fd37f30260a4d222d
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -177,7 +177,7 @@ manifest:
       display_name: wpa_supplicant-rtos
       description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 3f48c91e827b67be9aa6fc71fc675e4b0219704b
+    revision: 63042188626d9676cb63db37263ccf567b47ae5b
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
