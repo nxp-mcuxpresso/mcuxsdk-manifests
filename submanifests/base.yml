@@ -12,7 +12,7 @@ manifest:
   - name: bifrost
     path: bifrost
     remote: nxp-zephyr
-    revision: 0d414ae0261985fcd99fe622b8bd1e5e37a2afeb
+    revision: 289f483395e41710e88db87e35e34b787980d6fd
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
