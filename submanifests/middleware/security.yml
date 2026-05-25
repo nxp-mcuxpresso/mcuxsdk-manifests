@@ -120,7 +120,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: a31da215152507c40b9bf805f5e784907299215c
+    revision: 26472ad9e3e1f385a4e09b2419e4210a884cdfb5
     groups:
     - tfm
   - name: psa_crypto_driver
@@ -132,7 +132,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 91f5fa7cec498ad3d1e15dc787f2177c5959225d
+    revision: 372eb993a4116b2504748c513ffebf2b8f13b4ea
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
@@ -240,7 +240,7 @@ manifest:
       track_branch: mcux_tf_psa_crypto_v1.1.0
       branch_flow: false
     path: mcuxsdk/middleware/mbedtls/tf-psa-crypto
-    revision: 2a7b85cf629616eec81c45e864649b98f3c742c3
+    revision: 7a4a08bc4e530a1b90d1283ae769edd96a9870a3
     remote: nxp-mcuxpresso
     groups:
     - psa_crypto_driver
