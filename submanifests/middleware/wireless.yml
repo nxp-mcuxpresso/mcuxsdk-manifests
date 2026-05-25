@@ -140,7 +140,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 6dbb7f3a89912fcb3c9ff465ecf4608391e4ee37
+    revision: 2e6203c056645617ffcbf38e6af02414f7f6c60a
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
