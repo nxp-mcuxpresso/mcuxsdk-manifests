@@ -29,7 +29,7 @@ manifest:
       display_name: rtcesl
       description: NXP Real Time Control Embedded Software Library.
     path: mcuxsdk/middleware/rtcesl
-    revision: ef2dddc7d39cdaabe83bad880da836844f49c9fc
+    revision: a914e33c973f2b1d4c3621ce1c32713847081769
     repo-path: rtcesl
     groups:
     - rtcesl
