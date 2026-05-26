@@ -135,7 +135,7 @@ manifest:
   - name: wifi_nxp
     userdata:
       owner: null
-      track_branch: wifi_nxp_gh
+      track_branch: release/26.06.00
       branch_flow: false
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
@@ -147,12 +147,12 @@ manifest:
   - name: fw_bin
     userdata:
       owner: jia.guo_2@nxp.com
-      track_branch: fw_bin_gh
+      track_branch: release/26.06.00
       branch_flow: false
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 4a03b40930bf5a494fbfc14fd37f30260a4d222d
+    revision: e040c64d8a4ca78bade1b26a197d86060f7d7f9a
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -172,19 +172,19 @@ manifest:
   - name: wpa_supplicant-rtos
     userdata:
       owner: jia.guo_2@nxp.com
-      track_branch: wpa_supplicant_rtos_gh
+      track_branch: release/26.06.00
       branch_flow: false
       display_name: wpa_supplicant-rtos
       description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 63042188626d9676cb63db37263ccf567b47ae5b
+    revision: 3f48c91e827b67be9aa6fc71fc675e4b0219704b
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
   - name: coex
     userdata:
       owner: jia.guo_2@nxp.com
-      track_branch: coex_gh
+      track_branch: release/26.06.00
       branch_flow: false
       display_name: coex
       description: coex examples for NXP RW612 SoC
