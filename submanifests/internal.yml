@@ -74,7 +74,7 @@ manifest:
       branch_flow: false
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
-    revision: 0a375d99c67cdfbec9fa55b75abfe635359dd615
+    revision: bb173f254a6ed5f7a93414d06f66bdd55a336bc7
     groups:
     - bifrost
     userdata:
@@ -110,7 +110,7 @@ manifest:
       branch_flow: false
   - name: fw_v19_nb
     path: mcuxsdk/middleware/wireless/fw_v19_nb
-    revision: 438552a6a60437824a225a58940997f1dfee0fcb
+    revision: e4d04f66af67794f214acba3dc6ccf56f2290154
     groups:
     - bifrost
     - fw_v19_nb
@@ -136,7 +136,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 1d8f4673682962254431eed8d9eed0d62483d3b8
+    revision: 8254790dc83f31e4be03af8ed571229a7fc58063
     groups:
     - bifrost
     userdata:
@@ -159,7 +159,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 21d1c2e50e868d27a3d45d25baec4a6fff0df68c
+    revision: d84c62cc9a7cd61dc7feca2971dd809b420e54d5
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -197,7 +197,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: 79eb03ddc2735e34f66c6ccf3e794a8c74478e18
+    revision: 54683ce7693e46f55b23a3fdaf4497d63913a8f1
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
@@ -208,7 +208,7 @@ manifest:
       track_branch: master
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
-    revision: 3de687c83e56353c8b60d0be4ee03d53c131571f
+    revision: 2991501363fb2acf99c81ef009bac2bd0fb33df6
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
     groups:
     - bifrost
@@ -219,7 +219,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo-restricted_private
-    revision: ff58bce86418eb3c0416f0ff44753805a3cacf40
+    revision: 6b0102a55ccc7288611bb66c9807b9ffe5559518
     repo-path: mcux-sdk-middleware-ble_cs_algo-restricted-int
     groups:
     - bifrost
