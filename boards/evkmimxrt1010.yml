@@ -1,0 +1,35 @@
+example_list:
+- bootloader_examples
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- freemaster_examples
+- freertos_examples
+- lvgl_examples
+- mbedtls_examples
+- usb_examples
+repo_list:
+- CMSIS
+- aws_iot_llhttp
+- core
+- emwin
+- fatfs
+- freemaster
+- freertos-kernel
+- freertos-kernel-upstream
+- libjpeg
+- lvgl
+- mbedtls
+- mbedtls3x
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcu_bootloader
+- mcux-devices-rt
+- mcux-freertos-drivers
+- mcuxsdk-tool-data
+- pkcs11
+- psa_crypto_driver
+- tinycbor
+- usb
