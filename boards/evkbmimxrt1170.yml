@@ -55,6 +55,8 @@ repo_list:
 - freemaster
 - freertos-kernel
 - freertos-kernel-upstream
+- lab-project-freertos-posix
+- lab-project-freertos-posix-upstream
 - libjpeg
 - littlefs
 - lvgl
@@ -91,6 +93,7 @@ repo_list:
 - rtcesl
 - se_hostlib
 - soem
+- tf-psa-crypto
 - tfm
 - tinycbor
 - usb

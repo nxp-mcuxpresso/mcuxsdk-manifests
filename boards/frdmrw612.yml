@@ -41,6 +41,7 @@ repo_list:
   - mcuboot_opensource
   - wifi_nxp
   - lwip
+  - tf-psa-crypto
   - tfm
   - tf-m-tests
   - qcbor
