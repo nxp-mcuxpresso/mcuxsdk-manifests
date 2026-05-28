@@ -1,0 +1,31 @@
+example_list:
+- cmsis_driver_examples
+- component_examples
+- demo_apps
+- driver_examples
+- emwin_examples
+- freemaster_examples
+- freertos_examples
+- lvgl_examples
+- lwip_examples
+- mbedtls_examples
+- sdmmc_examples
+- usb_examples
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-lpc
+- usb
+- fatfs
+- mcux-sdk-middleware-sdmmc
+- freemaster
+- lvgl
+- lwip
+- mbedtls
+- freertos-kernel
+- freertos-kernel-upstream
+- emwin
