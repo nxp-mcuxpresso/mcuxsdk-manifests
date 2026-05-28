@@ -43,6 +43,9 @@ repo_list:
 - freemaster
 - freertos-kernel
 - freertos-kernel-upstream
+- fw_bin
+- lab-project-freertos-posix
+- lab-project-freertos-posix-upstream
 - libjpeg
 - littlefs
 - lvgl
@@ -58,6 +61,7 @@ repo_list:
 - mcux-devices-rt
 - mcux-freertos-drivers
 - mcux-sdk-middleware-eiq
+- mcux-sdk-middleware-mpp
 - mcux-sdk-middleware-sdmmc
 - mcux-sdk-middleware-tensorflow
 - mcuxsdk-middleware-executorch
@@ -68,6 +72,7 @@ repo_list:
 - psa-arch-tests
 - psa_crypto_driver
 - soem
+- tf-psa-crypto
 - tfm
 - tinycbor
 - usb
