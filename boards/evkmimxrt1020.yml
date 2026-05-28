@@ -52,6 +52,7 @@ repo_list:
 - psa-arch-tests
 - psa_crypto_driver
 - soem
+- tf-psa-crypto
 - tfm
 - tinycbor
 - usb
