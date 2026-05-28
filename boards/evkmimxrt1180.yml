@@ -75,6 +75,7 @@ repo_list:
 - rpmsg-lite
 - rtcesl
 - soem
+- tf-psa-crypto
 - tfm
 - tinycbor
 - usb
