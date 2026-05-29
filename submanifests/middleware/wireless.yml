@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: 4a3a7d6796d8cc02178e19570d620ddab5ca5c4c
+    revision: 8fb84c410e5d146d60ede577f94bdbc3bce51dba
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 0e9f3ff64a050af7ebaaf7c1778a2b9f4b5cfacf
+    revision: f5f43192d2cf5e1cd1b17794af6fa29fe459c6d9
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 82b7ddf87fd1e9f0e75ddcf4ef932ee04c6b0d38
+    revision: 92d5fec41892bd399e496c06ff69f648ce1c6ad0
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 541c8c9f5248b42ceae179df872da0a9c2ded567
+    revision: d93b3a4fbb187de0b30941095baee297325d4443
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -113,7 +113,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: fa3cdf799351dab12f2533e8019e8a3b9789da91
+    revision: c47d3015c35ed0af2d05c1ed1417c75b652676a6
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -177,7 +177,7 @@ manifest:
       display_name: wpa_supplicant-rtos
       description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 63042188626d9676cb63db37263ccf567b47ae5b
+    revision: 3f48c91e827b67be9aa6fc71fc675e4b0219704b
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
