@@ -242,3 +242,12 @@ manifest:
     revision: main
     groups:
     - bifrost
+  - name: mcuxsdk-imgutil
+    userdata:
+      owner: chunlei.xu@nxp.com
+      track_branch: main
+      branch_flow: false
+    path: mcuxsdk/tools/imgutil
+    revision: main
+    groups:
+    - bifrost
