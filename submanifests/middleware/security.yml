@@ -85,14 +85,14 @@ manifest:
     userdata:
       owner: ruchika.gupta_1@nxp.com
       dev_branch: mcux_main
-      track_branch: mcux_main
+      track_branch: release/26.06.00
       branch_flow: false
       display_name: MbedTLS 3.X
       description: mbedtls SSL/TLS library version 3.X
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 172d8c8a4fd54dd25bfe346ea143d0521ae83388
+    revision: adb73eed5d4582524f8569f7687b3e83246115d5
     groups:
     - mbedtls3x
     - security
