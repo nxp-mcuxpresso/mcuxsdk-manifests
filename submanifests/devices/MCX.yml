@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: mcux-devices-mcx
-    revision: 27e3a51d7e7a16f42ee5f73adec056477e191170
+    revision: a01a536c87cad934c56b1e6eebc2a13bbe281f2f
     path: mcuxsdk/devices/MCX
     groups:
     - core
