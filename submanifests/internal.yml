@@ -66,11 +66,11 @@ manifest:
       branch_flow: false
   - name: MIR
     path: mcuxsdk/MIR
-    revision: 9207235092503d5012649b78c24f6fc87495089b
+    revision: 92f8cb7e913329098bd70b6e035fb62e93434a23
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: 26_06_00_lts_cr1
       branch_flow: false
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
