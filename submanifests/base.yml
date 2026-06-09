@@ -12,7 +12,7 @@ manifest:
   - name: bifrost
     path: bifrost
     remote: nxp-zephyr
-    revision: 76c921a85677d2621d46503d5aa41262b99a571b
+    revision: 84a94352f7edb62818f25e1e8fa858b9435cc8cb
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -84,7 +84,7 @@ manifest:
       description: NXP MCU SDK components and board-specific peripheral driver libraries
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 15d622a1bb4d2847228b3f4258197d72ebc97235
+    revision: 70bf76f4c12719be458f17ff53e4b5556df140ae
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
