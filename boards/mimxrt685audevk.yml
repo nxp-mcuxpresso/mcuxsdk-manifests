@@ -15,6 +15,7 @@ example_list:
 - sdmmc_examples
 - usb_examples
 - wifi_examples
+- trustzone_examples
 - lwip_examples/ipv4_ipv6_echo_common
 repo_list:
 - core
