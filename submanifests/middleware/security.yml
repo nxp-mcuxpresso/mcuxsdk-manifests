@@ -72,12 +72,12 @@ manifest:
     - path: framework
     userdata:
       owner: vit.solcik@nxp.com
-      track_branch: v4.1.0
+      track_branch: mbedtls_v4.1.0
       branch_flow: false
       display_name: mbedtls
       description: mbedtls SSL/TLS library
     path: mcuxsdk/middleware/mbedtls
-    revision: 22a8b03d19ea1ad1ea846c215f2c054ecb1e9425
+    revision: faa2d04e2e933a344e304f9bf282c888a94f6f07
     groups:
     - mbedtls
     - security
