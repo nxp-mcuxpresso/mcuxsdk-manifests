@@ -79,7 +79,7 @@ manifest:
       display_name: vit
       description: Voice intelligent technology library
     path: mcuxsdk/middleware/audio_voice/components/vit
-    revision: 4ec8a9dde1caaebdd8349d32adbf6c9de2eb22ff
+    revision: 1ed8ef2c38b0e3e5e70b5ee1e6ffad7dbde143b5
     groups:
     - vit
     - audio_voice
