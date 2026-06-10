@@ -177,7 +177,7 @@ manifest:
       display_name: wpa_supplicant-rtos
       description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 3f48c91e827b67be9aa6fc71fc675e4b0219704b
+    revision: 3864688c03971b47e25afb9ac950200b9fd1f5cb
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
