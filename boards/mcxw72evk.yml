@@ -23,6 +23,7 @@ repo_list:
   - psa_crypto_driver
   - psa-arch-tests
   - tf-m-tests
+  - tf-psa-crypto
   - qcbor
   - secure_storage
   - mcux-sdk-middleware-connectivity-framework

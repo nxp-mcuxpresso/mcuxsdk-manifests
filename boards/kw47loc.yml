@@ -20,6 +20,7 @@ repo_list:
   - mbedtls3x
   - nxp_iot_agent
   - tfm
+  - tf-psa-crypto
   - psa_crypto_driver
   - psa-arch-tests
   - secure_storage
@@ -184,6 +185,7 @@ example_list:
   - mbedtls_examples/mbedtls_benchmark
   - mbedtls_examples/mbedtls_selftest
   - mbedtls_examples/psa_crypto_examples
+  - mbedtls_examples/psa_crypto_opaque_key_examples
   - multicore_examples/erpc_matrix_multiply_rpmsg
   - multicore_examples/erpc_matrix_multiply_rpmsg_rtos
   - multicore_examples/erpc_two_way_rpc_rpmsg_rtos

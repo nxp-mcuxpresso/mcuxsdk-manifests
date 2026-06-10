@@ -20,6 +20,7 @@ repo_list:
   - mbedtls3x
   - nxp_iot_agent
   - tfm
+  - tf-psa-crypto
   - psa_crypto_driver
   - psa-arch-tests
   - secure_storage
