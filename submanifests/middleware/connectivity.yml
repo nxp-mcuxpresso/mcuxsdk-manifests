@@ -14,7 +14,7 @@ manifest:
   - name: usb
     userdata:
       owner: yichang.wang@nxp.com
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: false
       display_name: USB stack
       description: Host, Device, OTG
