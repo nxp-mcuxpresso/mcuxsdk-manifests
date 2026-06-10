@@ -67,6 +67,7 @@ example_list:
   - driver_examples/dma3/memory_to_memory
   - driver_examples/dma3/scatter_gather
   - driver_examples/eeprom_emulation
+  - driver_examples/eeprom_emulation_k4
   - driver_examples/elemu
   - driver_examples/ewm
   - driver_examples/flash_k4/pflash
@@ -175,9 +176,11 @@ example_list:
   - mbedtls3x_examples/psa_crypto_examples
   - mbedtls_examples/mbedtls_benchmark
   - mbedtls_examples/mbedtls_selftest
+  - mbedtls_examples/psa_crypto_examples
   - secure-subsystem_examples/ele_asymmetric
   - secure-subsystem_examples/ele_common
   - secure-subsystem_examples/ele_decrypt_sb3
+  - secure-subsystem_examples/ele_derive_key_extended
   - secure-subsystem_examples/ele_digest
   - secure-subsystem_examples/ele_keystore
   - secure-subsystem_examples/ele_symmetric
