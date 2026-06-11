@@ -62,7 +62,7 @@ manifest:
       display_name: Edgelock Firmware
       description: Edgelock Firmware
     path: mcuxsdk/firmware/edgelock
-    revision: 087f7f3e19b425b492d1c97e22a5c2431bf933a0
+    revision: 8c8454e6a12ced54591d1567e0cf5e4ac407bc18
     repo-path: mcux-edgelock
     groups:
     - edgelock
@@ -132,7 +132,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 972fc752eebf268593ae01482dd505665587baa2
+    revision: ee11bcda7b8c5f6ec468a85d6587107eff76fd64
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
