@@ -136,7 +136,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 63e33effbc71cc5a6d92abf23724b67d48d02383
+    revision: 9854557919aa1b457380152793a9d78219695e8b
     groups:
     - bifrost
     userdata:
