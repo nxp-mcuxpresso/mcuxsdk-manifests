@@ -140,7 +140,7 @@ manifest:
     groups:
     - bifrost
     userdata:
-      track_branch: main
+      track_branch: release/26.06.00
       branch_flow: false
   - name: emwin
     userdata:
