@@ -101,7 +101,7 @@ manifest:
       track_branch: release/26.06.00
       branch_flow: false
     path: mcuxsdk/middleware/edgefast_open
-    revision: 5a7fa5199bf1f53de2047a272cf72c60b4516af7
+    revision: 9e6db5c024d93894938df8f4eed9f541630b11dc
     repo-path: edgefast-open
     groups:
     - edgefast_open
