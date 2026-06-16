@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: freertos-kernel
     path: mcuxsdk/rtos/freertos/freertos-kernel
-    revision: 47394c9248c9f608da8147d04034e89414fd3429
+    revision: 949982376147da2460d1abdd137ab984fb329f94
     groups:
     - freertos
     - rtos
