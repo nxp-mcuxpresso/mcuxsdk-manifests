@@ -24,7 +24,7 @@ manifest:
       description: Cryptographic library running on NXP ELS and PKC Crypto Hardware
         IP
     path: mcuxsdk/components/els_pkc
-    revision: 6fff673438999d5ae72d2f4f8e7b3b66d1043aae
+    revision: f3272806bfc3e8ad9d0cc67f6c9a7c0659e6d6ad
     url: https://github.com/NXP/els_pkc
     groups:
     - security
