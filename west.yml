@@ -14,6 +14,7 @@ manifest:
   - -ble_cs_algo_private
   - -bluetooth_private
   - -fw_v19_nb
+  - -ble_cs_algo-restricted_private
   self:
     path: manifests
     west-commands: scripts/west_commands.yml
