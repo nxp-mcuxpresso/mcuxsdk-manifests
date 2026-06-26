@@ -83,18 +83,6 @@ manifest:
     - middleware
     - wireless
     - ble_nxp
-  - name: edgefast_bt_ble
-    userdata:
-      owner: junjie.liu@nxp.com
-      track_branch: main
-      branch_flow: false
-      display_name: Wireless edgefast_bluetooth stack
-      description: BT/BLE edgefast_bluetooth stack
-    path: mcuxsdk/middleware/edgefast_bluetooth
-    revision: dc51e197d02c3ead8f4db57a0a5545b83a2f621c
-    repo-path: mcux-sdk-middleware-edgefast-bluetooth
-    groups:
-    - edgefast_bt_ble
   - name: edgefast_open
     userdata:
       owner: junjie.liu@nxp.com
