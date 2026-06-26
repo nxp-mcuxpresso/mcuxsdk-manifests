@@ -16,7 +16,7 @@ manifest:
     - core
     - ble_nxp
     userdata:
-      track_branch: release/26.06.00
+      track_branch: release/26.06.00-lts
       branch_flow: true
       display_name: Wireless Series Device Files
       description: Device system files, template files, IDE related startup and linker
