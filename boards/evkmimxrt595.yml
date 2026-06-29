@@ -5,7 +5,6 @@ example_list:
 - display_examples
 - driver_examples
 - dsp_examples
-- edgefast_bluetooth_examples
 - eiq_examples
 - freemaster_examples
 - freertos_examples
@@ -64,7 +63,6 @@ repo_list:
 - tf-m-tests
 - qcbor
 - mcux-sdk-middleware-connectivity-framework
-- edgefast_bt_ble
 - ethermind
 - wifi_nxp
 - wpa_supplicant-rtos

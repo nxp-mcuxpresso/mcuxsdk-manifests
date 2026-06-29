@@ -46,7 +46,6 @@ repo_list:
   - tf-m-tests
   - qcbor
   - psa-arch-tests
-  - edgefast_bt_ble
   - usb
   - lvgl
   - mbedtls
@@ -70,7 +69,6 @@ example_list:
   - component_examples
   - demo_apps
   - driver_examples
-  - edgefast_bluetooth_examples
   - el2go_examples
   - els_pkc_examples
   - freemaster_examples
