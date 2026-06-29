@@ -4,7 +4,6 @@ example_list:
 - demo_apps
 - driver_examples
 - dsp_examples
-- edgefast_bluetooth_examples
 - eiq_examples
 - freemaster_examples
 - freertos_examples
@@ -60,7 +59,6 @@ repo_list:
 - psa-arch-tests
 - tf-m-tests
 - qcbor
-- edgefast_bt_ble
 - ethermind
 - wifi_nxp
 - wpa_supplicant-rtos

@@ -5,7 +5,6 @@ example_list:
 - demo_apps
 - display_examples
 - driver_examples
-- edgefast_bluetooth_examples
 - eiq_examples
 - freemaster_examples
 - freertos_examples
@@ -36,7 +35,6 @@ repo_list:
 - corepkcs11
 - corepkcs11-upstream
 - dhara
-- edgefast_bt_ble
 - emwin
 - ethermind
 - fatfs

@@ -5,7 +5,6 @@ example_list:
 - display_examples
 - driver_examples
 - dsp_examples
-- edgefast_bluetooth_examples
 - eiq_examples
 - els_pkc_examples
 - ezhv_examples
@@ -72,7 +71,6 @@ repo_list:
 - tfm
 - psa_crypto_driver
 - psa-arch-tests
-- edgefast_bt_ble
 - ethermind
 - wifi_nxp
 - freertos-kernel

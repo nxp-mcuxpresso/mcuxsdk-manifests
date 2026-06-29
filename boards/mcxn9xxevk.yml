@@ -2,7 +2,6 @@ example_list:
 - cmsis_driver_examples
 - demo_apps
 - driver_examples
-- edgefast_bluetooth_examples
 - eiq_examples
 - el2go_examples
 - els_pkc_examples
@@ -64,7 +63,6 @@ repo_list:
 - tf-m-tests
 - qcbor
 - touch
-- edgefast_bt_ble
 - ethermind
 - wifi_nxp
 - freertos-kernel

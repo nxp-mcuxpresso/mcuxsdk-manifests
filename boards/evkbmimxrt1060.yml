@@ -42,7 +42,6 @@ repo_list:
 - corepkcs11
 - corepkcs11-upstream
 - dhara
-- edgefast_bt_ble
 - emwin
 - erpc
 - ethermind
