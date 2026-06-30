@@ -55,7 +55,7 @@ manifest:
       display_name: RPMsg-Lite
       description: Open Asymmetric Multi Processing (OpenAMP) framework project
   - name: erpc
-    revision: dc7a80b4faf25069f7a56c4c61eccd5f149f7308
+    revision: 538b77a2bfc56a7e8cd0b1b34fbf7f6490132f20
     path: mcuxsdk/middleware/multicore/erpc
     url: https://github.com/EmbeddedRPC/erpc
     groups:
