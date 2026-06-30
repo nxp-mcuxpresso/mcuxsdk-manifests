@@ -40,6 +40,7 @@ repo_list:
   - sgi_pkc_pqc
   - els_pkc
   - se_hostlib
+  - tf-psa-crypto
   - tfm
   - psa-arch-tests
   - tf-m-tests

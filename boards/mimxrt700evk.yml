@@ -71,6 +71,7 @@ repo_list:
 - els_pkc
 - mbedtls
 - mbedtls3x
+- tf-psa-crypto
 - tfm
 - psa_crypto_driver
 - psa-arch-tests
