@@ -146,6 +146,7 @@ manifest:
     groups:
     - fw_bin
     - wireless
+    clone-depth: 1
   - name: zigbee
     userdata:
       owner: alexandru.porosanu@nxp.com
