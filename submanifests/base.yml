@@ -36,7 +36,7 @@ manifest:
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
-    revision: e07cca54712c65a938f41a3e72fbfcb20e2f864a
+    revision: dd88dfb6c36140c3f48a0aa545d386deae29e6c7
     groups:
     - core
     - ble_nxp
