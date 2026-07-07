@@ -48,7 +48,7 @@ manifest:
         that are based on Arm Cortex processors, distributed by ARM.
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: 8cf1279cc00abac7bca507fa4a32deffc7a357b4
+    revision: 75d6d351e2a1dcbe2a7c76fc5920fede7f54ae1a
     groups:
     - optional
     userdata:
@@ -58,7 +58,7 @@ manifest:
       description: System View Description (SVD) files for NXP MCU devices, providing
         detailed peripheral register definitions
   - name: mcu-sdk-examples
-    revision: 3a643fed2153eed9253ac7d99ed97400dcf46653
+    revision: 82d37b34d8f312b4146c8f22dab35a3d8c3a9f84
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
