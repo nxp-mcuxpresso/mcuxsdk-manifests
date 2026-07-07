@@ -177,7 +177,7 @@ manifest:
       display_name: wpa_supplicant-rtos
       description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 17171199a9358516237b1de5a71035fe62a48e8a
+    revision: 279482b90ef64aa9cfe5e44681cfa9d66ac19471
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
@@ -189,6 +189,6 @@ manifest:
       display_name: coex
       description: coex examples for NXP RW612 SoC
     path: mcuxsdk/middleware/wireless/coex
-    revision: c3fe7354d14c2d103f19e7c74e8bc39857da5190
+    revision: a6bf07f5cfee298074a2533b767016ce4cb16641
     groups:
     - coex
