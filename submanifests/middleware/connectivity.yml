@@ -18,7 +18,7 @@ manifest:
       branch_flow: false
       display_name: USB stack
       description: Host, Device, OTG
-    revision: 079dece81abdfc4b75ddd6be70594bacec6e5980
+    revision: bfc3e10ace5b2f2f2d5dc4c3b742b7a8e2800868
     path: mcuxsdk/middleware/usb
     repo-path: mcux-sdk-middleware-usb
     groups:
