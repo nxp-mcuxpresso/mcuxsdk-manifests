@@ -24,7 +24,7 @@ manifest:
       description: Cryptographic library running on NXP ELS and PKC Crypto Hardware
         IP
     path: mcuxsdk/components/els_pkc
-    revision: 6cc3714913facd322a44d5ce0dabec84caf7654a
+    revision: b9da67372d5d1c2f17683976807e5918553c8a26
     url: https://github.com/NXP/els_pkc
     groups:
     - security
@@ -132,7 +132,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 76a56f12fad660497d8ab68c732411431c7adab7
+    revision: f1fa6a12dce7217f959b8aa38c799286a4cde390
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
@@ -215,7 +215,7 @@ manifest:
       description: Cryptographic library running on NXP SGI and PKC Crypto Hardware
         IP
     path: mcuxsdk/components/sgi_pkc
-    revision: 4262a9914cb23396a826b3264f3043a27a18fc88
+    revision: ba91c4344b8170678857aa6831e40f1f777319be
     url: https://github.com/nxp-mcuxpresso/sgi_pkc
     groups:
     - security
@@ -228,7 +228,7 @@ manifest:
       display_name: SGI PKC PQC Addon
       description: PQC addon for SGI PKC lib
     path: mcuxsdk/components/sgi_pkc/pqc
-    revision: c60c3750b73493337c226ff61d53329d8eab0cfe
+    revision: 2f7a0db2475797a573bf98afb1f21de16653c937
     url: https://github.com/nxp-mcuxpresso/sgi_pkc_pqc
     groups:
     - security
