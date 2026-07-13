@@ -78,5 +78,6 @@ repo_list:
 - corehttp
 - corehttp-upstream
 - emwin
+- edgefast_open
 - safety_iec60730b
 

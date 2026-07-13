@@ -61,6 +61,7 @@ repo_list:
   - coex
   - zigbee
   - ieee-802.15.4
+  - edgefast_open
 
 # Optional repositories (excluded by default, can be included with --include-optional)
 optional_repos: []
