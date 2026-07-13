@@ -3,6 +3,7 @@ repo_list:
   - mcu-sdk-components
   - els_pkc
   - psa_crypto_driver
+  - secure_storage
   - fw_bin
   - memfault
   - mcu-sdk-doc
