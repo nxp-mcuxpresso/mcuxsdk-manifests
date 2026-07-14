@@ -189,7 +189,7 @@ manifest:
   - name: freertos-plus-tcp-upstream
     url: https://github.com/FreeRTOS/FreeRTOS-Plus-TCP.git
     path: mcuxsdk/rtos/freertos/freertos-plus-tcp-upstream
-    revision: 2788dbb9328e934616c129e7a6f105c368320bf0
+    revision: c12361095aca68aeed858f45d14395fbffa92c0d
     userdata:
       owner: michal.princ@nxp.com
       track_branch: main
