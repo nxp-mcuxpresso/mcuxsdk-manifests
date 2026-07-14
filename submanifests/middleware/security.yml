@@ -31,7 +31,7 @@ manifest:
     - els_pkc
   - name: se_hostlib
     userdata:
-      owner: null
+      owner: divyanshu.kapil@nxp.com
       track_branch: mcux_main
       branch_flow: false
       display_name: Secure Element

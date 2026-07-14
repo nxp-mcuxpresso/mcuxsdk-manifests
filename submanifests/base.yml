@@ -41,6 +41,7 @@ manifest:
     - core
     - ble_nxp
     userdata:
+      owner: zejiang.yu@nxp.com
       track_branch: mcux_main
       branch_flow: false
       display_name: CMSIS

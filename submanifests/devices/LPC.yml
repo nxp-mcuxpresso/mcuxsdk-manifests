@@ -15,6 +15,7 @@ manifest:
     groups:
     - core
     userdata:
+      owner: chaoyi.wang@nxp.com
       track_branch: main
       branch_flow: true
       display_name: LPC Series Device Files

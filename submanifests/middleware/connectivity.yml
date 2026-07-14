@@ -31,6 +31,7 @@ manifest:
     - lwip
     - middleware
     userdata:
+      owner: martin.pitonak@nxp.com
       track_branch: mcux_main
       branch_flow: false
       display_name: lwIP
@@ -56,6 +57,7 @@ manifest:
     - soem
     - middleware
     userdata:
+      owner: jony.zhang@nxp.com
       track_branch: master
       branch_flow: false
       display_name: SOEM

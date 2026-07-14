@@ -16,6 +16,7 @@ manifest:
     - core
     - ble_nxp
     userdata:
+      owner: chaoyi.wang@nxp.com
       track_branch: main
       branch_flow: true
       display_name: MCX Series Device Files

@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: mcux-sdk-middleware-eiq
     userdata:
-      owner: null
+      owner: xuelin.shi@nxp.com
       track_branch: main
       branch_flow: false
       display_name: eIQ
@@ -25,7 +25,7 @@ manifest:
     - middleware
   - name: mcux-sdk-middleware-tensorflow
     userdata:
-      owner: null
+      owner: xuelin.shi@nxp.com
       track_branch: main
       branch_flow: false
       display_name: TensorFlow Lite for Microcontrollers
@@ -38,7 +38,7 @@ manifest:
     - middleware
   - name: mcux-sdk-middleware-mpp
     userdata:
-      owner: null
+      owner: xuelin.shi@nxp.com
       track_branch: external_main
       branch_flow: false
       display_name: Multimedia Processing Pipelines (MPP)
@@ -50,7 +50,7 @@ manifest:
     - middleware
   - name: mcuxsdk-middleware-executorch
     userdata:
-      owner: null
+      owner: xuelin.shi@nxp.com
       track_branch: release/mcux
       branch_flow: false
       display_name: ExecuTorch
