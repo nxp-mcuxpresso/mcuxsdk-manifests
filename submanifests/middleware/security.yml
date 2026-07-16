@@ -251,7 +251,8 @@ manifest:
       track_branch: main
       branch_flow: false
       display_name: ELE HSE-B
-      description: Cryptographic library running on NXP ELE HSE-B Crypto Hardware IP
+      description: Cryptographic library running on NXP ELE HSE-B Crypto Hardware
+        IP
     path: mcuxsdk/components/ele_hseb
     revision: ab81a79a7e39e9aeb08e6ea4770a91cf609af3ec
     url: https://github.com/nxp-mcuxpresso/ele_hseb
