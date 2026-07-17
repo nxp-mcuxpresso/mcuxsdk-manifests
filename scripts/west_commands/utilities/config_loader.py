@@ -16,18 +16,34 @@ from .device_board_mapper import DeviceBoardMapper
 
 class BoardConfig:
     """Represents a board configuration."""
-    
-    def __init__(self, name: str, repo_list: List[str], example_list: List[str], 
+
+    def __init__(self, name: str, repo_list: List[str], example_list: List[str],
                  optional_repos: List[str] = None, optional_examples: List[str] = None,
-                 board_dependencies: List[str] = None):
+                 board_dependencies: List[str] = None,
+                 devices_int_paths: List[str] = None,
+                 examples_int_paths: List[str] = None,
+                 devices_filter: List[str] = None,
+                 drivers_filter: List[str] = None):
         self.name = name
         self.repo_list = repo_list or []
         self.example_list = example_list or []
         self.optional_repos = optional_repos or []
         self.optional_examples = optional_examples or []
-        self.board_dependencies = board_dependencies or []  # New attribute
+        self.board_dependencies = board_dependencies or []
+        # Migration: sub-paths taken from the live mcuxsdk/devices_int/ repo and merged into the
+        # package's public mcuxsdk/devices/ tree (package-only; the live workspace is never modified).
+        self.devices_int_paths = devices_int_paths or []
+        # Migration: sub-paths taken from the live mcuxsdk/examples_int/ repo and merged into the
+        # package's public mcuxsdk/examples/ tree (package-only). Use full relative paths such as
+        # "_boards/mcxw23evk", "_devices/MCXW235", or any example category. Migrated _boards/_devices
+        # entries are also promoted to the public example.yml format so `west list_project` sees them.
+        self.examples_int_paths = examples_int_paths or []
+        # Tailoring: sub-paths under mcuxsdk/devices/ to keep during packaging (empty = keep all)
+        self.devices_filter = devices_filter or []
+        # Tailoring: folder names under mcuxsdk/drivers/ to keep during packaging (empty = keep all)
+        self.drivers_filter = drivers_filter or []
         self.source_boards = []  # For device configs
-    
+
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary format."""
         result = {
@@ -36,7 +52,11 @@ class BoardConfig:
             'example_list': self.example_list,
             'optional_repos': self.optional_repos,
             'optional_examples': self.optional_examples,
-            'board_dependencies': self.board_dependencies  # Include in dict
+            'board_dependencies': self.board_dependencies,
+            'devices_int_paths': self.devices_int_paths,
+            'examples_int_paths': self.examples_int_paths,
+            'devices_filter': self.devices_filter,
+            'drivers_filter': self.drivers_filter,
         }
         if self.source_boards:
             result['source_boards'] = self.source_boards
@@ -82,23 +102,28 @@ class ConfigLoader:
         
         config_path = os.path.join(self.manifest_dir, 'boards', f'{board_name}.yml')
         self.logger(f"Looking for config file: {config_path}", 'dbg')
-        
-        if not os.path.isfile(config_path):
-            self.logger(f"Board configuration file not found: {config_path}", 'err')
-            error_msg = self._format_board_not_found_error(board_name)
-            raise FileNotFoundError(error_msg)
-        
-        # Load main configuration
-        self.logger(f"Loading main configuration from: {config_path}", 'dbg')
-        with open(config_path, 'r', encoding='utf-8') as f:
-            data = yaml.safe_load(f) or {}
-        
-        # Load controlled-access configuration if available
-        controlled_data = self._load_controlled_access_config(board_name)
-        if controlled_data:
-            self.logger(f"Merging controlled-access configuration for board: {board_name}", 'dbg')
-            data = self._merge_controlled_access(data, controlled_data)
-        
+
+        if os.path.isfile(config_path):
+            # Public config is the base; controlled-access config (bifrost) adds overlay fields.
+            self.logger(f"Loading main configuration from: {config_path}", 'dbg')
+            with open(config_path, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f) or {}
+
+            controlled_data = self._load_controlled_access_config(board_name)
+            if controlled_data:
+                self.logger(f"Merging controlled-access configuration for board: {board_name}", 'dbg')
+                data = self._merge_controlled_access(data, controlled_data)
+        else:
+            # No public config: a fully controlled-access board may be defined solely in
+            # bifrost/boards/<board>.yml (repo_list, example_list, and any overlay fields all live
+            # there). Fall back to that file as the complete base configuration.
+            self.logger(f"No public board config at {config_path}; trying controlled-access config", 'dbg')
+            data = self._load_controlled_access_config(board_name)
+            if not data:
+                self.logger(f"Board configuration file not found: {config_path}", 'err')
+                raise FileNotFoundError(self._format_board_not_found_error(board_name))
+            self.logger(f"Using controlled-access config as the base for board: {board_name}", 'inf')
+
         config = self._create_board_config(board_name, data)
         self.logger(f"Successfully loaded board config: {board_name} (repos: {len(config.repo_list)}, examples: {len(config.example_list)})", 'inf')
         
@@ -116,11 +141,15 @@ class ConfigLoader:
         merged_examples = set()
         merged_optional_repos = set()
         merged_optional_examples = set()
-        merged_dependencies = set()  # New: collect all dependencies
-        
+        merged_dependencies = set()
+        merged_devices_int_paths = set()
+        merged_examples_int_paths = set()
+        merged_devices_filter = set()
+        merged_drivers_filter = set()
+
         successful_boards = []
         failed_boards = []
-        
+
         for board_name in board_names:
             try:
                 self.logger(f"Loading configuration for board: {board_name}", 'dbg')
@@ -129,22 +158,26 @@ class ConfigLoader:
                 merged_examples.update(board_config.example_list)
                 merged_optional_repos.update(board_config.optional_repos)
                 merged_optional_examples.update(board_config.optional_examples)
-                merged_dependencies.update(board_config.board_dependencies)  # Merge dependencies
+                merged_dependencies.update(board_config.board_dependencies)
+                merged_devices_int_paths.update(board_config.devices_int_paths)
+                merged_examples_int_paths.update(board_config.examples_int_paths)
+                merged_devices_filter.update(board_config.devices_filter)
+                merged_drivers_filter.update(board_config.drivers_filter)
                 successful_boards.append(board_name)
                 self.logger(f"Successfully merged config from board: {board_name} (deps: {board_config.board_dependencies})", 'dbg')
             except Exception as e:
                 failed_boards.append(board_name)
                 self.logger(f"Failed to load config for board {board_name}: {e}", 'wrn')
                 continue  # Skip failed board configs
-        
+
         if failed_boards:
             self.logger(f"Failed to load {len(failed_boards)} board configs: {failed_boards}", 'wrn')
-        
+
         if not successful_boards:
             error_msg = f"No valid board configurations found for device '{device_name}'"
             self.logger(error_msg, 'err')
             raise ValueError(error_msg)
-        
+
         # Create merged configuration
         config = BoardConfig(
             name=f"{device_name}_device",
@@ -152,14 +185,22 @@ class ConfigLoader:
             example_list=sorted(list(merged_examples)),
             optional_repos=sorted(list(merged_optional_repos)),
             optional_examples=sorted(list(merged_optional_examples)),
-            board_dependencies=sorted(list(merged_dependencies))  # Include merged dependencies
+            board_dependencies=sorted(list(merged_dependencies)),
+            devices_int_paths=sorted(list(merged_devices_int_paths)),
+            examples_int_paths=sorted(list(merged_examples_int_paths)),
+            devices_filter=sorted(list(merged_devices_filter)),
+            drivers_filter=sorted(list(merged_drivers_filter)),
         )
         config.source_boards = board_names
-        
+
         self.logger(f"Successfully created merged device config: {device_name} "
-           f"(repos: {len(config.repo_list)}, examples: {len(config.example_list)}, "
-           f"optional_repos: {len(config.optional_repos)}, optional_examples: {len(config.optional_examples)}, "
-           f"dependencies: {len(config.board_dependencies)})", 'inf')
+                    f"(repos: {len(config.repo_list)}, examples: {len(config.example_list)}, "
+                    f"optional_repos: {len(config.optional_repos)}, optional_examples: {len(config.optional_examples)}, "
+                    f"dependencies: {len(config.board_dependencies)}, "
+                    f"devices_int_paths: {len(config.devices_int_paths)}, "
+                    f"examples_int_paths: {len(config.examples_int_paths)}, "
+                    f"devices_filter: {len(config.devices_filter)}, "
+                    f"drivers_filter: {len(config.drivers_filter)})", 'inf')
         
         return config
     
@@ -299,23 +340,24 @@ class ConfigLoader:
     def _merge_controlled_access(self, base_data: Dict, controlled_data: Dict) -> Dict:
         """Merge controlled-access data with base configuration."""
         merged = base_data.copy()
-        
-        # Merge optional repositories
-        base_optional_repos = merged.get('optional_repos', [])
-        controlled_optional_repos = controlled_data.get('optional_repos', [])
-        if controlled_optional_repos:
-            base_optional_repos.extend(controlled_optional_repos)
-            merged['optional_repos'] = list(dict.fromkeys(base_optional_repos))
-            self.logger(f"Merged {len(controlled_optional_repos)} controlled-access optional repos", 'dbg')
-        
-        # Merge optional examples
-        base_optional_examples = merged.get('optional_examples', [])
-        controlled_optional_examples = controlled_data.get('optional_examples', [])
-        if controlled_optional_examples:
-            base_optional_examples.extend(controlled_optional_examples)
-            merged['optional_examples'] = list(dict.fromkeys(base_optional_examples))
-            self.logger(f"Merged {len(controlled_optional_examples)} controlled-access optional examples", 'dbg')
-        
+
+        list_fields = [
+            ('optional_repos', 'optional repos'),
+            ('optional_examples', 'optional examples'),
+            ('devices_int_paths', 'devices_int paths'),
+            ('examples_int_paths', 'examples_int paths'),
+            ('devices_filter', 'devices filter'),
+            ('drivers_filter', 'drivers filter'),
+        ]
+
+        for field, label in list_fields:
+            base_values = merged.get(field, [])
+            controlled_values = controlled_data.get(field, [])
+            if controlled_values:
+                base_values.extend(controlled_values)
+                merged[field] = list(dict.fromkeys(base_values))
+                self.logger(f"Merged {len(controlled_values)} controlled-access {label}", 'dbg')
+
         return merged
     
     def _create_board_config(self, name: str, data: Dict) -> BoardConfig:
@@ -326,12 +368,20 @@ class ConfigLoader:
             example_list=data.get('example_list', []),
             optional_repos=data.get('optional_repos', []),
             optional_examples=data.get('optional_examples', []),
-            board_dependencies=data.get('board_dependencies', [])  # Load dependencies
+            board_dependencies=data.get('board_dependencies', []),
+            devices_int_paths=data.get('devices_int_paths', []),
+            examples_int_paths=data.get('examples_int_paths', []),
+            devices_filter=data.get('devices_filter', []),
+            drivers_filter=data.get('drivers_filter', []),
         )
-        
+
         self.logger(f"Created BoardConfig for {name}: "
-           f"repos={len(config.repo_list)}, examples={len(config.example_list)}, "
-           f"optional_repos={len(config.optional_repos)}, optional_examples={len(config.optional_examples)}, "
-           f"dependencies={len(config.board_dependencies)}", 'dbg')
+                    f"repos={len(config.repo_list)}, examples={len(config.example_list)}, "
+                    f"optional_repos={len(config.optional_repos)}, optional_examples={len(config.optional_examples)}, "
+                    f"dependencies={len(config.board_dependencies)}, "
+                    f"devices_int_paths={len(config.devices_int_paths)}, "
+                    f"examples_int_paths={len(config.examples_int_paths)}, "
+                    f"devices_filter={len(config.devices_filter)}, "
+                    f"drivers_filter={len(config.drivers_filter)}", 'dbg')
 
         return config

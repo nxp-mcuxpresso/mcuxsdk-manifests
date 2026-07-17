@@ -15,3 +15,18 @@ optional_repos:
 optional_examples:
   - tfm_examples
 
+# --- Package tailoring (optional): trim the devices/ and drivers/ trees in the package ---
+
+# Sub-paths under mcuxsdk/devices/ to keep; all other top-level directories are removed.
+# Add shared dirs (e.g. "arm") explicitly if the board's build system needs them.
+# Format: <Family>/<Device>. Omit or leave empty to keep the full devices/ tree.
+# devices_filter:
+#   - Wireless/MCXW235
+
+# Top-level folder names under mcuxsdk/drivers/ to keep; all others are removed.
+# Omit or leave empty to keep the full drivers/ tree.
+# drivers_filter:
+#   - lpuart
+#   - gpio
+#   - flexcomm
+

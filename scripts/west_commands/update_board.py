@@ -131,7 +131,21 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
             # Process repositories and examples based on optional inclusion
             # This needs to happen before list-sbom to respect --include-optional
             final_repos, final_examples = self._process_optional_inclusion(config, args)
-            
+
+            # Migration implies its internal repo dependency: configuring devices_int_paths /
+            # examples_int_paths requires the corresponding internal repo to be checked out so the
+            # migration can read from it. Auto-include it here so --include-optional is not needed
+            # just for migration. (Still subject to the group-filter / access check below.)
+            migration_repo_deps = {
+                'mcu-sdk-devices-int': bool(config.devices_int_paths),
+                'mcu-sdk-examples-int': bool(config.examples_int_paths),
+            }
+            for repo_name, needed in migration_repo_deps.items():
+                if needed and repo_name not in final_repos:
+                    final_repos.append(repo_name)
+                    self._log_with_timestamp(
+                        f"Auto-including {repo_name} (required by configured migration paths)", 'inf')
+
             # Filter repos by group-filter (e.g. exclude bifrost for external users)
             project_map = {p.name: p for p in manifest.projects}
             inactive_repos = [r for r in final_repos if r in project_map and not manifest.is_active(project_map[r])]
@@ -511,7 +525,7 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
 
         if projects:
             project_names = [p.name for p in projects]
-            self._log_with_timestamp(f"Found {len(projects)} projects to update: {project_names}", 'inf')
+            self._log_with_timestamp(f"Found {len(projects)} selected projects: {project_names}", 'inf')
             self._log_with_timestamp(f"Project details: {[(p.name, p.path) for p in projects]}", 'dbg')
         else:
             self._log_with_timestamp("No projects found to update", 'wrn')
@@ -608,10 +622,19 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
         options = PackageOptions(
             include_git=args.include_git,
             generate_docs=args.gen_doc,
-            board_filter=board_list
+            board_filter=board_list,
+            devices_int_paths=config.devices_int_paths,
+            examples_int_paths=config.examples_int_paths,
+            devices_filter=config.devices_filter,
+            drivers_filter=config.drivers_filter,
         )
         
-        self._log_with_timestamp(f"Package options: git={options.include_git}, docs={options.generate_docs}", 'dbg')
+        self._log_with_timestamp(
+            f"Package options: git={options.include_git}, docs={options.generate_docs}, "
+            f"devices_int_paths={options.devices_int_paths}, "
+            f"examples_int_paths={options.examples_int_paths}, "
+            f"devices_filter={options.devices_filter}, "
+            f"drivers_filter={options.drivers_filter}", 'dbg')
         
         # Create package with logger
         package_creator = PackageCreator(self.topdir, self._log_with_timestamp)

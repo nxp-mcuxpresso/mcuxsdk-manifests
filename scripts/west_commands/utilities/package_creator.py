@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import os
+import re
 import zipfile
 import shutil
 import tempfile
@@ -19,10 +20,30 @@ class PackageOptions:
     include_git: bool = False
     generate_docs: bool = False
     board_filter: List[str] = None
-    
+    # Migration: sub-paths from the live mcuxsdk/devices_int/ repo, merged into the package's
+    # public mcuxsdk/devices/ tree (package staging only; live workspace untouched).
+    devices_int_paths: List[str] = None
+    # Migration: sub-paths from the live mcuxsdk/examples_int/ repo, merged into the package's
+    # public mcuxsdk/examples/ tree (package staging only). Use full relative paths, e.g.
+    # "_boards/mcxw23evk", "_devices/MCXW235", or any category dir. Migrated _boards/_devices
+    # entries are also promoted to the public example.yml format for `west list_project`.
+    examples_int_paths: List[str] = None
+    # Tailoring: sub-paths under mcuxsdk/devices/ to keep; all others are removed (empty = keep all)
+    devices_filter: List[str] = None
+    # Tailoring: folder names under mcuxsdk/drivers/ to keep; all others are removed (empty = keep all)
+    drivers_filter: List[str] = None
+
     def __post_init__(self):
         if self.board_filter is None:
             self.board_filter = []
+        if self.devices_int_paths is None:
+            self.devices_int_paths = []
+        if self.examples_int_paths is None:
+            self.examples_int_paths = []
+        if self.devices_filter is None:
+            self.devices_filter = []
+        if self.drivers_filter is None:
+            self.drivers_filter = []
 
 
 class PackageCreator:
@@ -78,6 +99,43 @@ class PackageCreator:
             self._filter_examples(temp_dir, repo_list, example_list, options.board_filter)
             filter_elapsed = time.time() - filter_start
             self.logger(f"Example filtering completed in {filter_elapsed:.2f} seconds", 'inf')
+
+            # Tailor devices and drivers trees
+            if options.devices_filter:
+                self.logger("Starting devices tree tailoring phase", 'inf')
+                dev_start = time.time()
+                # Only device-family folders provided by separate device projects (mcuxsdk/devices/<Family>)
+                # are eligible for trimming; core (mcuxsdk repo) content under devices/ is always kept.
+                device_families = self._device_project_families(projects)
+                self._filter_devices(temp_dir, options.devices_filter, device_families)
+                self.logger(f"Devices tailoring completed in {time.time() - dev_start:.2f} seconds", 'inf')
+
+            if options.drivers_filter:
+                self.logger("Starting drivers tree tailoring phase", 'inf')
+                drv_start = time.time()
+                self._filter_drivers(temp_dir, options.drivers_filter)
+                self.logger(f"Drivers tailoring completed in {time.time() - drv_start:.2f} seconds", 'inf')
+
+            # Selective migration: copy only the configured sub-paths from internal repos.
+            # The internal repos are excluded from _copy_repositories upstream (in update_board),
+            # so only the listed sub-paths reach the package staging directory.
+            if options.devices_int_paths:
+                self.logger("Starting devices_int migration phase", 'inf')
+                di_start = time.time()
+                self._migrate_devices_int(temp_dir, options.devices_int_paths)
+                self.logger(f"devices_int migration completed in {time.time() - di_start:.2f} seconds", 'inf')
+
+            if options.examples_int_paths:
+                self.logger("Starting examples_int migration phase", 'inf')
+                ei_start = time.time()
+                self._migrate_examples_int(temp_dir, options.examples_int_paths)
+                self.logger(f"examples_int migration completed in {time.time() - ei_start:.2f} seconds", 'inf')
+                # Promote migrated internal boards/devices to the public example.yml format so
+                # `west list_project` can discover them (see _promote_internal_examples).
+                self.logger("Starting internal example.yml promotion phase", 'inf')
+                pr_start = time.time()
+                self._promote_internal_examples(temp_dir, options.examples_int_paths)
+                self.logger(f"example.yml promotion completed in {time.time() - pr_start:.2f} seconds", 'inf')
 
             # Create final archive
             self.logger("Starting archive creation phase", 'inf')
@@ -157,12 +215,25 @@ class PackageCreator:
             else:
                 self.logger(f"Workspace metadata directory not found: {meta_dir}", 'dbg')
         
+        # Internal repos with selective migration configured are NOT copied wholesale here.
+        # They remain checked out/updated in the live workspace, but only the sub-paths listed
+        # in devices_int_paths / examples_int_paths are migrated into the package later.
+        migration_skip = set()
+        if options.devices_int_paths:
+            migration_skip.add('mcu-sdk-devices-int')
+        if options.examples_int_paths:
+            migration_skip.add('mcu-sdk-examples-int')
+
         # Copy project repositories
         for project in projects:
+            if project.name in migration_skip:
+                self.logger(
+                    f"Skipping full copy of {project.name}; only configured sub-paths will be migrated", 'inf')
+                continue
             self.logger(f"Copying project: {project.name} ({project.path})", 'dbg')
             self._copy_project(temp_dir, project, excluded_boards, options.include_git)
-    
-    def _copy_project(self, temp_dir: str, project, excluded_boards: Set[str], 
+
+    def _copy_project(self, temp_dir: str, project, excluded_boards: Set[str],
                      include_git: bool) -> None:
         """Copy a single project."""
         src = os.path.join(self.workspace_root, project.path)
@@ -593,6 +664,431 @@ class PackageCreator:
         
         return False
     
+    @staticmethod
+    def _device_project_families(projects: List) -> Set[str]:
+        """Top-level devices/ folder names that come from separate device projects.
+
+        These (e.g. RT, MCX, Wireless from the mcux-devices-* projects, mounted at
+        mcuxsdk/devices/<Family>) are the only entries devices_filter may trim. Everything else
+        under devices/ belongs to the core mcuxsdk repo and is always kept.
+        """
+        prefix = "mcuxsdk/devices/"
+        families: Set[str] = set()
+        for p in projects:
+            pp = str(getattr(p, 'path', '')).replace('\\', '/')
+            if pp.startswith(prefix):
+                rest = pp[len(prefix):].strip('/')
+                if rest:
+                    families.add(rest.split('/')[0])
+        return families
+
+    def _filter_devices(self, temp_dir: str, devices_filter: List[str],
+                        device_families: Optional[Set[str]] = None) -> None:
+        """Trim mcuxsdk/devices/ to only the sub-paths listed in devices_filter.
+
+        Only device-family folders provided by separate device projects (device_families) are
+        eligible for removal; core mcuxsdk-repo content under devices/ (arm, xtensa, Kconfig, ...)
+        is always kept. Files at any level are always kept. Entry forms (relative to devices/):
+          - "arm"            keep the whole family tree
+          - "Wireless/MCXW235"  keep that device dir (plus its family's root files)
+          - "RT/*"           keep only RT/'s ROOT FILES and exclude ALL of RT/'s subfolders
+                             (useful when the actual device is added later by migration)
+        """
+        devices_root = os.path.join(temp_dir, "mcuxsdk", "devices")
+        if not os.path.isdir(devices_root):
+            self.logger(f"devices/ directory not found in package staging dir: {devices_root}", 'wrn')
+            return
+
+        device_families = device_families or set()
+
+        # Normalise filter paths to forward slashes
+        normalised = [p.replace('\\', '/').strip('/') for p in devices_filter]
+
+        # Build exact-keep and parent sets.
+        #  - target_paths: directories kept in full.
+        #  - parent_paths: directories kept but recursed into (children still evaluated). A parent
+        #    with no matching target beneath it keeps its files while dropping every subfolder,
+        #    which is exactly what a "<dir>/*" entry requests.
+        target_paths: Set[str] = set()
+        parent_paths: Set[str] = set()
+        for path in normalised:
+            if path.endswith('/*'):
+                base = path[:-2].strip('/')
+                if not base:
+                    continue
+                parts = base.split('/')
+                for i in range(1, len(parts) + 1):
+                    parent_paths.add('/'.join(parts[:i]))
+                continue
+            target_paths.add(path)
+            parts = path.split('/')
+            for i in range(1, len(parts)):
+                parent_paths.add('/'.join(parts[:i]))
+
+        # Always keep core (mcuxsdk-repo) top-level entries: only separate device-project families
+        # are trimmable. A core family dir is kept in full by adding it to target_paths.
+        try:
+            for entry in os.listdir(devices_root):
+                if os.path.isdir(os.path.join(devices_root, entry)) and entry not in device_families:
+                    target_paths.add(entry)
+        except (OSError, PermissionError) as e:
+            self.logger(f"Cannot read devices/ for core-keep pass: {e}", 'wrn')
+
+        removed = self._remove_unwanted_examples(devices_root, "", target_paths, parent_paths)
+        self.logger(f"Devices tailoring: removed {removed} unwanted entries from devices/", 'inf')
+
+    def _filter_drivers(self, temp_dir: str, drivers_filter: List[str]) -> None:
+        """Trim mcuxsdk/drivers/ to only the top-level folders listed in drivers_filter.
+
+        Each entry is a folder name directly inside mcuxsdk/drivers/ (e.g. "lpuart", "gpio").
+        Files at the top level of drivers/ are always kept. Sub-folders not in the whitelist
+        are removed entirely.
+        """
+        drivers_root = os.path.join(temp_dir, "mcuxsdk", "drivers")
+        if not os.path.isdir(drivers_root):
+            self.logger(f"drivers/ directory not found in package staging dir: {drivers_root}", 'wrn')
+            return
+
+        keep_set = set(drivers_filter)
+        removed = 0
+
+        try:
+            for entry in os.listdir(drivers_root):
+                entry_path = os.path.join(drivers_root, entry)
+                if os.path.isdir(entry_path) and entry not in keep_set:
+                    try:
+                        shutil.rmtree(entry_path)
+                        removed += 1
+                        self.logger(f"Drivers tailoring: removed drivers/{entry}", 'dbg')
+                    except (OSError, IOError) as e:
+                        self.logger(f"Failed to remove drivers/{entry}: {e}", 'wrn')
+        except (OSError, PermissionError) as e:
+            self.logger(f"Cannot read drivers/ directory: {e}", 'wrn')
+            return
+
+        self.logger(f"Drivers tailoring: removed {removed} unwanted entries from drivers/", 'inf')
+
+    def _migrate_devices_int(self, temp_dir: str, devices_int_paths: List[str]) -> None:
+        """Merge sub-paths from the live workspace's devices_int/ into the package's devices/ tree.
+
+        Source:      <workspace_root>/mcuxsdk/devices_int/<path>/
+        Destination: <temp_dir>/mcuxsdk/devices/<path>/
+
+        The internal content is merged into the public devices/ tree so the package looks like a
+        normal SDK with no devices_int/ folder. The live workspace is never modified; this copies
+        into the package staging dir only. Skips any path whose source directory does not exist.
+        """
+        devices_int_root = os.path.join(self.workspace_root, "mcuxsdk", "devices_int")
+        if not os.path.isdir(devices_int_root):
+            self.logger(
+                "mcuxsdk/devices_int/ not found in workspace — skipping devices_int migration. "
+                "Ensure mcu-sdk-devices-int is checked out.", 'wrn')
+            return
+
+        copied_paths = 0
+        for rel_path in devices_int_paths:
+            src = os.path.join(devices_int_root, rel_path.replace('/', os.sep))
+            dst = os.path.join(temp_dir, "mcuxsdk", "devices", rel_path.replace('/', os.sep))
+
+            if not os.path.exists(src):
+                self.logger(f"devices_int path not found, skipping: {rel_path}", 'wrn')
+                continue
+
+            try:
+                if os.path.isdir(src):
+                    self.logger(f"Migrating devices_int/{rel_path} -> devices/{rel_path}", 'dbg')
+                    self._copy_with_filtering(src, dst, set(), False)
+                else:
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    shutil.copy2(src, dst)
+                self._rewrite_internal_paths(dst)
+                copied_paths += 1
+                self.logger(f"Migrated devices_int/{rel_path} into devices/{rel_path}", 'dbg')
+            except (OSError, IOError, shutil.Error) as e:
+                self.logger(f"Failed to migrate devices_int/{rel_path}: {e}", 'wrn')
+
+        self.logger(
+            f"devices_int migration: {copied_paths}/{len(devices_int_paths)} paths merged into devices/", 'inf')
+
+    def _migrate_examples_int(self, temp_dir: str, examples_int_paths: List[str]) -> None:
+        """Merge sub-paths from the live workspace's examples_int/ into the package's examples/ tree.
+
+        Source:      <workspace_root>/mcuxsdk/examples_int/<path>/
+        Destination: <temp_dir>/mcuxsdk/examples/<path>/
+
+        Each entry in examples_int_paths is a forward-slash path relative to mcuxsdk/examples_int/,
+        e.g. "_boards/mcxw23evk", "_devices/MCXW235", or any example category directory. The internal
+        content is merged into the public examples/ tree so the package looks like a normal SDK with
+        no examples_int/ folder. The live workspace is never modified; this copies into the package
+        staging dir only. Skips paths that do not exist in the workspace (logs a warning).
+        Requires mcu-sdk-examples-int to be checked out in the workspace.
+        """
+        examples_int_root = os.path.join(self.workspace_root, "mcuxsdk", "examples_int")
+        if not os.path.isdir(examples_int_root):
+            self.logger(
+                "mcuxsdk/examples_int/ not found in workspace — skipping examples_int migration. "
+                "Ensure mcu-sdk-examples-int is checked out.", 'wrn')
+            return
+
+        copied_paths = 0
+        for rel_path in examples_int_paths:
+            src = os.path.join(examples_int_root, rel_path.replace('/', os.sep))
+            dst = os.path.join(temp_dir, "mcuxsdk", "examples", rel_path.replace('/', os.sep))
+
+            if not os.path.exists(src):
+                self.logger(f"examples_int/{rel_path} not found, skipping", 'wrn')
+                continue
+
+            try:
+                if os.path.isdir(src):
+                    self.logger(f"Migrating examples_int/{rel_path} -> examples/{rel_path}", 'dbg')
+                    self._copy_with_filtering(src, dst, set(), False)
+                else:
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    shutil.copy2(src, dst)
+                self._rewrite_internal_paths(dst)
+                copied_paths += 1
+                self.logger(f"Migrated examples_int/{rel_path} into examples/{rel_path}", 'dbg')
+            except (OSError, IOError, shutil.Error) as e:
+                self.logger(f"Failed to migrate examples_int/{rel_path}: {e}", 'wrn')
+
+        self.logger(
+            f"examples_int migration: {copied_paths}/{len(examples_int_paths)} paths merged into examples/", 'inf')
+
+    # ------------------------------------------------------------------
+    # Internal path rewrite (repoint _int paths to the public trees)
+    # ------------------------------------------------------------------
+
+    # Build-relevant text files whose hardcoded internal paths must be repointed after migration.
+    _PATH_REWRITE_SUFFIXES = ('.cmake', '.txt', '.yml', '.yaml', '.conf', '.overlay', '.cfg', '.ld')
+
+    def _rewrite_internal_paths(self, dest: str) -> None:
+        """Repoint `examples_int/` and `devices_int/` references in migrated build files to public.
+
+        Migrated content may hardcode internal paths (e.g. a board variable.cmake setting
+        `board_root examples_int/_boards` or including `devices_int/<...>/variable.cmake`). Because
+        the content is merged into the public examples/ and devices/ trees, those prefixes must be
+        rewritten so the package builds without manual edits. Only build-relevant text files are
+        touched; `dest` may be a file or a directory tree.
+        """
+        if os.path.isfile(dest):
+            self._rewrite_internal_paths_in_file(dest)
+            return
+        for root, _dirs, files in os.walk(dest):
+            for name in files:
+                if (name == 'CMakeLists.txt' or name.startswith('Kconfig')
+                        or name.endswith(self._PATH_REWRITE_SUFFIXES)):
+                    self._rewrite_internal_paths_in_file(os.path.join(root, name))
+
+    def _rewrite_internal_paths_in_file(self, path: str) -> None:
+        """Rewrite internal path prefixes in a single file (no-op for binary/unchanged files)."""
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                content = f.read()
+        except (OSError, IOError, UnicodeDecodeError):
+            return  # unreadable or binary; skip
+        # Match whole tokens so both path prefixes ("devices_int/...") and bare values
+        # (e.g. `mcux_set_variable(device_root devices_int)`, used to build Kconfig rsource paths)
+        # are repointed to the public trees, while similarly-named tokens (devices_int_paths,
+        # xxx_devices_int) are left untouched by the \b boundaries.
+        updated = re.sub(r'\bexamples_int\b', 'examples', content)
+        updated = re.sub(r'\bdevices_int\b', 'devices', updated)
+        if updated != content:
+            try:
+                with open(path, 'w', encoding='utf-8') as f:
+                    f.write(updated)
+                self.logger(f"Rewrote internal paths in {path}", 'dbg')
+            except (OSError, IOError) as e:
+                self.logger(f"Failed to rewrite internal paths in {path}: {e}", 'wrn')
+
+    # ------------------------------------------------------------------
+    # Internal example.yml promotion (internal enablement -> public format)
+    # ------------------------------------------------------------------
+
+    def _promote_internal_examples(self, temp_dir: str, examples_int_paths: List[str]) -> None:
+        """Convert migrated internal _boards/_devices example.yml entries into the public format.
+
+        Internal boards/devices store their example enablement inverted: each
+        examples_int/_boards/<board>/<core>/example.yml lists the example names the board supports
+        plus a `board.toolchains` default. The public flow instead expects each app's own
+        examples/<category>/<app>/example.yml to list the instance under its `boards:` map
+        (as `<board>@<core>: [<toolchain deltas>]`). Without this conversion `west list_project`
+        cannot discover the migrated board because its enablement lives nowhere the public flow reads.
+
+        This mirrors `west npi_move` (bifrost/scripts/west_commands/move_npi.py): for every example an
+        instance enables, inject `<instance_key>: <toolchains-or-[]>` into that app's `boards:` (board)
+        or `devices:` (device) map, then rewrite the migrated instance example.yml to the public form
+        (only the `<instance_type>.toolchains` default). Runs only for _boards/<name> and
+        _devices/<name> entries in examples_int_paths.
+        """
+        instances = self._collect_promotion_instances(temp_dir, examples_int_paths)
+        if not instances:
+            self.logger("Promotion: no _boards/_devices instances to promote", 'dbg')
+            return
+        self._apply_promotion_to_apps(temp_dir, instances)
+        # Normalize each migrated instance example.yml to the public (toolchains-only) form.
+        for inst in instances:
+            self._clean_instance_example_yml(inst)
+
+    @staticmethod
+    def _promotion_delta(value) -> List[str]:
+        """Return the public boards:/devices: value (toolchain delta list) for an internal entry.
+
+        Internal entries may be None (`hello_world:`), a dict (`{toolchains: [...]}`), or already a
+        list. The public map value is always the toolchain delta list; empty means "use the
+        instance default toolchains" resolved from the instance example.yml.
+        """
+        if value is None:
+            return []
+        if isinstance(value, dict):
+            return value.get('toolchains', []) or []
+        if isinstance(value, list):
+            return value
+        return []
+
+    def _collect_promotion_instances(self, temp_dir: str, examples_int_paths: List[str]) -> List[dict]:
+        """Build the list of migrated board/device instances to promote.
+
+        Each returned dict has: key (public map key, e.g. "fpga_imxrtl375@cm33_core0"), map_name
+        ('boards'|'devices'), toolchains_key ('board.toolchains'|'device.toolchains'), toolchains
+        (the default list or None), entries ({example_name: raw_value}), source_yml (migrated file).
+        """
+        examples_root = os.path.join(temp_dir, "mcuxsdk", "examples")
+        seen = set()
+        instances = []
+        for rel_path in examples_int_paths:
+            parts = rel_path.replace('\\', '/').strip('/').split('/')
+            if len(parts) < 2 or parts[0] not in ('_boards', '_devices'):
+                continue  # not an instance path (plain example dir); nothing to promote
+            instance_type = 'board' if parts[0] == '_boards' else 'device'
+            map_name = 'boards' if instance_type == 'board' else 'devices'
+            name = parts[1]
+            if (parts[0], name) in seen:
+                continue
+            seen.add((parts[0], name))
+
+            instance_dir = os.path.join(examples_root, parts[0], name)
+            if not os.path.isdir(instance_dir):
+                self.logger(f"Promotion: migrated instance dir not found, skipping: {parts[0]}/{name}", 'wrn')
+                continue
+
+            # Single-instance layout (<name>/example.yml -> "<name>") or
+            # per-core layout (<name>/<core>/example.yml -> "<name>@<core>").
+            yml_specs = []
+            top_yml = os.path.join(instance_dir, "example.yml")
+            if os.path.isfile(top_yml):
+                yml_specs.append((name, top_yml))
+            else:
+                for entry in sorted(os.listdir(instance_dir)):
+                    core_yml = os.path.join(instance_dir, entry, "example.yml")
+                    if os.path.isfile(core_yml):
+                        yml_specs.append((f"{name}@{entry}", core_yml))
+
+            if not yml_specs:
+                self.logger(f"Promotion: no example.yml found under {parts[0]}/{name}, skipping", 'wrn')
+                continue
+
+            toolchains_key = f"{instance_type}.toolchains"
+            for key, yml_path in yml_specs:
+                data = self._load_yaml(yml_path)
+                if not isinstance(data, dict):
+                    continue
+                entries = {k: v for k, v in data.items() if k != toolchains_key}
+                instances.append({
+                    'key': key,
+                    'map_name': map_name,
+                    'toolchains_key': toolchains_key,
+                    'toolchains': data.get(toolchains_key),
+                    'entries': entries,
+                    'source_yml': yml_path,
+                })
+                self.logger(f"Promotion: instance '{key}' enables {len(entries)} example(s)", 'dbg')
+        return instances
+
+    def _apply_promotion_to_apps(self, temp_dir: str, instances: List[dict]) -> None:
+        """Inject instance enablement into public app example.yml boards:/devices: maps.
+
+        Walks examples/ once (pruning _boards/_devices) and applies every instance's entries to each
+        matching app example.yml, preserving leading comment lines.
+        """
+        examples_root = os.path.join(temp_dir, "mcuxsdk", "examples")
+        updated_files = 0
+        for root, dirs, files in os.walk(examples_root):
+            if os.path.abspath(root) == os.path.abspath(examples_root):
+                dirs[:] = [d for d in dirs if d not in ('_boards', '_devices')]
+            if "example.yml" not in files:
+                continue
+            yml_path = os.path.join(root, "example.yml")
+            rel = os.path.relpath(root, examples_root).replace('\\', '/')
+            data, comments = self._load_yaml_with_comments(yml_path)
+            if not isinstance(data, dict):
+                continue
+
+            updated = False
+            for inst in instances:
+                map_name = inst['map_name']
+                key = inst['key']
+                for ex_name, value in inst['entries'].items():
+                    app = data.get(ex_name)
+                    if not isinstance(app, dict) or map_name not in app:
+                        continue  # example not in this file, or not an instance-mapped example
+                    inst_map = app.get(map_name) or {}
+                    if not isinstance(inst_map, dict):
+                        continue
+                    if key not in inst_map:
+                        inst_map[key] = self._promotion_delta(value)
+                        app[map_name] = inst_map
+                        updated = True
+                        self.logger(f"Promotion: added '{key}' to '{ex_name}' in {rel}/example.yml", 'dbg')
+
+            if updated:
+                self._dump_yaml_with_comments(yml_path, data, comments)
+                updated_files += 1
+
+        self.logger(f"Promotion: updated {updated_files} public example.yml file(s)", 'inf')
+
+    def _clean_instance_example_yml(self, inst: dict) -> None:
+        """Rewrite a migrated instance example.yml to the public (toolchains-only) form."""
+        toolchains = inst['toolchains']
+        if toolchains is None:
+            return  # no default toolchains to normalize; leave the migrated file untouched
+        try:
+            self._dump_yaml_with_comments(inst['source_yml'], {inst['toolchains_key']: toolchains}, [])
+            self.logger(f"Promotion: normalized {inst['source_yml']} to toolchains-only form", 'dbg')
+        except (OSError, IOError) as e:
+            self.logger(f"Promotion: failed to normalize {inst['source_yml']}: {e}", 'wrn')
+
+    def _load_yaml(self, path: str):
+        """Load a YAML file, returning parsed data or None on error."""
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                return yaml.safe_load(f)
+        except (OSError, IOError, yaml.YAMLError) as e:
+            self.logger(f"Promotion: failed to read {path}: {e}", 'wrn')
+            return None
+
+    def _load_yaml_with_comments(self, path: str):
+        """Load YAML, returning (data, comment_lines) so top-level comments survive a re-dump."""
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            comments = [ln for ln in lines if ln.startswith('#')]
+            data = yaml.safe_load(''.join(lines))
+            return data, comments
+        except (OSError, IOError, yaml.YAMLError) as e:
+            self.logger(f"Promotion: failed to read {path}: {e}", 'wrn')
+            return None, []
+
+    def _dump_yaml_with_comments(self, path: str, data, comments: List[str]) -> None:
+        """Write YAML preserving key order, re-prepending collected comment lines."""
+        with open(path, 'w', encoding='utf-8') as f:
+            yaml.dump(data, f, default_flow_style=False, sort_keys=False)
+        if comments:
+            with open(path, 'r+', encoding='utf-8') as f:
+                content = f.readlines()
+                f.seek(0, 0)
+                f.writelines(comments + content)
+
     def _create_archive(self, temp_dir: str, output_path: str) -> None:
         """Create the final zip archive."""
         self.logger(f"Creating zip archive: {output_path}", 'inf')
