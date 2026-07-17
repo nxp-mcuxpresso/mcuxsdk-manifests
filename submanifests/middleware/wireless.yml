@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: d12dbcf905bca2e87382632e80602ffabfc1a661
+    revision: 6f0fe7422335a574e9a57102664ef8f81c5d6ed6
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 5eacd8d9c44af070832ae935d7bfb3bce37b1623
+    revision: 14770e7b05049a0f78fc91c4be67dd2bda5bcd23
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: a24737d36c7b245208738d827fb5a2a90a9aa33f
+    revision: ec0bd5424180bf18ed4ebb66b6343b941a6113a1
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: fc8a87bbd0101e265fb0aa89f82809e56ae43ff4
+    revision: 8045f42c913468b36d64b5260efaae1321c418dc
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -101,7 +101,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: abeb2a405ae1f793049ba51150b56cad4942f913
+    revision: e0f82f10c8f93fa2a71dfed4d6a23ccbeb138189
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
