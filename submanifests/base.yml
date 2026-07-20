@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: df4dfe873ec49e142c77e9a7df47f171ec790073
+    revision: 5e3d315693d294d088034bf1c7ad0f4a4257d468
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -48,7 +48,7 @@ manifest:
         that are based on Arm Cortex processors, distributed by ARM.
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: 78729348994a2e9c13f3c897105543a97085edc7
+    revision: a2ace20c4221c2917276f1bd82ec3f9dc1b60c36
     groups:
     - optional
     userdata:
@@ -72,7 +72,7 @@ manifest:
         integration.
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 28c4b14a5728967a89791324fc5a6a999be288af
+    revision: 4bf19d9380da277dc7608584147cf67db832feb9
     path: mcuxsdk/components
     groups:
     - components
