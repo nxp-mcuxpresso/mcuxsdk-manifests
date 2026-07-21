@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: f7e0f1b5411e52241d32e6b997ca7ea1fa5cf98f
+    revision: a96977d590a046b61cf2e7e8be8a0721bac58f8f
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 53b9cc494587b5c026b13da68b6cee230729899c
+    revision: 4388753f8504f827568ded36a6b53cd09f226ac5
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: c42605b5affa411f83629d2722939e0a1122e328
+    revision: df72c688f5d1b65838e5d2d64e8b7b630fcb9a2a
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 78e7bedc2a0aae5456f6364bdce5a0580ed74b55
+    revision: 6c5030e1b5952adaa2fc14eb30fd532e5a39e743
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -101,7 +101,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 3eb3d25290af3a5742815afddcd6c753069c5976
+    revision: 8af202171c8b3235a8e7360d0796e1d6bc8f54d3
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -140,7 +140,7 @@ manifest:
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: f2752ce98f25401fc74144a6332aa92d8a253399
+    revision: e82bd34575126ed81ddb2c1cd995482b221f538a
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
