@@ -27,7 +27,7 @@ manifest:
         communication. It involves Multicore Manager (MCMGR), Remote Processor Messaging
         - Lite (RPMsg-Lite) and Embedded Remote Procedure Call (eRPC) sw components.
   - name: mcux-mcmgr
-    revision: a2dc7f1d5a3fc2a47b468a9108943d2d1a191b5d
+    revision: c7d42f5b94c8b1b91fb4aa999dd4fb1a2d1776cb
     path: mcuxsdk/middleware/multicore/mcmgr
     url: https://github.com/nxp-mcuxpresso/mcux-mcmgr
     groups:
@@ -41,7 +41,7 @@ manifest:
       display_name: MCMGR
       description: Multicore manager
   - name: rpmsg-lite
-    revision: 5dc549847b67022c646466290c6c7e6891a9aaff
+    revision: 7c29224f3df996e25f3e8ec0b4d5574eecd9ab99
     path: mcuxsdk/middleware/multicore/rpmsg-lite
     url: https://github.com/nxp-mcuxpresso/rpmsg-lite
     groups:

@@ -24,7 +24,7 @@ manifest:
       description: Cryptographic library running on NXP ELS and PKC Crypto Hardware
         IP
     path: mcuxsdk/components/els_pkc
-    revision: c168d9adab8cba6c4ca7dce87904678068247e4a
+    revision: ed32783f2b3be897f599e56cbd81d9f129f0de89
     url: https://github.com/NXP/els_pkc
     groups:
     - security
@@ -120,7 +120,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: 7eff14828e4a7f58ffec6dae34e91e18751ae875
+    revision: 815776dc0586f4dbd2deb404eb6ac6da00c6a20e
     groups:
     - tfm
   - name: psa_crypto_driver
