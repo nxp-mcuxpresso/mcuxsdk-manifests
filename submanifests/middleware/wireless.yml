@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: a96977d590a046b61cf2e7e8be8a0721bac58f8f
+    revision: 4efcbe72507ef3d74a5e3f11b5c6397de736690c
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: df72c688f5d1b65838e5d2d64e8b7b630fcb9a2a
+    revision: 77d917b25ced2b32b41b9e3241e8bad738bc53b0
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
