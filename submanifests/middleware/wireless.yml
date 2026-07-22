@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 77d917b25ced2b32b41b9e3241e8bad738bc53b0
+    revision: 37437a86d0c399d0c97a3393cace0c45853b456b
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
