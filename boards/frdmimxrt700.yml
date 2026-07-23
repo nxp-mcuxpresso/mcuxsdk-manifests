@@ -73,6 +73,7 @@ repo_list:
 - psa-arch-tests
 - ethermind
 - wifi_nxp
+- wpa_supplicant-rtos
 - freertos-kernel
 - freertos-kernel-upstream
 - corepkcs11
