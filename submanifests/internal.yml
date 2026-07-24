@@ -56,7 +56,7 @@ manifest:
       branch_flow: false
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: cbb1f9959e84149e375864869bebe4ba14d4c3a8
+    revision: 233408d4247ca55987a4e6aa8490b92fe2cd9da6
     submodules:
     - path: modules/manifest_schema
     groups:
