@@ -1,3 +1,64 @@
+# Package tailoring: trim devices/ and drivers/ to only what KW47EVK needs.
+# Fixes: MCUX-87403 (unused driver files confuse users, e.g. lpc_rtc vs lpc_rtc_1)
+# Implemented via: MCUX-89118 (drivers_filter / devices_filter mechanism)
+devices_filter:
+  - Wireless/KW/*
+  - Wireless/KW/KW47B42Z83
+  - Wireless/KW/KW47B42Z96
+  - Wireless/KW/KW47B42Z97
+  - Wireless/KW/KW47B42ZB2
+  - Wireless/KW/KW47B42ZB3
+  - Wireless/KW/KW47B42ZB6
+  - Wireless/KW/KW47B42ZB7
+  - Wireless/KW/KW47Z42082
+  - Wireless/KW/KW47Z42092
+  - Wireless/KW/KW47Z420B2
+  - Wireless/KW/KW47Z420B3
+  - Wireless/KW/periph6
+
+drivers_filter:
+  - ccm32k
+  - ce
+  - clock
+  - cmc
+  - common
+  - crc
+  - dma3
+  - elemu
+  - ewm
+  - flash_k4
+  - flexcan
+  - flexio
+  - gpio
+  - i3c
+  - imu
+  - lpadc
+  - lpcmp
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - lin
+  - ltc
+  - mcm
+  - mscm
+  - mu1
+  - port
+  - rtc
+  - sema42
+  - sfa
+  - smscm
+  - spc
+  - syspm
+  - tpm
+  - trdc
+  - trgmux
+  - vbat
+  - vref_1
+  - wdog32
+  - wuu
+
 # Core repositories (always included)
 repo_list:
   - core
