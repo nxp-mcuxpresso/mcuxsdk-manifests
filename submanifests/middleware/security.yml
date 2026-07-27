@@ -254,7 +254,7 @@ manifest:
       description: Cryptographic library running on NXP ELE HSE-B Crypto Hardware
         IP
     path: mcuxsdk/components/ele_hseb
-    revision: bd05f624112aa22143ed7783c484efdf41df676f
+    revision: 48981dc364154c4359c304ce731b0f8094d45ebd
     url: https://github.com/nxp-mcuxpresso/ele_hseb
     groups:
     - security
