@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: fatfs
-    revision: e4d8284efc2c6dccc3f2ed83e3df563c952b635b
+    revision: 5bd01759c8f62c774ae0ed921cce64f302a0a0df
     path: mcuxsdk/middleware/fatfs
     groups:
     - fatfs
