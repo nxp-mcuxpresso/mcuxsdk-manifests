@@ -18,7 +18,7 @@ manifest:
       description: DSP Audio Streamer Framework based on Xtensa Audio Framework from
         Cadence Design Systems for Xtensa DSP Audio Engines.
     path: mcuxsdk/middleware/cadence/multicore-xaf
-    revision: d575544741f3e0ad599db9ffcaf451069466ad43
+    revision: 3d708d9445b69782801aeafa938e8abb2c5c13b6
     groups:
     - bifrost
   - name: dsp-codecs
