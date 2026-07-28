@@ -32,6 +32,7 @@ repo_list:
 - canopennode
 - cjson
 - coex
+- mcux-sdk-middleware-connectivity-framework
 - core
 - corehttp
 - corehttp-upstream
