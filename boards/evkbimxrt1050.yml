@@ -19,6 +19,71 @@ example_list:
 - soem_examples
 - usb_examples
 - wifi_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - RT/RT1050
+
+drivers_filter:
+  - adc_12b1msps_sar
+  - adc_etc
+  - aipstz
+  - aoi
+  - bee
+  - cache
+  - clock
+  - cmp
+  - common
+  - csi
+  - dcdc_1
+  - dcp
+  - dmamux
+  - edma
+  - elcdif
+  - enc
+  - enet
+  - ewm
+  - flexcan
+  - flexio
+  - flexpwm
+  - flexram
+  - flexspi
+  - gpc_1
+  - gpt
+  - igpio
+  - iomuxc
+  - kpp
+  - lpi2c
+  - lpspi
+  - lpuart
+  - ocotp
+  - pit
+  - pmu
+  - power
+  - pwm
+  - pxp
+  - qtmr_1
+  - reset
+  - rtwdog
+  - sai
+  - semc
+  - snvs_hp
+  - snvs_lp
+  - spdif
+  - src
+  - tempmon
+  - trng
+  - tsc
+  - usdhc
+  - wdog01
+  - xbara
+  - xbarb
+
 repo_list:
 - CMSIS
 - audio-voice-components

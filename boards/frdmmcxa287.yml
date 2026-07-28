@@ -18,6 +18,65 @@ example_list:
 - tfm_examples
 - trustzone_examples
 - usb_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXA
+
+drivers_filter:
+  - aoi
+  - cache
+  - cdog
+  - clock
+  - common
+  - crc
+  - ctimer
+  - dac_1
+  - edma4
+  - eim
+  - erm
+  - ewm
+  - flexcan
+  - flexio
+  - flexspi
+  - gdet
+  - glikey
+  - gpio
+  - i3c
+  - inputmux
+  - iomuxc
+  - irtc
+  - itrc
+  - lpadc
+  - lpc_freqme
+  - lpcmp
+  - lpi2c
+  - lpspi
+  - lptmr
+  - lpuart
+  - mcx_cmc
+  - mcx_spc
+  - mcx_vbat
+  - ostimer
+  - port
+  - power
+  - reset
+  - smartcard
+  - smartdma
+  - tdet
+  - trdc_1
+  - trng
+  - utick
+  - vref_1
+  - waketimer
+  - wuu
+  - wwdt
+
 repo_list:
 - aws_iot_llhttp
 - core

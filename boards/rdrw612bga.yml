@@ -1,3 +1,45 @@
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - Wireless/RW
+
+drivers_filter:
+  - cache
+  - cdog
+  - clock
+  - cns_acomp
+  - cns_adc
+  - cns_dac
+  - common
+  - ctimer
+  - dmic
+  - enet
+  - flexcomm
+  - flexspi
+  - fmeas
+  - gdma
+  - imu
+  - inputmux
+  - iomuxc
+  - itrc_1
+  - lcdic
+  - lpc_crc
+  - lpc_dma
+  - lpc_gpio
+  - lpc_rtc
+  - mrt
+  - ostimer
+  - pint
+  - power
+  - powerquad
+  - reset
+  - sctimer
+  - sdu
+  - smartcard
+  - trng
+  - utick
+  - wwdt
+
 # Core repositories (always included)
 repo_list:
   - mcu-sdk-components

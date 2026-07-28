@@ -8,6 +8,56 @@ example_list:
 - ota_examples
 - se_hostlib_examples
 - usb_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXA
+
+drivers_filter:
+  - aoi
+  - cache
+  - cdog
+  - clock
+  - common
+  - crc
+  - ctimer
+  - edma4
+  - eim
+  - eqdc
+  - erm
+  - flexpwm
+  - glikey
+  - gpio
+  - i3c
+  - inputmux
+  - iomuxc
+  - lpadc
+  - lpc_freqme
+  - lpcmp
+  - lpi2c
+  - lpspi
+  - lptmr
+  - lpuart
+  - mcx_cmc
+  - mcx_spc
+  - mcx_vbat
+  - ostimer
+  - port
+  - power
+  - pwm
+  - reset
+  - smartcard
+  - trdc_1
+  - utick
+  - waketimer
+  - wuu
+  - wwdt
+
 repo_list:
 - core
 - CMSIS

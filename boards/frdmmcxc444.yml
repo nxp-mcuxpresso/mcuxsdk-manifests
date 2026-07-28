@@ -7,6 +7,52 @@ example_list:
 - freertos_examples
 - multiprocessor_examples
 - usb_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXC
+
+drivers_filter:
+  - adc16
+  - cache
+  - clock
+  - cmp
+  - common
+  - cop
+  - dac
+  - dma
+  - dmamux
+  - flash
+  - flexio
+  - gpio
+  - i2c
+  - iomuxc
+  - llwu
+  - lptmr
+  - lpuart
+  - mcm
+  - pit
+  - pmc
+  - port
+  - power
+  - rcm
+  - reset
+  - rtc
+  - sai
+  - sim
+  - slcd
+  - smartcard
+  - smc
+  - spi
+  - tpm
+  - uart
+  - vref
+
 repo_list:
 - core
 - CMSIS

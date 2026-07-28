@@ -11,6 +11,74 @@ example_list:
 - multicore_examples
 - modbus_examples
 - digital_encoder_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - i.MX/i.MX943
+
+drivers_filter:
+  - aoi
+  - bbnsm
+  - biss
+  - cache
+  - clock
+  - common
+  - dcif
+  - ecat
+  - edma4
+  - eim
+  - endat2p2
+  - endat3
+  - eqdc
+  - erm
+  - ewm
+  - flexcan
+  - flexio
+  - flexpwm
+  - fract_pll
+  - gpt
+  - hiperface
+  - i3c
+  - igf
+  - intm
+  - iomuxc
+  - irqsteer_1
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - mcm
+  - msgintr
+  - mu1
+  - netc
+  - pdm
+  - power
+  - pwm
+  - pxp
+  - qtmr_1
+  - reset
+  - rgpio
+  - s3mu
+  - sai
+  - sar_adc
+  - sema42
+  - sfa
+  - sinc
+  - smartcard
+  - sramctl
+  - src1
+  - tpm
+  - trdc
+  - tstmr
+  - xbar_1
+  - xspi
+
 repo_list:
 - core
 - CMSIS

@@ -24,6 +24,62 @@ example_list:
 - usb_examples
 - vglite_examples
 - wifi_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - RT/RT700
+
+drivers_filter:
+  - acmp
+  - cache
+  - cdog
+  - clock
+  - common
+  - crc
+  - ctimer
+  - edma4
+  - flexio
+  - gdet
+  - glikey
+  - gpio
+  - i3c
+  - inputmux
+  - iomuxc
+  - irtc
+  - itrc
+  - jpegdec
+  - lcdif
+  - lpadc
+  - lpc_freqme
+  - lpflexcomm
+  - mipi_dsi
+  - mmu
+  - mrt
+  - mu1
+  - ostimer
+  - pdm
+  - pint
+  - pngdec
+  - power
+  - puf_v3
+  - reset
+  - sai
+  - sctimer
+  - sdadc
+  - sema42
+  - smartcard
+  - syspm
+  - trng
+  - usdhc
+  - utick
+  - wwdt
+  - xspi
+
 repo_list:
 - core
 - CMSIS

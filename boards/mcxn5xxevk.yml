@@ -21,6 +21,81 @@ example_list:
 - usb_examples
 - wifi_examples
 - trustzone_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXN
+
+drivers_filter:
+  - cache
+  - cdog
+  - clock
+  - common
+  - crc
+  - ctimer
+  - dac_1
+  - edma4
+  - eim
+  - erm
+  - evtg
+  - ewm
+  - flexcan
+  - flexio
+  - flexpwm
+  - flexspi
+  - gdet
+  - gpio
+  - i3c
+  - inputmux
+  - intm
+  - iomuxc
+  - iped
+  - irtc
+  - itrc
+  - lpadc
+  - lpc_freqme
+  - lpcmp
+  - lpflexcomm
+  - lptmr
+  - mailbox
+  - mcx_cmc
+  - mcx_enet
+  - mcx_spc
+  - mcx_vbat
+  - mrt
+  - npx
+  - ostimer
+  - otp
+  - pdm
+  - pint
+  - plu
+  - port
+  - power
+  - powerquad
+  - puf_v3
+  - pwm
+  - qdc
+  - reset
+  - sai
+  - sctimer
+  - sema42
+  - smartcard
+  - smartdma
+  - syspm
+  - tdet
+  - trdc_1
+  - tsi
+  - usdhc
+  - utick
+  - vref_1
+  - wuu
+  - wwdt
+
 repo_list:
 - core
 - CMSIS

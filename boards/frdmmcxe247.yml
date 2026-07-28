@@ -8,6 +8,56 @@ example_list:
 - lwip_examples
 - mbedtls3x_examples
 - ota_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXE
+
+drivers_filter:
+  - acmp
+  - adc12
+  - cache
+  - clock
+  - common
+  - crc
+  - dmamux
+  - edma
+  - ela_csec
+  - enet
+  - ewm
+  - flash
+  - flexcan
+  - flexio
+  - ftm
+  - gpio
+  - iomuxc
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - mcm
+  - pdb
+  - pmc
+  - port
+  - power
+  - qspi
+  - rcm
+  - reset
+  - rtc
+  - sai
+  - sim
+  - smartcard
+  - smc
+  - sysmpu
+  - trgmux
+  - wdog32
+
 repo_list:
 - core
 - CMSIS

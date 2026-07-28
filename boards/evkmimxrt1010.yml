@@ -9,6 +9,61 @@ example_list:
 - lvgl_examples
 - mbedtls_examples
 - usb_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - RT/RT1010
+  - RT/RT1020
+  - RT/RT1050
+
+drivers_filter:
+  - adc_12b1msps_sar
+  - adc_etc
+  - aipstz
+  - aoi
+  - cache
+  - clock
+  - common
+  - dcdc_1
+  - dcp
+  - dmamux
+  - edma
+  - ewm
+  - flexio
+  - flexpwm
+  - flexram
+  - flexspi
+  - gpc_1
+  - gpt
+  - igpio
+  - iomuxc
+  - kpp
+  - lpi2c
+  - lpspi
+  - lpuart
+  - ocotp
+  - otfad
+  - pit
+  - pmu
+  - power
+  - pwm
+  - reset
+  - rtwdog
+  - sai
+  - snvs_hp
+  - snvs_lp
+  - spdif
+  - src
+  - tempmon
+  - trng
+  - wdog01
+  - xbara
+
 repo_list:
 - CMSIS
 - aws_iot_llhttp

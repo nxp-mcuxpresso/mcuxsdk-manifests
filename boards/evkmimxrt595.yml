@@ -18,6 +18,58 @@ example_list:
 - wifi_examples
 - trustzone_examples
 - lwip_examples/ipv4_ipv6_echo_common
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - RT/RT500
+
+drivers_filter:
+  - acmp
+  - cache
+  - casper
+  - clock
+  - common
+  - ctimer
+  - dmic
+  - flexcomm
+  - flexio
+  - flexspi
+  - fmeas
+  - hashcrypt
+  - i3c
+  - iap3
+  - inputmux
+  - iomuxc
+  - lcdif
+  - lpadc
+  - lpc_crc
+  - lpc_dma
+  - lpc_gpio
+  - lpc_iopctl
+  - lpc_rtc
+  - mipi_dsi
+  - mrt
+  - mu
+  - ostimer
+  - otfad
+  - pint
+  - power
+  - powerquad
+  - puf
+  - reset
+  - sctimer
+  - sema42
+  - smartdma
+  - trng
+  - usdhc
+  - utick
+  - wwdt
+
 repo_list:
 - core
 - CMSIS

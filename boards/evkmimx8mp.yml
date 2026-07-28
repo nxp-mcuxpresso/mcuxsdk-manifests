@@ -4,6 +4,55 @@ example_list:
 - driver_examples
 - demo_apps
 - multicore_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - i.MX/i.MX8MP
+
+drivers_filter:
+  - aipstz
+  - cache
+  - clock
+  - common
+  - dma3
+  - easrc
+  - ecspi
+  - enet
+  - enet_qos
+  - flexcan
+  - flexspi
+  - gpc_2
+  - gpt
+  - igpio
+  - ii2c
+  - iomuxc
+  - ipwm
+  - irqsteer
+  - isi
+  - iuart
+  - lcdif
+  - mu
+  - ocotp
+  - pdm
+  - power
+  - rdc
+  - rdc_sema42
+  - reset
+  - sai
+  - sdma
+  - sema4
+  - snvs_hp
+  - snvs_lp
+  - src
+  - tmu_2
+  - usdhc
+  - wdog01
+
 repo_list:
 - core
 - CMSIS

@@ -12,6 +12,72 @@ example_list:
 - mbedtls_examples
 - usb_examples
 - trustzone_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - LPC/LPC5500
+
+drivers_filter:
+  - anactrl
+  - aoi
+  - cache
+  - casper
+  - cdog
+  - clock
+  - cmp_1
+  - common
+  - crc
+  - ctimer
+  - dac_1
+  - dmic
+  - enc
+  - flexcomm
+  - flexpwm
+  - flexspi
+  - gint
+  - hashcrypt
+  - hscmp
+  - i3c
+  - iap1
+  - inputmux
+  - iomuxc
+  - iped
+  - irtc
+  - itrc
+  - lpadc
+  - lpc_crc
+  - lpc_dma
+  - lpc_freqme
+  - lpc_gpio
+  - lpc_iocon
+  - lpc_rtc
+  - mailbox
+  - mcan
+  - mrt
+  - opamp
+  - ostimer
+  - pint
+  - plu
+  - power
+  - powerquad
+  - prince
+  - puf
+  - puf_v3
+  - pwm
+  - reset
+  - rng_1
+  - sctimer
+  - sdif
+  - sysctl
+  - utick
+  - vref_1
+  - wwdt
+
 repo_list:
 - core
 - CMSIS

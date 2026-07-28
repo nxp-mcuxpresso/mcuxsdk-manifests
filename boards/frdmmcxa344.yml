@@ -6,6 +6,60 @@ example_list:
 - freemaster_examples
 - freertos_examples
 - littlefs_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXA
+
+drivers_filter:
+  - aoi
+  - cache
+  - cdog
+  - clock
+  - common
+  - crc
+  - ctimer
+  - edma4
+  - eim
+  - eqdc
+  - erm
+  - flexcan
+  - flexpwm
+  - glikey
+  - gpio
+  - inputmux
+  - iomuxc
+  - lpadc
+  - lpc_freqme
+  - lpcmp
+  - lpi2c
+  - lpspi
+  - lptmr
+  - lpuart
+  - mau
+  - mcx_cmc
+  - mcx_spc
+  - mcx_vbat
+  - opamp_fast
+  - ostimer
+  - port
+  - power
+  - pwm
+  - reset
+  - rtc
+  - smartcard
+  - smartdma
+  - trdc_1
+  - utick
+  - waketimer
+  - wuu
+  - wwdt
+
 repo_list:
 - core
 - CMSIS

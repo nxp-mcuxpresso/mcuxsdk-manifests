@@ -19,6 +19,76 @@ example_list:
 - ota_examples
 - soem_examples
 - usb_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - RT/RT1180
+
+drivers_filter:
+  - acmp
+  - aoi
+  - asrc
+  - bbnsm
+  - cache
+  - clock
+  - common
+  - dac12
+  - ecat
+  - edma4
+  - eqdc
+  - ewm
+  - flexcan
+  - flexio
+  - flexpwm
+  - flexspi
+  - flexspi_flr
+  - gpt
+  - i3c
+  - iee
+  - iee_apc
+  - iomuxc
+  - kpp
+  - lpadc
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - mecc
+  - msgintr
+  - mu1
+  - netc
+  - otfad
+  - pdm
+  - power
+  - pwm
+  - qtmr_1
+  - reset
+  - rgpio
+  - rtwdog
+  - s3mu
+  - sai
+  - sema42
+  - semc
+  - sinc
+  - smartcard
+  - spdif
+  - sramc
+  - sysctr
+  - syspm
+  - tempsensor
+  - tpm
+  - trdc
+  - tstmr
+  - usdhc
+  - vref_1
+  - xbar_1
+
 repo_list:
 - CMSIS
 - aws_iot_llhttp

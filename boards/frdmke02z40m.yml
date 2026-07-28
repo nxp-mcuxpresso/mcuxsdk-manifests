@@ -2,6 +2,41 @@ example_list:
 - cmsis_driver_examples
 - demo_apps
 - driver_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - Kinetis/KE
+
+drivers_filter:
+  - acmp_1
+  - adc_5v12b_ll18_015
+  - cache
+  - clock
+  - common
+  - crc
+  - flash_ftmr
+  - ftm
+  - gpio_1
+  - i2c
+  - iomuxc
+  - irq
+  - kbi
+  - mcm
+  - pit
+  - power
+  - reset
+  - rtc_1
+  - smartcard
+  - spi
+  - tpm
+  - uart
+  - wdog8
+
 repo_list:
 - core
 - CMSIS

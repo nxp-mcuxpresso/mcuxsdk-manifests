@@ -7,6 +7,52 @@ example_list:
 - freertos_examples
 - mbedtls3x_examples
 - ota_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXC
+
+drivers_filter:
+  - cache
+  - clock
+  - common
+  - crc
+  - ctimer
+  - edma4
+  - eim
+  - erm
+  - flash_k4
+  - flexpwm
+  - gpio
+  - inputmux
+  - iomuxc
+  - lpadc
+  - lpc_freqme
+  - lpcmp
+  - lpi2c
+  - lpspi
+  - lptmr
+  - lpuart
+  - mcx_cmc
+  - mcx_spc
+  - mcx_vbat
+  - opamp
+  - port
+  - power
+  - pwm
+  - reset
+  - rtc
+  - smartcard
+  - trdc_1
+  - trng
+  - wuu
+  - wwdt
+
 repo_list:
 - core
 - CMSIS

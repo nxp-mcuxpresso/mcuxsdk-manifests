@@ -4,6 +4,44 @@ example_list:
 - driver_examples
 - freemaster_examples
 - freertos_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - LPC/LPC800
+
+drivers_filter:
+  - cache
+  - clock
+  - common
+  - ftm
+  - i3c
+  - iap
+  - inputmux
+  - iomuxc
+  - lpc_acomp
+  - lpc_adc
+  - lpc_crc
+  - lpc_dma
+  - lpc_gpio
+  - lpc_i2c
+  - lpc_iocon_lite
+  - lpc_minispi
+  - lpc_miniusart
+  - mrt
+  - pint
+  - power
+  - reset
+  - smartcard
+  - swm
+  - syscon
+  - wkt
+  - wwdt
+
 repo_list:
 - core
 - CMSIS

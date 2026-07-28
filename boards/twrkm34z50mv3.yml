@@ -5,6 +5,57 @@ example_list:
 - driver_examples
 - freemaster_examples
 - freertos_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - Kinetis/KM
+
+drivers_filter:
+  - adc16
+  - afe
+  - cache
+  - clock
+  - cmp
+  - common
+  - crc
+  - dma
+  - dmamux
+  - ewm
+  - flash
+  - gpio
+  - i2c
+  - iomuxc
+  - irtc
+  - llwu
+  - lptmr
+  - lpuart
+  - mcm
+  - mmau
+  - pdb
+  - pit
+  - pmc
+  - port
+  - power
+  - qtmr_2
+  - rcm
+  - reset
+  - rnga
+  - sim
+  - slcd
+  - smartcard
+  - smc
+  - spi
+  - sysmpu
+  - uart
+  - vref
+  - wdog
+  - xbar
+
 repo_list:
 - core
 - CMSIS

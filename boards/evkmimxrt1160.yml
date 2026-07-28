@@ -22,6 +22,87 @@ example_list:
 - usb_examples
 - vglite_examples
 - wifi_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - RT/RT1160
+  - RT/RT1170
+
+drivers_filter:
+  - acmp
+  - adc_etc
+  - aoi
+  - asrc
+  - caam
+  - cache
+  - cdog
+  - clock
+  - common
+  - csi
+  - dac12
+  - dcic
+  - dmamux
+  - edma
+  - elcdif
+  - enc
+  - enet
+  - ewm
+  - flexcan
+  - flexio
+  - flexpwm
+  - flexram
+  - flexspi
+  - gpt
+  - iee
+  - iee_apc
+  - igpio
+  - iomuxc
+  - key_manager
+  - kpp
+  - lcdifv2
+  - lpadc
+  - lpi2c
+  - lpspi
+  - lpuart
+  - mcm
+  - mecc
+  - mipi_csi2rx
+  - mipi_dsi_split
+  - mu
+  - ocotp
+  - otfad
+  - pdm
+  - pit
+  - power
+  - puf
+  - pwm
+  - pxp
+  - qtmr_1
+  - rdc
+  - rdc_sema42
+  - reset
+  - rtwdog
+  - sai
+  - sema4
+  - semc
+  - smartcard
+  - snvs_hp
+  - snvs_lp
+  - spdif
+  - ssarc
+  - tempsensor
+  - usdhc
+  - wdog01
+  - xbara
+  - xbarb
+  - xecc
+  - xrdc2
+
 repo_list:
 - CMSIS
 - audio-voice-components

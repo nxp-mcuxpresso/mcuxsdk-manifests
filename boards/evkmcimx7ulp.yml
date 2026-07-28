@@ -6,6 +6,64 @@ example_list:
 - demo_apps
 - multicore_examples
 - mmcau_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - i.MX/i.MX7ULP
+
+drivers_filter:
+  - acmp
+  - cache
+  - clock
+  - common
+  - crc
+  - dac12
+  - dmamux
+  - edma
+  - ewm
+  - flexbus
+  - flexio
+  - gpio
+  - iomuxc
+  - lcdif
+  - llwu
+  - lpadc
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - ltc
+  - mcm
+  - mipi_dsi
+  - mmdc
+  - msmc
+  - mu
+  - ocotp
+  - otfad
+  - pmc0
+  - port
+  - power
+  - qspi
+  - reset
+  - sai
+  - sema42
+  - sim
+  - smartcard
+  - snvs_hp
+  - snvs_lp
+  - tpm
+  - trgmux
+  - trng
+  - tstmr
+  - wdog32
+  - xrdc
+
 repo_list:
 - core
 - CMSIS

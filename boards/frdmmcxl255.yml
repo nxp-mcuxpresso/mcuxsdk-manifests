@@ -14,6 +14,58 @@ example_list:
 - tfm_examples
 - trustzone_examples
 
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXL
+
+drivers_filter:
+  - aoi
+  - aon_lpadc
+  - cache
+  - cdog
+  - clock
+  - common
+  - crc
+  - ctimer
+  - edma4
+  - erm
+  - glikey
+  - gpio
+  - inputmux
+  - iomuxc
+  - kpp
+  - lpacmp
+  - lpadc
+  - lpc_freqme
+  - lpcmp
+  - lpi2c
+  - lpspi
+  - lptmr
+  - lpuart
+  - mcx_cmc
+  - mu1
+  - ostimer
+  - pls_pmu
+  - port
+  - power
+  - qtmr_1
+  - reset
+  - rtc_analog
+  - slcd_split
+  - smartcard
+  - smm
+  - trdc_1
+  - trng
+  - utick
+  - wuu
+  - wwdt
+
 repo_list:
   - core
   - CMSIS

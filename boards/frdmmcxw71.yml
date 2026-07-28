@@ -1,3 +1,55 @@
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXW
+  - Wireless
+
+drivers_filter:
+  - cache
+  - ccm32k
+  - clock
+  - cmc
+  - common
+  - crc
+  - dma3
+  - elemu
+  - ewm
+  - flash_k4
+  - flexcan
+  - flexio
+  - gpio
+  - i3c
+  - imu
+  - iomuxc
+  - lpadc
+  - lpcmp
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - ltc
+  - mcm
+  - mscm
+  - port
+  - power
+  - reset
+  - rtc
+  - sema42
+  - sfa
+  - smartcard
+  - smscm
+  - spc
+  - syspm
+  - tpm
+  - trdc
+  - trgmux
+  - tstmr
+  - vbat
+  - vref_1
+  - wdog32
+  - wuu
+
 # Core repositories (always included)
 repo_list:
   - core

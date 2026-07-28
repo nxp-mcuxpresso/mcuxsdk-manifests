@@ -10,6 +10,61 @@ example_list:
 - mbedtls3x_examples
 - ota_examples
 - el2go_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXE
+
+drivers_filter:
+  - bctu
+  - cache
+  - clock
+  - cmu_fc
+  - cmu_fm
+  - common
+  - crc
+  - dmamux
+  - edma4
+  - eim
+  - emios
+  - enet_qos
+  - erm
+  - flash_c40
+  - flexcan
+  - flexio
+  - intm
+  - iomuxc
+  - lcu
+  - lpcmp
+  - lpi2c
+  - lpspi
+  - lpuart
+  - mc_rgm
+  - mcm
+  - mscm
+  - pit
+  - power
+  - qspi
+  - reset
+  - rtc_jdp
+  - sai
+  - sar_adc
+  - sema42
+  - stm
+  - swt
+  - tempsense
+  - trgmux
+  - tspc
+  - virt_wrapper
+  - wkpu
+  - xbic
+  - xrdc
+
 repo_list:
 - core
 - CMSIS
