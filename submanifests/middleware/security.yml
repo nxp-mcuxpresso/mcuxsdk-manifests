@@ -82,6 +82,8 @@ manifest:
     - mbedtls
     - security
   - name: mbedtls3x
+    submodules:
+    - path: framework
     userdata:
       owner: ruchika.gupta_1@nxp.com
       dev_branch: mcux_main
@@ -92,7 +94,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 89223d1dd13ed91d4521df0d25fb4a35bfe84c7d
+    revision: 22045f8e5e4fe2f255570f60c9d15c9c99bab4a6
     groups:
     - mbedtls3x
     - security
