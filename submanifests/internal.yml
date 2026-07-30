@@ -77,7 +77,7 @@ manifest:
       branch_flow: false
   - name: framework-int
     path: mcuxsdk/middleware/wireless/framework_private
-    revision: 4e33bb536bef41a6432585410686c883f7a3ec28
+    revision: f245d5461bc4b9cd9f039f429237d6692d4c7d81
     groups:
     - bifrost
     userdata:
@@ -86,7 +86,7 @@ manifest:
       branch_flow: false
   - name: hciot-threadx
     path: mcuxsdk/examples/wireless_examples/reference_design/health_care_iot_threadx
-    revision: 70eb994eef13732e39a0302503e66d1bdf2865b9
+    revision: 6be410c3384328b2cd444586f3473c976a5926b0
     groups:
     - bifrost
     userdata:
@@ -96,7 +96,7 @@ manifest:
       description: Health Care IoT Reference Design using ThreadX RTOS
   - name: threadx
     path: mcuxsdk/rtos/eclipse-threadx/threadx
-    revision: be411ceed27a88831791c2023617c15d6069a649
+    revision: 631fb3688b9d0fcd14650c49ae274e47d9bceb7f
     groups:
     - bifrost
     userdata:
@@ -116,7 +116,7 @@ manifest:
       branch_flow: false
   - name: fw_v19_nb
     path: mcuxsdk/middleware/wireless/fw_v19_nb
-    revision: d1be3508ad369ec45485ff93ff948b7ede9b14af
+    revision: a3d933fd3af31e5ebe51d4a6abee8f9c3aafe32d
     groups:
     - bifrost
     - fw_v19_nb
@@ -166,7 +166,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ieee-802.15.4_private
-    revision: 9a193a8c15c92fece46f58d6ca96d932576b63f4
+    revision: a03d81618ae23c7de2731b38071ce14ae82d15ac
     repo-path: mcux-sdk-middleware-ieee_802.15.4-int
     groups:
     - bifrost
@@ -204,7 +204,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: 21821fcaf7194b6e75e7e82efa9019f50b539ac4
+    revision: 8b1c2ce965c619321cd814c6ebc1b30b292579a9
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
@@ -215,7 +215,7 @@ manifest:
       track_branch: master
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo_private
-    revision: 83cd38714af3cde3cae03c77f6326266a67fd253
+    revision: 03039f81351dc44e4a6b0edaee97dfead9f898f7
     repo-path: mcux-sdk-middleware-ble_cs_algo-int
     groups:
     - bifrost
@@ -226,7 +226,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/ble_cs_algo-restricted_private
-    revision: 59424f1ee312e6b9a6d740ab57a17c7d4ea469bb
+    revision: 78aeb80f594b00cb12710e1e15ded4bf30b70e16
     repo-path: mcux-sdk-middleware-ble_cs_algo-restricted-int
     groups:
     - bifrost
