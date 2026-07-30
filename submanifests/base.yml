@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 2e841fa4ee791aa9cf11783657af729278e3fd8f
+    revision: 3e2c0fb20696944b3094c9f3b04690007ea5dce3
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -49,7 +49,7 @@ manifest:
         that are based on Arm Cortex processors, distributed by ARM.
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: a2ace20c4221c2917276f1bd82ec3f9dc1b60c36
+    revision: cbabeabb6ac94df27c3642228b35638aebfd319d
     groups:
     - optional
     userdata:
@@ -59,7 +59,7 @@ manifest:
       description: System View Description (SVD) files for NXP MCU devices, providing
         detailed peripheral register definitions
   - name: mcu-sdk-examples
-    revision: 165ef9a835f889b7aac19160adf00165e282a536
+    revision: 3d0e0fb09909c7a7bfec7fb28b009fac23287417
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:

@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 29fb6e7177d6b4a4cab68f77cd639c5352acaaf0
+    revision: ba48cf22b3eeb41c0b1a0dbd5d1e7cb392880ac8
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
