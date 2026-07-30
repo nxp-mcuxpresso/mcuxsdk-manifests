@@ -37,7 +37,7 @@ manifest:
       display_name: Secure Element
       description: Secure Element
     path: mcuxsdk/middleware/se_hostlib
-    revision: 410f88d9393d9b536f3900ac0e5acb019ee9d6f3
+    revision: 5124231069285675c7f7c0a855da7d748a719b0a
     submodules: false
     groups:
     - bifrost
