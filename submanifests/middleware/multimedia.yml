@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: maestro
-    revision: 780bf5941167da074eba2a83d804dcd66c591106
+    revision: 950afdb2334beb6d77a778e6123e1f8ef620bd6e
     path: mcuxsdk/middleware/audio_voice/maestro
     groups:
     - maestro
@@ -105,7 +105,7 @@ manifest:
       description: NXP decoder, encoder and processing libraries for MCU integrated
         and demonstrated in Maestro audio framework
     path: mcuxsdk/middleware/audio_voice/components
-    revision: 0d09428ea5159df561e8a33b3175147d5b854629
+    revision: e45c77bd877d3b9db340b8eb7f9c452249ae45ad
     groups:
     - audio-voice-components
     - audio_voice

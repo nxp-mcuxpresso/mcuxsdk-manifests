@@ -17,7 +17,7 @@ manifest:
       display_name: Motor Control
       description: Motor control examples
     path: mcuxsdk/middleware/motor_control
-    revision: c8a62469511db19b5824c3274333ca6361266d64
+    revision: 999d23964c765195ece8c573f4234d7a62949c5c
     repo-path: mcux-motor_control
     groups:
     - motor_control
@@ -42,7 +42,7 @@ manifest:
       display_name: FreeMASTER
       description: FreeMASTER communication driver
     path: mcuxsdk/middleware/freemaster
-    revision: ae760c4f8ea249f62faf92e0f78a3eaf9731c40c
+    revision: 160177e509848fb69bacea999c331f54f3b7568d
     repo-path: mcux-freemaster
     groups:
     - freemaster
