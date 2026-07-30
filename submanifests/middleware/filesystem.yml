@@ -27,7 +27,7 @@ manifest:
       branch_flow: false
       display_name: sdmmc stack
       description: sd, mmc, sdio card stack
-    revision: aaafcf85b8eab09042ffcd503f7c96d0bdb1bd60
+    revision: ad9ca756ee71f981ee46b0efb9c79effba229914
     path: mcuxsdk/middleware/sdmmc
     groups:
     - sdmmc
