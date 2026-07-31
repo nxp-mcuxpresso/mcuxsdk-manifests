@@ -24,7 +24,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-ecosystem
     path: mcuxsdk/ecosystem
-    revision: de2972b52b8690e8dbe006f4fad32e2ebfbcfa26
+    revision: edb461c19859a8522900659d03fbf9028b530740
     west-commands: scripts/west_commands.yml
     groups:
     - bifrost
@@ -135,7 +135,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: a51fb62b897edd041fb252bebb564f6cff266cd4
+    revision: 73a661120ec9ac08dc908ba900130e0b74ac785b
     groups:
     - bifrost
     userdata:
@@ -143,7 +143,7 @@ manifest:
       branch_flow: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: 0f0274e81d16162e5256c1b17913d4c514398827
+    revision: 6f7c8018f5ac340d545eedb73d8540a926676c4c
     groups:
     - bifrost
     userdata:
@@ -157,7 +157,7 @@ manifest:
       display_name: emWin
       description: emWin graphics library
     path: mcuxsdk/middleware/emwin
-    revision: b9df66d864a0a6da11230531cdd59c87ff66abc7
+    revision: afe1414d1b1f75efb77453a454eeec014b70dc8a
     groups:
     - bifrost
   - name: ieee-802.15.4_private
