@@ -17,7 +17,7 @@ manifest:
       display_name: Touch
       description: NXP Touch Library
     path: mcuxsdk/middleware/touch
-    revision: 5dff4ad36ccdd38028a0bdb258fdae5fcded6e5a
+    revision: 277ccd8d9cce147d3b66dfbd30af97cad0a71684
     repo-path: mcux-touch
     groups:
     - touch
