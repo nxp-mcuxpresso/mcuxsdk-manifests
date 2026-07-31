@@ -17,7 +17,7 @@ manifest:
       display_name: Safety
       description: NXP IEC60730B Safety Library
     path: mcuxsdk/middleware/safety_iec60730b
-    revision: 3179e877e83a1ea1d27103b83f48d2892e33b233
+    revision: 2854f5faea0e94b7aeac72a9b17349e0da9c011b
     repo-path: mcux-safety-iec60730b
     groups:
     - safety_iec60730b
