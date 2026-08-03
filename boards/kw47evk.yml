@@ -295,6 +295,7 @@ example_list:
   - wireless_examples/bluetooth/beacon
   - wireless_examples/bluetooth/ble_fscibb
   - wireless_examples/bluetooth/ble_shell
+  - wireless_examples/bluetooth/config
   - wireless_examples/bluetooth/digital_key_car_anchor
   - wireless_examples/bluetooth/digital_key_car_anchor_cs
   - wireless_examples/bluetooth/digital_key_device

@@ -279,6 +279,7 @@ example_list:
   - wireless_examples/bluetooth/beacon
   - wireless_examples/bluetooth/ble_fscibb
   - wireless_examples/bluetooth/ble_shell
+  - wireless_examples/bluetooth/config
   - wireless_examples/bluetooth/eatt_central
   - wireless_examples/bluetooth/eatt_peripheral
   - wireless_examples/bluetooth/fsci_bridge

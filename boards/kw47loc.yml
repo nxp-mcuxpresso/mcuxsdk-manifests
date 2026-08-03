@@ -265,6 +265,7 @@ example_list:
   - trustzone_examples
   - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb
+  - wireless_examples/bluetooth/config
   - wireless_examples/bluetooth/digital_key_car_anchor_cs
   - wireless_examples/bluetooth/digital_key_device_cs
   - wireless_examples/bluetooth/loc_reader
