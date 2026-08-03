@@ -1,0 +1,99 @@
+example_list:
+- canopennode_examples
+- cmsis_driver_examples
+- demo_apps
+- driver_examples
+- ele_hseb
+- freemaster_examples
+- freertos_examples
+- littlefs_examples
+- lvgl_examples
+- lwip_examples
+- mbedtls3x_examples
+- mbedtls_examples
+- multicore_examples
+- ota_examples
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (MCXE32B).
+devices_filter:
+  - MCX/MCXE
+
+drivers_filter:
+  - bctu
+  - cache
+  - clock
+  - cmu_fc
+  - cmu_fm
+  - common
+  - crc
+  - dmamux
+  - edma4
+  - edma_unified
+  - eim
+  - emios
+  - enet_qos
+  - erm
+  - flash_c40
+  - flexcan
+  - flexio
+  - intm
+  - lcu
+  - lpcmp
+  - lpi2c
+  - lpspi
+  - lpuart
+  - mc_rgm
+  - mcm
+  - mscm
+  - mu1
+  - pit
+  - power
+  - qspi
+  - reset
+  - rtc_jdp
+  - sai
+  - sar_adc
+  - sema42
+  - stm
+  - swt
+  - tempsense
+  - trgmux
+  - tspc
+  - virt_wrapper
+  - wkpu
+  - xbic
+  - xrdc
+
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- mcuboot_opensource
+- littlefs
+- lwip
+- canopennode
+- motor_control
+- rtcesl
+- freemaster
+- lvgl
+- safety_iec60730b
+- ele_hseb
+- mbedtls
+- mbedtls3x
+- tf-psa-crypto
+- tfm
+- psa_crypto_driver
+- psa-arch-tests
+- tf-m-tests
+- qcbor
+- mcux-sdk-middleware-multicore
+- mcux-mcmgr
+- rpmsg-lite
+- erpc
+- freertos-kernel
+- freertos-kernel-upstream
