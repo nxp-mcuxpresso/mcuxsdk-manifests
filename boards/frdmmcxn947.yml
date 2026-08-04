@@ -43,6 +43,7 @@ drivers_filter:
   - dac14
   - dac_1
   - edma4
+  - edma_unified
   - eim
   - erm
   - evtg

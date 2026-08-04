@@ -24,6 +24,7 @@ drivers_filter:
   - crc
   - ctimer
   - edma4
+  - edma_unified
   - eim
   - erm
   - flash_k4

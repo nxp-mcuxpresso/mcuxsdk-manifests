@@ -38,6 +38,7 @@ drivers_filter:
   - ctimer
   - dac_1
   - edma4
+  - edma_unified
   - eim
   - erm
   - espi

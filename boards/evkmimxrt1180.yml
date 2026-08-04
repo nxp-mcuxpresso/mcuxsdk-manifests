@@ -44,6 +44,7 @@ drivers_filter:
   - dac12
   - ecat
   - edma4
+  - edma_unified
   - eqdc
   - ewm
   - flexcan

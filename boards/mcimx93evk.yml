@@ -22,6 +22,7 @@ drivers_filter:
   - clock
   - common
   - edma4
+  - edma_unified
   - enet
   - enet_qos
   - flexcan

@@ -34,6 +34,7 @@ drivers_filter:
   - dac_1
   - dcif_1
   - edma4
+  - edma_unified
   - enet
   - enet_qos
   - eqdc

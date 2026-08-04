@@ -22,6 +22,7 @@ drivers_filter:
   - common
   - dpu_1
   - edma4
+  - edma_unified
   - flexcan
   - flexio
   - flexspi

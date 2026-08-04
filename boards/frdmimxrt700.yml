@@ -43,6 +43,7 @@ drivers_filter:
   - crc
   - ctimer
   - edma4
+  - edma_unified
   - flexio
   - gdet
   - glikey

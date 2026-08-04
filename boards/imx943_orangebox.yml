@@ -24,6 +24,7 @@ drivers_filter:
   - dcif
   - ecat
   - edma4
+  - edma_unified
   - eim
   - endat2p2
   - endat3

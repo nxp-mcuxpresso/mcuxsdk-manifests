@@ -30,6 +30,7 @@ drivers_filter:
   - crc
   - dmamux
   - edma4
+  - edma_unified
   - eim
   - emios
   - enet_qos
