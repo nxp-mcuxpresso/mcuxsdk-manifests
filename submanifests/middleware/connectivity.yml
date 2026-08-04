@@ -86,3 +86,15 @@ manifest:
       branch_flow: false
       display_name: CANopenNode
       description: CANopen protocol stack
+  - name: mstp-lib
+    url: https://github.com/adigostin/mstp-lib.git
+    revision: 40ce5ccc511dcd773cbe940f6cecb1e1e463f5f7
+    path: mcuxsdk/middleware/mstp-lib/src
+    groups:
+    - mstp
+    - middleware
+    userdata:
+      track_branch: master
+      branch_flow: false
+      display_name: mstp-lib
+      description: mstp/rstp protocol stack
