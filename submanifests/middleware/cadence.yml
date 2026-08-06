@@ -18,7 +18,7 @@ manifest:
       description: DSP Audio Streamer Framework based on Xtensa Audio Framework from
         Cadence Design Systems for Xtensa DSP Audio Engines.
     path: mcuxsdk/middleware/cadence/multicore-xaf
-    revision: 3d708d9445b69782801aeafa938e8abb2c5c13b6
+    revision: a27a7b238403b586da1cf38ac01cef61848082a1
     groups:
     - bifrost
   - name: dsp-codecs
@@ -29,7 +29,7 @@ manifest:
       display_name: Codecs for Cadence DSP platforms
       description: DSP Audio codecs for HiFi1, HiFi4, FusionF1 cores
     path: mcuxsdk/middleware/cadence/codecs
-    revision: 2c435c90f979689d9bc4bd926db959297931eec5
+    revision: d4e162392066a3106b5318759e6fa5033cebc263
     groups:
     - bifrost
   - name: naturedsp
@@ -53,6 +53,6 @@ manifest:
       description: DSP Neural Networks Framework based on Xtensa Neural Networks Library
         from Cadence Design Systems for Xtensa HiFi Audio Engines.
     path: mcuxsdk/middleware/cadence/nnlib
-    revision: 89d0a7e7f63b63bb6ff75c924383a9c291dfd40a
+    revision: 9b6b8156bcdb1afa31c90956698e94b4f30f9452
     groups:
     - bifrost
