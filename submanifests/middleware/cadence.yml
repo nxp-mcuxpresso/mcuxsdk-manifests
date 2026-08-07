@@ -14,6 +14,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      has_examples: true
       display_name: DSP Audio Streamer
       description: DSP Audio Streamer Framework based on Xtensa Audio Framework from
         Cadence Design Systems for Xtensa DSP Audio Engines.
@@ -37,6 +38,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      has_examples: true
       display_name: NatureDSP
       description: Digital Signal Processing for Xtensa HiFi1, HiFi4, FusionF1 Audio
         Engines

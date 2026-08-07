@@ -41,6 +41,7 @@ manifest:
       owner: xuelin.shi@nxp.com
       track_branch: external_main
       branch_flow: false
+      has_examples: true
       display_name: Multimedia Processing Pipelines (MPP)
       description: Library to build vision pipelines
     path: mcuxsdk/middleware/eiq/mpp

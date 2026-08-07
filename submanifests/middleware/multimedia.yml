@@ -89,6 +89,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: mcuxsdk_release
       branch_flow: false
+      has_examples: true
       display_name: voicespot
       description: VoiceSpot library
     path: mcuxsdk/middleware/audio_voice/components/voice_spot

@@ -32,6 +32,7 @@ manifest:
       owner: holt.sun@nxp.com
       track_branch: main
       branch_flow: true
+      has_examples: true
   - name: sdk_components
     path: mcuxsdk/ecosystem/sdk_generator/modules/sdk_components
     revision: e8d5be6bbd6643374a68ec8f6b9e7c5f334e461a
@@ -92,6 +93,7 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: false
+      has_examples: true
       display_name: health_care_iot_threadx
       description: Health Care IoT Reference Design using ThreadX RTOS
   - name: threadx
@@ -141,6 +143,7 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: true
+      has_examples: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
     revision: d84b275a55c5f369949c8d3ea70ef4f88bb2af9a
@@ -154,6 +157,7 @@ manifest:
       owner: tomas.barak@nxp.com
       track_branch: main
       branch_flow: false
+      has_examples: true
       display_name: emWin
       description: emWin graphics library
     path: mcuxsdk/middleware/emwin

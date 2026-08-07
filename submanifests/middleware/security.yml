@@ -117,6 +117,7 @@ manifest:
       owner: waqar.tahir@nxp.com
       track_branch: mcux_main
       branch_flow: false
+      has_examples: true
       display_name: TFM
       description: Trusted Firmware - M Library
     path: mcuxsdk/middleware/tfm/tf-m

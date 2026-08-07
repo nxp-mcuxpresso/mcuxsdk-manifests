@@ -68,6 +68,7 @@ manifest:
     userdata:
       track_branch: main
       branch_flow: true
+      has_examples: true
       display_name: Out-of-box Examples
       description: Out-of-box examples demonstrating peripheral driver usage and middleware
         integration.
