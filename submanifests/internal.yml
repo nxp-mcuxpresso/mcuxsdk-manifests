@@ -32,7 +32,6 @@ manifest:
       owner: holt.sun@nxp.com
       track_branch: main
       branch_flow: true
-      has_examples: true
   - name: sdk_components
     path: mcuxsdk/ecosystem/sdk_generator/modules/sdk_components
     revision: e8d5be6bbd6643374a68ec8f6b9e7c5f334e461a
