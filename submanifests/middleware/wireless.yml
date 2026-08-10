@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: 867e0e1b20dcee63176ce6960063f802d752c1e8
+    revision: 1c5dc9979210f558e5441b9ed7a6468e8f314f1e
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
