@@ -2,7 +2,6 @@
 # Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
 devices_filter:
   - MCX/MCXW
-  - Wireless
 
 drivers_filter:
   - cache

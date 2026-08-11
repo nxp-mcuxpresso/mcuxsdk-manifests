@@ -2,7 +2,6 @@
 # Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
 devices_filter:
   - MCX/MCXW
-  - Wireless
 
 drivers_filter:
   - aoi
@@ -65,7 +64,6 @@ repo_list:
   - mcu-sdk-doc
   - mcu-sdk-examples
   - mcux-devices-mcx
-  - mcux-devices-wireless
   - littlefs
   - freemaster
   - mcux-sdk-middleware-multicore
