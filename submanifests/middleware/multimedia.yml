@@ -42,7 +42,7 @@ manifest:
       display_name: vglite sdk
       description: Integration layer for the vglite graphics library
     path: mcuxsdk/middleware/vglite/vglite_sdk
-    revision: c41dd5de621d75188e2a037940e1bd3f620714e7
+    revision: ec56f8562d329ea5ff2bf9e3053b9713d6d9fad5
     groups:
     - vglite
     - middleware
