@@ -136,7 +136,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 141a648b5828266a0cc1146000c77b93b5ea1a4f
+    revision: 4bd706f2e2f9c476739ae2e2f8456c2bb685cb41
     groups:
     - bifrost
     userdata:
