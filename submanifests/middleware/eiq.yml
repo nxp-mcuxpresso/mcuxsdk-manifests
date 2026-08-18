@@ -19,7 +19,7 @@ manifest:
         network kernels optimized  for Cortex-M cores) - an inference engine for running
         TensorFlow Lite models'
     path: mcuxsdk/middleware/eiq
-    revision: 01720500eaa666e0293760c71fb54e6a0cc4e061
+    revision: 26daf553cbe0f32a19cfc1fa0f9c0f745ecfc39c
     groups:
     - eiq
     - middleware
