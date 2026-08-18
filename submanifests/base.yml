@@ -74,7 +74,7 @@ manifest:
         integration.
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 4e8101b67bd415ab72441bd9872e30e9732f56f9
+    revision: c997c8c30253ee391b1b9950d92a93276aeed77e
     path: mcuxsdk/components
     groups:
     - components
