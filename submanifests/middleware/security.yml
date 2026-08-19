@@ -72,12 +72,12 @@ manifest:
     - path: framework
     userdata:
       owner: vit.solcik@nxp.com
-      track_branch: mbedtls_v4.1.0
+      track_branch: mbedtls_v4.2.0
       branch_flow: false
       display_name: mbedtls
       description: mbedtls SSL/TLS library
     path: mcuxsdk/middleware/mbedtls
-    revision: faa2d04e2e933a344e304f9bf282c888a94f6f07
+    revision: d61031a9162b4f8879358ca842cc455a809493f5
     groups:
     - mbedtls
     - security
@@ -240,10 +240,10 @@ manifest:
     submodules: true
     userdata:
       owner: vit.solcik@nxp.com
-      track_branch: mcux_tf_psa_crypto_v1.1.0
+      track_branch: mcux_tf_psa_crypto_v1.2.0
       branch_flow: false
     path: mcuxsdk/middleware/mbedtls/tf-psa-crypto
-    revision: ede920c2f034d9d5ea2046cc41bd00a5a9a2e541
+    revision: 39646b16145af1d425bdf273605063bd9789fdff
     remote: nxp-mcuxpresso
     groups:
     - psa_crypto_driver
