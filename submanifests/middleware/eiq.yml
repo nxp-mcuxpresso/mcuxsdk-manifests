@@ -50,15 +50,16 @@ manifest:
     - eiq
     - middleware
   - name: mcuxsdk-middleware-executorch
+    submodules: true
     userdata:
       owner: xuelin.shi@nxp.com
-      track_branch: release/mcux
+      track_branch: release/mcux-full
       branch_flow: false
       display_name: ExecuTorch
       description: Software library for running machine learning models on embedded
         devices
     path: mcuxsdk/middleware/eiq/executorch
-    revision: 814d26b45829d4f0d3f08b0878c78fa1af9029b7
+    revision: bcf38bfb0e08da2c3cc7ff2f0e49b4e413112400
     groups:
     - eiq
     - middleware
