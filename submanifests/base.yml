@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 35b4a517e2c0fee4ff9bb9bc89838144e6b74654
+    revision: 1f0ef03597fec18667ef73629c8202c4a6d8b070
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -86,7 +86,7 @@ manifest:
       description: NXP MCU SDK components and board-specific peripheral driver libraries
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 1afe22ba10b17fb30506016d56ebe46f786fe75e
+    revision: 8331d85c43001701e3de79e43d53d3887e12dccd
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
