@@ -154,7 +154,7 @@ manifest:
       display_name: openvg
       description: openvg lib
     path: mcuxsdk/middleware/openvg
-    revision: 9ff3aa3e50ee80eb41220cf982cb2e473039d853
+    revision: 98c26c12a4ea4357bd058027db0afac959d21e4a
     url: https://github.com/nxp-mcuxpresso/mcux-openvg
     groups:
     - openvg
