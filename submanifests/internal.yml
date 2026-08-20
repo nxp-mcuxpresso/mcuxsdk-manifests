@@ -136,7 +136,7 @@ manifest:
       branch_flow: false
   - name: mcu-sdk-examples-int
     path: mcuxsdk/examples_int
-    revision: 9e1867d4bb23002d9bce1da8c75631f2f8bf0e03
+    revision: edbf1724ef242fb1c5b863a5c9553c78c5a9ea88
     groups:
     - bifrost
     userdata:
@@ -198,7 +198,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/components/crypto_benchmark
-    revision: 078b89decb7ca48e7a21dfde01e1552934aefedf
+    revision: 18df490c8050cbdf289034e9cd6c342d1e91c05f
     groups:
     - bifrost
   - name: bluetooth_private
