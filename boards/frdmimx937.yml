@@ -1,0 +1,85 @@
+example_list:
+- freertos_examples
+- lwip_examples
+- cmsis_driver_examples
+- driver_examples
+- demo_apps
+- multicore_examples
+
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - i.MX/i.MX952
+
+drivers_filter:
+  - asrc
+  - audmix
+  - bbnsm
+  - cache
+  - camera_csr
+  - clock
+  - common
+  - dpu_1
+  - edma4
+  - edma_unified
+  - eim
+  - erm
+  - flexcan
+  - flexio
+  - i3c
+  - intm
+  - iomuxc
+  - irqsteer_1
+  - isi
+  - ldb_1
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - mcm
+  - mipi_csi2rx_dwc_1
+  - mipi_dsi2_dwc
+  - msgintr
+  - mu1
+  - netc
+  - pdm
+  - power
+  - reset
+  - rgpio
+  - s3mu
+  - sai
+  - sar_adc
+  - sema42
+  - smartcard
+  - tpm
+  - trdc_1
+  - tstmr
+  - xspi
+
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-imx
+- tinycbor
+- pkcs11
+- aws_iot_llhttp
+- lwip
+- mcux-sdk-middleware-multicore
+- mcux-mcmgr
+- rpmsg-lite
+- erpc
+- g2d_dpu
+- voice_seeker
+- voice_spot
+- audio-voice-components
+- freertos-kernel
+- freertos-kernel-upstream
