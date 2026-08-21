@@ -1,0 +1,117 @@
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXW
+
+drivers_filter:
+  - aoi
+  - cache
+  - ccm32k
+  - cdog
+  - ce
+  - clock
+  - cmc
+  - common
+  - crc
+  - dma3
+  - ewm
+  - flash_k4
+  - flexcan
+  - flexpwm
+  - gdet
+  - glikey
+  - gpio
+  - intm
+  - iomuxc
+  - itrc
+  - lin
+  - lpadc
+  - lpcmp
+  - lpi2c
+  - lpit
+  - lpspi
+  - lptmr
+  - lpuart
+  - ltc
+  - mcm
+  - mscm
+  - mu1
+  - port
+  - power
+  - pwm
+  - reset
+  - rtc
+  - sema42
+  - sfa
+  - smartcard
+  - spc
+  - syspm
+  - tdet
+  - tpm
+  - trdc_1
+  - trgmux
+  - trng
+  - tstmr
+  - wdog32
+  - wuu
+
+# Core repositories (always included)
+repo_list:
+  - core
+  - CMSIS
+  - mcuxsdk-tool-data
+  - mcu-sdk-components
+  - mcu-sdk-doc
+  - mcu-sdk-examples
+  - mcux-devices-mcx
+  - littlefs
+  - freemaster
+  - mcux-sdk-middleware-multicore
+  - mcux-mcmgr
+  - rpmsg-lite
+  - erpc
+  - secure-subsystem
+  - edgelock
+  - mbedtls
+  - mbedtls3x
+  - nxp_iot_agent
+  - tfm
+  - psa_crypto_driver
+  - psa-arch-tests
+  - tf-m-tests
+  - qcbor
+  - secure_storage
+  - mcux-sdk-middleware-connectivity-framework
+  - genfsk
+  - ble_controller
+  - bluetooth
+  - XCVR
+  - ieee-802.15.4
+  - zigbee
+  - freertos-kernel
+  - freertos-kernel-upstream
+  - mcux-freertos-drivers
+  - sgi_pkc
+  - sgi_pkc_pqc
+
+# Optional repositories (excluded by default, can be included with --include-optional)
+optional_repos: []
+
+# Core examples (always included)
+example_list:
+  - ce_lite_examples
+  - cmsis_driver_examples
+  - component_examples
+  - demo_apps
+  - driver_examples
+  - freertos_driver_examples
+  - freertos_examples
+  - littlefs_examples
+  - mbedtls3x_examples
+  - tfm_examples
+  - sgi_pkc_examples
+  - trustzone_examples
+  - wireless_examples
+
+# Optional examples (excluded by default, can be included with --include-optional)
+optional_examples: []
