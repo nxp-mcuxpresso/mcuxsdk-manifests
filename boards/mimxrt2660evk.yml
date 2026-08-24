@@ -130,12 +130,14 @@ repo_list:
 - mcux-sdk-middleware-tensorflow
 - mcuxsdk-middleware-executorch
 - mcuxsdk-tool-data
+- motor_control
 - openh264
 - pkcs11
 - pngdec
 - psa-arch-tests
 - psa_crypto_driver
 - qcbor
+- rtcesl
 - tf-m-tests
 - tfm
 - tinycbor
