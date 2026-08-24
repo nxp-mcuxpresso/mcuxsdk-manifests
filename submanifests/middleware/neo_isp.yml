@@ -1,0 +1,23 @@
+manifest:
+  remotes:
+  - name: nxp
+    url-base: https://github.com/NXP
+  - name: nxp-zephyr
+    url-base: https://github.com/nxp-zephyr
+  - name: nxp-mcuxpresso
+    url-base: https://github.com/nxp-mcuxpresso
+  defaults:
+    remote: nxp-mcuxpresso
+  projects:
+  - name: neo_isp
+    userdata:
+      owner: jan.malek@nxp.com
+      track_branch: main
+      branch_flow: true
+      display_name: neo_isp
+      description: Middleware for image processing
+    path: mcuxsdk/middleware/neo_isp
+    revision: 78bf3c906a5f248f1997653f0fc0e465798b7c7f
+    repo-path: neo_isp
+    groups:
+    - neo_isp
