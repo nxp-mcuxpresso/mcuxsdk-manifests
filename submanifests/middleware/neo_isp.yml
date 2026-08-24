@@ -17,7 +17,7 @@ manifest:
       display_name: neo_isp
       description: Middleware for image processing
     path: mcuxsdk/middleware/neo_isp
-    revision: 78bf3c906a5f248f1997653f0fc0e465798b7c7f
+    revision: fb36f686ffafab310af5f4490595286f51492376
     repo-path: neo_isp
     groups:
     - neo_isp
