@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: 9d78f452c6753fcc1e61924ea777eec126181a79
+    revision: d1ee4e93c886f7794a718518c4fabb1cc7e88282
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -47,7 +47,7 @@ manifest:
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
     path: mcuxsdk/middleware/wireless/ble_controller
-    revision: 1bc09ced169c0249fd8e02db4ea29fa6fb30bee3
+    revision: b529e6fe62b62347fb83da7b54add5c60607730f
     groups:
     - ble_controller
     - middleware
@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 959fa12084ed94f7e25eb52d550e13af78ef9433
+    revision: d02b1d484010304a269cb53a2ff9c139aa4a9eee
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: 42ae303dfc3b3466739c2c734f18351a9f13beea
+    revision: eca20a2702063c32f3efbd357ca8408e7e9e6d0e
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -102,7 +102,7 @@ manifest:
       display_name: IEEE 802.15.4 MACPHY Software
       description: Software implementation for the IEEE 802.15.4 MACPHY
     path: mcuxsdk/middleware/wireless/ieee-802.15.4
-    revision: 59449d6c490a45862928611701321485c509a4f9
+    revision: caa46fdd48a6195d6a928875164b84aa998b7fd4
     repo-path: mcux-sdk-middleware-ieee_802.15.4
     groups:
     - ieee-802.15.4
@@ -129,7 +129,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: da2e8e2897d5aeb51fb1c78e168617058060b5e5
+    revision: 550719af95b974bf8379204b2ac0bca9a0cdb5af
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
