@@ -11,6 +11,8 @@ example_list:
 - multicore_examples
 - modbus_examples
 - digital_encoder_examples
+- v2x_base_examples
+- v2x_fce_examples
 
 
 
