@@ -137,9 +137,6 @@ example_list:
   - driver_examples/trng/random
   - driver_examples/utick
   - driver_examples/wwdt/wwdt_example
-  - freertos_driver_examples/freertos_lpc_i2c
-  - freertos_driver_examples/freertos_lpc_spi
-  - freertos_driver_examples/freertos_lpc_usart
   - freertos_examples/freertos_event
   - freertos_examples/freertos_generic
   - freertos_examples/freertos_hello
@@ -150,13 +147,14 @@ example_list:
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
   - littlefs_examples/littlefs_shell_onchip_flash
-  - littlefs_examples/littlefs_shell
   - tfm_examples/tfm_demo_ns
   - tfm_examples/tfm_demo_s
   - tfm_examples/tfm_psatest_ns
   - tfm_examples/tfm_psatest_s
   - tfm_examples/tfm_regression_ns
   - tfm_examples/tfm_regression_s
+  - trustzone_examples/hello_world_ns
+  - trustzone_examples/hello_world_s
   - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb_mcxw23
   - wireless_examples/bluetooth/adv_ext_central

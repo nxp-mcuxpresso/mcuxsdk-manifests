@@ -104,8 +104,6 @@ example_list:
   - cmsis_driver_examples/lpspi/int_b2b_transfer/slave
   - cmsis_driver_examples/lpuart/edma_transfer
   - cmsis_driver_examples/lpuart/interrupt_transfer
-  - cmsis_driver_examples/usart/interrupt_transfer
-  - cmsis_driver_examples/usart/edma_transfer
   - component_examples/coredump_fault
   - component_examples/flash_component/nor/lpspi
   - component_examples/log/bm
@@ -121,7 +119,6 @@ example_list:
   - driver_examples/crc
   - driver_examples/dma3/memory_to_memory
   - driver_examples/dma3/scatter_gather
-  - driver_examples/eeprom_emulation
   - driver_examples/eeprom_emulation_k4
   - driver_examples/elemu
   - driver_examples/ewm
@@ -129,7 +126,6 @@ example_list:
   - driver_examples/flexcan/efifo_edma_transfer
   - driver_examples/flexcan/efifo_interrupt_transfer
   - driver_examples/flexcan/interrupt_transfer
-  - driver_examples/flexcan/loopback_edma_transfer
   - driver_examples/flexcan/loopback_transfer
   - driver_examples/flexcan/pretended_networking_wakeup
   - driver_examples/flexio/i2c/interrupt_lpi2c_transfer
@@ -227,13 +223,8 @@ example_list:
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
   - littlefs_examples/littlefs_shell_onchip_flash
-  - littlefs_examples/littlefs_shell
-  - mbedtls3x_examples/mbedtls3x_benchmark
   - mbedtls3x_examples/mbedtls3x_psatest
-  - mbedtls3x_examples/mbedtls3x_selftest
   - mbedtls3x_examples/psa_crypto_examples
-  - mbedtls_examples/mbedtls_benchmark
-  - mbedtls_examples/mbedtls_selftest
   - mbedtls_examples/psa_crypto_examples
   - mbedtls_examples/psa_crypto_opaque_key_examples
   - secure-subsystem_examples/ele_asymmetric
@@ -271,7 +262,6 @@ example_list:
   - wireless_examples/bluetooth/temp_sens
   - wireless_examples/bluetooth/w_uart
   - wireless_examples/genfsk/connectivity_test
-  - wireless_examples/ieee-802.15.4/connectivity_test/bm
   - wireless_examples/reference_design/lowpower_central
   - wireless_examples/reference_design/lowpower_peripheral
 
