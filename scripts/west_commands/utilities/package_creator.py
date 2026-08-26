@@ -19,6 +19,8 @@ class PackageOptions:
     """Package creation options."""
     include_git: bool = False
     generate_docs: bool = False
+    # Generate a merged SBOM (SBOM.spdx.json, via `west sbom_collect`) and include it in the package.
+    generate_sbom: bool = True
     board_filter: List[str] = None
     # Migration: sub-paths from the live mcuxsdk/devices_int/ repo, merged into the package's
     # public mcuxsdk/devices/ tree (package staging only; live workspace untouched).
@@ -136,6 +138,13 @@ class PackageCreator:
                 pr_start = time.time()
                 self._promote_internal_examples(temp_dir, options.examples_int_paths)
                 self.logger(f"example.yml promotion completed in {time.time() - pr_start:.2f} seconds", 'inf')
+
+            # Generate merged SBOM
+            if options.generate_sbom:
+                self.logger("Starting SBOM generation phase", 'inf')
+                sbom_start = time.time()
+                self._generate_sbom(temp_dir, repo_list)
+                self.logger(f"SBOM generation completed in {time.time() - sbom_start:.2f} seconds", 'inf')
 
             # Create final archive
             self.logger("Starting archive creation phase", 'inf')
@@ -1088,6 +1097,40 @@ class PackageCreator:
                 content = f.readlines()
                 f.seek(0, 0)
                 f.writelines(comments + content)
+
+    def _generate_sbom(self, temp_dir: str, repo_list: List[str]) -> None:
+        """Collect and merge per-project SBOMs into the package via `west sbom_collect`.
+
+        Runs against the staged temp_dir (which already has its own copied .west/manifests, see
+        _copy_repositories and _clean_west_filters) so the merge reflects exactly the project set
+        being packaged. Non-fatal on failure: a missing or broken SBOM shouldn't block packaging.
+        """
+        sbom_output = os.path.join(temp_dir, 'SBOM.spdx.json')
+        cmd = ['west', 'sbom_collect'] + repo_list + ['-o', sbom_output]
+
+        try:
+            self.logger(f"Running command: {' '.join(cmd)}", 'dbg')
+            result = subprocess.run(cmd, cwd=temp_dir, check=True, capture_output=True, text=True)
+
+            if result.stdout:
+                for line in result.stdout.strip().split('\n'):
+                    if line.strip():
+                        self.logger(f"SBOM: {line}", 'dbg')
+
+            if os.path.exists(sbom_output):
+                file_size = os.path.getsize(sbom_output) / 1024
+                self.logger(f"SBOM file created: {sbom_output} ({file_size:.1f} KB)", 'inf')
+            else:
+                self.logger(f"SBOM file was not created: {sbom_output}", 'wrn')
+
+        except subprocess.CalledProcessError as e:
+            self.logger(f"SBOM generation failed with exit code {e.returncode}", 'wrn')
+            if e.stderr:
+                for line in e.stderr.strip().split('\n'):
+                    if line.strip():
+                        self.logger(f"SBOM Error: {line}", 'wrn')
+        except Exception as e:
+            self.logger(f"Unexpected error during SBOM generation: {e}", 'wrn')
 
     def _create_archive(self, temp_dir: str, output_path: str) -> None:
         """Create the final zip archive."""

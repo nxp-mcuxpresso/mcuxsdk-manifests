@@ -8,18 +8,19 @@ West extension command to merge SBOM files from all manifest projects.
 """
 
 import argparse
+import fnmatch
 import json
 import os
+import re
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Set
-from datetime import datetime
-import uuid
-import fnmatch
 
 from west.commands import WestCommand
 from west.manifest import Manifest
 from west import log
+
+from sbom_merge import SbomMerger
 
 
 class SbomCollect(WestCommand):
@@ -157,9 +158,22 @@ class SbomCollect(WestCommand):
             if not sbom_files:
                 log.err("No SBOM files found in any project. Nothing to merge.")
                 return 1
-            
-            # Merge SBOM files
-            merged_sbom = self._merge_sbom_files(sbom_files)
+
+            # Parse and validate each project's SBOM, then merge by reference:
+            # each project's own DESCRIBES relationship names its root package(s),
+            # which are expanded to their transitive closure and deduplicated
+            # across projects rather than concatenated wholesale.
+            parsed_sbom_files = self._load_sbom_files(sbom_files)
+            if not parsed_sbom_files:
+                log.err("No valid SBOM files could be parsed. Nothing to merge.")
+                return 1
+
+            sdk_version = self._read_mcux_version(workspace_root)
+            log.inf(f"Using SDK version for merged SBOM: {sdk_version}")
+
+            merger = SbomMerger(output_name='MCUXpresso-SDK-SBOM', root_package_version=sdk_version,
+                                 warn=log.wrn, debug=log.dbg)
+            merged_sbom = merger.merge(parsed_sbom_files)
             
             # Write merged SBOM to output file
             output_path = Path(args.output)
@@ -207,6 +221,35 @@ class SbomCollect(WestCommand):
             log.err(f"Error during SBOM merge: {e}")
             log.dbg("Exception details:", exc_info=True)
             return 1
+
+    def _read_mcux_version(self, workspace_root: Path) -> str:
+        """
+        Read the SDK version (YY.MM.NN[-suffix]) from mcuxsdk/MCUX_VERSION, the same
+        file used by mcux_version.cmake and sdk_version_update.py, so the merged
+        SBOM's root package reports the actual SDK release rather than NOASSERTION.
+
+        Returns:
+            Version string, or 'NOASSERTION' if the file is missing or unparsable.
+        """
+        version_file = workspace_root / 'mcuxsdk' / 'MCUX_VERSION'
+        if not version_file.is_file():
+            log.wrn(f"MCUX_VERSION file not found at {version_file}; using NOASSERTION for SBOM version")
+            return 'NOASSERTION'
+
+        try:
+            text = version_file.read_text(encoding='utf-8')
+        except OSError as e:
+            log.wrn(f"Unable to read {version_file}: {e}; using NOASSERTION for SBOM version")
+            return 'NOASSERTION'
+
+        year = re.search(r'CURRENT_YEAR\s*=\s*(\d+)', text)
+        major = re.search(r'VERSION_MAJOR\s*=\s*(\d+)', text)
+        minor = re.search(r'VERSION_MINOR\s*=\s*([\w.\-]+)', text)
+        if not (year and major and minor):
+            log.wrn(f"Unable to parse {version_file}; using NOASSERTION for SBOM version")
+            return 'NOASSERTION'
+
+        return f"{year.group(1)}.{major.group(1)}.{minor.group(1)}"
 
     def _find_sbom_files(self, project_path: Path, pattern: str) -> List[Path]:
         """
@@ -263,14 +306,39 @@ class SbomCollect(WestCommand):
             
         return True
 
-    def _create_package_key(self, package: Dict) -> str:
-        """Create a unique key for package deduplication."""
-        name = package.get('name', 'unknown')
-        version = package.get('versionInfo', 'unknown')
-        download_location = package.get('downloadLocation', '')
-        
-        # Include download location for better uniqueness
-        return f"{name}-{version}-{hash(download_location) if download_location else 'no-location'}"
+    def _load_sbom_files(self, sbom_files: List[Dict]) -> List[Dict]:
+        """Parse and validate each discovered SBOM file.
+
+        Returns [{'project_name': str, 'sbom_data': dict}, ...] for files that
+        parse as JSON and pass minimal SPDX structure validation; unparseable
+        or invalid files are logged and skipped.
+        """
+        loaded = []
+        for sbom_info in sbom_files:
+            sbom_path = sbom_info['sbom_path']
+            project_name = sbom_info['project_name']
+
+            try:
+                with open(sbom_path, 'r', encoding='utf-8') as f:
+                    sbom_data = json.load(f)
+            except json.JSONDecodeError as e:
+                log.err(f"Invalid JSON in SBOM file {sbom_path}: {e}")
+                continue
+            except OSError as e:
+                log.err(f"Error reading SBOM file {sbom_path}: {e}")
+                continue
+
+            if not self._validate_sbom_structure(sbom_data, project_name):
+                log.err(f"Invalid SBOM structure in {project_name}, skipping...")
+                continue
+
+            spdx_version = sbom_data.get('spdxVersion', '')
+            if not spdx_version.startswith('SPDX-2.'):
+                log.wrn(f"Unsupported SPDX version in {project_name}: {spdx_version}")
+
+            loaded.append({'project_name': project_name, 'sbom_data': sbom_data})
+
+        return loaded
 
     def _get_disabled_groups(self, manifest: Manifest) -> Set[str]:
         """
@@ -346,137 +414,3 @@ class SbomCollect(WestCommand):
         except Exception as e:
             log.wrn(f"Error checking if project '{project.name}' is disabled: {e}")
             return False
-
-    def _merge_sbom_files(self, sbom_files: List[Dict]) -> Dict:
-        """Merge multiple SBOM files into a single SPDX document."""
-        
-        # Initialize merged SBOM structure
-        merged_sbom = {
-            "spdxVersion": "SPDX-2.3",
-            "dataLicense": "CC0-1.0",
-            "SPDXID": "SPDXRef-DOCUMENT",
-            "name": "MCUXpresso-SDK-SBOM",
-            "documentNamespace": f"https://nxp.com/mcuxpresso-sdk-sbom/{uuid.uuid4()}",
-            "creationInfo": {
-                "created": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "creators": ["Organization: NXP"],
-                "licenseListVersion": "3.20"
-            },
-            "packages": [],
-            "relationships": []
-        }
-        
-        # Track unique packages and relationships
-        packages_by_spdxid: Dict[str, Dict] = {}
-        relationships: Set[tuple] = set()
-        package_counter = 1
-        
-        log.dbg("Starting SBOM file processing...")
-        
-        for sbom_info in sbom_files:
-            sbom_path = sbom_info['sbom_path']
-            project_name = sbom_info['project_name']
-            
-            log.dbg(f"Processing SBOM file: {sbom_path}")
-            
-            try:
-                with open(sbom_path, 'r', encoding='utf-8') as f:
-                    sbom_data = json.load(f)
-                
-                # Validate SBOM structure
-                if not self._validate_sbom_structure(sbom_data, project_name):
-                    log.err(f"Invalid SBOM structure in {project_name}, skipping...")
-                    continue
-                
-                # Validate SPDX version compatibility
-                spdx_version = sbom_data.get('spdxVersion', '')
-                if not spdx_version.startswith('SPDX-2.'):
-                    log.wrn(f"Unsupported SPDX version in {project_name}: {spdx_version}")
-                
-                # Process packages
-                packages = sbom_data.get('packages', [])
-                log.dbg(f"Found {len(packages)} packages in {project_name}")
-                
-                for package in packages:
-                    original_spdxid = package.get('SPDXID', f'SPDXRef-Package-{package_counter}')
-                    
-                    # Create unique SPDXID for merged document
-                    new_spdxid = f"SPDXRef-{project_name}-{original_spdxid.replace('SPDXRef-', '')}"
-                    # Check for duplicates based on name and version
-                    package_key = self._create_package_key(package)
-                    existing_keys = {self._create_package_key(p) for p in packages_by_spdxid.values()}
-                    
-                    if package_key not in existing_keys:
-                        
-                        # Update package SPDXID and add project context
-                        updated_package = package.copy()
-                        updated_package['SPDXID'] = new_spdxid
-                        
-                        # Add project information as annotation
-                        if 'annotations' not in updated_package:
-                            updated_package['annotations'] = []
-                        
-                        updated_package['annotations'].append({
-                            "annotationType": "OTHER",
-                            "annotator": "Tool: west-collect-sbom",
-                            "annotationDate": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-                            "annotationComment": f"Package from project: {project_name}"
-                        })
-                        
-                        packages_by_spdxid[new_spdxid] = updated_package
-                        package_counter += 1
-                        
-                        log.dbg(f"Added package: {package.get('name', 'unknown')} from {project_name}")
-                    else:
-                        log.dbg(f"Skipped duplicate package: {package.get('name', 'unknown')}")
-                
-                # Process relationships
-                for relationship in sbom_data.get('relationships', []):
-                    # Update SPDX IDs in relationships to match merged document
-                    spdx_element_id = relationship.get('spdxElementId', '')
-                    related_spdx_element = relationship.get('relatedSpdxElement', '')
-                    relationship_type = relationship.get('relationshipType', '')
-                    
-                    # Update IDs to match merged document structure
-                    if spdx_element_id.startswith('SPDXRef-') and spdx_element_id != 'SPDXRef-DOCUMENT':
-                        spdx_element_id = f"SPDXRef-{project_name}-{spdx_element_id.replace('SPDXRef-', '')}"
-                    
-                    if related_spdx_element.startswith('SPDXRef-') and related_spdx_element != 'SPDXRef-DOCUMENT':
-                        related_spdx_element = f"SPDXRef-{project_name}-{related_spdx_element.replace('SPDXRef-', '')}"
-                    
-                    relationship_tuple = (spdx_element_id, relationship_type, related_spdx_element)
-                    relationships.add(relationship_tuple)
-                
-                log.inf(f"Successfully processed SBOM from project: {project_name}")
-                
-            except json.JSONDecodeError as e:
-                log.err(f"Invalid JSON in SBOM file {sbom_path}: {e}")
-                continue
-            except Exception as e:
-                log.err(f"Error processing SBOM file {sbom_path}: {e}")
-                continue
-        
-        # Add all unique packages to merged SBOM
-        merged_sbom['packages'] = list(packages_by_spdxid.values())
-        
-        # Add all unique relationships to merged SBOM
-        merged_sbom['relationships'] = [
-            {
-                "spdxElementId": rel[0],
-                "relationshipType": rel[1],
-                "relatedSpdxElement": rel[2]
-            }
-            for rel in relationships
-        ]
-        
-        # Add workspace-level relationships
-        for spdxid in packages_by_spdxid.keys():
-            merged_sbom['relationships'].append({
-                "spdxElementId": "SPDXRef-DOCUMENT",
-                "relationshipType": "DESCRIBES",
-                "relatedSpdxElement": spdxid
-            })
-        
-        log.inf(f"Merged SBOM created with {len(merged_sbom['packages'])} packages and {len(merged_sbom['relationships'])} relationships")
-        
-        return merged_sbom

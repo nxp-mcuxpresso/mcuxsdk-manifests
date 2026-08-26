@@ -45,6 +45,9 @@ Examples:
   # Skip update, create package with docs (for CI/CD parallel execution)
   west update_board --set board mcxw23evk -o package.zip --no-update --gen-doc
 
+  # Create package including a merged SBOM (SBOM.spdx.json) inside the zip
+  west update_board --set board mcxw23evk -o package.zip
+
   # List all repositories with descriptions in YAML format
   west update_board --set board mcxw23evk --list-repo
 
@@ -97,7 +100,7 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
                                       'Can be used with --list-sbom to include optional repositories in SBOM collection.')
         package_group.add_argument('--include-git', action='store_true', 
                                  help='Include .git history in package. Only valid with -o/--output.')
-        package_group.add_argument('--gen-doc', action='store_true', 
+        package_group.add_argument('--gen-doc', action='store_true',
                                  help='Generate and include PDF documentation in package. Requires mcu-sdk-doc repository. Only valid with -o/--output.')
         
         return parser
@@ -628,9 +631,10 @@ Note: For custom SBOM pattern matching, use 'west sbom_collect' directly with
             devices_filter=config.devices_filter,
             drivers_filter=config.drivers_filter,
         )
-        
+
         self._log_with_timestamp(
             f"Package options: git={options.include_git}, docs={options.generate_docs}, "
+            f"sbom={options.generate_sbom}, "
             f"devices_int_paths={options.devices_int_paths}, "
             f"examples_int_paths={options.examples_int_paths}, "
             f"devices_filter={options.devices_filter}, "
