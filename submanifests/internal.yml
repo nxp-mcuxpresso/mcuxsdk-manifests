@@ -145,7 +145,7 @@ manifest:
       has_examples: true
   - name: mcu-sdk-devices-int
     path: mcuxsdk/devices_int
-    revision: ae039edb6f217610acc282b6b7a9ce2f30c8e64a
+    revision: 06d85c75710e29e38338b37c84ee90fb2ca28a45
     groups:
     - bifrost
     userdata:
