@@ -93,7 +93,6 @@ example_list:
   - demo_apps/hello_world_swo
   - demo_apps/led_blinky
   - demo_apps/shell
-  - freertos_driver_examples/freertos_lpuart
   - freertos_examples/freertos_event
   - freertos_examples/freertos_generic
   - freertos_examples/freertos_hello

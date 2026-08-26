@@ -103,6 +103,7 @@ example_list:
   - component_examples
   - demo_apps
   - driver_examples
+  - el2go_examples/el2go_csr/el2go_csr
   - freertos_driver_examples
   - freertos_examples
   - littlefs_examples
