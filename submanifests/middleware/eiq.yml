@@ -59,7 +59,7 @@ manifest:
       description: Software library for running machine learning models on embedded
         devices
     path: mcuxsdk/middleware/eiq/executorch
-    revision: bcf38bfb0e08da2c3cc7ff2f0e49b4e413112400
+    revision: bf798ef9f12221bd4c462a3748910a0d3f720a4a
     groups:
     - eiq
     - middleware
