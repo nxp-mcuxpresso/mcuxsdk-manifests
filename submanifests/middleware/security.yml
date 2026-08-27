@@ -135,7 +135,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: a8a48d5958bc57c320706b7b18d37bab4d976f00
+    revision: 4df657078d7375eeef2ddfc2f670760e010b265b
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
