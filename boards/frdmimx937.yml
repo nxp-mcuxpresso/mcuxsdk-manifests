@@ -13,7 +13,7 @@ example_list:
 # Package tailoring: trim devices/ and drivers/ to only what this board needs.
 # Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
 devices_filter:
-  - i.MX/i.MX952
+  - i.MX/i.MX937
 
 drivers_filter:
   - asrc
