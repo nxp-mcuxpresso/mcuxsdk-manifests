@@ -105,6 +105,7 @@ repo_list:
 - corepkcs11
 - corepkcs11-upstream
 - dhara
+- edgelock
 - erpc
 - fatfs
 - freemaster
@@ -114,6 +115,7 @@ repo_list:
 - lwip
 - mbedtls
 - mbedtls3x
+- tf-psa-crypto
 - mcu-sdk-components
 - mcu-sdk-doc
 - mcu-sdk-examples

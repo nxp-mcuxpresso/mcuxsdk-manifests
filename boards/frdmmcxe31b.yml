@@ -83,6 +83,7 @@ repo_list:
 - lvgl
 - safety_iec60730b
 - edgelock
+- ele_hseb
 - mbedtls3x
 - tfm
 - psa_crypto_driver

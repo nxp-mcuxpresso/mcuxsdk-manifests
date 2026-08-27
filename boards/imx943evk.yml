@@ -98,6 +98,7 @@ repo_list:
 - lwip
 - soem
 - freemodbus
+- mstp-lib
 - motor_control
 - rtcesl
 - freemaster

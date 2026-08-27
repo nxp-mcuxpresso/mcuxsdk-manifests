@@ -139,6 +139,7 @@ repo_list:
 - qcbor
 - rtcesl
 - tf-m-tests
+- tf-psa-crypto
 - tfm
 - tinycbor
 - usb
