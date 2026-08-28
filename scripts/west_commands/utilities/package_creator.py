@@ -648,11 +648,12 @@ class PackageCreator:
                 
                 original_board_count = len(boards_config)
                 
-                # Filter boards
+                # Filter boards — compare only the board-name part (before '@') to avoid
+                # substring false-positives such as 'frdmmcxn947' matching 'frdmmcxn947t@cm33_core0'.
                 filtered_boards = {
-                    board_key: board_value 
+                    board_key: board_value
                     for board_key, board_value in boards_config.items()
-                    if any(target_board in board_key for target_board in target_boards)
+                    if board_key.split('@')[0] in target_boards
                 }
                 
                 if len(filtered_boards) != original_board_count:
