@@ -83,6 +83,7 @@ repo_list:
   - fatfs
   - mbedtls
   - mbedtls3x
+  - tf-psa-crypto
   - mcux-sdk-middleware-multicore
   - mcux-mcmgr
   - rpmsg-lite

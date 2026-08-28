@@ -85,6 +85,7 @@ repo_list:
 - edgelock
 - ele_hseb
 - mbedtls3x
+- nxp_iot_agent
 - tfm
 - psa_crypto_driver
 - psa-arch-tests
