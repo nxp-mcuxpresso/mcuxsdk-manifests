@@ -146,6 +146,7 @@ example_list:
   - freertos_examples/freertos_sem_static
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
+  - littlefs_examples/littlefs_shell
   - littlefs_examples/littlefs_shell_onchip_flash
   - tfm_examples/tfm_demo_ns
   - tfm_examples/tfm_demo_s
@@ -153,6 +154,7 @@ example_list:
   - tfm_examples/tfm_psatest_s
   - tfm_examples/tfm_regression_ns
   - tfm_examples/tfm_regression_s
+  - trustzone_examples/tzm_api
   - trustzone_examples/hello_world_ns
   - trustzone_examples/hello_world_s
   - wireless_examples/ble_controller/common
