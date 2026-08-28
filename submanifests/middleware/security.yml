@@ -204,7 +204,7 @@ manifest:
       description: secure storage library
     path: mcuxsdk/middleware/secure_storage
     remote: nxp-mcuxpresso
-    revision: bcf50dc71a680ff773843694678c02a7321cb2a0
+    revision: 1a54f31a219ecabe299459630a5e7b8e5a445ce5
     repo-path: secure_storage
     groups:
     - secure_storage
