@@ -84,8 +84,10 @@ repo_list:
 - safety_iec60730b
 - edgelock
 - ele_hseb
-- mbedtls3x
 - nxp_iot_agent
+- littlefs
+- mbedtls3x
+- tf-psa-crypto
 - tfm
 - psa_crypto_driver
 - psa-arch-tests
