@@ -86,6 +86,7 @@ repo_list:
 - ele_hseb
 - nxp_iot_agent
 - littlefs
+- secure_storage
 - mbedtls
 - mbedtls3x
 - tf-psa-crypto
