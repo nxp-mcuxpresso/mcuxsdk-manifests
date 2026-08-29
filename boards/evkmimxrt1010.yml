@@ -82,6 +82,7 @@ repo_list:
 - mcu-sdk-examples
 - mcu_bootloader
 - mcux-devices-rt
+- mcux-sdk-middleware-multicore
 - mcux-freertos-drivers
 - mcuxsdk-tool-data
 - pkcs11
