@@ -49,7 +49,7 @@ manifest:
       display_name: secure-subsystem
       description: Secure subsystem library - SSS APIs
     path: mcuxsdk/middleware/secure-subsystem
-    revision: 1cce4ff3093af3c1e79cf70891e96d13e3416b58
+    revision: 5bb31d6166e676f5215e58c6e7e41297a0d35b23
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
@@ -135,7 +135,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: c7bde9a4b02892d9774792f47d0fa7bbb7f0a171
+    revision: 0400f6fd61a3c0a2b472e63469fd23be1d966b98
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
