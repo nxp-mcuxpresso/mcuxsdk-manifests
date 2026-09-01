@@ -12,7 +12,7 @@ manifest:
   - name: neo_isp
     userdata:
       owner: jan.malek@nxp.com
-      track_branch: main
+      track_branch: release/26.09.00
       branch_flow: true
       display_name: neo_isp
       description: Middleware for image processing
