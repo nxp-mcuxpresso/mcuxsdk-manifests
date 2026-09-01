@@ -49,7 +49,7 @@ manifest:
       display_name: secure-subsystem
       description: Secure subsystem library - SSS APIs
     path: mcuxsdk/middleware/secure-subsystem
-    revision: 5bb31d6166e676f5215e58c6e7e41297a0d35b23
+    revision: bdc4f1873125dd224c3a585154d2065c7af3df39
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
