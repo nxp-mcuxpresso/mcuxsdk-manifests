@@ -56,7 +56,7 @@ manifest:
   - name: bluetooth
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: develop/main
+      track_branch: release/26.09.00
       branch_flow: false
       display_name: Wireless BLE stack
       description: BLE
