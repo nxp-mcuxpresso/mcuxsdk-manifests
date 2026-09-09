@@ -86,7 +86,7 @@ manifest:
   - name: edgefast_open
     userdata:
       owner: junjie.liu@nxp.com
-      track_branch: main
+      track_branch: release/26.09.00
       branch_flow: false
       has_examples: true
     path: mcuxsdk/middleware/edgefast_open
