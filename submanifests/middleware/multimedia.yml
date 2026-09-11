@@ -106,7 +106,7 @@ manifest:
       description: NXP decoder, encoder and processing libraries for MCU integrated
         and demonstrated in Maestro audio framework
     path: mcuxsdk/middleware/audio_voice/components
-    revision: e45c77bd877d3b9db340b8eb7f9c452249ae45ad
+    revision: bb8a6ad0d5d9f2cdb3d7202fb0ce7700a8964814
     groups:
     - audio-voice-components
     - audio_voice
