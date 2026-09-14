@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 96d7e0a18f47f21e216b32b29e621337017cf76b
+    revision: 9dac31cb15ecb05a79e1a1feb88b9ff7ee9725b3
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -59,7 +59,7 @@ manifest:
       description: System View Description (SVD) files for NXP MCU devices, providing
         detailed peripheral register definitions
   - name: mcu-sdk-examples
-    revision: 026542400f6431adc21cc6088fa2303604690026
+    revision: 7029f4da87af0ada38a321b9cce89dc7aa81c317
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
