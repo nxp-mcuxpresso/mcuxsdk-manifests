@@ -150,7 +150,7 @@ manifest:
     - bifrost
     userdata:
       track_branch: main
-      branch_flow: false
+      branch_flow: true
   - name: emwin
     userdata:
       owner: tomas.barak@nxp.com
