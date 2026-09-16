@@ -12,7 +12,7 @@ manifest:
   - name: mcux-sdk-middleware-connectivity-framework
     userdata:
       owner: nicolas.collonville@nxp.com
-      track_branch: main
+      track_branch: release/26.09.00
       branch_flow: false
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
