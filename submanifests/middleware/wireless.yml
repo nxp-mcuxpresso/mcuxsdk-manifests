@@ -42,7 +42,7 @@ manifest:
     repo-path: mcuxsdk-middleware-bluetooth-controller
     userdata:
       owner: damien.lefebvre@nxp.com
-      track_branch: develop/main
+      track_branch: release/26.09.00
       branch_flow: false
       display_name: Wireless BLE Controller
       description: wireless ble_controller middleware
@@ -71,7 +71,7 @@ manifest:
   - name: XCVR
     userdata:
       owner: john.vandermeer@nxp.com
-      track_branch: main
+      track_branch: release/26.09.00
       branch_flow: false
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
