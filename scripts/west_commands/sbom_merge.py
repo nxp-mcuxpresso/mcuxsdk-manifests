@@ -59,6 +59,18 @@ _PACKAGE_FALLBACKS = {
     'licenseDeclared': 'NOASSERTION',
 }
 
+# Templated per NXP Policy 5.3.5: licenseConcluded may legitimately differ
+# from licenseDeclared (source-scan result vs. upstream-stated license), but
+# the policy requires licenseComments to say why. When upstream provides no
+# rationale, attach this standard note rather than leaving the pair
+# unexplained -- flagged in review since it is templated text, not a human
+# rationale.
+_LICENSE_MISMATCH_COMMENT = (
+    'licenseConcluded was determined by automated source-code license '
+    'scanning and differs from the licenseDeclared value stated by the '
+    'package; no additional rationale was provided by the source project.'
+)
+
 _NoOp = lambda *_args, **_kwargs: None
 
 
@@ -68,6 +80,29 @@ def dedup_key(package: Dict) -> str:
     version = package.get('versionInfo', '')
     download = package.get('downloadLocation', '')
     return f"{name}|{version}|{download}"
+
+
+def merge_extracted_licenses(sbom_files: List[Dict],
+                              warn: Optional[Callable[[str], None]] = None) -> List[Dict]:
+    """Collect hasExtractedLicensingInfos entries from every source project doc.
+
+    Deduped by licenseId; the first definition seen for a given licenseId
+    wins, with a warning logged if a later project defines the same id with
+    a different name/text (rather than silently picking one).
+    """
+    warn = warn or _NoOp
+    by_id: Dict[str, Dict] = {}
+    for info in sbom_files:
+        for entry in info['sbom_data'].get('hasExtractedLicensingInfos', []) or []:
+            lid = entry.get('licenseId')
+            if not lid:
+                continue
+            if lid not in by_id:
+                by_id[lid] = entry
+            elif entry.get('name') != by_id[lid].get('name') or entry.get('extractedText') != by_id[lid].get('extractedText'):
+                warn(f"hasExtractedLicensingInfos '{lid}' redefined by project "
+                     f"'{info['project_name']}' with different name/text; keeping first definition")
+    return list(by_id.values())
 
 
 def _sanitize(text: str) -> str:
@@ -188,6 +223,11 @@ def _sanitize_package(pkg: Dict, final_spdxid: str) -> Dict:
             out[key] = fallback
     out['supplier'] = 'NOASSERTION'
     out['filesAnalyzed'] = False
+
+    declared, concluded = out.get('licenseDeclared'), out.get('licenseConcluded')
+    if declared and concluded and declared != concluded and not out.get('licenseComments'):
+        out['licenseComments'] = _LICENSE_MISMATCH_COMMENT
+
     return out
 
 
@@ -260,6 +300,7 @@ class SbomMerger:
         all_packages = [root_package] + merged_packages
         all_packages.sort(key=lambda p: p['SPDXID'])
         relationships.sort(key=lambda r: (r['spdxElementId'], r['relationshipType'], r['relatedSpdxElement']))
+        extracted_licenses = merge_extracted_licenses(sbom_files, warn=self._warn)
 
         return {
             'SPDXID': DOC_SPDXID,
@@ -274,6 +315,7 @@ class SbomMerger:
             },
             'packages': all_packages,
             'relationships': relationships,
+            'hasExtractedLicensingInfos': extracted_licenses,
         }
 
     def _document_namespace(self) -> str:

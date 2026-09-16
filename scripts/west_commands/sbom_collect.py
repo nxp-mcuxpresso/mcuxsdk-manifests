@@ -9,6 +9,7 @@ West extension command to merge SBOM files from all manifest projects.
 
 import argparse
 import fnmatch
+import importlib.util
 import json
 import os
 import re
@@ -21,6 +22,34 @@ from west.manifest import Manifest
 from west import log
 
 from sbom_merge import SbomMerger
+from spdx23_validator import SPDX23Validator
+
+# Optional internal overlay: NXP's SBOM policy on top of generic SPDX 2.3.
+# Lives in bifrost (Bitbucket-only, never mirrored to public GitHub) so
+# company policy details never ship in this publicly-mirrored repo. When
+# bifrost isn't checked out (e.g. a public GitHub-only workspace), only
+# the generic SPDX 2.3 validation above runs.
+_POLICY_OVERLAY_RELPATH = Path('bifrost') / 'scripts' / 'nxp_sbom_policy_validator.py'
+
+
+def _load_policy_overlay(workspace_root: Path):
+    """Load the optional internal NXP-policy overlay validator, if present.
+
+    Returns the loaded module (exposing `validate(sbom_dict) -> list[dict]`),
+    or None if bifrost is not checked out in this workspace.
+    """
+    overlay_path = workspace_root / _POLICY_OVERLAY_RELPATH
+    if not overlay_path.is_file():
+        return None
+    spec = importlib.util.spec_from_file_location('nxp_sbom_policy_validator', overlay_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _format_overlay_issue(issue: Dict) -> str:
+    loc = f" [{issue['location']}]" if issue.get('location') else ''
+    return f"[{issue.get('severity')}] ({issue.get('section')}){loc} {issue.get('message')}"
 
 
 class SbomCollect(WestCommand):
@@ -64,7 +93,13 @@ class SbomCollect(WestCommand):
             '--dry-run',
             action='store_true',
             help='Show what would be collected without creating output file')
-        
+
+        parser.add_argument(
+            '--allow-policy-violations',
+            action='store_true',
+            help='Write the merged SBOM and exit 0 even if it fails NXP Policy / SPDX 2.3 '
+                 'validation (default: fail the command on any validation error)')
+
         return parser
 
     def do_run(self, args, unknown_args):
@@ -174,7 +209,9 @@ class SbomCollect(WestCommand):
             merger = SbomMerger(output_name='MCUXpresso-SDK-SBOM', root_package_version=sdk_version,
                                  warn=log.wrn, debug=log.dbg)
             merged_sbom = merger.merge(parsed_sbom_files)
-            
+
+            policy_errors = self._validate_policy(merged_sbom, workspace_root)
+
             # Write merged SBOM to output file
             output_path = Path(args.output)
             if not output_path.is_absolute():
@@ -214,13 +251,59 @@ class SbomCollect(WestCommand):
             log.inf(f"Total packages collected: {len(merged_sbom.get('packages', []))}")
             log.inf(f"Total relationships: {len(merged_sbom.get('relationships', []))}")
             log.inf(f"Output file: {output_path}")
-            
+
+            if policy_errors and not args.dry_run and not args.allow_policy_violations:
+                log.err(f"Merged SBOM failed validation "
+                        f"({len(policy_errors)} error(s)); see validator warnings above. "
+                        f"Pass --allow-policy-violations to write it anyway.")
+                return 1
+
             return 0
-            
+
         except Exception as e:
             log.err(f"Error during SBOM merge: {e}")
             log.dbg("Exception details:", exc_info=True)
             return 1
+
+    def _validate_policy(self, merged_sbom: Dict, workspace_root: Path) -> List:
+        """Validate the merged SBOM and log every issue found.
+
+        Always runs the generic, company-policy-free SPDX23Validator. If the
+        internal NXP-policy overlay (bifrost/scripts/nxp_sbom_policy_validator.py)
+        is present in this workspace, also runs it and merges its findings;
+        otherwise only generic SPDX 2.3 conformance is checked.
+
+        Returns the combined list of ERROR-severity issues (empty == passes
+        whatever validation actually ran). Warnings/info are logged but never
+        fail the command.
+        """
+        issues = SPDX23Validator().validate(merged_sbom)
+        errors = [i for i in issues if i.severity.value == 'ERROR']
+        warnings = [i for i in issues if i.severity.value == 'WARNING']
+
+        log.inf(f"SPDX 2.3 validation: {len(errors)} error(s), {len(warnings)} warning(s)")
+        for issue in errors:
+            log.err(f"SPDX23Validator: {issue}")
+        for issue in warnings:
+            log.wrn(f"SPDX23Validator: {issue}")
+
+        overlay = _load_policy_overlay(workspace_root)
+        if overlay is None:
+            log.inf(f"Internal policy overlay not found at {_POLICY_OVERLAY_RELPATH} "
+                     "(bifrost not checked out); skipping company-policy checks.")
+            return errors
+
+        overlay_issues = overlay.validate(merged_sbom)
+        overlay_errors = [i for i in overlay_issues if i.get('severity') == 'ERROR']
+        overlay_warnings = [i for i in overlay_issues if i.get('severity') == 'WARNING']
+
+        log.inf(f"NXP policy validation: {len(overlay_errors)} error(s), {len(overlay_warnings)} warning(s)")
+        for issue in overlay_errors:
+            log.err(f"NXPSbomPolicyValidator: {_format_overlay_issue(issue)}")
+        for issue in overlay_warnings:
+            log.wrn(f"NXPSbomPolicyValidator: {_format_overlay_issue(issue)}")
+
+        return errors + overlay_errors
 
     def _read_mcux_version(self, workspace_root: Path) -> str:
         """

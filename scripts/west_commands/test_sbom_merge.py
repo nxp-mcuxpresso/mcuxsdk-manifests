@@ -179,6 +179,85 @@ class TestSbomMerger(unittest.TestCase):
         spdxids = [p['SPDXID'] for p in merged['packages']]
         self.assertEqual(len(spdxids), len(set(spdxids)))
 
+    def test_extracted_licensing_infos_are_aggregated(self):
+        doc = self._single_root_sbom('foo')
+        doc['hasExtractedLicensingInfos'] = [
+            {'licenseId': 'LicenseRef-custom-1', 'name': 'Custom 1', 'extractedText': 'text-1'},
+        ]
+        doc['packages'][0]['licenseDeclared'] = 'LicenseRef-custom-1'
+        doc['packages'][0]['licenseConcluded'] = 'LicenseRef-custom-1'
+
+        merger = SbomMerger()
+        merged = merger.merge([{'project_name': 'proj-a', 'sbom_data': doc}])
+
+        self.assertEqual(merged['hasExtractedLicensingInfos'],
+                          [{'licenseId': 'LicenseRef-custom-1', 'name': 'Custom 1', 'extractedText': 'text-1'}])
+
+    def test_extracted_licensing_infos_missing_key_yields_empty_list(self):
+        merger = SbomMerger()
+        merged = merger.merge([{'project_name': 'proj-a', 'sbom_data': self._single_root_sbom('foo')}])
+        self.assertEqual(merged['hasExtractedLicensingInfos'], [])
+
+    def test_conflicting_extracted_license_definition_warns_and_keeps_first(self):
+        doc_a = self._single_root_sbom('foo')
+        doc_a['hasExtractedLicensingInfos'] = [
+            {'licenseId': 'LicenseRef-custom-1', 'name': 'First', 'extractedText': 'text-a'},
+        ]
+        doc_b = self._single_root_sbom('bar')
+        doc_b['hasExtractedLicensingInfos'] = [
+            {'licenseId': 'LicenseRef-custom-1', 'name': 'Second', 'extractedText': 'text-b'},
+        ]
+
+        warnings = []
+        merger = SbomMerger(warn=warnings.append)
+        merged = merger.merge([
+            {'project_name': 'proj-a', 'sbom_data': doc_a},
+            {'project_name': 'proj-b', 'sbom_data': doc_b},
+        ])
+
+        self.assertEqual(len(merged['hasExtractedLicensingInfos']), 1)
+        self.assertEqual(merged['hasExtractedLicensingInfos'][0]['name'], 'First')
+        self.assertTrue(any('redefined' in w for w in warnings))
+
+    def test_license_mismatch_gets_default_comment(self):
+        doc = self._single_root_sbom('foo')
+        doc['packages'][0]['licenseDeclared'] = 'MIT'
+        doc['packages'][0]['licenseConcluded'] = 'Apache-2.0'
+
+        merger = SbomMerger()
+        merged = merger.merge([{'project_name': 'proj-a', 'sbom_data': doc}])
+
+        foo = next(p for p in merged['packages'] if p['name'] == 'foo')
+        self.assertIn('automated source-code license scanning', foo['licenseComments'])
+
+    def test_license_mismatch_preserves_existing_comment(self):
+        doc = self._single_root_sbom('foo')
+        doc['packages'][0]['licenseDeclared'] = 'MIT'
+        doc['packages'][0]['licenseConcluded'] = 'Apache-2.0'
+        doc['packages'][0]['licenseComments'] = 'Reviewed manually by legal.'
+
+        merger = SbomMerger()
+        merged = merger.merge([{'project_name': 'proj-a', 'sbom_data': doc}])
+
+        foo = next(p for p in merged['packages'] if p['name'] == 'foo')
+        self.assertEqual(foo['licenseComments'], 'Reviewed manually by legal.')
+
+    def test_merged_output_passes_spdx23_validator(self):
+        doc = self._single_root_sbom('foo')
+        doc['hasExtractedLicensingInfos'] = [
+            {'licenseId': 'LicenseRef-custom-1', 'name': 'Custom 1', 'extractedText': 'text-1'},
+        ]
+        doc['packages'][0]['licenseDeclared'] = 'MIT'
+        doc['packages'][0]['licenseConcluded'] = 'Apache-2.0'
+
+        merger = SbomMerger(root_package_version='26.09.00')
+        merged = merger.merge([{'project_name': 'proj-a', 'sbom_data': doc}])
+
+        from spdx23_validator import SPDX23Validator
+        issues = SPDX23Validator().validate(merged)
+        errors = [i for i in issues if i.severity.value == 'ERROR']
+        self.assertEqual(errors, [], f"Unexpected policy errors: {errors}")
+
 
 if __name__ == '__main__':
     unittest.main()
