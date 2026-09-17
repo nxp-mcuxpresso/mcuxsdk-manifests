@@ -25,7 +25,7 @@ manifest:
   - name: freertos-kernel-upstream
     url: https://github.com/FreeRTOS/FreeRTOS-Kernel.git
     path: mcuxsdk/rtos/freertos/freertos-kernel-upstream
-    revision: 0adc196d4bd52a2d91102b525b0aafc1e14a2386
+    revision: 3a22924e0a9ddbbc8b0758881c33b3422a5cc20d
     groups:
     - freertos
     - rtos
