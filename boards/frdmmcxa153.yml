@@ -6,7 +6,6 @@ example_list:
 - freemaster_examples
 - freertos_examples
 - ota_examples
-- se_hostlib_examples
 - usb_examples
 
 
@@ -69,11 +68,13 @@ repo_list:
 - mcux-devices-mcx
 - mcuboot_opensource
 - usb
-- motor_control
-- rtcesl
 - freemaster
-- se_hostlib
 - freertos-kernel
 - freertos-kernel-upstream
 - safety_iec60730b
+- fatfs
+- lwip
+- mbedtls3x
+- mcux-sdk-middleware-sdmmc
+- psa_crypto_driver
 

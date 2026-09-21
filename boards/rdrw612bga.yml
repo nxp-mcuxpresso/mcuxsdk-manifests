@@ -133,8 +133,6 @@ example_list:
   - usb_examples
   - wifi_examples
   - audio_examples
-  - emwin_examples
-  - wireless_examples/zigbee
 
 # Optional examples (excluded by default, can be included with --include-optional)
 optional_examples: []

@@ -17,12 +17,12 @@ example_list:
 - mbedtls_examples
 - modbus_examples
 - multicore_examples
-- multiprocessor_examples
 - ota_examples
 - sdmmc_examples
 - soem_examples
 - usb_examples
 - wifi_examples
+- trustzone_examples
 
 
 
@@ -97,23 +97,13 @@ drivers_filter:
 repo_list:
 - CMSIS
 - aws_iot_llhttp
-- backoffalgorithm
-- backoffalgorithm-upstream
+- mcux-sdk-middleware-mpp
 - canopennode
 - core
 - corehttp
 - corehttp-upstream
-- corejson
-- corejson-upstream
-- coremqtt
-- coremqtt-upstream
-- corepkcs11
-- corepkcs11-upstream
-- dhara
-- edgefast_open
 - edgelock
 - erpc
-- ethermind
 - fatfs
 - freemaster
 - freemodbus
@@ -135,8 +125,6 @@ repo_list:
 - mcux-sdk-middleware-multicore
 - mcux-sdk-middleware-sdmmc
 - mcux-sdk-middleware-tensorflow
-- mcux-sdk-middleware-mpp
-- mcuxsdk-middleware-executorch
 - mcuxsdk-tool-data
 - motor_control
 - pkcs11
@@ -151,3 +139,9 @@ repo_list:
 - usb
 - wifi_nxp
 - wpa_supplicant-rtos
+- mcux-freertos-drivers
+- mmcau
+- qcbor
+- secure_storage
+- tf-m-tests
+- edgefast_open

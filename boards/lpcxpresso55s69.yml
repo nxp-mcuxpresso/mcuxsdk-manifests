@@ -4,7 +4,6 @@ example_list:
 - component_examples
 - demo_apps
 - driver_examples
-- emwin_examples
 - freemaster_examples
 - freertos_examples
 - lvgl_examples
@@ -96,8 +95,6 @@ repo_list:
 - usb
 - fatfs
 - mcux-sdk-middleware-sdmmc
-- motor_control
-- rtcesl
 - freemaster
 - mcux-sdk-middleware-multicore
 - mcux-mcmgr
@@ -105,7 +102,6 @@ repo_list:
 - erpc
 - maestro
 - lvgl
-- vit
 - audio-voice-components
 - mbedtls
 - mbedtls3x
@@ -121,3 +117,6 @@ repo_list:
 - corehttp
 - corehttp-upstream
 - emwin
+- lwip
+- mmcau
+- vglite_sdk

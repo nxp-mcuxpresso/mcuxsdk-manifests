@@ -50,8 +50,6 @@ repo_list:
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcux-devices-lpc
-- motor_control
-- rtcesl
 - freemaster
 - freertos-kernel
 - freertos-kernel-upstream

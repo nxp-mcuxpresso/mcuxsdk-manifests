@@ -6,7 +6,6 @@ example_list:
 - display_examples
 - driver_examples
 - eiq_examples
-- emwin_examples
 - freemaster_examples
 - freertos_examples
 - littlefs_examples
@@ -105,34 +104,23 @@ drivers_filter:
 
 repo_list:
 - CMSIS
-- audio-voice-components
 - aws_iot_llhttp
-- backoffalgorithm
-- backoffalgorithm-upstream
-- cjson
 - core
 - corehttp
 - corehttp-upstream
-- corejson
-- corejson-upstream
-- coremqtt
-- coremqtt-upstream
-- corepkcs11
-- corepkcs11-upstream
-- dhara
 - emwin
 - erpc
 - fatfs
 - freemaster
 - freertos-kernel
 - freertos-kernel-upstream
+- mcux-sdk-middleware-mpp
 - lab-project-freertos-posix
 - lab-project-freertos-posix-upstream
 - libjpeg
 - littlefs
 - lvgl
 - lwip
-- maestro
 - mbedtls
 - mbedtls3x
 - mcu-sdk-components
@@ -147,8 +135,6 @@ repo_list:
 - mcux-sdk-middleware-multicore
 - mcux-sdk-middleware-sdmmc
 - mcux-sdk-middleware-tensorflow
-- mcux-sdk-middleware-mpp
-- mcuxsdk-middleware-executorch
 - mcuxsdk-tool-data
 - mmcau
 - openh264
@@ -163,5 +149,8 @@ repo_list:
 - usb
 - vglite
 - vglite_sdk
-- vit
 - wifi_nxp
+- mcux-freertos-drivers
+- secure_storage
+- tfm
+- wpa_supplicant-rtos

@@ -12,10 +12,8 @@ example_list:
 - freertos_examples
 - littlefs_examples
 - lvgl_examples
-- lwip_examples
 - mbedtls3x_examples
 - multicore_examples
-- multiprocessor_examples
 - openvg_examples
 - ota_examples
 - sdmmc_examples
@@ -24,6 +22,8 @@ example_list:
 - usb_examples
 - vglite_examples
 - wifi_examples
+- coex_examples
+- mbedtls_examples
 
 
 
@@ -91,7 +91,6 @@ repo_list:
 - mcu-sdk-examples
 - mcux-devices-rt
 - mcuboot_opensource
-- multicore-xaf
 - dsp-codecs
 - naturedsp
 - nnlib
@@ -119,8 +118,6 @@ repo_list:
 - vglite
 - vglite_sdk
 - lvgl
-- vit
-- audio-voice-components
 - libjpeg
 - openvg
 - els_pkc
@@ -128,20 +125,20 @@ repo_list:
 - tfm
 - psa_crypto_driver
 - psa-arch-tests
-- ethermind
 - wifi_nxp
 - wpa_supplicant-rtos
 - freertos-kernel
 - freertos-kernel-upstream
-- corepkcs11
-- corepkcs11-upstream
-- coremqtt
-- coremqtt-upstream
-- corejson
-- corejson-upstream
 - corehttp
 - corehttp-upstream
-- backoffalgorithm
-- backoffalgorithm-upstream
 - edgefast_open
 - dhara
+- lab-project-freertos-posix
+- lab-project-freertos-posix-upstream
+- mbedtls
+- mcux-freertos-drivers
+- mmcau
+- openh264
+- pngdec
+- secure_storage
+- tf-psa-crypto

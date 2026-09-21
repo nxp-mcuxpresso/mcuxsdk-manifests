@@ -79,22 +79,13 @@ drivers_filter:
 repo_list:
 - CMSIS
 - aws_iot_llhttp
-- backoffalgorithm
-- backoffalgorithm-upstream
 - core
 - corehttp
 - corehttp-upstream
-- corejson
-- corejson-upstream
-- coremqtt
-- coremqtt-upstream
-- corepkcs11
-- corepkcs11-upstream
 - fatfs
 - freemaster
 - freertos-kernel
 - freertos-kernel-upstream
-- libjpeg
 - littlefs
 - lvgl
 - lwip
@@ -116,4 +107,5 @@ repo_list:
 - tfm
 - tinycbor
 - usb
-- wifi_nxp
+- qcbor
+- tf-m-tests

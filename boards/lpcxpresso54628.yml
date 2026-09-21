@@ -3,12 +3,10 @@ example_list:
 - component_examples
 - demo_apps
 - driver_examples
-- emwin_examples
 - freemaster_examples
 - freertos_examples
 - lvgl_examples
 - lwip_examples
-- mbedtls_examples
 - sdmmc_examples
 - usb_examples
 
@@ -68,13 +66,18 @@ repo_list:
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcux-devices-lpc
+- aws_iot_llhttp
 - usb
 - fatfs
 - mcux-sdk-middleware-sdmmc
 - freemaster
 - lvgl
 - lwip
-- mbedtls
 - freertos-kernel
 - freertos-kernel-upstream
 - emwin
+- corehttp
+- corehttp-upstream
+- mbedtls3x
+- psa_crypto_driver
+- vglite_sdk

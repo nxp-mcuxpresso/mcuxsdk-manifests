@@ -4,7 +4,6 @@ example_list:
 - component_examples
 - demo_apps
 - driver_examples
-- emwin_examples
 - freemaster_examples
 - freertos_examples
 - littlefs_examples
@@ -79,8 +78,6 @@ repo_list:
 - canopennode
 - fatfs
 - littlefs
-- motor_control
-- rtcesl
 - freemaster
 - lvgl
 - safety_iec60730b

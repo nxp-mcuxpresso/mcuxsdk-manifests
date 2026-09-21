@@ -10,6 +10,7 @@ example_list:
 - mbedtls3x_examples
 - ota_examples
 - el2go_examples
+- mbedtls_examples
 
 
 
@@ -75,16 +76,14 @@ repo_list:
 - mcu-sdk-examples
 - mcux-devices-mcx
 - mcuboot_opensource
+- aws_iot_llhttp
 - lwip
+- nxp_iot_agent
 - canopennode
-- motor_control
-- rtcesl
 - freemaster
 - lvgl
 - safety_iec60730b
-- edgelock
 - ele_hseb
-- nxp_iot_agent
 - littlefs
 - secure_storage
 - mbedtls
@@ -97,3 +96,11 @@ repo_list:
 - qcbor
 - freertos-kernel
 - freertos-kernel-upstream
+- corehttp
+- corehttp-upstream
+- erpc
+- fatfs
+- mcux-sdk-middleware-sdmmc
+- mmcau
+- usb
+- vglite_sdk

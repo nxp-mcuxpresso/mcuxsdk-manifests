@@ -5,7 +5,6 @@ example_list:
 - demo_apps
 - driver_examples
 - freemaster_examples
-- freertos_driver_examples
 - freertos_examples
 
 
@@ -69,4 +68,4 @@ repo_list:
 - touch
 - freertos-kernel
 - freertos-kernel-upstream
-- mcux-freertos-drivers
+- usb

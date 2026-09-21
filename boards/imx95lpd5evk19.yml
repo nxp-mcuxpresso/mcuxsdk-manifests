@@ -65,8 +65,6 @@ repo_list:
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcux-devices-imx
-- tinycbor
-- pkcs11
 - aws_iot_llhttp
 - usb
 - lwip
@@ -74,10 +72,14 @@ repo_list:
 - mcux-mcmgr
 - rpmsg-lite
 - erpc
-- g2d_dpu
-- voice_seeker
-- voice_spot
-- audio-voice-components
 - freertos-kernel
 - freertos-kernel-upstream
+- fatfs
+- mcux-sdk-middleware-sdmmc
+- mbedtls3x
+- psa_crypto_driver
+- mcux-freertos-drivers
+- corehttp
+- corehttp-upstream
+- g2d_dpu
 - neo_isp

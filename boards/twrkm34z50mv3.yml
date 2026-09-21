@@ -64,9 +64,6 @@ repo_list:
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcux-devices-kinetis
-- tinycbor
-- pkcs11
-- aws_iot_llhttp
 - freemaster
 - freertos-kernel
 - freertos-kernel-upstream

@@ -66,4 +66,7 @@ repo_list:
 - freertos-kernel
 - freertos-kernel-upstream
 - safety_iec60730b
+- aws_iot_llhttp
+- pkcs11
+- tinycbor
 

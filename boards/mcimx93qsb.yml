@@ -6,6 +6,7 @@ example_list:
 - demo_apps
 - multicore_examples
 - eiq_examples
+- trustzone_examples
 
 
 
@@ -72,15 +73,20 @@ repo_list:
 - lwip
 - mcux-sdk-middleware-eiq
 - mcux-sdk-middleware-tensorflow
-- mcuxsdk-middleware-executorch
-- mcux-sdk-middleware-mpp
-- freemaster
 - mcux-sdk-middleware-multicore
 - mcux-mcmgr
 - rpmsg-lite
 - erpc
-- voice_seeker
-- voice_spot
-- audio-voice-components
 - freertos-kernel
 - freertos-kernel-upstream
+- corehttp
+- corehttp-upstream
+- mbedtls3x
+- mcux-freertos-drivers
+- psa-arch-tests
+- psa_crypto_driver
+- qcbor
+- tf-m-tests
+- tfm
+- usb
+- mcux-sdk-middleware-mpp

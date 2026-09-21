@@ -13,6 +13,7 @@ example_list:
 - sgi_pkc_examples
 - tfm_examples
 - trustzone_examples
+- el2go_examples
 
 
 
@@ -74,7 +75,7 @@ repo_list:
   - mcu-sdk-components
   - mcux-devices-mcx
   - mcuxsdk-tool-data
-  - sdk-doc
+  - nxp_iot_agent
   - freertos-kernel
   - freertos-kernel-upstream
   - mcux-freertos-drivers
@@ -89,14 +90,20 @@ repo_list:
   - rpmsg-lite
   - erpc
   - mcuboot_opensource
-  - mcu_bootloader
   - sgi_pkc
   - sgi_pkc_pqc
   - els_pkc
-  - se_hostlib
   - tfm
   - psa-arch-tests
   - tf-m-tests
   - psa_crypto_driver
   - qcbor
   - secure_storage
+  - aws_iot_llhttp
+  - corehttp
+  - corehttp-upstream
+  - mcu-sdk-doc
+  - mcux-sdk-middleware-sdmmc
+  - mmcau
+  - pkcs11
+  - tinycbor

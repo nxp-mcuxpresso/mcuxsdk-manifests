@@ -58,6 +58,8 @@ repo_list:
   - psa-arch-tests
   - psa_crypto_driver
   - mcuxsdk-tool-data
+  - rpmsg-lite
+  - mcux-sdk-middleware-multicore
 
 # Core examples (always included)
 example_list:
@@ -146,7 +148,6 @@ example_list:
   - freertos_examples/freertos_sem_static
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
-  - littlefs_examples/littlefs_shell
   - littlefs_examples/littlefs_shell_onchip_flash
   - tfm_examples/tfm_demo_ns
   - tfm_examples/tfm_demo_s
@@ -154,10 +155,8 @@ example_list:
   - tfm_examples/tfm_psatest_s
   - tfm_examples/tfm_regression_ns
   - tfm_examples/tfm_regression_s
-  - trustzone_examples/tzm_api
   - trustzone_examples/hello_world_ns
   - trustzone_examples/hello_world_s
-  - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb_mcxw23
   - wireless_examples/bluetooth/adv_ext_central
   - wireless_examples/bluetooth/adv_ext_peripheral
@@ -175,6 +174,5 @@ example_list:
   - wireless_examples/bluetooth/temp_coll
   - wireless_examples/bluetooth/temp_sens
   - wireless_examples/bluetooth/w_uart
-  - wireless_examples/reference_design/health_care_iot_common
   - wireless_examples/reference_design/health_care_iot_central
   - wireless_examples/reference_design/health_care_iot_peripheral

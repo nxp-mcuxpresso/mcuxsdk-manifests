@@ -1,12 +1,9 @@
 example_list:
-- canopennode_examples
 - cmsis_driver_examples
 - demo_apps
 - driver_examples
 - ele_hseb
-- freemaster_examples
 - freertos_examples
-- littlefs_examples
 - lvgl_examples
 - lwip_examples
 - mbedtls3x_examples
@@ -74,14 +71,11 @@ repo_list:
 - mcu-sdk-examples
 - mcux-devices-mcx
 - mcuboot_opensource
-- littlefs
+- aws_iot_llhttp
 - lwip
-- canopennode
 - motor_control
-- rtcesl
 - freemaster
 - lvgl
-- safety_iec60730b
 - ele_hseb
 - mbedtls
 - mbedtls3x
@@ -97,3 +91,12 @@ repo_list:
 - erpc
 - freertos-kernel
 - freertos-kernel-upstream
+- corehttp
+- corehttp-upstream
+- fatfs
+- mcux-freertos-drivers
+- mcux-sdk-middleware-sdmmc
+- mmcau
+- usb
+- vglite_sdk
+- rtcesl

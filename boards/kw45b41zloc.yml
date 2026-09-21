@@ -103,7 +103,6 @@ example_list:
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
   - trustzone_examples
-  - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb/bm
   - wireless_examples/bluetooth/w_uart
   - wireless_examples/bluetooth/w_uart_genfsk

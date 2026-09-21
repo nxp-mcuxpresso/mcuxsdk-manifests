@@ -93,6 +93,7 @@ drivers_filter:
 repo_list:
 - CMSIS
 - aws_iot_llhttp
+- mcux-sdk-middleware-multicore
 - backoffalgorithm
 - backoffalgorithm-upstream
 - cjson

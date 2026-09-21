@@ -4,8 +4,8 @@ example_list:
 - driver_examples
 - demo_apps
 - multicore_examples
-- audio_examples
 - dsp_examples
+- trustzone_examples
 
 
 
@@ -83,13 +83,19 @@ repo_list:
 - tinycbor
 - pkcs11
 - aws_iot_llhttp
-- freemaster
 - mcux-sdk-middleware-multicore
 - mcux-mcmgr
 - rpmsg-lite
 - erpc
-- voice_spot
-- audio-voice-components
-- mbedtls
 - freertos-kernel
 - freertos-kernel-upstream
+- corehttp
+- corehttp-upstream
+- dsp-codecs
+- mcux-freertos-drivers
+- nnlib
+- psa-arch-tests
+- psa_crypto_driver
+- qcbor
+- tf-m-tests
+- tfm

@@ -1,8 +1,6 @@
 example_list:
-- component_examples
 - demo_apps
 - driver_examples
-- freemaster_examples
 
 
 
@@ -45,4 +43,3 @@ repo_list:
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcux-devices-lpc
-- freemaster

@@ -1,11 +1,9 @@
 example_list:
 - cmsis_driver_examples
-- component_examples
 - demo_apps
 - driver_examples
 - freemaster_examples
 - freertos_examples
-- mbedtls3x_examples
 - ota_examples
 
 
@@ -63,11 +61,10 @@ repo_list:
 - mcu-sdk-examples
 - mcux-devices-mcx
 - mcuboot_opensource
-- metering
 - motor_control
-- rtcesl
 - freemaster
-- safety_iec60730b
 - mbedtls3x
 - freertos-kernel
 - freertos-kernel-upstream
+- psa_crypto_driver
+- rtcesl

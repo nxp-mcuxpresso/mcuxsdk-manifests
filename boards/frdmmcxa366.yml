@@ -4,7 +4,6 @@ example_list:
 - demo_apps
 - display_examples
 - driver_examples
-- emwin_examples
 - fatfs_examples
 - freemaster_examples
 - freertos_examples
@@ -15,6 +14,8 @@ example_list:
 - ota_examples
 - sgi_pkc_examples
 - usb_examples
+- digital_encoder_examples
+- el2go_examples
 
 
 
@@ -88,9 +89,8 @@ repo_list:
 - usb
 - fatfs
 - littlefs
+- nxp_iot_agent
 - metering
-- motor_control
-- rtcesl
 - freemaster
 - lvgl
 - safety_iec60730b
@@ -107,3 +107,14 @@ repo_list:
 - freertos-kernel
 - freertos-kernel-upstream
 - emwin
+- erpc
+- lab-project-freertos-posix
+- lab-project-freertos-posix-upstream
+- libjpeg
+- lwip
+- mcux-sdk-middleware-sdmmc
+- mmcau
+- openh264
+- pngdec
+- secure_storage
+- vglite_sdk

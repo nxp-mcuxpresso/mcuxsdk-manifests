@@ -5,7 +5,6 @@ example_list:
 - driver_examples
 - freemaster_examples
 - freertos_examples
-- multiprocessor_examples
 - usb_examples
 
 
@@ -60,12 +59,9 @@ repo_list:
 - mcu-sdk-examples
 - mcux-devices-mcx
 - mcux-sdk-middleware-sdmmc
-- mcux-sdk-middleware-multicore
 - fatfs
 - freemaster
 - freertos-kernel
 - freertos-kernel-upstream
-- aws_iot_llhttp
-- pkcs11
-- tinycbor
 - usb
+- lwip

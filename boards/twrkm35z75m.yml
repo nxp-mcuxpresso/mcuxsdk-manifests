@@ -72,7 +72,6 @@ repo_list:
 - aws_iot_llhttp
 - metering
 - freemaster
-- mbedtls
 - mmcau
 - freertos-kernel
 - freertos-kernel-upstream

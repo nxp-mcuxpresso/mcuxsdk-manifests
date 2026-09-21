@@ -72,16 +72,11 @@ repo_list:
 - mcu-sdk-doc
 - mcu-sdk-examples
 - mcux-devices-imx
-- tinycbor
-- pkcs11
-- aws_iot_llhttp
-- usb
-- freemaster
 - mcux-sdk-middleware-multicore
 - mcux-mcmgr
 - rpmsg-lite
 - erpc
-- mbedtls
 - mmcau
 - freertos-kernel
 - freertos-kernel-upstream
+- mcux-freertos-drivers

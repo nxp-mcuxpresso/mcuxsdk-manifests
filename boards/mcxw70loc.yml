@@ -64,36 +64,29 @@ repo_list:
   - mcu-sdk-doc
   - mcu-sdk-examples
   - mcux-devices-mcx
-  - lin_stack
   - littlefs
-  - freemaster
-  - mcux-sdk-middleware-multicore
-  - mcux-mcmgr
-  - rpmsg-lite
+  - bluetooth
   - erpc
-  - secure-subsystem
-  - edgelock
   - mbedtls
   - mbedtls3x
-  - nxp_iot_agent
   - tfm
   - psa_crypto_driver
   - psa-arch-tests
   - tf-m-tests
   - qcbor
-  - secure_storage
-  - mcux-sdk-middleware-connectivity-framework
-  - genfsk
-  - ble_controller
-  - bluetooth
-  - XCVR
-  - ieee-802.15.4
-  - zigbee
   - freertos-kernel
   - freertos-kernel-upstream
-  - mcux-freertos-drivers
   - sgi_pkc
   - sgi_pkc_pqc
+  - aws_iot_llhttp
+  - corehttp
+  - corehttp-upstream
+  - fatfs
+  - mcux-sdk-middleware-sdmmc
+  - mmcau
+  - pkcs11
+  - tf-psa-crypto
+  - tinycbor
 
 # Optional repositories (excluded by default, can be included with --include-optional)
 optional_repos: []
@@ -105,14 +98,12 @@ example_list:
   - component_examples
   - demo_apps
   - driver_examples
-  - freertos_driver_examples
   - freertos_examples
   - littlefs_examples
   - mbedtls3x_examples
-  - tfm_examples
   - sgi_pkc_examples
   - trustzone_examples
-  - wireless_examples
+  - mbedtls_examples
 
 # Optional examples (excluded by default, can be included with --include-optional)
 optional_examples: []

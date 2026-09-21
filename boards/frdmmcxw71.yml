@@ -104,8 +104,6 @@ example_list:
   - cmsis_driver_examples/lpspi/int_b2b_transfer/slave
   - cmsis_driver_examples/lpuart/edma_transfer
   - cmsis_driver_examples/lpuart/interrupt_transfer
-  - cmsis_driver_examples/usart/interrupt_transfer
-  - cmsis_driver_examples/usart/edma_transfer
   - component_examples/coredump_fault
   - component_examples/flash_component/nor/lpspi
   - component_examples/log/bm
@@ -210,7 +208,6 @@ example_list:
   - driver_examples/wdog32
   - el2go_examples/el2go_blob_test/el2go_blob_test
   - el2go_examples/el2go_import_blob/el2go_import_blob
-  - freemaster_examples/common
   - freemaster_examples/fmstr_example_can
   - freemaster_examples/fmstr_example_pdbdm
   - freemaster_examples/fmstr_example_rtt
@@ -224,7 +221,6 @@ example_list:
   - freertos_examples/freertos_sem_static
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
-  - littlefs_examples/littlefs_shell
   - littlefs_examples/littlefs_shell_onchip_flash
   - mbedtls3x_examples/mbedtls3x_psatest
   - mbedtls3x_examples/psa_crypto_examples
@@ -246,7 +242,6 @@ example_list:
   - tfm_examples/tfm_secureboot_ns
   - tfm_examples/tfm_secureboot_s
   - trustzone_examples
-  - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb/bm
   - wireless_examples/bluetooth/adv_ext_central
   - wireless_examples/bluetooth/adv_ext_peripheral

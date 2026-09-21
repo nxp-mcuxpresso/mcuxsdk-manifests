@@ -4,15 +4,12 @@ example_list:
 - demo_apps
 - driver_examples
 - els_pkc_examples
-- emwin_examples
 - freemaster_examples
-- freertos_driver_examples
 - freertos_examples
 - littlefs_examples
 - lvgl_examples
 - mbedtls3x_examples
 - mbedtls_examples
-- multiprocessor_examples
 - usb_examples
 - trustzone_examples
 
@@ -93,14 +90,9 @@ repo_list:
 - fatfs
 - littlefs
 - metering
-- motor_control
-- rtcesl
 - freemaster
-- mcux-sdk-middleware-multicore
 - erpc
-- maestro
 - lvgl
-- audio-voice-components
 - els_pkc
 - mbedtls
 - mbedtls3x
@@ -112,7 +104,15 @@ repo_list:
 - qcbor
 - freertos-kernel
 - freertos-kernel-upstream
-- mcux-freertos-drivers
 - emwin
 - safety_iec60730b
+- aws_iot_llhttp
+- corehttp
+- corehttp-upstream
+- lwip
+- mcux-sdk-middleware-sdmmc
+- mmcau
+- pkcs11
+- tinycbor
+- vglite_sdk
 

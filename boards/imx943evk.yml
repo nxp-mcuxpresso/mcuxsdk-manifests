@@ -13,6 +13,7 @@ example_list:
 - digital_encoder_examples
 - v2x_base_examples
 - v2x_fce_examples
+- trustzone_examples
 
 
 
@@ -98,7 +99,6 @@ repo_list:
 - lwip
 - soem
 - freemodbus
-- mstp-lib
 - motor_control
 - rtcesl
 - freemaster
@@ -107,3 +107,15 @@ repo_list:
 - rpmsg-lite
 - freertos-kernel
 - freertos-kernel-upstream
+- corehttp
+- corehttp-upstream
+- erpc
+- mbedtls3x
+- mcuboot_opensource
+- mcux-freertos-drivers
+- psa-arch-tests
+- psa_crypto_driver
+- qcbor
+- tf-m-tests
+- tfm
+- mstp-lib
