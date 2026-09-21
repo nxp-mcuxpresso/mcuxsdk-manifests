@@ -87,6 +87,7 @@ optional_repos: []
 
 # Core examples (always included)
 example_list:
+  - wireless_examples/ble_controller/common
   - component_examples/log/bm
   - component_examples/log/freertos
   - demo_apps/hello_world

@@ -92,6 +92,7 @@ optional_repos: []
 
 # Core examples (always included)
 example_list:
+  - wireless_examples/ble_controller/common
   - cmsis_driver_examples/lpi2c/edma_b2b_transfer/master
   - cmsis_driver_examples/lpi2c/edma_b2b_transfer/slave
   - cmsis_driver_examples/lpi2c/int_b2b_transfer/master

@@ -63,6 +63,8 @@ repo_list:
 
 # Core examples (always included)
 example_list:
+  - trustzone_examples/tzm_api
+  - wireless_examples/ble_controller/common
   - wireless_examples/reference_design/health_care_iot_common
   - cmsis_driver_examples/flexcomm/spi/dma_b2b_transfer/master
   - cmsis_driver_examples/flexcomm/spi/dma_b2b_transfer/slave
