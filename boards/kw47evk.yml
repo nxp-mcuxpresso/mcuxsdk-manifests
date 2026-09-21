@@ -101,6 +101,8 @@ optional_repos: []
 
 # Core examples (always included)
 example_list:
+  - wireless_examples/bluetooth/config
+  - freemaster_examples/common
   - ce_examples/basic_test
   - ce_examples/blockingmode_test
   - ce_examples/fft_test
