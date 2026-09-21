@@ -59,7 +59,7 @@ manifest:
       description: System View Description (SVD) files for NXP MCU devices, providing
         detailed peripheral register definitions
   - name: mcu-sdk-examples
-    revision: c92140b5a77469c679a7e44c3560ee2988218f1e
+    revision: e6dffdbaf285bebf65c06626d0bcc0c6bd5f5165
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
