@@ -99,6 +99,8 @@ optional_repos: []
 
 # Core examples (always included)
 example_list:
+  - cmsis_driver_examples/lpuart/edma_transfer
+  - cmsis_driver_examples/lpuart/interrupt_transfer
   - ce_lite_examples
   - cmsis_driver_examples
   - component_examples

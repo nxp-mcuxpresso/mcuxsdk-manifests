@@ -101,6 +101,7 @@ optional_repos: []
 
 # Core examples (always included)
 example_list:
+  - littlefs_examples/littlefs_shell
   - wireless_examples/ble_controller/common
   - wireless_examples/bluetooth/config
   - freemaster_examples/common

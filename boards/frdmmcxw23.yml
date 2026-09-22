@@ -64,6 +64,7 @@ repo_list:
 
 # Core examples (always included)
 example_list:
+  - littlefs_examples/littlefs_shell
   - trustzone_examples/tzm_api
   - wireless_examples/ble_controller/common
   - wireless_examples/reference_design/health_care_iot_common
