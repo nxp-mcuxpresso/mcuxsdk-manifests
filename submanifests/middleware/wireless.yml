@@ -17,7 +17,7 @@ manifest:
       display_name: Wireless Connectivity Framework
       description: Abstraction and Integration Layer for the connectivity Stacks,
         MAC and Link Layers
-    revision: d9ba1fd62407534b8859cb52a48286815a24f749
+    revision: 07d54f477faf17f0608063fa452c8e50d75016a6
     path: mcuxsdk/middleware/wireless/framework
     groups:
     - connectivity-framework
@@ -90,7 +90,7 @@ manifest:
       branch_flow: false
       has_examples: true
     path: mcuxsdk/middleware/edgefast_open
-    revision: 5784199a805a6ddf4ade3cd1d000c2f45e606aa1
+    revision: 79b0779663ec200ecc6bd09f513fa4cd16a7b8de
     repo-path: edgefast-open
     groups:
     - edgefast_open
