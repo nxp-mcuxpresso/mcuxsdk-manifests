@@ -101,10 +101,6 @@ optional_repos: []
 
 # Core examples (always included)
 example_list:
-  - littlefs_examples/littlefs_shell
-  - wireless_examples/ble_controller/common
-  - wireless_examples/bluetooth/config
-  - freemaster_examples/common
   - ce_examples/basic_test
   - ce_examples/blockingmode_test
   - ce_examples/fft_test
@@ -228,6 +224,7 @@ example_list:
   - driver_examples/wdog32
   - el2go_examples/el2go_blob_test/el2go_blob_test
   - el2go_examples/el2go_import_blob/el2go_import_blob
+  - freemaster_examples/common
   - freemaster_examples/fmstr_example_can
   - freemaster_examples/fmstr_example_rtt
   - freemaster_examples/fmstr_example_uart
@@ -240,6 +237,7 @@ example_list:
   - freertos_examples/freertos_sem_static
   - freertos_examples/freertos_swtimer
   - freertos_examples/freertos_tickless
+  - littlefs_examples/littlefs_shell
   - littlefs_examples/littlefs_shell_onchip_flash
   - mbedtls3x_examples/mbedtls3x_psatest
   - mbedtls3x_examples/psa_crypto_examples
@@ -270,6 +268,7 @@ example_list:
   - tfm_examples/tfm_secureboot_ns
   - tfm_examples/tfm_secureboot_s
   - trustzone_examples
+  - wireless_examples/ble_controller/common
   - wireless_examples/ble_controller/hci_bb/bm
   - wireless_examples/ble_controller/nbu_ble
   - wireless_examples/bluetooth/adv_ext_central
@@ -278,6 +277,7 @@ example_list:
   - wireless_examples/bluetooth/beacon
   - wireless_examples/bluetooth/ble_fscibb
   - wireless_examples/bluetooth/ble_shell
+  - wireless_examples/bluetooth/config
   - wireless_examples/bluetooth/digital_key_car_anchor
   - wireless_examples/bluetooth/digital_key_car_anchor_cs
   - wireless_examples/bluetooth/digital_key_device
