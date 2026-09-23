@@ -18,14 +18,14 @@ manifest:
       branch_flow: false
       display_name: USB stack
       description: Host, Device, OTG
-    revision: 6a468027ccd31e34364e6756ce27c983dba9eb02
+    revision: 9d55159c8dea9240acf2bd9a1cab82b43d4bfde6
     path: mcuxsdk/middleware/usb
     repo-path: mcux-sdk-middleware-usb
     groups:
     - usb
     - middleware
   - name: lwip
-    revision: 8300f2bf8d4624b5a2c875d6c1d172f55b78c9cd
+    revision: a741c7c08c5aa2a0082ac32c02922f98845ee842
     path: mcuxsdk/middleware/lwip
     groups:
     - lwip
