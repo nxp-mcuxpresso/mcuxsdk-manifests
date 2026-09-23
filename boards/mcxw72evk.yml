@@ -111,6 +111,8 @@ example_list:
   - cmsis_driver_examples/lpspi/int_b2b_transfer/slave
   - cmsis_driver_examples/lpuart/edma_transfer
   - cmsis_driver_examples/lpuart/interrupt_transfer
+  - cmsis_driver_examples/usart/interrupt_transfer
+  - cmsis_driver_examples/usart/edma_transfer
   - component_examples/flash_component/nor/lpspi
   - component_examples/log/bm
   - component_examples/log/freertos
