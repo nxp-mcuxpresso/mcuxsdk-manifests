@@ -149,12 +149,12 @@ manifest:
   - name: openvg
     userdata:
       owner: camelia.groza@nxp.com
-      track_branch: main
+      track_branch: mcux_main
       branch_flow: false
       display_name: openvg
       description: openvg lib
     path: mcuxsdk/middleware/openvg
-    revision: 98c26c12a4ea4357bd058027db0afac959d21e4a
+    revision: 22c5063880fa37b7f7de1e0831c8282395808aad
     url: https://github.com/nxp-mcuxpresso/mcux-openvg
     groups:
     - openvg
