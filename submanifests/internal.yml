@@ -16,7 +16,7 @@ manifest:
       branch_flow: false
   - name: docs-int
     path: mcuxsdk/docs/internal
-    revision: c92dafb571d2aeee054fd765816ec8bf4a812878
+    revision: 5e2917543f856704801ceeb1158be399fabc51cc
     groups:
     - bifrost
     userdata:
