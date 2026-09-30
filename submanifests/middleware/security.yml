@@ -94,7 +94,7 @@ manifest:
     remote: nxp
     repo-path: nxp_mbedtls
     path: mcuxsdk/middleware/mbedtls3x
-    revision: 30271b7e9d8ed5420de2d1e8354674b21bb24463
+    revision: d183131720f262e008c0f1e09f068c03690d9eff
     groups:
     - mbedtls3x
     - security
@@ -135,7 +135,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: 57b9c1c32fe9f73271c36c42f85fa696e1aa775a
+    revision: c2f3fca0365f645262e295b0c0e5290c342cfa70
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
@@ -243,7 +243,7 @@ manifest:
       track_branch: mcux_tf_psa_crypto_v1.2.0
       branch_flow: false
     path: mcuxsdk/middleware/mbedtls/tf-psa-crypto
-    revision: 41a3225da0e93926d6ea976697ff5f181c211a04
+    revision: a6c6dbb0593cf15187b3093ca8c0226e5e95d467
     remote: nxp-mcuxpresso
     groups:
     - psa_crypto_driver
