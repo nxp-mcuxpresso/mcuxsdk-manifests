@@ -1,0 +1,71 @@
+example_list:
+- cmsis_driver_examples
+- demo_apps
+- driver_examples
+- fatfs_examples
+- freemaster_examples
+- freertos_examples
+- littlefs_examples
+- ota_examples
+
+
+
+
+# Package tailoring: trim devices/ and drivers/ to only what this board needs.
+# Derived from device Kconfig.chip IP support variants (via MIR board->device mapping).
+devices_filter:
+  - MCX/MCXC
+
+drivers_filter:
+  - aoi
+  - cache
+  - clock
+  - common
+  - crc
+  - dsc_pit
+  - dual_adc
+  - edma4
+  - edma_unified
+  - eim
+  - erm
+  - flash_k4
+  - ftm
+  - gpio
+  - hscmp
+  - lpc_freqme
+  - lpi2c
+  - lpspi
+  - lpuart
+  - mau
+  - mcx_cmc
+  - mcx_spc
+  - mcx_vbat
+  - opamp_1
+  - phd
+  - port
+  - power
+  - pwm
+  - pwt
+  - qtmr_1
+  - reset
+  - trdc_1
+  - wuu
+  - wwdt
+  - xbar_1
+
+repo_list:
+- core
+- CMSIS
+- mcuxsdk-tool-data
+- mcu-sdk-components
+- mcu-sdk-doc
+- mcu-sdk-examples
+- mcux-devices-mcx
+- mcuboot_opensource
+- motor_control
+- fatfs
+- littlefs
+- freemaster
+- freertos-kernel
+- freertos-kernel-upstream
+- rtcesl
