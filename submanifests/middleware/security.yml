@@ -218,7 +218,7 @@ manifest:
       description: Cryptographic library running on NXP SGI and PKC Crypto Hardware
         IP
     path: mcuxsdk/components/sgi_pkc
-    revision: fc5b39bc3e7cb5abc9ce3798dcb4b99353aed8f2
+    revision: 331fa6b28cc2222ab7ff082070b3b4f9f0789987
     url: https://github.com/nxp-mcuxpresso/sgi_pkc
     groups:
     - security
