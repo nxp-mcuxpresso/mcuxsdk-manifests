@@ -86,11 +86,11 @@ manifest:
   - name: edgefast_open
     userdata:
       owner: junjie.liu@nxp.com
-      track_branch: main
+      track_branch: release/26.12.00-pvw1
       branch_flow: false
       has_examples: true
     path: mcuxsdk/middleware/edgefast_open
-    revision: 142184f8f275395cd21e13df0dd020f36a88cb75
+    revision: 97ab5f385a14298732ad9c2dcb491449f3be41b8
     repo-path: edgefast-open
     groups:
     - edgefast_open
