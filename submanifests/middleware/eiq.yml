@@ -19,7 +19,7 @@ manifest:
         network kernels optimized  for Cortex-M cores) - an inference engine for running
         TensorFlow Lite models'
     path: mcuxsdk/middleware/eiq
-    revision: e02e2ee604e3d5b3feffee537ffd05bba1e7b615
+    revision: 1fbf907475cf031d7b9aa517723a983881bbbad7
     groups:
     - eiq
     - middleware
@@ -32,7 +32,7 @@ manifest:
       description: Software library for running machine learning models on embedded
         devices
     path: mcuxsdk/middleware/eiq/tensorflow-lite
-    revision: 7332b26b0917e3c8dc8877179943c6017170757a
+    revision: a7d1ddfb0841f0d67ae39470b6c6dd985f63d903
     groups:
     - eiq
     - middleware
@@ -45,7 +45,7 @@ manifest:
       display_name: Multimedia Processing Pipelines (MPP)
       description: Library to build vision pipelines
     path: mcuxsdk/middleware/eiq/mpp
-    revision: 70ffb784d224b48a3b3b1e4c6c3c222c085fab9d
+    revision: fd5795377340b2050a88ebda58f09baf470a2376
     groups:
     - eiq
     - middleware
@@ -59,7 +59,7 @@ manifest:
       description: Software library for running machine learning models on embedded
         devices
     path: mcuxsdk/middleware/eiq/executorch
-    revision: 2227d3034995e7fbc1c856ee3a3cd5b17927420a
+    revision: c97219bde8daf149d3ae0cbdab1828259c8892f3
     groups:
     - eiq
     - middleware

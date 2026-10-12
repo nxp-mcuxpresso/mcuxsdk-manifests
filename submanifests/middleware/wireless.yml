@@ -61,7 +61,7 @@ manifest:
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: f7f5bdefb6d34bcbf1c05e35d8212a0e0d7b1f7d
+    revision: 06f9b295869f1217dae0c4ee9cfeefe26a55b5f7
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -76,7 +76,7 @@ manifest:
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: ea93a835160e246a3d0c0628acb6cbad1faf1761
+    revision: c7b21c60a2674d56dd646078aeb3456622195d9c
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR
@@ -116,7 +116,7 @@ manifest:
       display_name: Bluetooth and Bluetooth Low Energy Host Stack
       description: Bluetooth and Bluetooth Low Energy Host Stack.
     path: mcuxsdk/middleware/wireless/ethermind
-    revision: dcf3f5467a56312ef01240b1342ba18a854c396f
+    revision: 5371964dabf0c5fbb39d5b00b828c68603bd4e97
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-ethermind
     groups:
     - ethermind
@@ -129,7 +129,7 @@ manifest:
       display_name: NXP Wi-Fi
       description: NXP Wi-Fi
     path: mcuxsdk/middleware/wifi_nxp
-    revision: 03103a51dadaa9b105b206c6a36e0805ffba3acd
+    revision: 13981888199755350ba4a92f781957ff2973c49a
     url: https://github.com/NXP/wifi_nxp
     groups:
     - wifi_nxp
@@ -141,7 +141,7 @@ manifest:
       display_name: RW61X Firmware Binary
       description: WIFI, BLE and 15.4 Firmware Binaries.
     path: mcuxsdk/components/conn_fwloader/fw_bin
-    revision: 2b003d3149561e0675bd311cd9bc86fbd840489f
+    revision: 2553ab1d2097f0adb6e0846f054142c86045db3f
     url: https://github.com/NXP/wifi_nb_fw
     groups:
     - fw_bin
@@ -167,7 +167,7 @@ manifest:
       display_name: wpa_supplicant-rtos
       description: wpa_supplicant-rtos
     path: mcuxsdk/middleware/wireless/wpa_supplicant-rtos
-    revision: 1b4aa64b40f4c9887c8e60f9712d0ca49f622a29
+    revision: 60abfea9a8764ed787257ba326e8cb466e549420
     groups:
     - wpa_supplicant-rtos
     - wifi_nxp
@@ -179,6 +179,6 @@ manifest:
       display_name: coex
       description: coex examples for NXP RW612 SoC
     path: mcuxsdk/middleware/wireless/coex
-    revision: 7e4252daf4b864af77e75335b0331dd503f05bb0
+    revision: e790d77ac38c28b4191458f82c38a252814b021c
     groups:
     - coex

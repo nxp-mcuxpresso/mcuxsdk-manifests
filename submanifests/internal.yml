@@ -58,7 +58,7 @@ manifest:
       branch_flow: false
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: d69441de5068ce16ace251b95e7a78c323fccc2e
+    revision: 6f3c4e33d399365b01f8ac2cf653bcc34d3739e2
     submodules:
     - path: modules/manifest_schema
     groups:
@@ -207,7 +207,7 @@ manifest:
       track_branch: develop/main
       branch_flow: false
     path: mcuxsdk/middleware/wireless/bluetooth_private
-    revision: b4dc20ba137eb9fa4f27a45452d9e64991c17603
+    revision: 9179d2f51e1d5e2fd5746b3b817eb6de3da21dd8
     repo-path: mcux-sdk-middleware-bluetooth-int
     groups:
     - bifrost
@@ -251,7 +251,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/freemaster_internal
-    revision: main
+    revision: 7b7a6fd920afc1489bf10b29746a355712b008bc
     groups:
     - bifrost
   - name: mcux-sdk-middleware-eiq-int
@@ -260,7 +260,7 @@ manifest:
       track_branch: main
       branch_flow: false
     path: mcuxsdk/middleware/eiq_int
-    revision: main
+    revision: 7c16e2ed70ec6c8c71475bbb8404e5ca7d94257c
     groups:
     - bifrost
   - name: mcuxsdk-imgutil

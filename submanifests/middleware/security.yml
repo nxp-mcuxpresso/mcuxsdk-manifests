@@ -24,7 +24,7 @@ manifest:
       description: Cryptographic library running on NXP ELS and PKC Crypto Hardware
         IP
     path: mcuxsdk/components/els_pkc
-    revision: cecaadec419956517620d74285727c09f8e37528
+    revision: e334905f9b3dbe5fa2124fa09b0690feaa1658e4
     url: https://github.com/NXP/els_pkc
     groups:
     - security
@@ -49,7 +49,7 @@ manifest:
       display_name: secure-subsystem
       description: Secure subsystem library - SSS APIs
     path: mcuxsdk/middleware/secure-subsystem
-    revision: bdc4f1873125dd224c3a585154d2065c7af3df39
+    revision: 0b420d6b9d922413c3943394cf7429d15929663e
     url: https://github.com/nxp-mcuxpresso/mcux-secure-subsystem
     groups:
     - secure-subsystem
@@ -108,7 +108,7 @@ manifest:
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
-    revision: 9b33d206819fc8bc9626105e0dc3e7a4cedad287
+    revision: dc1539473c4ff31699d8b9ef2a50ffc5ac6a6df9
     groups:
     - nxp_iot_agent
     - security
@@ -123,7 +123,7 @@ manifest:
     path: mcuxsdk/middleware/tfm/tf-m
     remote: nxp
     repo-path: nxp_tf-m
-    revision: eb835f3ecaaf22d06c9206e175f126839203fb41
+    revision: 74203f67e9b864b9650b4a835ec98ffbd3dd033e
     groups:
     - tfm
   - name: psa_crypto_driver
@@ -135,7 +135,7 @@ manifest:
       description: PSA crypto driver interface to use cryptographic library running
         on NXP crypto Hardware IP
     path: mcuxsdk/components/psa_crypto_driver
-    revision: cd790e22137da8269598f76eb7017423a079ab4c
+    revision: 11a4d4e159999c9ba52e93af7fe610d22e4e2e64
     url: https://github.com/NXP/psa_crypto_driver
     groups:
     - psa_crypto_driver
@@ -148,7 +148,7 @@ manifest:
       display_name: MMCAU
       description: MMCAU
     path: mcuxsdk/middleware/mmcau
-    revision: ad3d50b51ee676c7901258093d6e36ea28a94545
+    revision: a58a12d2a5891cbc9b3edc175def8579761bbef4
     url: https://github.com/nxp-mcuxpresso/mcux-mmcau
     groups:
     - mmcau

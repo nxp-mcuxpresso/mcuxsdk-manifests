@@ -10,7 +10,7 @@ manifest:
     remote: nxp-mcuxpresso
   projects:
   - name: fatfs
-    revision: 3ffa11e39da730589c817796fe8c67b1ccd5fab8
+    revision: 20193e52c1475e3435d57f221fc677c71a9410ad
     path: mcuxsdk/middleware/fatfs
     groups:
     - fatfs
@@ -27,7 +27,7 @@ manifest:
       branch_flow: false
       display_name: sdmmc stack
       description: sd, mmc, sdio card stack
-    revision: bac8094c776f45981bcc9a2dcc611a6684176c87
+    revision: eedaebdf64ab15a107b1b4286dc1ba7942079ff5
     path: mcuxsdk/middleware/sdmmc
     groups:
     - sdmmc
@@ -40,7 +40,7 @@ manifest:
       display_name: nand flash management stack
       description: nand flash management stack
     path: mcuxsdk/middleware/dhara
-    revision: 2bcc5ae40b9942475c8660af0d61688819f4279b
+    revision: 85b15c57afa7c9c660036560032372bfc71b7d11
     groups:
     - dhara
   - name: littlefs
@@ -51,6 +51,6 @@ manifest:
       display_name: littlefs
       description: LittleFS filesystem stack
     path: mcuxsdk/middleware/littlefs
-    revision: dd93ab8a1980d0d8971887a99e7645a84cf71c09
+    revision: 4a827cc7b2f62384380a333b39a9dbf3d3f1dc57
     groups:
     - littlefs

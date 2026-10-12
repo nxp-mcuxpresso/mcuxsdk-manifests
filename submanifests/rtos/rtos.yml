@@ -11,7 +11,7 @@ manifest:
   projects:
   - name: freertos-kernel
     path: mcuxsdk/rtos/freertos/freertos-kernel
-    revision: 3cc7e17f9ce2a6e1b368e6a7c2e4d5ccf34907d6
+    revision: 7d3700a395c1d7c935bffa9c0e89886ff14a574e
     groups:
     - freertos
     - rtos
@@ -44,7 +44,7 @@ manifest:
       display_name: FreeRTOS Drivers
       description: FreeRTOS peripheral drivers for MCUXpresso SDK
     path: mcuxsdk/rtos/freertos/freertos-drivers
-    revision: b3b65fbaa74c83d484b267561093bc23044d0126
+    revision: 6740f21eef394523140c396a38e732f6e5b1b17c
     groups:
     - rtos
     - freertos

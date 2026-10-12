@@ -22,7 +22,7 @@ manifest:
   - name: core
     path: mcuxsdk/
     repo-path: mcuxsdk-core
-    revision: 5231fe1d5d30c9a709f001301230d4cc937486b7
+    revision: b2cee0c457e7e59bd85379fe835076f864260b93
     west-commands: scripts/west_commands.yml
     groups:
     - core
@@ -36,7 +36,7 @@ manifest:
   - name: CMSIS
     repo-path: mcu-sdk-cmsis
     path: mcuxsdk/arch/arm/CMSIS
-    revision: dd88dfb6c36140c3f48a0aa545d386deae29e6c7
+    revision: 6cadb0dd51370a6460989b60cc94755316da9714
     groups:
     - core
     - ble_nxp
@@ -49,7 +49,7 @@ manifest:
         that are based on Arm Cortex processors, distributed by ARM.
   - name: mcux-soc-svd
     path: mcuxsdk/svd
-    revision: 7c10e88907c90ed153422952a247306c5b6c1029
+    revision: 705f3f78e28b145b31723d3dbda0e8d13d15c307
     groups:
     - optional
     userdata:
@@ -59,7 +59,7 @@ manifest:
       description: System View Description (SVD) files for NXP MCU devices, providing
         detailed peripheral register definitions
   - name: mcu-sdk-examples
-    revision: 68097ac9fc2a63f6f73925440ceff6b464827cb0
+    revision: 24d626791a148c9b7f020af5c00e35404ae732d4
     repo-path: mcuxsdk-examples
     path: mcuxsdk/examples
     groups:
@@ -74,7 +74,7 @@ manifest:
         integration.
   - name: mcu-sdk-components
     repo-path: mcux-component
-    revision: 15eca1261139ea88d54f3e0632ea59f6fd1107e7
+    revision: b59d44a900ea5ecf18bc0e4616363c935462d2f3
     path: mcuxsdk/components
     groups:
     - components
@@ -86,7 +86,7 @@ manifest:
       description: NXP MCU SDK components and board-specific peripheral driver libraries
   - name: mcu-sdk-doc
     repo-path: mcuxsdk-doc
-    revision: 9d6f13d5329669acdbf02daca2549d7417fc7ff7
+    revision: 34637466a48f0111e946bf52fdcc4d1055890f2a
     path: mcuxsdk/docs
     west-commands: scripts/west_commands.yml
     groups:
@@ -98,7 +98,7 @@ manifest:
       description: Documentation for NXP MCUXpresso SDK, providing comprehensive reference
         materials
   - name: mcuxsdk-tool-data
-    revision: d9fa5878c324bc0c08faae4057c3b3a419ab6196
+    revision: 529cc96a1ebb49cfe5290f0bd2e4b73d228cf767
     path: mcuxsdk/tool_data
     groups:
     - core
