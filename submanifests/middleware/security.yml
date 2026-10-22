@@ -62,7 +62,7 @@ manifest:
       display_name: Edgelock Firmware
       description: Edgelock Firmware
     path: mcuxsdk/firmware/edgelock
-    revision: d249cf2867f2c63f513b843b3e8edd520ae52263
+    revision: beed265fd33ae34abacb636b2b11360a5ded032b
     repo-path: mcux-edgelock
     groups:
     - edgelock
