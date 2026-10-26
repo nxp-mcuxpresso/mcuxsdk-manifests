@@ -56,12 +56,12 @@ manifest:
   - name: bluetooth
     userdata:
       owner: mihai-octavian.urzica@nxp.com
-      track_branch: develop/main
+      track_branch: release/26.12.00-pvw1
       branch_flow: false
       display_name: Wireless BLE stack
       description: BLE
     path: mcuxsdk/middleware/wireless/bluetooth
-    revision: 06f9b295869f1217dae0c4ee9cfeefe26a55b5f7
+    revision: 7e7004cb9941792ee74d022a494a56383934c579
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-bluetooth-host
     groups:
     - bluetooth
@@ -71,12 +71,12 @@ manifest:
   - name: XCVR
     userdata:
       owner: john.vandermeer@nxp.com
-      track_branch: main
+      track_branch: release/26.12.00-pvw1
       branch_flow: false
       display_name: Wireless XCVR Driver
       description: Transceiver Driver for 2.4GHz narrowband radios
     path: mcuxsdk/middleware/wireless/XCVR
-    revision: c7b21c60a2674d56dd646078aeb3456622195d9c
+    revision: c72943e4bf52a166adf1b3246fdb479d1daea229
     url: https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-xcvr
     groups:
     - XCVR

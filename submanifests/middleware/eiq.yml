@@ -26,13 +26,13 @@ manifest:
   - name: mcux-sdk-middleware-tensorflow
     userdata:
       owner: xuelin.shi@nxp.com
-      track_branch: main
+      track_branch: release/26.12.00-pvw1
       branch_flow: false
       display_name: TensorFlow Lite for Microcontrollers
       description: Software library for running machine learning models on embedded
         devices
     path: mcuxsdk/middleware/eiq/tensorflow-lite
-    revision: a7d1ddfb0841f0d67ae39470b6c6dd985f63d903
+    revision: 31fed156c6a05b8101729456a71ad7a5df3a5599
     groups:
     - eiq
     - middleware

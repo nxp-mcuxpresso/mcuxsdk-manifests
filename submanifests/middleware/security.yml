@@ -101,14 +101,14 @@ manifest:
   - name: nxp_iot_agent
     userdata:
       owner: bojan.simoneta@nxp.com
-      track_branch: main_mcux
+      track_branch: release/26.12.00-pvw1
       branch_flow: false
       display_name: nxp_iot_agent
       description: nxp_iot_agent
     remote: nxp
     repo-path: el2go-agent
     path: mcuxsdk/middleware/nxp_iot_agent
-    revision: dc1539473c4ff31699d8b9ef2a50ffc5ac6a6df9
+    revision: b4170660aa74a78aedd3d349b9845fc7d612460a
     groups:
     - nxp_iot_agent
     - security

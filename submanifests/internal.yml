@@ -58,14 +58,14 @@ manifest:
       branch_flow: false
   - name: sdk_generator
     path: mcuxsdk/ecosystem/sdk_generator
-    revision: 6f3c4e33d399365b01f8ac2cf653bcc34d3739e2
+    revision: d3a0834aec92f21788823c34ca19bbcfe204c80a
     submodules:
     - path: modules/manifest_schema
     groups:
     - bifrost
     userdata:
       owner: holt.sun@nxp.com
-      track_branch: develop/mcu_sdk_next
+      track_branch: release/26.12.00-pvw1
       branch_flow: false
   - name: MIR
     path: mcuxsdk/MIR

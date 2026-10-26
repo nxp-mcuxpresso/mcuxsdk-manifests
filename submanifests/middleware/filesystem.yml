@@ -46,11 +46,11 @@ manifest:
   - name: littlefs
     userdata:
       owner: david.jurajda@nxp.com
-      track_branch: mcux_main
+      track_branch: release/26.12.00-pvw1
       branch_flow: false
       display_name: littlefs
       description: LittleFS filesystem stack
     path: mcuxsdk/middleware/littlefs
-    revision: 4a827cc7b2f62384380a333b39a9dbf3d3f1dc57
+    revision: aedd194820f77f9358caf42fd394cbc2cc551458
     groups:
     - littlefs
